@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3136506976543933348}
   - component: {fileID: 7791655236001309451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   inventory: {fileID: 2854704983080223569}
   _setSpawnBulletPosition: {fileID: 1081197973007504128}
   _weaponMesh: {fileID: 0}
-  _turelMesh: {fileID: 0}
+  TurelMesh: {fileID: 0}
 --- !u!1 &2039706244962328061
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 3157792873630176401}
   - component: {fileID: 2798865427442402535}
   - component: {fileID: 5107141065049532908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IKBone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 2628128380907278392}
   - component: {fileID: 5833013581066134349}
   - component: {fileID: 7981929284997595972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -246,6 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72dc4a761b94bca49949d035f9134692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inputhandlers:
+  - {fileID: 5683671012514460301}
+  - {fileID: 3680572866832395275}
   PlayerIndex: 0
   PlayerData: {fileID: 11400000, guid: 2b685de70f5ee8f49af4b40bd1cbc32a, type: 2}
   _health: 0
@@ -292,6 +295,7 @@ MonoBehaviour:
     Range: 0
     MaxHEalth: 0
     AmmoType: {fileID: 0}
+  _player: {fileID: 0}
   handingObject: {fileID: 7791655236001309451}
 --- !u!114 &5683671012514460301
 MonoBehaviour:
@@ -313,7 +317,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2902083763329592815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d8099b308ac60749aef34245e2208a1, type: 3}
   m_Name: 
@@ -396,7 +400,7 @@ GameObject:
   - component: {fileID: 3971736794419961404}
   - component: {fileID: 1496537828772848699}
   - component: {fileID: 2893222835068801040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253369008572978527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AimTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4346148206417568940}
   - component: {fileID: 1081197973007504128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpawnBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +588,7 @@ GameObject:
   - component: {fileID: 7216304089433185394}
   - component: {fileID: 776647652166143796}
   - component: {fileID: 8095591275408846250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7189200296774894613}
   - component: {fileID: 4844730303737976313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HeadTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5857859990584886892}
   - component: {fileID: 8405483737928660862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rig 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

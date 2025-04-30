@@ -15,6 +15,7 @@ namespace Script.Turel
         {
             Debug.Log("interact with Turel");
             player.GetComponent<InventoryPlayer>().TookTurel(turelWrap, turelWrap.Turel.Visual);
+            player.GetComponent<Player>().handingObject.TurelMesh = turelWrap.Turel.Visual;
             Destroy(gameObject);
         }
         

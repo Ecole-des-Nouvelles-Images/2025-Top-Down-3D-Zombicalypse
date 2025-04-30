@@ -57,7 +57,7 @@ namespace Script
         [FormerlySerializedAs("_weaponHanding")]
         [Header("Other")] 
         
-        [SerializeField] private HandingObject handingObject;
+        public HandingObject handingObject;
         [SerializeField] private GameObject _dropPrefab;
 
         [Header("References")] 

@@ -1,6 +1,4 @@
-using System;
 using Script.Turel.State;
-using UnityEngine;
 
 namespace Script.Turel
 {

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7629480888036252511}
   - component: {fileID: 1007300868732359165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 2572186697106531258}
   - component: {fileID: 3059601732651761770}
   - component: {fileID: 1049842860446789663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IKBone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523985534769830431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3120306384701007699}
   - component: {fileID: 1622575422542823047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeadTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7148020878259474554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AimTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 3163446985432840933}
   - component: {fileID: 1787640630862644100}
   - component: {fileID: 3060310312402717317}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Turel
   m_TagString: Turel
   m_Icon: {fileID: 0}
@@ -401,8 +401,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.8344308, z: 1}
-  m_Center: {x: 0, y: 0.4172154, z: 0}
+  m_Size: {x: 0.7150595, y: 1.6897676, z: 0.68684655}
+  m_Center: {x: 0.022726655, y: 0.489547, z: -0.054807574}
 --- !u!135 &1787640630862644100
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -461,7 +461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5879850559952377610}
   - component: {fileID: 3758617131731377265}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Rig 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 6982627918490121866}
   - component: {fileID: 8137912481269897934}
   - component: {fileID: 6469986255557070829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Socle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,8 +617,7 @@ GameObject:
   - component: {fileID: 451738461268430222}
   - component: {fileID: 8749904816434242840}
   - component: {fileID: 8341374458109265195}
-  - component: {fileID: 2064285813314864555}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TurelRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,29 +695,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2064285813314864555
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8540968015393134329}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9131198845381864921
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,8 +706,7 @@ GameObject:
   - component: {fileID: 3670030264623342975}
   - component: {fileID: 543534184604352507}
   - component: {fileID: 5386280198470785080}
-  - component: {fileID: 6732139999174345112}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,24 +781,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6732139999174345112
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9131198845381864921}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

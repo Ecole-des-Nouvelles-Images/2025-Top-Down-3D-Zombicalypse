@@ -9,7 +9,7 @@ namespace Script
 
         [SerializeField] private SetSpawnBulletPosition _setSpawnBulletPosition;
         [SerializeField] private GameObject _weaponMesh;
-        [SerializeField] private GameObject _turelMesh;
+        public GameObject TurelMesh;
         
         public void SwitchWeapon(Transform handingTransform)
         { 
