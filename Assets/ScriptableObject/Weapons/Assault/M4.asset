@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8bba67085df2340b7409860ee2797d, type: 3}
+  m_Name: M4
+  m_EditorClassIdentifier: 
+  WeaponMesh: {fileID: 8452351603674016922, guid: 5438a4792475728418a0e5c2353a2c1e, type: 3}
+  SpawnPositionOffset: {x: 0, y: 0, z: 0}
+  SpawnBulletOffset: {x: 0, y: 0, z: 0}
+  BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
+  BulletSpeed: 120
+  Damage: 25
+  FireRate: 0.2
+  Precision: 0.05
+  LethalRangeLetal: 1.7
+  MaxAmmo: 30
+  MaxMagazine: 7
+  ReloadTime: 4
+  RemoveAmmoParFire: 1
