@@ -28,7 +28,6 @@ namespace Julien.Script.TurelScripts
             
             P.SwitchInputHandler(1);
             
-            
             Destroy(gameObject);
         }
         

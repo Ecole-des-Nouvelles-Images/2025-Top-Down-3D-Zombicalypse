@@ -67,7 +67,8 @@ namespace Julien.Script
         [SerializeField] private GameObject _playerRenderer;
         private Vector2 _move;
         private InventoryPlayer _inventory;
-        private IInteractable _interactable;
+
+        [SerializeField] private List<GameObject> InteractsGameObject;
         
         private void Awake()
         {
@@ -111,6 +112,18 @@ namespace Julien.Script
                         _currentAimTurel = hit.transform.gameObject;
                         Debug.Log("Touche une tourelle");
                     }
+                    else
+                    {
+                        _currentAimTurel = null;
+                    }
+                }
+            }
+
+            for (int i = 0; i < InteractsGameObject.Count; i++)
+            {
+                if (!InteractsGameObject[i])
+                {
+                    InteractsGameObject.Remove(InteractsGameObject[i]);
                 }
             }
         }
@@ -202,18 +215,6 @@ namespace Julien.Script
         {
             _inventory.SetDownTurel();
         }
-        
-        // Interagir
-        
-        public void Interact()
-        {
-            // regarder si _interactable n'est pas vide
-            if (_interactable != null)
-            {
-                _interactable.Activate(this);
-            }
-        }
-
         public void OpenInventory()
         {
             Debug.Log("Open Inventory");
@@ -249,13 +250,23 @@ namespace Julien.Script
             } 
             Inputhandlers[index].enabled = true;
         }
+        
+        
+        // Interagir
+        public void Interact()
+        {
+            if (InteractsGameObject != null)
+            {
+                InteractsGameObject[0].GetComponent<IInteractable>().Activate(this);
+                InteractsGameObject[0].gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
-            // If collide with an object with tag "interactable"
             if (other.gameObject.CompareTag("Interactable"))
             {
-                _interactable = other.GetComponent<IInteractable>();
+                InteractsGameObject.Add(other.gameObject);
             }
         }
 
@@ -263,7 +274,8 @@ namespace Julien.Script
         {
             if (other.gameObject.CompareTag("Interactable"))
             {
-                _interactable = null;
+                other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                InteractsGameObject.Remove(other.gameObject);
             }
         }
     }

@@ -1,6 +1,6 @@
-using Julien.Script;
+using UnityEngine;
 
-namespace Script
+namespace Julien.Script
 {
     public interface IInteractable
     {

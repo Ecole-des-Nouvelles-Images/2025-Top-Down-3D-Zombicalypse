@@ -1935,6 +1935,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7186925124097694812, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7208615373735821925, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
       propertyPath: m_Name
       value: TurelOnGround (1)
@@ -2194,6 +2198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7186925124097694812, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7208615373735821925, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
       propertyPath: m_Name
       value: TurelOnGround
