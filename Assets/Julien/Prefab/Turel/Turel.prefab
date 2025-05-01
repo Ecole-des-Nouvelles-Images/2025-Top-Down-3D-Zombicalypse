@@ -163,37 +163,6 @@ MonoBehaviour:
   m_Transforms:
   - {fileID: 5315754788530400657}
   - {fileID: 5879850559952377610}
---- !u!1 &1854410797321545820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4523985534769830431}
-  m_Layer: 3
-  m_Name: Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4523985534769830431
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854410797321545820}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.354, z: 0.886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 451738461268430222}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2120982612440274258
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +419,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: -5
   m_CollisionDetection: 0
 --- !u!1 &7711613031861213611
 GameObject:
@@ -639,7 +608,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3670030264623342975}
-  - {fileID: 4523985534769830431}
   - {fileID: 7629480888036252511}
   m_Father: {fileID: 5315754788530400657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

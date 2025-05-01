@@ -1,28 +1,40 @@
-using Julien.Script;
-using Script.Struc;
+using Julien.Script.Struc;
+using Script;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Script.Turel
+namespace Julien.Script.TurelScripts
 {
     public class TurelOnGround : MonoBehaviour, IInteractable
     {
-        public TurelWrap turelWrap;
+        public TurelWrap TurelWrap;
         private void Start()
         {
-            turelWrap.SetFirstData();
+            TurelWrap.SetFirstData();
             SetVisual();
         }
         public void Activate(Player player)
         {
+            Player P = player.GetComponent<Player>();
             Debug.Log("interact with Turel");
-            player.GetComponent<InventoryPlayer>().TookTurel(turelWrap, turelWrap.Turel.Visual);
-            player.GetComponent<Player>().handingObject.TurelMesh = turelWrap.Turel.Visual;
+            
+            player.GetComponent<InventoryPlayer>().TurelWrap = TurelWrap;
+            
+            P.handingObject.HandingWeapon.SetActive(false);
+            P.handingObject.TurelPrefab = TurelWrap.Turel.VisualHologram;
+
+            GameObject turelHologram = Instantiate(TurelWrap.Turel.VisualHologram, P.handingObject.HandingTurel.gameObject.transform.position, quaternion.identity, P.handingObject.HandingTurel.transform);
+            
+            P.SwitchInputHandler(1);
+            
+            
             Destroy(gameObject);
         }
         
         public void SetVisual()
         {
-            GameObject turel = Instantiate(turelWrap.Turel.Visual, transform.position, Quaternion.identity, transform);
+            GameObject turel = Instantiate(TurelWrap.Turel.Prefab, transform.position, Quaternion.identity, transform);
             turel.transform.localScale = new Vector3(0.4f,0.4f,0.4f);
         }
     }

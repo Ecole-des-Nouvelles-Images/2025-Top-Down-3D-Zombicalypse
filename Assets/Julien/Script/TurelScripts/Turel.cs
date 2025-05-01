@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using Julien.Script.Struc;
+using Julien.Script.TurelScripts.State;
 using Script.Data.TurellData;
 using Script.Turel.State;
 using UnityEngine;
@@ -13,7 +15,9 @@ namespace Julien.Script.TurelScripts
         public TurelData TurelType;
         public TurelState CurrentStat;
 
-        [Header("Data")]
+        [Header("Data")] 
+        
+        public TurelWrap TurelWrap;
         
         public int CurrentAmmo;
         public float Damage;
@@ -127,13 +131,6 @@ namespace Julien.Script.TurelScripts
         public void Die()
         {
             Destroy(gameObject);
-        }
-
-        public void Drop()
-        {
-            Debug.Log("Drop la tourelle");
-            _rigidbody.useGravity = true;
-            _rigidbody.constraints = ~RigidbodyConstraints.FreezePositionY;
         }
     }
 }

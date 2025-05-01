@@ -2,7 +2,7 @@ using System;
 using Script.Data.TurellData;
 using UnityEngine;
 
-namespace Script.Struc
+namespace Julien.Script.Struc
 {
     [Serializable]
     public struct TurelWrap

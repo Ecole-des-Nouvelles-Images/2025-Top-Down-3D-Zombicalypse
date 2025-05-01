@@ -1,11 +1,11 @@
-using System;
-using Julien.Script;
+using Julien.Script.Struc;
+using Script;
 using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Script
+namespace Julien.Script
 {
     
     public class InventoryPlayer : MonoBehaviour
@@ -15,7 +15,7 @@ namespace Script
          public WeaponWrap[] StrucWeapons;
          public int indexWeapon;
 
-         public TurelWrap _TurelWrap;
+         public TurelWrap TurelWrap;
          
          [FormerlySerializedAs("_weaponHanding")]
          [Header("Ref script")]
@@ -32,7 +32,7 @@ namespace Script
                     StrucWeapons[i].SetFirstData(); 
                 }
             }
-            handingObject.SwitchWeapon(handingObject.transform);
+            handingObject.SwitchWeapon();
             equipedWeaponWrap = StrucWeapons[0];
         }
 
@@ -55,7 +55,7 @@ namespace Script
                 if (StrucWeapons[i].Weapon != null)
                 {
                     equipedWeaponWrap = StrucWeapons[i];
-                    handingObject.SwitchWeapon(handingObject.transform);
+                    handingObject.SwitchWeapon();
                     indexWeapon = i;
                 }
             }
@@ -72,14 +72,6 @@ namespace Script
                     Debug.Log(" met l'arme dans sont inventaire");
                 }
             }
-        }
-
-        public void TookTurel(TurelWrap turelWrap, GameObject turelVisual)
-        {
-            _TurelWrap = turelWrap;
-            _player.SwitchInputHandler(1);
-            GameObject turel = Instantiate(turelVisual, handingObject.transform.position, Quaternion.identity, handingObject.transform);
-            turel.GetComponent<BoxCollider>().enabled = false;
         }
 
         public void DropWeapon(GameObject dropPrefab)
@@ -104,6 +96,11 @@ namespace Script
                 AutomaticSwitch();
                 Debug.Log("DropWeapon"); 
             }
+        }
+
+        public void SetDownTurel()
+        {
+            GameObject turel = Instantiate(TurelWrap.Turel.Prefab, handingObject.HandingTurel.transform.GetChild(0).position, handingObject.HandingTurel.transform.GetChild(0).rotation);
             
         }
     }

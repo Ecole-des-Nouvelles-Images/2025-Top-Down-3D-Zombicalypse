@@ -21,4 +21,5 @@ MonoBehaviour:
   MaxHealth: 50
   BulletRange: 2
   AmmoType: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
-  Visual: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
+  Prefab: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
+  VisualHologram: {fileID: 5071826242273263616, guid: d28215e190c9ac84cb9c7bde4ee2eab2, type: 3}

@@ -1,6 +1,7 @@
+using Julien.Script.TurelScripts.State;
 using Script.Turel.State;
 
-namespace Script.Turel
+namespace Julien.Script.TurelScripts
 {
     public class TurelNormal : Julien.Script.TurelScripts.Turel
     {

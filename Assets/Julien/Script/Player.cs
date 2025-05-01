@@ -76,7 +76,7 @@ namespace Julien.Script
         {
             _inventory = gameObject.GetComponent<InventoryPlayer>();
             DisplayData();
-            handingObject.SwitchWeapon(handingObject.transform);
+            handingObject.SwitchWeapon();
             _inventory.AutomaticSwitch();
             _gameManager = GameObject.FindWithTag("GameManager");
             gameObject.GetComponent<PlayerInputHandlerTurel>().enabled = true;
@@ -167,7 +167,7 @@ namespace Julien.Script
         {
             _inventory.Switch();
             StopCoroutine("ReloadDelay");
-            handingObject.SwitchWeapon(handingObject.transform);
+            handingObject.SwitchWeapon();
             _isReloading = false;
         }
         
@@ -179,6 +179,11 @@ namespace Julien.Script
         public void DropWeapon()
         {
             _inventory.DropWeapon(_dropPrefab);
+        }
+
+        public void DropTurel()
+        {
+            _inventory.SetDownTurel();
         }
         
         // Interagir
@@ -198,17 +203,13 @@ namespace Julien.Script
             Debug.Log(PlayerIndex);
         }
 
-        public void SetDownTurel()
+        public void RotateTurel(float rotateValue)
         {
-            if (_inventory._TurelWrap.Turel)
-            {
-                if (handingObject.TurelMesh.GetComponent<Turel>().CanSetDown)
-                {
-                    handingObject.TurelMesh.GetComponent<Turel>().Drop();
-                }
-            }
+            Debug.Log(rotateValue);
+            GameObject turelHologram = handingObject.HandingTurel.transform.GetChild(0).gameObject;
+            turelHologram.transform.Rotate(Vector3.up * (rotateValue * 80 * Time.deltaTime));
         }
-
+        
         public void SwitchInputHandler(int index)
         {
             foreach (MonoBehaviour component in Inputhandlers)

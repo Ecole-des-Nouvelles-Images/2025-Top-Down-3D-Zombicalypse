@@ -85,6 +85,15 @@
                     "processors": "StickDeadzone(min=0.9,max=0.925)",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "RotateTurel",
+                    "type": "Value",
+                    "id": "8d33aef0-f612-4639-8c32-e16fdab27f18",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -186,6 +195,39 @@
                     "action": "PutTurel",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Left Right",
+                    "id": "30cf2b81-193e-43f7-b05c-fd9d4dc66696",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateTurel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "aa910ef7-e751-4a21-83e4-d258221ee3e4",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateTurel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "dfbf8838-0460-4151-bdb8-67a37b9957be",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateTurel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

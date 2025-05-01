@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Script.Data.TurellData
 {
@@ -14,6 +15,7 @@ namespace Script.Data.TurellData
         public float MaxHealth;
         public float BulletRange;
         public GameObject AmmoType;
-        public GameObject Visual;
+        public GameObject Prefab;
+        public GameObject VisualHologram;
     }
 }

@@ -12,6 +12,9 @@ namespace Script.Input
         public static event Action<bool> OnInputDeviceChanged;
         
         private Player _player;
+
+        private bool _isRotating;
+       [SerializeField] private float RotateValue;
         private void Awake()
         {
             _playerInput = GetComponent<PlayerInput>();
@@ -22,7 +25,10 @@ namespace Script.Input
         {
             InputSystem.onDeviceChange += OnDeviceChange;
             
-            _playerInput.actions["PutTurel"].performed += PutTurel;
+            _playerInput.actions["PutTurel"].performed += OnSetDownTurel;
+
+            _playerInput.actions["RotateTurel"].performed += OnRotateTurel;
+            _playerInput.actions["RotateTurel"].canceled += OnStopRotateTurel;
             
             _playerInput.actions["Move"].performed += OnMove;
             _playerInput.actions["Move"].canceled += OnMove;
@@ -38,7 +44,10 @@ namespace Script.Input
         {
             InputSystem.onDeviceChange -= OnDeviceChange;
             
-            _playerInput.actions["PutTurel"].performed -= PutTurel;
+            _playerInput.actions["PutTurel"].performed -= OnSetDownTurel;
+            
+            _playerInput.actions["RotateTurel"].performed -= OnRotateTurel;
+            _playerInput.actions["RotateTurel"].canceled -= OnStopRotateTurel;
             
             _playerInput.actions["Move"].performed -= OnMove;
             _playerInput.actions["Move"].canceled -= OnMove;
@@ -46,7 +55,15 @@ namespace Script.Input
             _playerInput.actions["Aim"].performed -= OnAim;
             _playerInput.actions["Aim"].canceled -= OnAim;
         }
-    
+
+        private void Update()
+        {
+            if (_isRotating)
+            {
+                _player.RotateTurel(RotateValue);      
+            }
+        }
+
         private void OnDeviceChange(InputDevice device, InputDeviceChange change)
         {
             if (change == InputDeviceChange.Added || change == InputDeviceChange.Removed)
@@ -75,9 +92,18 @@ namespace Script.Input
             _player.Aim(context.ReadValue<Vector2>());
         }
 
-        private void PutTurel(InputAction.CallbackContext context)
+        private void OnRotateTurel(InputAction.CallbackContext context)
         {
-            _player.SetDownTurel();
+            _isRotating = true;
+            RotateValue = context.ReadValue<float>();
+        }
+        private void OnStopRotateTurel(InputAction.CallbackContext context)
+        {
+            _isRotating = false;
+        }
+        private void OnSetDownTurel(InputAction.CallbackContext context)
+        {
+            _player.DropTurel();
         }
     }
 }
