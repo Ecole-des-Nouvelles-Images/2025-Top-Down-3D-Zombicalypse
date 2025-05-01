@@ -8,6 +8,7 @@ namespace Script.Data.TurellData
     {
         public int MaxAmmo;
         public float Damage;
+        public float MaxFireRate;
         public float FireRate;
         public float Precision;
         public float Range;
@@ -16,6 +17,7 @@ namespace Script.Data.TurellData
         public float BulletRange;
         public GameObject AmmoType;
         public GameObject Prefab;
+        public GameObject OnGroundPrefab;
         public GameObject VisualHologram;
     }
 }

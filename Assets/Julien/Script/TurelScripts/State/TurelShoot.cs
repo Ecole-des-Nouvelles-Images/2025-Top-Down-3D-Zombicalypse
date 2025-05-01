@@ -1,6 +1,8 @@
+using Script;
+using Script.Turel.State;
 using UnityEngine;
 
-namespace Script.Turel.State
+namespace Julien.Script.TurelScripts.State
 {
     public class TurelShoot : TurelState
     {
@@ -12,8 +14,8 @@ namespace Script.Turel.State
                 turel.AimTarget.transform.position = turel.Target.transform.position;
             }
             
-            turel.FireRate -= Time.deltaTime;
-            if (turel.FireRate <= 0)
+            turel.TurelWrap.FireRate -= Time.deltaTime;
+            if (turel.TurelWrap.FireRate <= 0)
             {
                 Shoot(turel);
             }
@@ -23,9 +25,9 @@ namespace Script.Turel.State
         {
             Debug.Log("Shoot");
             GameObject bullet = Instantiate(turel.TurelType.AmmoType, turel.SpawnBullet.transform.position, turel.TurelRenderer.transform.rotation);
-            bullet.GetComponent<Bullet>().SetBulletParameter(turel.BulletSpeed, turel.Damage, turel.Precision, turel.BulletRange);
+            bullet.GetComponent<Bullet>().SetBulletParameter(turel.TurelWrap.BulletSpeed, turel.TurelWrap.Damage, turel.TurelWrap.Precision, turel.TurelWrap.BulletRange);
             bullet.GetComponent<Bullet>().Impulse();
-            turel.FireRate = turel.MaxFireRate;
+            turel.TurelWrap.FireRate = turel.TurelWrap.MaxFireRate;
         }
     }
 }

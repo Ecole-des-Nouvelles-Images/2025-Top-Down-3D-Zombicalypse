@@ -34,8 +34,7 @@ namespace Julien.Script.TurelScripts
         
         public void SetVisual()
         {
-            GameObject turel = Instantiate(TurelWrap.Turel.Prefab, transform.position, Quaternion.identity, transform);
-            turel.transform.localScale = new Vector3(0.4f,0.4f,0.4f);
+            GameObject turel = Instantiate(TurelWrap.Turel.OnGroundPrefab, transform.position, Quaternion.identity, transform);
         }
     }
 }

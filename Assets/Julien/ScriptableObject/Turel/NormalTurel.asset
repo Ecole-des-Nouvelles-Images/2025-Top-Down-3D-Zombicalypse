@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAmmo: 50
   Damage: 10
+  MaxFireRate: 0.2
   FireRate: 0.05
   Precision: 0.2
   Range: 10
@@ -22,4 +23,5 @@ MonoBehaviour:
   BulletRange: 2
   AmmoType: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
   Prefab: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
+  OnGroundPrefab: {fileID: 7901138809255134092, guid: 3f0e9e42db07aa249a71cb874ac2b8a4, type: 3}
   VisualHologram: {fileID: 5071826242273263616, guid: d28215e190c9ac84cb9c7bde4ee2eab2, type: 3}

@@ -1,4 +1,5 @@
 using Julien.Script.Struc;
+using Julien.Script.TurelScripts;
 using Script;
 using Script.Struc;
 using Unity.Mathematics;
@@ -101,7 +102,11 @@ namespace Julien.Script
         public void SetDownTurel()
         {
             GameObject turel = Instantiate(TurelWrap.Turel.Prefab, handingObject.HandingTurel.transform.GetChild(0).position, handingObject.HandingTurel.transform.GetChild(0).rotation);
+            turel.GetComponent<Turel>().SetParameters(TurelWrap);
+            Destroy(handingObject.HandingTurel.transform.GetChild(0).gameObject);
             
+            handingObject.HandingWeapon.SetActive(true);
+            _player.SwitchInputHandler(0);
         }
     }
 }

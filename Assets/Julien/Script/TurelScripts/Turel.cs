@@ -19,16 +19,16 @@ namespace Julien.Script.TurelScripts
         
         public TurelWrap TurelWrap;
         
-        public int CurrentAmmo;
-        public float Damage;
-        public float MaxFireRate;
-        public float FireRate;
-        public float Precision;
-        public float Range;
-        public float BulletSpeed;
-        public float BulletRange;
-        [SerializeField] private float _health;
-        public GameObject AmmoType;
+        // public int CurrentAmmo;
+        // public float Damage;
+        // public float MaxFireRate;
+        // public float FireRate;
+        // public float Precision;
+        // public float Range;
+        // public float BulletSpeed;
+        // public float BulletRange;
+        // [SerializeField] private float _health;
+        //public GameObject AmmoType;
 
         [Header("IA")] 
         
@@ -45,12 +45,12 @@ namespace Julien.Script.TurelScripts
         public bool HaveTarget;
         public float Health
         {
-            get => _health;
+            get => TurelWrap.Health;
             
             set
             {
-                _health = value;
-                if (_health <= 0)
+                TurelWrap.Health = value;
+                if (TurelWrap.Health <= 0)
                 {
                     Die();
                 }
@@ -61,7 +61,6 @@ namespace Julien.Script.TurelScripts
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            SetData();
             SetInfo();
             CurrentStat = new TurelShearch();
         }
@@ -79,24 +78,10 @@ namespace Julien.Script.TurelScripts
             if (Targets.Count > 0) Target = Targets[0];
             HaveTarget = Target;
         }
-
-        public void SetData()
-        {
-            CurrentAmmo = TurelType.MaxAmmo;
-            Damage = TurelType.Damage;
-            MaxFireRate = TurelType.FireRate;
-            FireRate = TurelType.FireRate;
-            Precision = TurelType.Precision;
-            Range = TurelType.Range;
-            Health = TurelType.MaxHealth; 
-            AmmoType = TurelType.AmmoType;
-            BulletSpeed = TurelType.BulletSpeed;
-            BulletRange = TurelType.BulletRange;
-        }
         public void SetInfo()
         {
             _sphereTriggerCollider = gameObject.GetComponent<SphereCollider>();
-            _sphereTriggerCollider.radius = Range;
+            _sphereTriggerCollider.radius = TurelWrap.Range;
         }
         
         private void OnTriggerEnter(Collider other)
@@ -131,6 +116,11 @@ namespace Julien.Script.TurelScripts
         public void Die()
         {
             Destroy(gameObject);
+        }
+
+        public void SetParameters(TurelWrap turelWrap)
+        {
+            TurelWrap = turelWrap;
         }
     }
 }
