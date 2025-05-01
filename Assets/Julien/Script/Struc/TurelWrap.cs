@@ -35,5 +35,12 @@ namespace Julien.Script.Struc
             Health = Turel.MaxHealth;
             AmmoType = Turel.AmmoType;
         }
+
+        public void AddBonus(UpgraderWrap BonusTurel)
+        {
+            Damage += BonusTurel.AddDamage;
+            FireRate -= BonusTurel.AddFireRate;
+            MaxHEalth += BonusTurel.AddMaxHealth;
+        }
     }
 }

@@ -22,6 +22,8 @@ namespace Julien.Script
          
          [SerializeField] private Player _player;
          [SerializeField] private HandingObject handingObject;
+        
+         
         private void Start()
         {
             _player = GetComponent<Player>();

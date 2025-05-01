@@ -18,17 +18,6 @@ namespace Julien.Script.TurelScripts
         [Header("Data")] 
         
         public TurelWrap TurelWrap;
-        
-        // public int CurrentAmmo;
-        // public float Damage;
-        // public float MaxFireRate;
-        // public float FireRate;
-        // public float Precision;
-        // public float Range;
-        // public float BulletSpeed;
-        // public float BulletRange;
-        // [SerializeField] private float _health;
-        //public GameObject AmmoType;
 
         [Header("IA")] 
         

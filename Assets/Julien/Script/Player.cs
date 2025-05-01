@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
 using Script;
 using Script.Data.PlayerData;
@@ -58,6 +59,8 @@ namespace Julien.Script
         public HandingObject handingObject;
         [SerializeField] private GameObject _dropPrefab;
 
+        [SerializeField] private GameObject _currentAimTurel;
+
         [Header("References")] 
         
         [SerializeField] private GameObject _gameManager;
@@ -94,6 +97,21 @@ namespace Julien.Script
             if (_isHolding)
             {
                 Fire(_isHolding);
+            }
+
+            if (_inventory.UpgraderWrap.Upgrader)
+            {
+                RaycastHit hit;
+                
+                Debug.DrawRay(_playerRenderer.transform.position, _playerRenderer.transform.forward * 2, Color.green, 1f);
+                if (Physics.Raycast(_playerRenderer.transform.position, _playerRenderer.transform.forward, out hit, 10))
+                {
+                    if (hit.transform.CompareTag("Turel"))
+                    {
+                        _currentAimTurel = hit.transform.gameObject;
+                        Debug.Log("Touche une tourelle");
+                    }
+                }
             }
         }
         
@@ -206,24 +224,21 @@ namespace Julien.Script
         {
             Debug.Log(rotateValue);
             GameObject turelHologram = handingObject.HandingTurel.transform.GetChild(0).gameObject;
-            turelHologram.transform.Rotate(Vector3.up * (rotateValue * 80 * Time.deltaTime));
+            turelHologram.transform.Rotate(Vector3.up * (rotateValue * 150 * Time.deltaTime));
         }
 
         public void PutBonus()
         {
             Debug.Log("PutBonus");
 
-            RaycastHit hit;
-            
-            Debug.DrawRay(_playerRenderer.transform.position, _playerRenderer.transform.forward * 2, Color.green, 1f);
-            if (Physics.Raycast(_playerRenderer.transform.position, _playerRenderer.transform.forward, out hit, 10))
+            if (_currentAimTurel)
             {
-                if (hit.transform.CompareTag("Turel"))
-                {
-                    Debug.Log("Touche une tourelle");
-                }
+                _currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(_inventory.UpgraderWrap);
+                _inventory.UpgraderWrap = new UpgraderWrap();
+                Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
+                handingObject.HandingWeapon.SetActive(true);
+                SwitchInputHandler(0);
             }
-            
         }
         
         public void SwitchInputHandler(int index)
