@@ -1,4 +1,5 @@
 using System;
+using Julien.Script;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,7 +22,7 @@ namespace Script.Input
         {
             InputSystem.onDeviceChange += OnDeviceChange;
             
-            _playerInput.actions["PutTurel"].started += PutTurel;
+            _playerInput.actions["PutTurel"].performed += PutTurel;
             
             _playerInput.actions["Move"].performed += OnMove;
             _playerInput.actions["Move"].canceled += OnMove;
@@ -37,7 +38,7 @@ namespace Script.Input
         {
             InputSystem.onDeviceChange -= OnDeviceChange;
             
-            _playerInput.actions["PutTurel"].started -= PutTurel;
+            _playerInput.actions["PutTurel"].performed -= PutTurel;
             
             _playerInput.actions["Move"].performed -= OnMove;
             _playerInput.actions["Move"].canceled -= OnMove;
@@ -76,7 +77,7 @@ namespace Script.Input
 
         private void PutTurel(InputAction.CallbackContext context)
         {
-            _player.PutTurel();
+            _player.SetDownTurel();
         }
     }
 }

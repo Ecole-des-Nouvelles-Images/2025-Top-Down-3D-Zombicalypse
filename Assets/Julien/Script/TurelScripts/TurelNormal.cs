@@ -2,7 +2,7 @@ using Script.Turel.State;
 
 namespace Script.Turel
 {
-    public class TurelNormal : Turel
+    public class TurelNormal : Julien.Script.TurelScripts.Turel
     {
         private void Update()
         {

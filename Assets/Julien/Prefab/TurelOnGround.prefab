@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c4a10088cf91048b27c09978d20c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurelWrap:
-    Turel: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
+  turelWrap:
+    Turel: {fileID: 0}
     MaxAmmo: 0
     Damage: 0
     FireRate: 0

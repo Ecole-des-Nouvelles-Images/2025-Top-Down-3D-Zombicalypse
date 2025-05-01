@@ -1,3 +1,4 @@
+using Julien.Script;
 using UnityEngine;
 
 namespace Script.ZombieScript.States.Kamaikaz

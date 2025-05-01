@@ -1,15 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Script.TurelScripts;
+using Script;
 using Script.Data.PlayerData;
 using Script.Input;
-using Script.Multiplayer;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-namespace Script
+namespace Julien.Script
 {
     public class Player : MonoBehaviour
     {
@@ -200,11 +198,14 @@ namespace Script
             Debug.Log(PlayerIndex);
         }
 
-        public void PutTurel()
+        public void SetDownTurel()
         {
             if (_inventory._TurelWrap.Turel)
             {
-                Debug.Log("PutTurel");
+                if (handingObject.TurelMesh.GetComponent<Turel>().CanSetDown)
+                {
+                    handingObject.TurelMesh.GetComponent<Turel>().Drop();
+                }
             }
         }
 

@@ -4,7 +4,7 @@ using Script.Data.TurellData;
 using Script.Turel.State;
 using UnityEngine;
 
-namespace Script.Turel
+namespace Julien.Script.TurelScripts
 {
     public class Turel : MonoBehaviour
     {
@@ -33,9 +33,10 @@ namespace Script.Turel
         public GameObject AimTarget;
         public List<GameObject> Targets = new List<GameObject>();
         public GameObject Target;
+
+        [Header("Conditions")] 
         
-        [Header("Conditions")]
-        
+        public bool CanSetDown;
         public bool CanFire;
         public bool HaveTarget;
         public float Health
@@ -126,6 +127,13 @@ namespace Script.Turel
         public void Die()
         {
             Destroy(gameObject);
+        }
+
+        public void Drop()
+        {
+            Debug.Log("Drop la tourelle");
+            _rigidbody.useGravity = true;
+            _rigidbody.constraints = ~RigidbodyConstraints.FreezePositionY;
         }
     }
 }

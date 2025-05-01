@@ -1,3 +1,5 @@
+using Julien.Script;
+
 namespace Script
 {
     public interface IInteractable

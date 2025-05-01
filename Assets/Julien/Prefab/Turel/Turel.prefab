@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd782cfbdb0f3c9438bb470214d71636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 3060310312402717317}
   TurelType: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
   CurrentStat: {fileID: 0}
   CurrentAmmo: 0
@@ -379,6 +379,7 @@ MonoBehaviour:
   AimTarget: {fileID: 5047398084613149821}
   Targets: []
   Target: {fileID: 0}
+  CanSetDown: 1
   CanFire: 0
   HaveTarget: 0
   _sphereTriggerCollider: {fileID: 0}
@@ -446,10 +447,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &7711613031861213611
 GameObject:

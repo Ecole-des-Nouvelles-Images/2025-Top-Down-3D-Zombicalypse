@@ -4,7 +4,7 @@ namespace Script.Turel.State
 {
     public class TurelShoot : TurelState
     {
-        public override void Execute(Turel turel)
+        public override void Execute(Julien.Script.TurelScripts.Turel turel)
         {
             Debug.Log("Aim");
             if (turel.Target != null)
@@ -19,7 +19,7 @@ namespace Script.Turel.State
             }
         }
 
-        public void Shoot(Turel turel)
+        public void Shoot(Julien.Script.TurelScripts.Turel turel)
         {
             Debug.Log("Shoot");
             GameObject bullet = Instantiate(turel.TurelType.AmmoType, turel.SpawnBullet.transform.position, turel.TurelRenderer.transform.rotation);

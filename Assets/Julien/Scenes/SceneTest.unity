@@ -127,6 +127,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1738255326887202812, guid: 558e4628af26a84488944124055862f8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738255326887202812, guid: 558e4628af26a84488944124055862f8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060310312402717317, guid: 558e4628af26a84488944124055862f8, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
       propertyPath: m_Name
       value: Turel (1)
@@ -174,7 +186,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4149206694819023993, guid: 558e4628af26a84488944124055862f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2028579622}
   m_SourcePrefab: {fileID: 100100000, guid: 558e4628af26a84488944124055862f8, type: 3}
 --- !u!4 &117516827 stripped
 Transform:
@@ -1830,6 +1845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5199529125109664327, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1878,11 +1897,35 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6595909471570855872, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+--- !u!1 &2028579620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4149206694819023993, guid: 558e4628af26a84488944124055862f8, type: 3}
+  m_PrefabInstance: {fileID: 76879569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028579622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028579620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26ce571184c9c142bdedeee6a24f9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsCollid: 0
+  _cantCollidWith:
+  - Player
 --- !u!1001 &1034333255700356938
 PrefabInstance:
   m_ObjectHideFlags: 0
