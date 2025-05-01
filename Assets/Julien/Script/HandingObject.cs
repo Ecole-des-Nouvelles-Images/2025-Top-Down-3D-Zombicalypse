@@ -10,10 +10,12 @@ namespace Julien.Script
 
         public GameObject HandingWeapon;
         public GameObject HandingTurel;
+        public GameObject HandingBonus;
         
         [SerializeField] private SetSpawnBulletPosition _setSpawnBulletPosition;
         [SerializeField] private GameObject _weaponMesh;
         public GameObject TurelPrefab;
+        public GameObject BonusPrefab;
         
         public void SwitchWeapon()
         { 

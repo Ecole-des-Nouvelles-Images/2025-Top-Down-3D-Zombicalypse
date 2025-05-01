@@ -63,6 +63,7 @@ Transform:
   m_Children:
   - {fileID: 4788732013258505172}
   - {fileID: 2306394849977026675}
+  - {fileID: 7722865401416756814}
   m_Father: {fileID: 3669403566939113269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7791655236001309451
@@ -80,9 +81,11 @@ MonoBehaviour:
   inventory: {fileID: 2854704983080223569}
   HandingWeapon: {fileID: 8102002826871880862}
   HandingTurel: {fileID: 60933250256397019}
+  HandingBonus: {fileID: 6115931542095130803}
   _setSpawnBulletPosition: {fileID: 1081197973007504128}
   _weaponMesh: {fileID: 0}
-  TurelMesh: {fileID: 0}
+  TurelPrefab: {fileID: 0}
+  BonusPrefab: {fileID: 0}
 --- !u!1 &2039706244962328061
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +219,7 @@ GameObject:
   - component: {fileID: 2854704983080223569}
   - component: {fileID: 5683671012514460301}
   - component: {fileID: 3680572866832395275}
+  - component: {fileID: 5168746040384885885}
   - component: {fileID: 2628128380907278392}
   - component: {fileID: 5833013581066134349}
   - component: {fileID: 7981929284997595972}
@@ -284,6 +288,7 @@ MonoBehaviour:
   Inputhandlers:
   - {fileID: 5683671012514460301}
   - {fileID: 3680572866832395275}
+  - {fileID: 5168746040384885885}
   PlayerIndex: 0
   PlayerData: {fileID: 11400000, guid: 2b685de70f5ee8f49af4b40bd1cbc32a, type: 2}
   _health: 0
@@ -321,15 +326,24 @@ MonoBehaviour:
     CurrentAmmo: 0
     CurrentMagazin: 0
   indexWeapon: 0
-  _TurelWrap:
+  TurelWrap:
     Turel: {fileID: 0}
     MaxAmmo: 0
+    BulletSpeed: 0
+    BulletRange: 0
     Damage: 0
+    MaxFireRate: 0
     FireRate: 0
     Precision: 0
     Range: 0
     MaxHEalth: 0
+    Health: 0
     AmmoType: {fileID: 0}
+  UpgraderWrap:
+    Upgrader: {fileID: 0}
+    AddDamage: 0
+    AddFireRate: 0
+    AddMaxHealth: 0
   _player: {fileID: 0}
   handingObject: {fileID: 7791655236001309451}
 --- !u!114 &5683671012514460301
@@ -357,6 +371,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8099b308ac60749aef34245e2208a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RotateValue: 0
+--- !u!114 &5168746040384885885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2902083763329592815}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea51f766df42d724fbb79627970ea4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateValue: 0
 --- !u!114 &2628128380907278392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +639,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f7b6dcd47fef34495ddd3f6c3247dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6115931542095130803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7722865401416756814}
+  m_Layer: 6
+  m_Name: HandingBonus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7722865401416756814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115931542095130803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3136506976543933348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6813081670958471992
 GameObject:
   m_ObjectHideFlags: 0

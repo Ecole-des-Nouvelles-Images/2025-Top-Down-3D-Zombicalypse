@@ -61,10 +61,9 @@ namespace Julien.Script
         [Header("References")] 
         
         [SerializeField] private GameObject _gameManager;
-        
+        [SerializeField] private GameObject _playerRenderer;
         private Vector2 _move;
         private InventoryPlayer _inventory;
-        
         private IInteractable _interactable;
         
         private void Awake()
@@ -208,6 +207,23 @@ namespace Julien.Script
             Debug.Log(rotateValue);
             GameObject turelHologram = handingObject.HandingTurel.transform.GetChild(0).gameObject;
             turelHologram.transform.Rotate(Vector3.up * (rotateValue * 80 * Time.deltaTime));
+        }
+
+        public void PutBonus()
+        {
+            Debug.Log("PutBonus");
+
+            RaycastHit hit;
+            
+            Debug.DrawRay(_playerRenderer.transform.position, _playerRenderer.transform.forward * 2, Color.green, 1f);
+            if (Physics.Raycast(_playerRenderer.transform.position, _playerRenderer.transform.forward, out hit, 10))
+            {
+                if (hit.transform.CompareTag("Turel"))
+                {
+                    Debug.Log("Touche une tourelle");
+                }
+            }
+            
         }
         
         public void SwitchInputHandler(int index)

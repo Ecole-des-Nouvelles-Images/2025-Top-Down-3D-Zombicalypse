@@ -4,21 +4,20 @@ using Script;
 using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Julien.Script
 {
     
     public class InventoryPlayer : MonoBehaviour
     {
-         [FormerlySerializedAs("equipedStructWeapon")] public WeaponWrap equipedWeaponWrap;
+         public WeaponWrap equipedWeaponWrap;
          
          public WeaponWrap[] StrucWeapons;
          public int indexWeapon;
 
          public TurelWrap TurelWrap;
+         public UpgraderWrap UpgraderWrap;
          
-         [FormerlySerializedAs("_weaponHanding")]
          [Header("Ref script")]
          
          [SerializeField] private Player _player;
@@ -107,6 +106,7 @@ namespace Julien.Script
             
             handingObject.HandingWeapon.SetActive(true);
             _player.SwitchInputHandler(0);
+            TurelWrap = new TurelWrap();
         }
     }
 }

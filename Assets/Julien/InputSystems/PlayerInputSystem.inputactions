@@ -88,12 +88,21 @@
                 },
                 {
                     "name": "RotateTurel",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "8d33aef0-f612-4639-8c32-e16fdab27f18",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "PutBonus",
+                    "type": "Button",
+                    "id": "7ecc8345-691c-4d11-8cfe-203e16b92a3a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -228,6 +237,17 @@
                     "action": "RotateTurel",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "cf4d54e7-8967-4104-a315-c63745f660a1",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "PutBonus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
