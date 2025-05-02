@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Script.Data.Upgrader
 {
@@ -10,5 +11,7 @@ namespace Julien.Script.Data.Upgrader
         public float AddDamage;
         public float AddFireRate;
         public float AddMaxHealth;
+        [FormerlySerializedAs("Range")] public float AddRange;
+        [FormerlySerializedAs("Distance")] public float AddDistance;
     }
 }

@@ -11,12 +11,16 @@ namespace Julien.Script.Struc
         public float AddDamage;
         public float AddFireRate;
         public float AddMaxHealth;
+        public float AddRange;
+        public float AddDistance;
 
         public void SetData()
         {
             AddDamage = Upgrader.AddDamage;
             AddFireRate = Upgrader.AddFireRate;
             AddMaxHealth = Upgrader.AddMaxHealth;
+            AddRange = Upgrader.AddRange;
+            AddDistance = Upgrader.AddDistance;
         }
     }
 }

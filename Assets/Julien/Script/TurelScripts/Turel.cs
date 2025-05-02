@@ -5,12 +5,14 @@ using Julien.Script.TurelScripts.State;
 using Script.Data.TurellData;
 using Script.Turel.State;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Script.TurelScripts
 {
     public class Turel : MonoBehaviour
     {
         [SerializeField] private Rigidbody _rigidbody;
+        [FormerlySerializedAs("_colliderTurel")] [SerializeField] private GameObject _AimCollider;
         
         public TurelData TurelType;
         public TurelState CurrentStat;
@@ -70,30 +72,6 @@ namespace Julien.Script.TurelScripts
         public void SetInfo()
         {
             _sphereTriggerCollider = gameObject.GetComponent<SphereCollider>();
-            _sphereTriggerCollider.radius = TurelWrap.Range;
-        }
-        
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Zombie"))
-            {
-                Debug.Log("add zombie");
-                Targets.Add(other.gameObject);
-                Target = Targets[0];
-            }
-        }
-
-        public void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag("Zombie"))
-            {
-                Target = null;
-                Targets.Remove(other.gameObject);
-                if (Targets.Count > 0)
-                {
-                    Target = Targets[0];
-                }
-            }
         }
         
         [ContextMenu("Take damage debug")]
@@ -110,6 +88,12 @@ namespace Julien.Script.TurelScripts
         public void SetParameters(TurelWrap turelWrap)
         {
             TurelWrap = turelWrap;
+            _AimCollider.gameObject.transform.localScale = new Vector3(turelWrap.Range, 1, turelWrap.Distance);
+        }
+        
+        public void UpdateInfo(UpgraderWrap turelWrap)
+        {
+            _AimCollider.transform.localScale += new Vector3(turelWrap.AddRange, 0, turelWrap.AddDistance);
         }
     }
 }

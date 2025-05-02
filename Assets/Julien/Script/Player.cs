@@ -184,14 +184,14 @@ namespace Julien.Script
             Debug.Log("Meurt");
         }
         
+        /// <summary>
+        /// Devra être mis dans l'inventory et serra appeler avec le input handler
+        /// </summary>
+        
         public void DropWeapon()
         {
             _inventory.DropWeapon(_dropPrefab);
         }
-        
-        /// <summary>
-        /// Devra être mis dans l'inventory et serra appeler avec le input handler
-        /// </summary>
         public void DropTurel()
         {
             _inventory.SetDownTurel();
@@ -204,6 +204,7 @@ namespace Julien.Script
             if (_currentAimTurel)
             {
                 _currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(_inventory.UpgraderWrap);
+                _currentAimTurel.GetComponent<Turel>().UpdateInfo(_inventory.UpgraderWrap);
                 _inventory.UpgraderWrap = new UpgraderWrap();
                 Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
                 handingObject.HandingWeapon.SetActive(true);
@@ -228,7 +229,6 @@ namespace Julien.Script
             _inventory.equipedWeaponWrap.CurrentMagazin--;
         }
         
-        // changer d'arme
         public void SwitchWeapon()
         {
             _inventory.Switch();

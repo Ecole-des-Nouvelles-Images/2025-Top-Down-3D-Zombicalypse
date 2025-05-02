@@ -12,6 +12,7 @@ namespace Script.Data.TurellData
         public float FireRate;
         public float Precision;
         public float Range;
+        public float Distance;
         public float BulletSpeed;
         public float MaxHealth;
         public float BulletRange;

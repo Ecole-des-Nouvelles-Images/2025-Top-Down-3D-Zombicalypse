@@ -17,6 +17,7 @@ namespace Julien.Script.Struc
         public float FireRate;
         public float Precision;
         public float Range;
+        public float Distance;
         public float MaxHEalth;
         public float Health;
         public GameObject AmmoType;
@@ -31,6 +32,7 @@ namespace Julien.Script.Struc
             FireRate = Turel.FireRate;
             Precision = Turel.Precision; 
             Range = Turel.Range;
+            Distance = Turel.Distance;
             MaxHEalth = Turel.MaxHealth;
             Health = Turel.MaxHealth;
             AmmoType = Turel.AmmoType;

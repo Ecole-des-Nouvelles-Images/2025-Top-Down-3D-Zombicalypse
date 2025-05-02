@@ -1,5 +1,6 @@
 using Julien.Script.TurelScripts.State;
 using Script.Turel.State;
+using UnityEngine;
 
 namespace Julien.Script.TurelScripts
 {
@@ -16,7 +17,7 @@ namespace Julien.Script.TurelScripts
                     CurrentStat = new TurelShoot();
                     break;
             }
-            
+            Debug.Log(CurrentStat);
             CurrentStat.Execute(this);
         }
     }

@@ -25,6 +25,7 @@ namespace Julien.Script.TurelScripts
             P.handingObject.TurelPrefab = TurelWrap.Turel.VisualHologram;
 
             GameObject turelHologram = Instantiate(TurelWrap.Turel.VisualHologram, P.handingObject.HandingTurel.gameObject.transform.position, quaternion.identity, P.handingObject.HandingTurel.transform);
+            turelHologram.GetComponent<HologramTurel>().TurelWrap = TurelWrap;
             
             P.SwitchInputHandler(1);
             
