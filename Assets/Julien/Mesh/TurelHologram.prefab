@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 827cd12f965f40d4786a14689566f8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanBeSetDoawn: 0
+  CanBeSetDoawn: 1
   _materials:
   - {fileID: 2100000, guid: 603dcd05ae4fabb45a0965e9360e234a, type: 2}
   - {fileID: 2100000, guid: d691766d0d28ee743a806ed2ca4f15c5, type: 2}
