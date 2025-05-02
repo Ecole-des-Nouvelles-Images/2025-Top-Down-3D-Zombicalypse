@@ -13,10 +13,12 @@ namespace Script.Input
         
         [SerializeField] private bool Holding;
         private Player _player;
+        private InventoryPlayer _inventory;
         private void Awake()
         {
             _playerInput = GetComponent<PlayerInput>();
             _player = GetComponent<Player>();
+            _inventory = GetComponent<InventoryPlayer>();
         }
 
         private void OnEnable()
@@ -95,7 +97,7 @@ namespace Script.Input
 
         private void OnSwitchWeapon(InputAction.CallbackContext context)
         {
-            _player.SwitchWeapon();
+            _inventory.SwitchWeapon();
         }
 
         private void OnMove(InputAction.CallbackContext context)
@@ -110,7 +112,7 @@ namespace Script.Input
 
         private void OnReload(InputAction.CallbackContext context)
         {
-            _player.Reload();
+            _inventory.Reload();
         }
 
         private void OnInteract(InputAction.CallbackContext context)
@@ -120,7 +122,7 @@ namespace Script.Input
 
         private void OnDrop(InputAction.CallbackContext context)
         {
-            _player.DropWeapon();
+            _inventory.DropWeapon();
         }
         
         private void OnOpenInventory(InputAction.CallbackContext context)

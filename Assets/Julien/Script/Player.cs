@@ -45,7 +45,7 @@ namespace Julien.Script
         
         [SerializeField] private GameObject _spawnBullet;
         [SerializeField] private bool _isHolding;
-        [SerializeField] private bool _isReloading;
+        [SerializeField] public bool isReloading;
         [SerializeField] private bool _canShoot;
         
         [Header("Movement")] 
@@ -59,7 +59,7 @@ namespace Julien.Script
         public HandingObject handingObject;
         [SerializeField] private GameObject _dropPrefab;
 
-        [SerializeField] private GameObject _currentAimTurel;
+        [SerializeField] public GameObject currentAimTurel;
 
         [Header("References")] 
         
@@ -109,13 +109,13 @@ namespace Julien.Script
                 {
                     if (hit.transform.CompareTag("Turel"))
                     {
-                        _currentAimTurel = hit.transform.gameObject;
+                        currentAimTurel = hit.transform.gameObject;
                         Debug.Log("Touche une tourelle");
                     }
                 }
                 else
                 {
-                    _currentAimTurel = null;
+                    currentAimTurel = null;
                 }
             }
 
@@ -158,7 +158,7 @@ namespace Julien.Script
         public void Fire(bool readValueAsButton)
         {
             _isHolding = readValueAsButton;
-            if (readValueAsButton && _canShoot && !_isReloading && _inventory.equipedWeaponWrap.CurrentAmmo - _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
+            if (readValueAsButton && _canShoot && !isReloading && _inventory.equipedWeaponWrap.CurrentAmmo - _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
             {
                 _inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform);
                 StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
@@ -188,54 +188,6 @@ namespace Julien.Script
         /// Devra être mis dans l'inventory et serra appeler avec le input handler
         /// </summary>
         
-        public void DropWeapon()
-        {
-            _inventory.DropWeapon(_dropPrefab);
-        }
-        public void DropTurel()
-        {
-            _inventory.SetDownTurel();
-        }
-        
-        public void PutBonus()
-        {
-            Debug.Log("PutBonus");
-
-            if (_currentAimTurel)
-            {
-                _currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(_inventory.UpgraderWrap);
-                _currentAimTurel.GetComponent<Turel>().UpdateInfo(_inventory.UpgraderWrap);
-                _inventory.UpgraderWrap = new UpgraderWrap();
-                Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
-                handingObject.HandingWeapon.SetActive(true);
-                SwitchInputHandler(0);
-            }
-        }
-        
-        public void Reload()
-        {
-            if (_inventory.equipedWeaponWrap.CurrentMagazin - 1 !>= 0 && _inventory.equipedWeaponWrap.CurrentAmmo != _inventory.equipedWeaponWrap.Weapon.MaxAmmo && !_isReloading)
-            {
-                StartCoroutine("ReloadDelay", _inventory.equipedWeaponWrap.Weapon.ReloadTime);
-            }
-        }
-        
-        private IEnumerator ReloadDelay(float timer)
-        {
-            _isReloading = true;
-            yield return new WaitForSeconds(timer);
-            _isReloading = false;
-            _inventory.equipedWeaponWrap.CurrentAmmo = _inventory.equipedWeaponWrap.Weapon.MaxAmmo;
-            _inventory.equipedWeaponWrap.CurrentMagazin--;
-        }
-        
-        public void SwitchWeapon()
-        {
-            _inventory.Switch();
-            StopCoroutine("ReloadDelay");
-            handingObject.SwitchWeapon();
-            _isReloading = false;
-        }
         /// <summary>
         /// Devra être mis dans l'inventory et serra appeler avec le input handler
         /// </summary>

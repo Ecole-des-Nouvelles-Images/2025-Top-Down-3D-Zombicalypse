@@ -12,6 +12,7 @@ namespace Script.Input
         public static event Action<bool> OnInputDeviceChanged;
         
         private Player _player;
+        private InventoryPlayer _inventory;
 
         private bool _isRotating;
        [SerializeField] private float RotateValue;
@@ -19,6 +20,7 @@ namespace Script.Input
         {
             _playerInput = GetComponent<PlayerInput>();
             _player = GetComponent<Player>();
+            _inventory = GetComponent<InventoryPlayer>();
         }
 
         private void OnEnable()
@@ -103,7 +105,7 @@ namespace Script.Input
         }
         private void OnSetDownTurel(InputAction.CallbackContext context)
         {
-            _player.DropTurel();
+            _inventory.SetDownTurel();
         }
     }
 }

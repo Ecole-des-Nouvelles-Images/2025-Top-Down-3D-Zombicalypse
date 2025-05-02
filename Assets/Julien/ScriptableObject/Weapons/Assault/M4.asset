@@ -23,5 +23,5 @@ MonoBehaviour:
   LethalRangeLetal: 1.7
   MaxAmmo: 30
   MaxMagazine: 7
-  ReloadTime: 4
+  ReloadTime: 1
   RemoveAmmoParFire: 1

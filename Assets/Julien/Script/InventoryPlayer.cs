@@ -1,3 +1,4 @@
+using System.Collections;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
 using Script;
@@ -24,6 +25,8 @@ namespace Julien.Script
          [SerializeField] private Player _player;
          [SerializeField] private HandingObject handingObject;
         
+         [Header("Prefab")]
+         [SerializeField] private GameObject _weaponPrefab;
          
         private void Start()
         {
@@ -37,6 +40,23 @@ namespace Julien.Script
             }
             handingObject.SwitchWeapon();
             equipedWeaponWrap = StrucWeapons[0];
+        }
+        
+        public void Reload()
+        {
+            if (equipedWeaponWrap.CurrentMagazin - 1 !>= 0 && equipedWeaponWrap.CurrentAmmo != equipedWeaponWrap.Weapon.MaxAmmo && ! _player.isReloading)
+            {
+                StartCoroutine("ReloadDelay", equipedWeaponWrap.Weapon.ReloadTime);
+            }
+        }
+        
+        private IEnumerator ReloadDelay(float timer)
+        {
+            _player.isReloading = true;
+            yield return new WaitForSeconds(timer);
+            _player.isReloading = false;
+            equipedWeaponWrap.CurrentAmmo = equipedWeaponWrap.Weapon.MaxAmmo;
+            equipedWeaponWrap.CurrentMagazin--;
         }
 
         public void Switch()
@@ -63,6 +83,14 @@ namespace Julien.Script
                 }
             }
         }
+        
+        public void SwitchWeapon()
+        {
+            Switch();
+            StopCoroutine("ReloadDelay");
+            handingObject.SwitchWeapon();
+            _player.isReloading = false;
+        }
  
         public void TookWeapon(WeaponWrap weaponWrap, GameObject weaponVisual)
         {
@@ -77,7 +105,7 @@ namespace Julien.Script
             }
         }
 
-        public void DropWeapon(GameObject dropPrefab)
+        public void DropWeapon()
         {
             int index = StrucWeapons.Length;
             
@@ -91,7 +119,7 @@ namespace Julien.Script
 
             if (index > 1)
             {
-                GameObject weapon = Instantiate(dropPrefab, gameObject.transform.position, quaternion.identity);
+                GameObject weapon = Instantiate(_weaponPrefab, gameObject.transform.position, quaternion.identity);
                 weapon.GetComponent<WeaponOnFloor>().Drop(equipedWeaponWrap);
                 weapon.GetComponent<WeaponOnFloor>().DropedWeapon = true;
                 StrucWeapons[indexWeapon].ClearData();
@@ -100,7 +128,7 @@ namespace Julien.Script
                 Debug.Log("DropWeapon"); 
             }
         }
-
+        
         public void SetDownTurel()
         {
             if (handingObject.HandingTurel.transform.GetChild(0).GetComponent<HologramTurel>().CanBeSetDoawn)
@@ -112,6 +140,21 @@ namespace Julien.Script
                 handingObject.HandingWeapon.SetActive(true);
                 _player.SwitchInputHandler(0);
                 TurelWrap = new TurelWrap();
+            }
+        }
+        
+        public void PutBonus()
+        {
+            Debug.Log("PutBonus");
+
+            if (_player.currentAimTurel)
+            {
+                _player.currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(UpgraderWrap);
+                _player.currentAimTurel.GetComponent<Turel>().UpdateInfo(UpgraderWrap);
+                UpgraderWrap = new UpgraderWrap();
+                Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
+                handingObject.HandingWeapon.SetActive(true);
+                _player.SwitchInputHandler(0);
             }
         }
     }

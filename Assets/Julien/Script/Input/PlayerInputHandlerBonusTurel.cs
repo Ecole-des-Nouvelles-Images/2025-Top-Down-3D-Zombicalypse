@@ -11,6 +11,7 @@ namespace Julien.Script.Input
         public static event Action<bool> OnInputDeviceChanged;
         
         private Player _player;
+        private InventoryPlayer _inventory;
 
         private bool _isRotating;
        [SerializeField] private float RotateValue;
@@ -18,6 +19,7 @@ namespace Julien.Script.Input
         {
             _playerInput = GetComponent<PlayerInput>();
             _player = GetComponent<Player>();
+            _inventory = GetComponent<InventoryPlayer>();
         }
 
         private void OnEnable()
@@ -87,7 +89,7 @@ namespace Julien.Script.Input
 
         private void OnPutBonusInTurel(InputAction.CallbackContext context)
         {
-            _player.PutBonus();
+            _inventory.PutBonus();
         }
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Julien.Script;
 using Script.Data.WeaponsData;
 using Script.Struc;
 using Unity.Mathematics;
@@ -7,17 +6,19 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-namespace Script
+namespace Julien.Script
 {
     public class WeaponOnFloor : MonoBehaviour, IInteractable
     {
         [SerializeField] private List<Weapon> _weapons;
         
-        [FormerlySerializedAs("weaponStruct")] public WeaponWrap weaponWrap;
+        public WeaponWrap weaponWrap;
         public bool DropedWeapon;
         
         [Header("Visual")]
         [SerializeField] private GameObject _visual;
+
+        
         private void Start()
         {
             if (!DropedWeapon)
