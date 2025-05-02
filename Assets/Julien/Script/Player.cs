@@ -175,6 +175,42 @@ namespace Julien.Script
         
         
         // recharger
+        
+
+       
+        
+        public void Die()
+        {
+            Debug.Log("Meurt");
+        }
+        
+        public void DropWeapon()
+        {
+            _inventory.DropWeapon(_dropPrefab);
+        }
+        
+        /// <summary>
+        /// Devra être mis dans l'inventory et serra appeler avec le input handler
+        /// </summary>
+        public void DropTurel()
+        {
+            _inventory.SetDownTurel();
+        }
+        
+        public void PutBonus()
+        {
+            Debug.Log("PutBonus");
+
+            if (_currentAimTurel)
+            {
+                _currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(_inventory.UpgraderWrap);
+                _inventory.UpgraderWrap = new UpgraderWrap();
+                Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
+                handingObject.HandingWeapon.SetActive(true);
+                SwitchInputHandler(0);
+            }
+        }
+        
         public void Reload()
         {
             if (_inventory.equipedWeaponWrap.CurrentMagazin - 1 !>= 0 && _inventory.equipedWeaponWrap.CurrentAmmo != _inventory.equipedWeaponWrap.Weapon.MaxAmmo && !_isReloading)
@@ -182,7 +218,7 @@ namespace Julien.Script
                 StartCoroutine("ReloadDelay", _inventory.equipedWeaponWrap.Weapon.ReloadTime);
             }
         }
-
+        
         private IEnumerator ReloadDelay(float timer)
         {
             _isReloading = true;
@@ -200,21 +236,11 @@ namespace Julien.Script
             handingObject.SwitchWeapon();
             _isReloading = false;
         }
-        
-        public void Die()
-        {
-            Debug.Log("Meurt");
-        }
-        
-        public void DropWeapon()
-        {
-            _inventory.DropWeapon(_dropPrefab);
-        }
+        /// <summary>
+        /// Devra être mis dans l'inventory et serra appeler avec le input handler
+        /// </summary>
 
-        public void DropTurel()
-        {
-            _inventory.SetDownTurel();
-        }
+       
         public void OpenInventory()
         {
             Debug.Log("Open Inventory");
@@ -228,19 +254,7 @@ namespace Julien.Script
             turelHologram.transform.Rotate(Vector3.up * (rotateValue * 150 * Time.deltaTime));
         }
 
-        public void PutBonus()
-        {
-            Debug.Log("PutBonus");
-
-            if (_currentAimTurel)
-            {
-                _currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(_inventory.UpgraderWrap);
-                _inventory.UpgraderWrap = new UpgraderWrap();
-                Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
-                handingObject.HandingWeapon.SetActive(true);
-                SwitchInputHandler(0);
-            }
-        }
+        
         
         public void SwitchInputHandler(int index)
         {
