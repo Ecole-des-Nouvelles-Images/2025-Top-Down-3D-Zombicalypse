@@ -112,10 +112,10 @@ namespace Julien.Script
                         _currentAimTurel = hit.transform.gameObject;
                         Debug.Log("Touche une tourelle");
                     }
-                    else
-                    {
-                        _currentAimTurel = null;
-                    }
+                }
+                else
+                {
+                    _currentAimTurel = null;
                 }
             }
 
