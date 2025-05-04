@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832ed3ff27ec50a48a5ae8fa0d488e39, type: 3}
   m_Name: Kamikaz
   m_EditorClassIdentifier: 
-  PirceZombie: 2
+  PriceZombie: 2
   MaxHealth: 15
   Damage: 30
   Speed: 10

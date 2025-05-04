@@ -64,7 +64,7 @@ namespace Julien.Script
         [Header("References")] 
         
         [SerializeField] private GameObject _gameManager;
-        [SerializeField] private GameObject _playerRenderer;
+        [FormerlySerializedAs("_playerRenderer")] public GameObject PlayerRenderer;
         private Vector2 _move;
         private InventoryPlayer _inventory;
 
@@ -104,13 +104,18 @@ namespace Julien.Script
             {
                 RaycastHit hit;
                 
-                Debug.DrawRay(_playerRenderer.transform.position, _playerRenderer.transform.forward * 2, Color.green, 1f);
-                if (Physics.Raycast(_playerRenderer.transform.position, _playerRenderer.transform.forward, out hit, 10))
+                Debug.DrawRay(PlayerRenderer.transform.position, PlayerRenderer.transform.forward * 2, Color.blue, 1f);
+                if (Physics.Raycast(PlayerRenderer.transform.position, PlayerRenderer.transform.forward, out hit, 2))
                 {
-                    if (hit.transform.CompareTag("Turel"))
+                    if (hit.collider.CompareTag("Turel"))
                     {
                         currentAimTurel = hit.transform.gameObject;
                         Debug.Log("Touche une tourelle");
+                    }
+                    else
+                    {
+                        currentAimTurel = null;
+                        Debug.Log("Touche rien");
                     }
                 }
                 else
@@ -183,15 +188,6 @@ namespace Julien.Script
         {
             Debug.Log("Meurt");
         }
-        
-        /// <summary>
-        /// Devra être mis dans l'inventory et serra appeler avec le input handler
-        /// </summary>
-        
-        /// <summary>
-        /// Devra être mis dans l'inventory et serra appeler avec le input handler
-        /// </summary>
-
        
         public void OpenInventory()
         {
@@ -205,7 +201,6 @@ namespace Julien.Script
             GameObject turelHologram = handingObject.HandingTurel.transform.GetChild(0).gameObject;
             turelHologram.transform.Rotate(Vector3.up * (rotateValue * 150 * Time.deltaTime));
         }
-
         
         
         public void SwitchInputHandler(int index)

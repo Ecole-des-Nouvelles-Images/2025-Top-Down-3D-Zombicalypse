@@ -24,7 +24,9 @@ namespace Julien.Script.TurelScripts
             P.handingObject.HandingWeapon.SetActive(false);
             P.handingObject.TurelPrefab = TurelWrap.Turel.VisualHologram;
 
-            GameObject turelHologram = Instantiate(TurelWrap.Turel.VisualHologram, P.handingObject.HandingTurel.gameObject.transform.position, quaternion.identity, P.handingObject.HandingTurel.transform);
+            GameObject turelHologram = Instantiate(TurelWrap.Turel.VisualHologram, P.handingObject.HandingTurel.gameObject.transform.position, player.PlayerRenderer.transform.rotation, P.handingObject.HandingTurel.transform);
+            Debug.Log(" player rotation = " + player.PlayerRenderer.transform.rotation);
+            Debug.Log(" Turel rotation = " + turelHologram.transform.rotation);
             turelHologram.GetComponent<HologramTurel>().TurelWrap = TurelWrap;
             
             P.SwitchInputHandler(1);

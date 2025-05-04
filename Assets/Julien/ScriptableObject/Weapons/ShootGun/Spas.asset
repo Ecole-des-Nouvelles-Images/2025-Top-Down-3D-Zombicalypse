@@ -25,5 +25,5 @@ MonoBehaviour:
   MaxAmmo: 5
   MaxMagazine: 6
   ReloadTime: 2
-  RemoveAmmoParFire: 2
+  RemoveAmmoParFire: 1
   BulletParShoot: 25

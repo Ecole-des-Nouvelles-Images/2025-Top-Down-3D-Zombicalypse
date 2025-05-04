@@ -1,7 +1,8 @@
+using Julien.Script.ZombieScript.States.Kamaikaz;
+using Script.ZombieScript;
 using Script.ZombieScript.States;
-using Script.ZombieScript.States.Kamaikaz;
 
-namespace Script.ZombieScript
+namespace Julien.Script.ZombieScript
 {
     public class ZombieKamikaz : Zombie
     {

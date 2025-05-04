@@ -1,11 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Script
+namespace Julien.Script
 {
+
+    [Serializable]
+    public class DictionaryRound
+    {
+        public int Round;
+        public GameObject ZombiePrefab;
+    }
+    
     public class RoundHundler : MonoBehaviour
     {
         public float MinSpawnRate;
@@ -15,13 +24,14 @@ namespace Script
         public int CurrentWave;
         public int NumberOfPoint;
 
+        public List<DictionaryRound> RoundDictionary = new List<DictionaryRound>();
+        
         [SerializeField] private GameObject[] _spawners;
 
-        [SerializeField] private List<GameObject> _zombiePrefabs;
         [SerializeField] private List<GameObject> _zombiesPrefabCanSpawn = null;
 
         [SerializeField] private List<GameObject> _zombies;
-        [SerializeField] private List<GameObject> _zombieToKill;
+        private List<GameObject> _zombieToKill;
         private int _zombieToKillCount;
         [SerializeField] private bool _inBreak;
         [SerializeField] private Break _break;
@@ -49,8 +59,8 @@ namespace Script
         {
             for (int i = NumberOfPoint; i > 0;)
             {
-                GameObject zombieToAdd = _zombiePrefabs[Random.Range(0, _zombiePrefabs.Count)].gameObject;
-                int priceZombie = zombieToAdd.GetComponent<ZombieScript.Zombie>().TypeZombie.PirceZombie;
+                GameObject zombieToAdd = _zombiesPrefabCanSpawn[Random.Range(0, _zombiesPrefabCanSpawn.Count)].gameObject;
+                int priceZombie = zombieToAdd.GetComponent<global::Script.ZombieScript.Zombie>().TypeZombie.PriceZombie;
                 
                 i -= priceZombie;
                 //Debug.Log(i + " - "  + " prix : " + zombieToAdd.GetComponent<Zombie.Zombie>().TypeZombie.PirceZombie);
@@ -81,6 +91,7 @@ namespace Script
             CurrentWave++;
             NumberOfPoint += 10;
             
+            AddZombieType();
             ChoiseEnemyToSpawn();
         }
         
@@ -100,6 +111,7 @@ namespace Script
             CurrentWave++;
             NumberOfPoint += 5;
             ZombieToKillCount = 0;
+            AddZombieType();
             Debug.Log("NexRound");
             
             ChoiseEnemyToSpawn();
@@ -119,6 +131,18 @@ namespace Script
             
             _zombieToKill.Clear();
             _zombies.Clear();
+            AddZombieType();
+        }
+
+        private void AddZombieType()
+        {
+            foreach (var round in RoundDictionary)
+            {
+                if (CurrentWave >= round.Round && !_zombiesPrefabCanSpawn.Contains(round.ZombiePrefab))
+                {
+                    _zombiesPrefabCanSpawn.Add(round.ZombiePrefab);
+                }
+            }
         }
     }
 }

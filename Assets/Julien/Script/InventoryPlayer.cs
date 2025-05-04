@@ -101,7 +101,6 @@ namespace Julien.Script
                 {
                     StrucWeapons[i] = weaponWrap;
                     Destroy(weaponVisual);
-                    Debug.Log(" met l'arme dans sont inventaire");
                 }
             }
         }
@@ -146,8 +145,6 @@ namespace Julien.Script
         
         public void PutBonus()
         {
-            Debug.Log("PutBonus");
-
             if (_player.currentAimTurel)
             {
                 //_player.currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(UpgraderWrap);
@@ -161,7 +158,6 @@ namespace Julien.Script
 
         public void DropBonus()
         {
-            Debug.Log(" drop bonus ");
             GameObject bonus = Instantiate(UpgraderWrap.UpgraderPrefab, transform.position, quaternion.identity);
             bonus.GetComponent<BonusTurel>().UpgraderWrap = UpgraderWrap;
             Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5786094395230183077}
   - component: {fileID: 1564673775749906449}
   - component: {fileID: 2669916711556855687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponOnGround
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
   - {fileID: 11400000, guid: 1825723614bb75d4a89163a20aa8699d, type: 2}
   weaponWrap:
+    WeaponPrefab: {fileID: 0}
     Weapon: {fileID: 0}
     CurrentAmmo: 0
     CurrentMagazin: 0
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 4698316243541944794}
   - component: {fileID: 5199529125109664327}
   - component: {fileID: 4230170117468858106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -279,8 +280,16 @@ PrefabInstance:
       value: CanvaInteract
       objectReference: {fileID: 0}
     - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823109233696985481, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8009034115994777824, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_PresetInfoIsWorld

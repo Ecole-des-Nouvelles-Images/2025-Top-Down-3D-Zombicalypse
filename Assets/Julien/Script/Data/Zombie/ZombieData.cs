@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Script.Data.ZombieData
+namespace Julien.Script.Data.Zombie
 {
     [CreateAssetMenu(fileName = "ZombieData", menuName = "Scriptable Objects/ZombieData")]
     public class ZombieData : ScriptableObject
     {
-        public int PirceZombie;
+        public int PriceZombie;
         
         public float MaxHealth;
         public float Damage;

@@ -1,7 +1,8 @@
-using Julien.Script;
+using Script.ZombieScript;
+using Script.ZombieScript.States;
 using UnityEngine;
 
-namespace Script.ZombieScript.States.Kamaikaz
+namespace Julien.Script.ZombieScript.States.Kamaikaz
 {
     public class GoExplose : ZombieState
     {
@@ -10,7 +11,6 @@ namespace Script.ZombieScript.States.Kamaikaz
             zombie.NavMeshAgent.speed = 0f;
         
             zombie.AttackSpeed -= Time.deltaTime;
-        
         
             if (zombie.AttackSpeed <= 0)
             {

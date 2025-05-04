@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Script
+namespace Julien.Script
 {
     public class Break : MonoBehaviour
     {

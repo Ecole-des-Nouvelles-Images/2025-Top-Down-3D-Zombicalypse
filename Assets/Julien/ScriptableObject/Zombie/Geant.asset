@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832ed3ff27ec50a48a5ae8fa0d488e39, type: 3}
   m_Name: Geant
   m_EditorClassIdentifier: 
-  PirceZombie: 4
-  MaxHealth: 100
+  PriceZombie: 4
+  MaxHealth: 120
   Damage: 15
   Speed: 2
   Acceleration: 10
-  AttackRange: 3
+  AttackRange: 4
   AttackSpeed: 1.5

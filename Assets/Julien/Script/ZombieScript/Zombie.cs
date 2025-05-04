@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Script.Data.ZombieData;
+using Julien.Script;
+using Julien.Script.Data.Zombie;
 using Script.ZombieScript.States;
 using UnityEngine;
 using UnityEngine.AI;
@@ -30,7 +31,8 @@ namespace Script.ZombieScript
 
         public ZombieState CurrentState;
 
-        [FormerlySerializedAs("NavMesh")] public NavMeshAgent NavMeshAgent;
+        public NavMeshAgent NavMeshAgent;
+        public Rigidbody Rigidbody;
 
         [Header("Conditions")] 
         
@@ -74,7 +76,6 @@ namespace Script.ZombieScript
             Targets = GameObject.FindGameObjectsWithTag(TargetTag).ToList();
             int index = Random.Range(0, Targets.Count);
             Target = Targets[index];
-            Debug.Log("Nombre de target du zombie : " + Targets.Count + " | Cible choisie : " + Target.name);
             
             NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
             
@@ -98,7 +99,7 @@ namespace Script.ZombieScript
             AttackRange = TypeZombie.AttackRange;
             NavMeshAgent.acceleration = Acceleration;
             NavMeshAgent.speed = Speed;
-            Price = TypeZombie.PirceZombie;
+            Price = TypeZombie.PriceZombie;
         }
         
         public void SetRoundBonusStat()
