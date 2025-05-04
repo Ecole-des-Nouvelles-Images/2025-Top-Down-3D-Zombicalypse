@@ -619,23 +619,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2909526738638558133, guid: 7d30ceef9c4eeab49abda016957e07f1, type: 3}
   m_PrefabInstance: {fileID: 1629209036}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &528410755 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-  m_PrefabInstance: {fileID: 3955482195169874854}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &528410760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528410755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e73ecdd55debf4ab69afeb45bda18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &638324131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2279,10 +2262,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5097460286155230413, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.72102344
@@ -2324,76 +2303,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: _inBreak
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: _parentZombie
       value: 
       objectReference: {fileID: 1536146187}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: Round.CurrentRound
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: TimeBeforeNextRound
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: Round.TimeBeforeNextRound
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: _zombiePrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: '_zombiePrefabs.Array.data[0]'
-      value: 
-      objectReference: {fileID: 6910938945056931783, guid: 6a90b33e0e7704749affa8c023f01e7b, type: 3}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: '_zombiePrefabs.Array.data[1]'
-      value: 
-      objectReference: {fileID: 6910938945056931783, guid: 189aee67dbb761548b9797cb0d2068ac, type: 3}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: '_zombiePrefabs.Array.data[2]'
-      value: 
-      objectReference: {fileID: 6910938945056931783, guid: f24fcbd9bba7eee499043628a6377855, type: 3}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.data[0].Round
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.data[1].Round
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.data[2].Round
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.data[0].ZombiePrefab
-      value: 
-      objectReference: {fileID: 6910938945056931783, guid: 6a90b33e0e7704749affa8c023f01e7b, type: 3}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.data[1].ZombiePrefab
-      value: 
-      objectReference: {fileID: 6910938945056931783, guid: 189aee67dbb761548b9797cb0d2068ac, type: 3}
-    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      propertyPath: RoundDictionary.Array.data[2].ZombiePrefab
-      value: 
-      objectReference: {fileID: 6910938945056931783, guid: f24fcbd9bba7eee499043628a6377855, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 528410760}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7045a13421514d64780639df9faa05f9, type: 3}
 --- !u!1001 &4772951014945586644
 PrefabInstance:

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8727236817250310588}
   - component: {fileID: 5978329320630793120}
   - component: {fileID: 2446494881858463769}
+  - component: {fileID: 1237537192648682482}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -48,15 +49,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinSpawnRate: 2
   MaxSpawnRate: 4
-  CurrentWave: 0
-  NumberOfPoint: 0
+  Round:
+    CurrentRound: 0
+    NumberOfPoint: 0
+    TimeBeforeNextRound: 20
+    _zombieToKillCount: 0
+    _zombiesPrefabCanSpawn: []
+    _zombies: []
+    _zombieToKill: []
+  RoundDictionary:
+  - Round: 0
+    ZombiePrefab: {fileID: 6910938945056931783, guid: 6a90b33e0e7704749affa8c023f01e7b, type: 3}
+  - Round: 2
+    ZombiePrefab: {fileID: 6910938945056931783, guid: 189aee67dbb761548b9797cb0d2068ac, type: 3}
+  - Round: 3
+    ZombiePrefab: {fileID: 6910938945056931783, guid: f24fcbd9bba7eee499043628a6377855, type: 3}
   _spawners: []
-  _zombiePrefabs:
-  - {fileID: 6910938945056931783, guid: 6a90b33e0e7704749affa8c023f01e7b, type: 3}
-  - {fileID: 6910938945056931783, guid: 189aee67dbb761548b9797cb0d2068ac, type: 3}
-  _zombiesPrefabCanSpawn: []
-  _zombies: []
-  _zombieToKill: []
+  _inBreak: 0
+  _break: {fileID: 0}
   _parentZombie: {fileID: 0}
 --- !u!114 &5978329320630793120
 MonoBehaviour:
@@ -91,3 +101,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfPlayer: 0
+--- !u!114 &1237537192648682482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920496199143966151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e73ecdd55debf4ab69afeb45bda18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
