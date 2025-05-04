@@ -1,3 +1,4 @@
+using Julien.Script.ZombieScript;
 using UnityEngine;
 
 namespace Script.ZombieScript.States

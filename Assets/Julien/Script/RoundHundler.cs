@@ -9,6 +9,19 @@ namespace Julien.Script
 {
 
     [Serializable]
+    public class Round
+    {
+        public int CurrentRound;
+        public int NumberOfPoint;
+        public float TimeBeforeNextRound;
+        
+        public int _zombieToKillCount;
+        public List<GameObject> _zombiesPrefabCanSpawn = null;
+        public List<GameObject> _zombies;
+        public List<GameObject> _zombieToKill;
+    }
+    
+    [Serializable]
     public class DictionaryRound
     {
         public int Round;
@@ -20,29 +33,21 @@ namespace Julien.Script
         public float MinSpawnRate;
         public float MaxSpawnRate;
 
-        public float TimeBeforeNextRound;
-        public int CurrentWave;
-        public int NumberOfPoint;
-
+        public Round Round;
         public List<DictionaryRound> RoundDictionary = new List<DictionaryRound>();
         
         [SerializeField] private GameObject[] _spawners;
 
-        [SerializeField] private List<GameObject> _zombiesPrefabCanSpawn = null;
-
-        [SerializeField] private List<GameObject> _zombies;
-        private List<GameObject> _zombieToKill;
-        private int _zombieToKillCount;
         [SerializeField] private bool _inBreak;
         [SerializeField] private Break _break;
 
         public int ZombieToKillCount
         {
-            get => _zombieToKillCount;
+            get => Round._zombieToKillCount;
             set
             {
-                _zombieToKillCount = value;
-                if (_zombieToKillCount >= _zombieToKill.Count && !_inBreak)
+                Round._zombieToKillCount = value;
+                if (Round._zombieToKillCount >= Round._zombieToKill.Count && !_inBreak)
                 {
                     StartCoroutine("Break");
                 }
@@ -57,39 +62,39 @@ namespace Julien.Script
         }
         private void ChoiseEnemyToSpawn()
         {
-            for (int i = NumberOfPoint; i > 0;)
+            for (int i = Round.NumberOfPoint; i > 0;)
             {
-                GameObject zombieToAdd = _zombiesPrefabCanSpawn[Random.Range(0, _zombiesPrefabCanSpawn.Count)].gameObject;
-                int priceZombie = zombieToAdd.GetComponent<global::Script.ZombieScript.Zombie>().TypeZombie.PriceZombie;
+                GameObject zombieToAdd = Round._zombiesPrefabCanSpawn[Random.Range(0, Round._zombiesPrefabCanSpawn.Count)].gameObject;
+                int priceZombie = zombieToAdd.GetComponent<global::Julien.Script.ZombieScript.Zombie>().TypeZombie.PriceZombie;
                 
                 i -= priceZombie;
                 //Debug.Log(i + " - "  + " prix : " + zombieToAdd.GetComponent<Zombie.Zombie>().TypeZombie.PirceZombie);
-                _zombies.Add(zombieToAdd);
+                Round._zombies.Add(zombieToAdd);
             }
             
-            _zombieToKill = new List<GameObject>(_zombies);
+            Round._zombieToKill = new List<GameObject>(Round._zombies);
             StartCoroutine("Spawn");
         }
         
         private IEnumerator Spawn()
         {
-            for (int i = _zombies.Count; i > 0; i--)
+            for (int i = Round._zombies.Count; i > 0; i--)
             {
                 GameObject spawner = _spawners[Random.Range(0, _spawners.Length)];
-                int index = Random.Range(0,_zombies.Count);
-                GameObject zombieToSpawn = _zombies[index].gameObject;
+                int index = Random.Range(0,Round._zombies.Count);
+                GameObject zombieToSpawn = Round._zombies[index].gameObject;
 
                 yield return new WaitForSeconds(Random.Range(MinSpawnRate, MaxSpawnRate));
                 
                 Instantiate(zombieToSpawn, spawner.gameObject.transform.position, quaternion.identity, _parentZombie.transform);
-                _zombies.Remove(zombieToSpawn);
+                Round._zombies.Remove(zombieToSpawn);
             }
         }
 
         private void FirstRound()
         {
-            CurrentWave++;
-            NumberOfPoint += 10;
+            Round.CurrentRound++;
+            Round.NumberOfPoint += 10;
             
             AddZombieType();
             ChoiseEnemyToSpawn();
@@ -99,7 +104,7 @@ namespace Julien.Script
          {
              _inBreak = true;
              Debug.Log("Take a break");
-             yield return new WaitForSeconds(TimeBeforeNextRound);
+             yield return new WaitForSeconds(Round.TimeBeforeNextRound);
              Debug.Log("End of break");
              _inBreak = false;
              NexRound();
@@ -108,8 +113,8 @@ namespace Julien.Script
         [ContextMenu("NextRound")]
         public void NexRound()
         {
-            CurrentWave++;
-            NumberOfPoint += 5;
+            Round.CurrentRound++;
+            Round.NumberOfPoint += 5;
             ZombieToKillCount = 0;
             AddZombieType();
             Debug.Log("NexRound");
@@ -129,8 +134,8 @@ namespace Julien.Script
             StopCoroutine("Spawn");
             StartCoroutine("Break");
             
-            _zombieToKill.Clear();
-            _zombies.Clear();
+            Round._zombieToKill.Clear();
+            Round._zombies.Clear();
             AddZombieType();
         }
 
@@ -138,9 +143,9 @@ namespace Julien.Script
         {
             foreach (var round in RoundDictionary)
             {
-                if (CurrentWave >= round.Round && !_zombiesPrefabCanSpawn.Contains(round.ZombiePrefab))
+                if (round.Round <= Round.CurrentRound && !Round._zombiesPrefabCanSpawn.Contains(round.ZombiePrefab))
                 {
-                    _zombiesPrefabCanSpawn.Add(round.ZombiePrefab);
+                    Round._zombiesPrefabCanSpawn.Add(round.ZombiePrefab);
                 }
             }
         }

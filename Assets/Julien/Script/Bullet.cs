@@ -1,4 +1,5 @@
 using System.Collections;
+using Julien.Script.ZombieScript;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -44,7 +45,7 @@ namespace Script
         {
             if (other.gameObject.CompareTag("Zombie"))
             {
-                ZombieScript.Zombie zombie = other.gameObject.GetComponent<ZombieScript.Zombie>();
+                Zombie zombie = other.gameObject.GetComponent<Zombie>();
                 zombie.Damaged(DamageBullet);
                 Destroy(gameObject);
             }

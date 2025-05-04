@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using Julien.Script;
 using Julien.Script.Data.Zombie;
+using Script;
 using Script.ZombieScript.States;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
-namespace Script.ZombieScript
+namespace Julien.Script.ZombieScript
 {
     public class Zombie : MonoBehaviour
     {
@@ -34,7 +33,9 @@ namespace Script.ZombieScript
         public NavMeshAgent NavMeshAgent;
         public Rigidbody Rigidbody;
 
-        [Header("Conditions")] 
+        [Header("Conditions")]
+        
+        private bool Dead = false;
         
         [Header("Attack")]
         public bool WantAttack;
@@ -53,8 +54,9 @@ namespace Script.ZombieScript
             set
             {
                 CurrentHealth = value;
-                if (CurrentHealth <= 0 )
+                if (CurrentHealth <= 0 && !Dead)
                 {
+                    Dead = true;
                     Die();
                 }
             }
@@ -104,13 +106,14 @@ namespace Script.ZombieScript
         
         public void SetRoundBonusStat()
         {
-            MaxHealth *= _bonusToZombie.Bonus[_roundHundler.CurrentWave];
+            MaxHealth *= _bonusToZombie.Bonus[_roundHundler.Round.CurrentRound];
             CurrentHealth = MaxHealth;
         }
 
         public void Die()
         {
             GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
+            Debug.Log("Die");
             Destroy(gameObject);
         }
     }

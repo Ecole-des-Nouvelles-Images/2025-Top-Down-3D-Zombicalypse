@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Generic;
+using Julien.Script.ZombieScript;
 using UnityEngine;
 
 namespace Script
 {
     public class TriggerAll : MonoBehaviour
     {
-        public ZombieScript.Zombie Zombie;
+        public Zombie Zombie;
         public List<GameObject> Objects;
 
         private void Start()
         {
-            Zombie = gameObject.transform.parent.GetComponent<ZombieScript.Zombie>();
+            Zombie = gameObject.transform.parent.GetComponent<Zombie>();
         }
 
         private void OnTriggerEnter(Collider Object)

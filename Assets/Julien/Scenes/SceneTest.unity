@@ -2332,8 +2332,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1536146187}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: Round.CurrentRound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: TimeBeforeNextRound
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: Round.TimeBeforeNextRound
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: _zombiePrefabs.Array.size
@@ -2578,6 +2586,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 3955482195169874854}
   - {fileID: 410087041}
   - {fileID: 1505683566}
   - {fileID: 736395806}
@@ -2585,7 +2594,6 @@ SceneRoots:
   - {fileID: 1034333255700356938}
   - {fileID: 1550657483}
   - {fileID: 1536146188}
-  - {fileID: 3955482195169874854}
   - {fileID: 1780198996}
   - {fileID: 1682233399}
   - {fileID: 1321445978}
