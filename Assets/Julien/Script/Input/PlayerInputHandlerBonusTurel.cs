@@ -31,6 +31,8 @@ namespace Julien.Script.Input
 
             _playerInput.actions["PutBonus"].performed += OnPutBonusInTurel;
             
+            _playerInput.actions["DropBonus"].performed += OnDropBonus;
+            
             _playerInput.actions["Aim"].performed += OnAim;
             _playerInput.actions["Aim"].canceled += OnAim;
 
@@ -46,6 +48,8 @@ namespace Julien.Script.Input
             _playerInput.actions["Move"].canceled -= OnMove;
             
             _playerInput.actions["PutBonus"].performed -= OnPutBonusInTurel;
+            
+            _playerInput.actions["DropBonus"].performed -= OnDropBonus;
             
             _playerInput.actions["Aim"].performed -= OnAim;
             _playerInput.actions["Aim"].canceled -= OnAim;
@@ -90,6 +94,11 @@ namespace Julien.Script.Input
         private void OnPutBonusInTurel(InputAction.CallbackContext context)
         {
             _inventory.PutBonus();
+        }
+
+        private void OnDropBonus(InputAction.CallbackContext context)
+        {
+            _inventory.DropBonus();
         }
     }
 }

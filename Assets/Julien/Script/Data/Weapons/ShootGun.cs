@@ -1,3 +1,4 @@
+using Julien.Script.Data.Weapons;
 using UnityEngine;
 
 namespace Script.Data.WeaponsData

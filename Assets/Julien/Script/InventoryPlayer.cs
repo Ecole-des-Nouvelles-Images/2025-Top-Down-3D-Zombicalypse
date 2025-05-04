@@ -1,4 +1,5 @@
 using System.Collections;
+using Julien.Script.Data.Upgrader;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
 using Script;
@@ -25,8 +26,8 @@ namespace Julien.Script
          [SerializeField] private Player _player;
          [SerializeField] private HandingObject handingObject;
         
-         [Header("Prefab")]
-         [SerializeField] private GameObject _weaponPrefab;
+         //[Header("Prefab")]
+         //[SerializeField] private GameObject _weaponPrefab;
          
         private void Start()
         {
@@ -119,7 +120,7 @@ namespace Julien.Script
 
             if (index > 1)
             {
-                GameObject weapon = Instantiate(_weaponPrefab, gameObject.transform.position, quaternion.identity);
+                GameObject weapon = Instantiate(equipedWeaponWrap.WeaponPrefab, gameObject.transform.position, quaternion.identity);
                 weapon.GetComponent<WeaponOnFloor>().Drop(equipedWeaponWrap);
                 weapon.GetComponent<WeaponOnFloor>().DropedWeapon = true;
                 StrucWeapons[indexWeapon].ClearData();
@@ -149,13 +150,23 @@ namespace Julien.Script
 
             if (_player.currentAimTurel)
             {
-                _player.currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(UpgraderWrap);
-                _player.currentAimTurel.GetComponent<Turel>().UpdateInfo(UpgraderWrap);
+                //_player.currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(UpgraderWrap);
+                _player.currentAimTurel.GetComponent<Turel>().UpdateTurel(UpgraderWrap);
                 UpgraderWrap = new UpgraderWrap();
                 Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
                 handingObject.HandingWeapon.SetActive(true);
                 _player.SwitchInputHandler(0);
             }
+        }
+
+        public void DropBonus()
+        {
+            Debug.Log(" drop bonus ");
+            GameObject bonus = Instantiate(UpgraderWrap.UpgraderPrefab, transform.position, quaternion.identity);
+            bonus.GetComponent<BonusTurel>().UpgraderWrap = UpgraderWrap;
+            Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
+            handingObject.HandingWeapon.SetActive(true);
+            _player.SwitchInputHandler(0);
         }
     }
 }

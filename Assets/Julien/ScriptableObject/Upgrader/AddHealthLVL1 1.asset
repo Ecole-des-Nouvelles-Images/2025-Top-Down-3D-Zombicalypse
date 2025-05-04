@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c678e60a23f142b68a594fe510bc8, type: 3}
   m_Name: AddHealthLVL1 1
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
   VisualGameObject: {fileID: 1573882783218773931, guid: 83d806fadabf2af48b0d022a9296c4e1, type: 3}
   AddDamage: 0
   AddFireRate: 0
   AddMaxHealth: 10
+  AddRange: 0
+  AddDistance: 0

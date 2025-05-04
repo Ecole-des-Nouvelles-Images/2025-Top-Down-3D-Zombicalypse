@@ -224,7 +224,6 @@ namespace Julien.Script
             if (InteractsGameObject != null)
             {
                 InteractsGameObject[0].GetComponent<IInteractable>().Activate(this);
-                InteractsGameObject[0].gameObject.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
 
@@ -233,6 +232,7 @@ namespace Julien.Script
             if (other.gameObject.CompareTag("Interactable"))
             {
                 InteractsGameObject.Add(other.gameObject);
+                InteractsGameObject[0].gameObject.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
 

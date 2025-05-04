@@ -1,5 +1,4 @@
 using Julien.Script.Struc;
-using Script;
 using Unity.Mathematics;
 using UnityEngine;
 

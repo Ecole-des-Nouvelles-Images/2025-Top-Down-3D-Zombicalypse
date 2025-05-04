@@ -32,7 +32,7 @@ namespace Script.Input
 
             _playerInput.actions["Interact"].started += OnInteract;
             
-            _playerInput.actions["Drop"].performed += OnDrop;
+            _playerInput.actions["DropWeapon"].performed += OnDrop;
             
             _playerInput.actions["Reload"].performed += OnReload;
             
@@ -59,7 +59,7 @@ namespace Script.Input
             
             _playerInput.actions["Interact"].started -= OnInteract;
             
-            _playerInput.actions["Drop"].performed -= OnDrop;
+            _playerInput.actions["DropWeapon"].performed -= OnDrop;
             
             _playerInput.actions["Reload"].performed -= OnReload;
             

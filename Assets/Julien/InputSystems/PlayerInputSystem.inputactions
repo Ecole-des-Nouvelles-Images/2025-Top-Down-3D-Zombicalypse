@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Drop",
+                    "name": "DropWeapon",
                     "type": "Button",
                     "id": "98cb88b0-d0bd-4f2e-9dc7-4d5ebc69c521",
                     "expectedControlType": "",
@@ -54,15 +54,6 @@
                     "name": "Inventory",
                     "type": "Button",
                     "id": "cb54e9f0-197a-46b7-a516-e5e0cbaa7834",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "PutTurel",
-                    "type": "Button",
-                    "id": "232b1516-2d73-467b-b959-8dbf38b5301b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -96,9 +87,27 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "PutTurel",
+                    "type": "Button",
+                    "id": "232b1516-2d73-467b-b959-8dbf38b5301b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "PutBonus",
                     "type": "Button",
                     "id": "7ecc8345-691c-4d11-8cfe-203e16b92a3a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DropBonus",
+                    "type": "Button",
+                    "id": "7bec701b-c8f0-4511-8e31-7a6d08da3b20",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -179,7 +188,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Drop",
+                    "action": "DropWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -246,6 +255,17 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "PutBonus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef62ad3a-c088-44e5-9f15-a08c6beb545e",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "DropBonus",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

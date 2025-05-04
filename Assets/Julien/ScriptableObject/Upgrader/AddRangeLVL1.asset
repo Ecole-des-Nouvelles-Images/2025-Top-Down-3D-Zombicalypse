@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90c678e60a23f142b68a594fe510bc8, type: 3}
   m_Name: AddRangeLVL1
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
   VisualGameObject: {fileID: 1573882783218773931, guid: f8253fe40a34ce54a9cbff5ccf67228f, type: 3}
   AddDamage: 0
   AddFireRate: 0

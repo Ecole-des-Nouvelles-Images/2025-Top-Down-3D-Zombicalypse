@@ -91,9 +91,10 @@ namespace Julien.Script.TurelScripts
             _AimCollider.gameObject.transform.localScale = new Vector3(turelWrap.Range, 1, turelWrap.Distance);
         }
         
-        public void UpdateInfo(UpgraderWrap turelWrap)
+        public void UpdateTurel(UpgraderWrap turelWrap)
         {
             _AimCollider.transform.localScale += new Vector3(turelWrap.AddRange, 0, turelWrap.AddDistance);
+            TurelWrap.AddBonus(turelWrap);
         }
     }
 }

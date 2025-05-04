@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8dd3897e6fc98418f9212244b1d91e, type: 3}
   m_Name: Glock
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 9201717749093418378, guid: 3a1bb098d6624a540b858a4fd5b7ce6b, type: 3}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}

@@ -6,6 +6,7 @@ namespace Julien.Script.Data.Upgrader
     [CreateAssetMenu(fileName = "Upgrader", menuName = "Scriptable Objects/Upgrader")]
     public class Upgrader : ScriptableObject
     {
+        public GameObject Prefab;
         public GameObject VisualGameObject;
 
         public float AddDamage;
