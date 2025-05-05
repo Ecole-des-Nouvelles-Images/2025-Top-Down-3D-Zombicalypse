@@ -1,9 +1,7 @@
 using System.Collections.Generic;
-using Julien.Script.Data.Upgrader;
-using Julien.Script.TurelScripts;
-using Script.Data.TurellData;
+using Julien.Script.Interface;
+using Unity.AI.Navigation;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Julien.Script
 {
@@ -11,19 +9,18 @@ namespace Julien.Script
     {
         public int NumberTurel;
         public int NumberBonus;
-
+        
         public float MaxTimer;
         public float CurrentTimer;
+        [SerializeField] private float _breakTimer;
         
         [SerializeField] private GameObject _turelOnGroundPrefab;
         [SerializeField] private GameObject _bonusTurelsPrefab;
         
-        [SerializeField] private List<Upgrader> _bonusPrefabsData = new List<Upgrader>();
-        [SerializeField] private List<TurelData> _turelPrefabsData = new List<TurelData>();
-        
         [SerializeField] private List<GameObject> _objectsToSpawn = new List<GameObject>();
 
         [SerializeField] private GameObject _parentSpawn;
+        [SerializeField] private NavMeshSurface _navMeshSurface;
         private RoundHundler _roundHundler;
 
         private void Awake()
@@ -31,15 +28,20 @@ namespace Julien.Script
             _roundHundler = GetComponent<RoundHundler>();
         }
 
-        private void Start()
+        public void InBreakTime()
         {
-            InBreakTime();
+            RandomGifts();
+            SetObjectToSpawn();
             SetTimer();
         }
 
-        public void InBreakTime()
+        public void RandomGifts()
         {
-            SetObjectToSpawn();
+            float randomTurel = Random.Range(0f, 100f);
+            if (randomTurel >= 50 && randomTurel < 80) NumberTurel = 1;
+            if (randomTurel >= 80 && randomTurel <= 100) NumberTurel = 2;
+            
+            NumberBonus = Random.Range(2, 8);
         }
 
         public void SetObjectToSpawn()
@@ -47,26 +49,18 @@ namespace Julien.Script
             for (int i = 0; i < NumberTurel; i++)
             {
                 GameObject turel = _turelOnGroundPrefab;
-                
-                int index = Random.Range(0, _turelPrefabsData.Count);
-                turel.GetComponent<TurelOnGround>().TurelWrap.TurelType = _turelPrefabsData[index];
-                
-                _objectsToSpawn.Add(_turelOnGroundPrefab.gameObject);
+                _objectsToSpawn.Add(turel);
             }
             for (int i = 0; i < NumberBonus; i++)
             {
                 GameObject bonus = _bonusTurelsPrefab;
-                
-                int index = Random.Range(0, _bonusPrefabsData.Count);
-                bonus.GetComponent<BonusTurel>().UpgraderWrap.Upgrader = _bonusPrefabsData[index];
-                
-                _objectsToSpawn.Add(bonus.gameObject);
+                _objectsToSpawn.Add(bonus);
             }
         }
-        
         public void SetTimer()
         {
             MaxTimer = (_roundHundler.Round.TimeBeforeNextRound - 10) / _objectsToSpawn.Count;
+            _breakTimer = _roundHundler.Round.TimeBeforeNextRound;
             CurrentTimer = 2;
         }
         
@@ -75,10 +69,17 @@ namespace Julien.Script
             if (_roundHundler.InBreak)
             {
                 CurrentTimer -= Time.deltaTime;
+                _breakTimer -= Time.deltaTime;
                 if (CurrentTimer <= 0 && _objectsToSpawn.Count > 0)
                 {
                     Spawn();
                     CurrentTimer = MaxTimer;
+                }
+                if (_breakTimer <= 0)
+                {
+                    _breakTimer = _roundHundler.Round.TimeBeforeNextRound;
+                    CurrentTimer = MaxTimer;
+                    EndBreakTime();
                 }
             }
         }
@@ -93,8 +94,17 @@ namespace Julien.Script
             float RandomX = Random.Range(-x, x);
             float RandomZ = Random.Range(-z, z);
 
-            GameObject objectToSpawn = Instantiate(_objectsToSpawn[0], new Vector3(RandomX, _parentSpawn.transform.position.y, RandomZ), Quaternion.identity, _parentSpawn.transform);
+            GameObject ObjectToSpawn = Instantiate(_objectsToSpawn[0], new Vector3(RandomX, _parentSpawn.transform.position.y, RandomZ), Quaternion.identity, _parentSpawn.transform);
+            ObjectToSpawn.GetComponent<IRandom>().Random();
             _objectsToSpawn.Remove(_objectsToSpawn[0]); 
+        }
+
+        public void EndBreakTime()
+        {
+            for (int i = 0; i < _parentSpawn.transform.childCount; i++)
+            {
+                Destroy(_parentSpawn.transform.GetChild(i).gameObject);
+            }
         }
         
         public bool checkIfCanSpawn()

@@ -21,8 +21,8 @@ TagManager:
   - DontCollidePlayer
   - NoBakeAI
   - Spawner
-  - 
-  - 
+  - NoCollide
+  - Interactable
   - 
   - 
   - 

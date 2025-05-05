@@ -8,7 +8,7 @@ namespace Julien.Script.Struc
     [Serializable]
     public struct TurelWrap
     {
-        [FormerlySerializedAs("Turel")] public TurelData TurelType;
+        public TurelData TurelType;
 
         public int MaxAmmo;
         public float BulletSpeed;

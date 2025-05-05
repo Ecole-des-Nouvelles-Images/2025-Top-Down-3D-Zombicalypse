@@ -1,11 +1,8 @@
 using System.Collections;
-using Julien.Script.Data.Upgrader;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
-using Script;
 using Script.Struc;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Julien.Script
@@ -25,10 +22,6 @@ namespace Julien.Script
          
          [SerializeField] private Player _player;
          [SerializeField] private HandingObject handingObject;
-        
-         //[Header("Prefab")]
-         //[SerializeField] private GameObject _weaponPrefab;
-         
         private void Start()
         {
             _player = GetComponent<Player>();
@@ -147,7 +140,6 @@ namespace Julien.Script
         {
             if (_player.currentAimTurel)
             {
-                //_player.currentAimTurel.GetComponent<Turel>().TurelWrap.AddBonus(UpgraderWrap);
                 _player.currentAimTurel.GetComponent<Turel>().UpdateTurel(UpgraderWrap);
                 UpgraderWrap = new UpgraderWrap();
                 Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
@@ -162,6 +154,7 @@ namespace Julien.Script
             bonus.GetComponent<BonusTurel>().UpgraderWrap = UpgraderWrap;
             Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
             handingObject.HandingWeapon.SetActive(true);
+            UpgraderWrap = new UpgraderWrap();
             _player.SwitchInputHandler(0);
         }
     }

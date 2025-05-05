@@ -1,6 +1,7 @@
 using System;
 using Julien.Script.Data.Upgrader;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Script.Struc
 {
@@ -9,7 +10,7 @@ namespace Julien.Script.Struc
     {
         public GameObject UpgraderPrefab;
         
-        public Upgrader Upgrader;
+        public Upgrader UpgraderType;
         
         public float AddDamage;
         public float AddFireRate;
@@ -19,12 +20,12 @@ namespace Julien.Script.Struc
 
         public void SetData()
         {
-            UpgraderPrefab = Upgrader.Prefab;
-            AddDamage = Upgrader.AddDamage;
-            AddFireRate = Upgrader.AddFireRate;
-            AddMaxHealth = Upgrader.AddMaxHealth;
-            AddRange = Upgrader.AddRange;
-            AddDistance = Upgrader.AddDistance;
+            UpgraderPrefab = UpgraderType.Prefab;
+            AddDamage = UpgraderType.AddDamage;
+            AddFireRate = UpgraderType.AddFireRate;
+            AddMaxHealth = UpgraderType.AddMaxHealth;
+            AddRange = UpgraderType.AddRange;
+            AddDistance = UpgraderType.AddDistance;
         }
     }
 }

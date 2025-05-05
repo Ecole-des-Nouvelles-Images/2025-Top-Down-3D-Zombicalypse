@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Script.Interface;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
 using Script;
@@ -100,7 +101,7 @@ namespace Julien.Script
                 Fire(_isHolding);
             }
 
-            if (_inventory.UpgraderWrap.Upgrader)
+            if (_inventory.UpgraderWrap.UpgraderType)
             {
                 RaycastHit hit;
                 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8bba67085df2340b7409860ee2797d, type: 3}
-  m_Name: M4
+  m_Name: CheatM4
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 8452351603674016922, guid: 5438a4792475728418a0e5c2353a2c1e, type: 3}
@@ -18,11 +18,11 @@ MonoBehaviour:
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
   BulletSpeed: 120
-  Damage: 25
-  FireRate: 0.2
-  Precision: 0.05
+  Damage: 500
+  FireRate: 0
+  Precision: 0.1
   LethalRangeLetal: 1.7
-  MaxAmmo: 30
-  MaxMagazine: 70000
-  ReloadTime: 1
+  MaxAmmo: 5000
+  MaxMagazine: 5000
+  ReloadTime: 0.1
   RemoveAmmoParFire: 1

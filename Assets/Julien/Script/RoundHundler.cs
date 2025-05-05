@@ -39,8 +39,8 @@ namespace Julien.Script
         
         [SerializeField] private GameObject[] _spawners;
 
-        [FormerlySerializedAs("_inBreak")] public bool InBreak;
-        [FormerlySerializedAs("_break")] [SerializeField] private BreakSpawning breakSpawning;
+        public bool InBreak;
+        [SerializeField] private BreakSpawning _breakSpawning;
 
         public int ZombieToKillCount
         {
@@ -56,6 +56,12 @@ namespace Julien.Script
         }
         
         [SerializeField] private GameObject _parentZombie;
+
+        private void Awake()
+        {
+            _breakSpawning = GetComponent<BreakSpawning>();
+        }
+
         private void Start()
         {
             _spawners = GameObject.FindGameObjectsWithTag("Spawner");
@@ -104,6 +110,7 @@ namespace Julien.Script
          public IEnumerator Break()
          {
              InBreak = true;
+             _breakSpawning.InBreakTime();
              Debug.Log("Take a break");
              yield return new WaitForSeconds(Round.TimeBeforeNextRound);
              Debug.Log("End of break");

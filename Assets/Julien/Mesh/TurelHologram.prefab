@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanBeSetDoawn: 1
   TurelWrap:
-    Turel: {fileID: 0}
+    TurelType: {fileID: 0}
     MaxAmmo: 0
     BulletSpeed: 0
     BulletRange: 0
@@ -82,7 +82,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

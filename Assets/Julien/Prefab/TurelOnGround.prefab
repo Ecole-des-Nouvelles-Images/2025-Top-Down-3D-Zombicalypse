@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8360216231893004887}
   - component: {fileID: 7960980451764752522}
   - component: {fileID: 7799219947114454946}
+  - component: {fileID: 5048323451080830745}
   m_Layer: 8
   m_Name: TurelOnGround
   m_TagString: Interactable
@@ -47,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c4a10088cf91048b27c09978d20c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _turelsData:
+  - {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
   TurelWrap:
-    Turel: {fileID: 0}
+    TurelType: {fileID: 0}
     MaxAmmo: 0
     BulletSpeed: 0
     BulletRange: 0
@@ -82,6 +85,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5048323451080830745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208615373735821925}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1 &9116486799702989611
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,8 +124,8 @@ GameObject:
   - component: {fileID: 6506177897492206322}
   - component: {fileID: 27438072307158849}
   - component: {fileID: 560267397184334066}
-  m_Layer: 8
-  m_Name: Cube
+  m_Layer: 11
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +216,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
