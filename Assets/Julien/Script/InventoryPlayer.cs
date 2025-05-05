@@ -120,8 +120,8 @@ namespace Julien.Script
             if (index > 1)
             {
                 GameObject weapon = Instantiate(equipedWeaponWrap.WeaponPrefab, gameObject.transform.position, quaternion.identity);
-                weapon.GetComponent<WeaponOnFloor>().Drop(equipedWeaponWrap);
-                weapon.GetComponent<WeaponOnFloor>().DropedWeapon = true;
+                weapon.GetComponent<WeaponOnGround>().Drop(equipedWeaponWrap);
+                weapon.GetComponent<WeaponOnGround>().DropedWeapon = true;
                 StrucWeapons[indexWeapon].ClearData();
                 equipedWeaponWrap.ClearData();
                 AutomaticSwitch();
@@ -133,7 +133,7 @@ namespace Julien.Script
         {
             if (handingObject.HandingTurel.transform.GetChild(0).GetComponent<HologramTurel>().CanBeSetDoawn)
             {
-                GameObject turel = Instantiate(TurelWrap.Turel.Prefab, handingObject.HandingTurel.transform.GetChild(0).position, handingObject.HandingTurel.transform.GetChild(0).rotation);
+                GameObject turel = Instantiate(TurelWrap.TurelType.Prefab, handingObject.HandingTurel.transform.GetChild(0).position, handingObject.HandingTurel.transform.GetChild(0).rotation);
                 turel.GetComponent<Turel>().SetParameters(TurelWrap);
                 Destroy(handingObject.HandingTurel.transform.GetChild(0).gameObject);
             

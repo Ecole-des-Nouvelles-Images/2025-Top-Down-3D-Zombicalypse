@@ -1,13 +1,14 @@
 using System;
 using Script.Data.TurellData;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Script.Struc
 {
     [Serializable]
     public struct TurelWrap
     {
-        public TurelData Turel;
+        [FormerlySerializedAs("Turel")] public TurelData TurelType;
 
         public int MaxAmmo;
         public float BulletSpeed;
@@ -24,18 +25,18 @@ namespace Julien.Script.Struc
         
         public void SetFirstData()
         {
-            MaxAmmo = Turel.MaxAmmo;
-            BulletSpeed = Turel.BulletSpeed;
-            BulletRange = Turel.BulletRange;
-            Damage = Turel.Damage;
-            MaxFireRate = Turel.MaxFireRate;
-            FireRate = Turel.FireRate;
-            Precision = Turel.Precision; 
-            Range = Turel.Range;
-            Distance = Turel.Distance;
-            MaxHEalth = Turel.MaxHealth;
-            Health = Turel.MaxHealth;
-            AmmoType = Turel.AmmoType;
+            MaxAmmo = TurelType.MaxAmmo;
+            BulletSpeed = TurelType.BulletSpeed;
+            BulletRange = TurelType.BulletRange;
+            Damage = TurelType.Damage;
+            MaxFireRate = TurelType.MaxFireRate;
+            FireRate = TurelType.FireRate;
+            Precision = TurelType.Precision; 
+            Range = TurelType.Range;
+            Distance = TurelType.Distance;
+            MaxHEalth = TurelType.MaxHealth;
+            Health = TurelType.MaxHealth;
+            AmmoType = TurelType.AmmoType;
         }
 
         public void AddBonus(UpgraderWrap BonusTurel)

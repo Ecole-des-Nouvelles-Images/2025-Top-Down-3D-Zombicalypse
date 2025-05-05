@@ -1,12 +1,11 @@
 using Script;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Julien.Script
 {
     public class HandingObject : MonoBehaviour
     {
-        [FormerlySerializedAs("_inventary")] [SerializeField] private InventoryPlayer inventory;
+        [SerializeField] private InventoryPlayer inventory;
 
         public GameObject HandingWeapon;
         public GameObject HandingTurel;

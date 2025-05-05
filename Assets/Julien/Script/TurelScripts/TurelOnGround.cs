@@ -1,8 +1,5 @@
 using Julien.Script.Struc;
-using Script;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Julien.Script.TurelScripts
 {
@@ -22,9 +19,9 @@ namespace Julien.Script.TurelScripts
             player.GetComponent<InventoryPlayer>().TurelWrap = TurelWrap;
             
             P.handingObject.HandingWeapon.SetActive(false);
-            P.handingObject.TurelPrefab = TurelWrap.Turel.VisualHologram;
+            P.handingObject.TurelPrefab = TurelWrap.TurelType.VisualHologram;
 
-            GameObject turelHologram = Instantiate(TurelWrap.Turel.VisualHologram, P.handingObject.HandingTurel.gameObject.transform.position, player.PlayerRenderer.transform.rotation, P.handingObject.HandingTurel.transform);
+            GameObject turelHologram = Instantiate(TurelWrap.TurelType.VisualHologram, P.handingObject.HandingTurel.gameObject.transform.position, player.PlayerRenderer.transform.rotation, P.handingObject.HandingTurel.transform);
             Debug.Log(" player rotation = " + player.PlayerRenderer.transform.rotation);
             Debug.Log(" Turel rotation = " + turelHologram.transform.rotation);
             turelHologram.GetComponent<HologramTurel>().TurelWrap = TurelWrap;
@@ -36,7 +33,7 @@ namespace Julien.Script.TurelScripts
         
         public void SetVisual()
         {
-            GameObject turel = Instantiate(TurelWrap.Turel.OnGroundPrefab, transform.position, Quaternion.identity, transform);
+            GameObject turel = Instantiate(TurelWrap.TurelType.OnGroundPrefab, transform.position, Quaternion.identity, transform);
         }
     }
 }

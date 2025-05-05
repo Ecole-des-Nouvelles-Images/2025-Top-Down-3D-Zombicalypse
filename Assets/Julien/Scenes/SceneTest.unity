@@ -799,6 +799,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &906366849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906366851}
+  - component: {fileID: 906366850}
+  m_Layer: 0
+  m_Name: OnGroundGameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &906366850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906366849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 70, y: 1, z: 70}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &906366851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906366849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 19.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1079825883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2030,6 +2083,10 @@ PrefabInstance:
       propertyPath: turelWrap.Turel
       value: 
       objectReference: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
+    - target: {fileID: 7960980451764752522, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+      propertyPath: TurelWrap.TurelType
+      value: 
+      objectReference: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
     - target: {fileID: 8360216231893004887, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.76
@@ -2258,6 +2315,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: NumberBonus
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: NumberTurel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _parentSpawn
+      value: 
+      objectReference: {fileID: 906366849}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _turelPrefab
+      value: 
+      objectReference: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: BonusTurelsPrefab
+      value: 
+      objectReference: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _bonusTurelsPrefab
+      value: 
+      objectReference: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _turelOnGroundPrefab
+      value: 
+      objectReference: {fileID: 7208615373735821925, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: ObjectsToSpawn.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _objectsToSpawn.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _bonusPrefabsData.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: _turelPrefabsData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: '_bonusPrefabsData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 188dabb68fa44644ba1bef9f1852c8dd, type: 2}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: '_bonusPrefabsData.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 241025f629dba3d4bb41edfbd96eaae6, type: 2}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: '_bonusPrefabsData.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e3a30eb9bc56b974d84a26ea3ba22651, type: 2}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: '_bonusPrefabsData.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: af84c9f4ac49eb54bb022e89313e0e6c, type: 2}
+    - target: {fileID: 1237537192648682482, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: '_turelPrefabsData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
     - target: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2302,10 +2423,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5097460286155230413, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: InBreak
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: _parentZombie
       value: 
       objectReference: {fileID: 1536146187}
+    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: Round.TimeBeforeNextRound
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2333,6 +2466,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
     - target: {fileID: 7960980451764752522, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
       propertyPath: turelWrap.Turel
+      value: 
+      objectReference: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
+    - target: {fileID: 7960980451764752522, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+      propertyPath: TurelWrap.TurelType
       value: 
       objectReference: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
     - target: {fileID: 8360216231893004887, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
@@ -2503,6 +2640,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 3955482195169874854}
+  - {fileID: 906366851}
   - {fileID: 410087041}
   - {fileID: 1505683566}
   - {fileID: 736395806}

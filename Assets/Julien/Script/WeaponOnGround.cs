@@ -1,15 +1,13 @@
 using System.Collections.Generic;
 using Julien.Script.Data.Weapons;
-using Script.Data.WeaponsData;
 using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Julien.Script
 {
-    public class WeaponOnFloor : MonoBehaviour, IInteractable
+    public class WeaponOnGround : MonoBehaviour, IInteractable
     {
         [SerializeField] private List<Weapon> _weapons;
         

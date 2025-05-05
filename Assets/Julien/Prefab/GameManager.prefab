@@ -52,7 +52,7 @@ MonoBehaviour:
   Round:
     CurrentRound: 0
     NumberOfPoint: 0
-    TimeBeforeNextRound: 20
+    TimeBeforeNextRound: 10
     _zombieToKillCount: 0
     _zombiesPrefabCanSpawn: []
     _zombies: []

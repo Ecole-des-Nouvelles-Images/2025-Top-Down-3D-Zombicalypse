@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Julien.Script
@@ -38,8 +39,8 @@ namespace Julien.Script
         
         [SerializeField] private GameObject[] _spawners;
 
-        [SerializeField] private bool _inBreak;
-        [SerializeField] private Break _break;
+        [FormerlySerializedAs("_inBreak")] public bool InBreak;
+        [FormerlySerializedAs("_break")] [SerializeField] private BreakSpawning breakSpawning;
 
         public int ZombieToKillCount
         {
@@ -47,7 +48,7 @@ namespace Julien.Script
             set
             {
                 Round._zombieToKillCount = value;
-                if (Round._zombieToKillCount >= Round._zombieToKill.Count && !_inBreak)
+                if (Round._zombieToKillCount >= Round._zombieToKill.Count && !InBreak)
                 {
                     StartCoroutine("Break");
                 }
@@ -102,11 +103,11 @@ namespace Julien.Script
         
          public IEnumerator Break()
          {
-             _inBreak = true;
+             InBreak = true;
              Debug.Log("Take a break");
              yield return new WaitForSeconds(Round.TimeBeforeNextRound);
              Debug.Log("End of break");
-             _inBreak = false;
+             InBreak = false;
              NexRound();
          }
         
