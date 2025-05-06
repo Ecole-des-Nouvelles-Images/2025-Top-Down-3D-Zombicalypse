@@ -335,7 +335,7 @@ MonoBehaviour:
   TurelType: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
   CurrentStat: {fileID: 0}
   TurelWrap:
-    Turel: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
+    TurelType: {fileID: 0}
     MaxAmmo: 0
     BulletSpeed: 0
     BulletRange: 0
@@ -744,7 +744,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: eb5642ffe8c63f648af2a7d534d8392f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb5642ffe8c63f648af2a7d534d8392f, type: 3}
       propertyPath: m_LocalScale.z

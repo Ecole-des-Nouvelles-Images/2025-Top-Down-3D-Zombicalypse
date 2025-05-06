@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.72102344, y: 2.7560856, z: 3.804199}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2920496199143966151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6dbb8be60cbf5f44adc6f3e0b9c62af, type: 3}
   m_Name: 
@@ -52,7 +52,7 @@ MonoBehaviour:
   Round:
     CurrentRound: 0
     NumberOfPoint: 0
-    TimeBeforeNextRound: 10
+    TimeBeforeNextRound: 25
     _zombieToKillCount: 0
     _zombiesPrefabCanSpawn: []
     _zombies: []
@@ -65,8 +65,8 @@ MonoBehaviour:
   - Round: 3
     ZombiePrefab: {fileID: 6910938945056931783, guid: f24fcbd9bba7eee499043628a6377855, type: 3}
   _spawners: []
-  _inBreak: 0
-  _break: {fileID: 0}
+  InBreak: 0
+  _breakSpawning: {fileID: 0}
   _parentZombie: {fileID: 0}
 --- !u!114 &5978329320630793120
 MonoBehaviour:
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2920496199143966151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36ef24ecd5f5c5e4c897fcacdaaf23df, type: 3}
   m_Name: 
@@ -108,8 +108,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2920496199143966151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3e73ecdd55debf4ab69afeb45bda18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumberTurel: 1
+  NumberBonus: 6
+  MaxTimer: 0
+  CurrentTimer: 0
+  _breakTimer: 0
+  _turelOnGroundPrefab: {fileID: 7208615373735821925, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+  _bonusTurelsPrefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+  _objectsToSpawn: []
+  _parentSpawn: {fileID: 0}
+  _navMeshSurface: {fileID: 0}

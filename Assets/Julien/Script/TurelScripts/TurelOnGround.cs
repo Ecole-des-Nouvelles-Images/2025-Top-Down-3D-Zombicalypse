@@ -13,7 +13,6 @@ namespace Julien.Script.TurelScripts
         public TurelWrap TurelWrap;
         private void Start()
         {
-           
         }
         public void Activate(Player player)
         {

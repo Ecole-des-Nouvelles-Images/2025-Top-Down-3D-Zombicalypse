@@ -33,7 +33,7 @@ namespace Julien.Script
                 }
             }
             handingObject.SwitchWeapon();
-            equipedWeaponWrap = StrucWeapons[0];
+            equipedWeaponWrap = StrucWeapons[1];
         }
         
         public void Reload()
@@ -155,6 +155,7 @@ namespace Julien.Script
             Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
             handingObject.HandingWeapon.SetActive(true);
             UpgraderWrap = new UpgraderWrap();
+            bonus.GetComponent<BonusTurel>().SetVisual();
             _player.SwitchInputHandler(0);
         }
     }

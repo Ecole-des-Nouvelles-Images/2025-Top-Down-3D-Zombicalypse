@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 2628128380907278392}
   - component: {fileID: 5833013581066134349}
   - component: {fileID: 7981929284997595972}
+  - component: {fileID: 1016166810128652122}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -295,13 +296,16 @@ MonoBehaviour:
   Speed: 0
   _spawnBullet: {fileID: 5344439608016241122}
   _isHolding: 0
-  _isReloading: 0
+  isReloading: 0
   _canShoot: 1
   _aimTarget: {fileID: 4074730433169470613}
   _rigidbody: {fileID: 7844901640603662107}
   handingObject: {fileID: 7791655236001309451}
   _dropPrefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+  currentAimTurel: {fileID: 0}
   _gameManager: {fileID: 0}
+  PlayerRenderer: {fileID: 3948030461964295193}
+  InteractsGameObject: []
 --- !u!114 &2854704983080223569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,19 +319,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipedWeaponWrap:
+    WeaponPrefab: {fileID: 0}
     Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
-  - Weapon: {fileID: 11400000, guid: 7a09e463e3670cf41ae39d4b783961fb, type: 2}
+  - WeaponPrefab: {fileID: 0}
+    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
-  - Weapon: {fileID: 11400000, guid: 1825723614bb75d4a89163a20aa8699d, type: 2}
+  - WeaponPrefab: {fileID: 0}
+    Weapon: {fileID: 11400000, guid: 1825723614bb75d4a89163a20aa8699d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   indexWeapon: 0
   TurelWrap:
-    Turel: {fileID: 0}
+    TurelType: {fileID: 0}
     MaxAmmo: 0
     BulletSpeed: 0
     BulletRange: 0
@@ -336,14 +343,18 @@ MonoBehaviour:
     FireRate: 0
     Precision: 0
     Range: 0
+    Distance: 0
     MaxHEalth: 0
     Health: 0
     AmmoType: {fileID: 0}
   UpgraderWrap:
-    Upgrader: {fileID: 0}
+    UpgraderPrefab: {fileID: 0}
+    UpgraderType: {fileID: 0}
     AddDamage: 0
     AddFireRate: 0
     AddMaxHealth: 0
+    AddRange: 0
+    AddDistance: 0
   _player: {fileID: 0}
   handingObject: {fileID: 7791655236001309451}
 --- !u!114 &5683671012514460301
@@ -428,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _multiplayerHandler: {fileID: 0}
+  _player: {fileID: 0}
   PlayerNumber: 0
   _playerInput: {fileID: 0}
 --- !u!135 &7981929284997595972
@@ -443,7 +455,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -451,6 +463,29 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1016166810128652122
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2902083763329592815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.0575285
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.81563807, z: 0}
 --- !u!1 &3948030461964295193
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +593,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2

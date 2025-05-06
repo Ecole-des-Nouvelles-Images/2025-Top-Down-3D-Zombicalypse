@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using Julien.Script.Interface;
-using Julien.Script.Struc;
-using Julien.Script.TurelScripts;
-using Script;
+using Julien.Script.Static;
 using Script.Data.PlayerData;
 using Script.Input;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace Julien.Script
@@ -65,15 +64,28 @@ namespace Julien.Script
         [Header("References")] 
         
         [SerializeField] private GameObject _gameManager;
-        [FormerlySerializedAs("_playerRenderer")] public GameObject PlayerRenderer;
+        public GameObject PlayerRenderer;
         private Vector2 _move;
         private InventoryPlayer _inventory;
 
         [SerializeField] private List<GameObject> InteractsGameObject;
         
+        
         private void Awake()
         {
-           // _rigidbody = GetComponent<Rigidbody>();
+            // ne pas detruire le gameobject lors d'un chargement de scene
+            DontDestroyOnLoad(this);
+            SceneManager.sceneLoaded += OnSceneloaded;
+        }
+        
+        private void OnDestroy()
+        {
+            SceneManager.sceneLoaded -= OnSceneloaded;
+        }
+        
+        private void OnSceneloaded(Scene arg0, LoadSceneMode arg1)
+        {
+            transform.position = GameManagerStatic.positions[PlayerIndex];
         }
 
         private void Start()
@@ -100,7 +112,6 @@ namespace Julien.Script
             {
                 Fire(_isHolding);
             }
-
             if (_inventory.UpgraderWrap.UpgraderType)
             {
                 RaycastHit hit;
@@ -217,7 +228,7 @@ namespace Julien.Script
         // Interagir
         public void Interact()
         {
-            if (InteractsGameObject != null)
+            if (InteractsGameObject[0] != null)
             {
                 InteractsGameObject[0].GetComponent<IInteractable>().Activate(this);
             }

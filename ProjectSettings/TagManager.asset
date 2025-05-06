@@ -23,7 +23,7 @@ TagManager:
   - Spawner
   - NoCollide
   - Interactable
-  - 
+  - NoCollideWithSphereCollider
   - 
   - 
   - 

@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Script.Multiplayer
+namespace Julien.Script.Multiplayer
 {
     public class MultiplayerHandler : MonoBehaviour
     {

@@ -17,7 +17,7 @@ MonoBehaviour:
   MaxFireRate: 0.2
   FireRate: 0.05
   Precision: 0.2
-  Range: 6
+  Range: 15
   Distance: 3
   BulletSpeed: 20
   MaxHealth: 50
