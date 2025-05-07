@@ -29,6 +29,7 @@ namespace Julien.Script.Lobby
                 CurrentNumberPlayer++;
                 if (CurrentNumberPlayer >= _multiplayerHandler.NumberOfPlayer)
                 {
+                    StopCoroutine("StartGameCoroutine");
                     StartCoroutine("StartGameCoroutine");
                 }
             }
