@@ -1,7 +1,5 @@
-using System;
-using Unity.VisualScripting;
+using Julien.Script;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Script
 {
@@ -17,6 +15,7 @@ namespace Script
         [SerializeField] private float _timer;
         
         public bool IsBreak;
+        [SerializeField] private bool _isDestroyed;
         
         [SerializeField] private float _healthHH;
         
@@ -73,8 +72,10 @@ namespace Script
             }
         }
 
+        [ContextMenu("EndGame")]
         public void EndGame()
         {
+            GameObject.FindWithTag("GameManager").GetComponent<EndingGame>().EndGame();
             Debug.Log("EndGame");
         }
     }

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Julien/Scenes/MenuScene.unity
-    guid: a90be38fc1114da45a87db6cf8dbf8ad
+    path: Assets/Julien/Scenes/MainMenu.unity
+    guid: 3f2e87839034e2749aca69d64512207c
   - enabled: 1
     path: Assets/Julien/Scenes/Lobby.unity
     guid: 825deced135dd7d4da0fadbdd2aa765c

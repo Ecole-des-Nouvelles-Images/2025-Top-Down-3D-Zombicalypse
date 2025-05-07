@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Julien.Script.Menu
 {
-    public class MainMenu : MonoBehaviour
+    public class UI_MainMenu : MonoBehaviour
     {
         public GameObject MainMenuPanel;
         
@@ -12,16 +12,17 @@ namespace Julien.Script.Menu
         
         public void Play()
         {
-            Debug.Log("Play");
             SceneManager.LoadScene("Lobby");
         }
         public void OpenOptions()
         {
-            Debug.Log("Options");
+            MainMenuPanel.SetActive(false);
+            OptionsPanel.SetActive(true);
         }
         public void OpenCredit()
         {
-            Debug.Log("Credit");
+            MainMenuPanel.SetActive(false);
+            CreditsPanel.SetActive(true);
         }
         public void Quitter()
         {

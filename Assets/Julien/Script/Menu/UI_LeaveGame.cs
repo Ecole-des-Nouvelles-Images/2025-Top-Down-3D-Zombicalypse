@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Julien.Script.Menu
 {
-    public class LeaveGame : MonoBehaviour, IInteractable
+    public class UI_LeaveGame : MonoBehaviour, IInteractable
     {
         public void Activate(Player player)
         {
