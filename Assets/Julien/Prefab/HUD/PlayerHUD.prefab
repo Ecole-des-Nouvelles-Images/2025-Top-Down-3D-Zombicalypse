@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTarget: {fileID: 0}
+  Inventory: {fileID: 0}
   _weaponsHUD:
   - {fileID: 8951938864057025349}
   - {fileID: 6907280528359003188}
@@ -610,7 +611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4413928405845197473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -684,6 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eaf11702086d745a77ab4d2e12d0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentAmmo: {fileID: 6048077905412361435}
+  _currentMagazin: {fileID: 8140954869496241887}
 --- !u!1 &6283336026928773982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eaf11702086d745a77ab4d2e12d0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentAmmo: {fileID: 1514852693360134075}
+  _currentMagazin: {fileID: 5574151781683130402}
 --- !u!1 &8615908063079045268
 GameObject:
   m_ObjectHideFlags: 0

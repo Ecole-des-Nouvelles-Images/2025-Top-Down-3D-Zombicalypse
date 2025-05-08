@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 8452351603674016922, guid: 5438a4792475728418a0e5c2353a2c1e, type: 3}
+  ImageWeapon: {fileID: 0}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
@@ -23,6 +24,6 @@ MonoBehaviour:
   Precision: 0.05
   LethalRangeLetal: 1.7
   MaxAmmo: 30
-  MaxMagazine: 70000
+  MaxMagazine: 5
   ReloadTime: 1
   RemoveAmmoParFire: 1

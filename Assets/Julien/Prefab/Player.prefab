@@ -304,6 +304,7 @@ MonoBehaviour:
   _dropPrefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   currentAimTurel: {fileID: 0}
   HudPrefab: {fileID: 1959261300190757804, guid: 00cff2f511051ae4493c8e9135186c81, type: 3}
+  HudPlayerInventory: {fileID: 0}
   PlayerRenderer: {fileID: 3948030461964295193}
   InteractsGameObject: []
 --- !u!114 &2854704983080223569
@@ -320,16 +321,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipedWeaponWrap:
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
+    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
   - WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
+    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 1825723614bb75d4a89163a20aa8699d, type: 2}
+    Weapon: {fileID: 0}
     CurrentAmmo: 0
     CurrentMagazin: 0
   indexWeapon: 0

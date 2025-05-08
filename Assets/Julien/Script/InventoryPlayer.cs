@@ -1,4 +1,5 @@
 using System.Collections;
+using Julien.Script.HUD;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
 using Script.Struc;
@@ -33,7 +34,7 @@ namespace Julien.Script
                 }
             }
             handingObject.SwitchWeapon();
-            equipedWeaponWrap = StrucWeapons[1];
+            equipedWeaponWrap = StrucWeapons[0];
         }
         
         public void Reload()
@@ -51,6 +52,7 @@ namespace Julien.Script
             _player.isReloading = false;
             equipedWeaponWrap.CurrentAmmo = equipedWeaponWrap.Weapon.MaxAmmo;
             equipedWeaponWrap.CurrentMagazin--;
+            _player.HudPlayerInventory.SetHudInfo();
         }
 
         public void Switch()
@@ -67,6 +69,7 @@ namespace Julien.Script
 
         public void AutomaticSwitch()
         {
+            StrucWeapons[indexWeapon] = equipedWeaponWrap;
             for (int i = 0; i < StrucWeapons.Length; i++)
             {
                 if (StrucWeapons[i].Weapon != null)
@@ -93,28 +96,34 @@ namespace Julien.Script
                 if (StrucWeapons[i].Weapon == null)
                 {
                     StrucWeapons[i] = weaponWrap;
+                    _player.HudPlayerInventory.SetActiveWeapon(i, true);
                     Destroy(weaponVisual);
                 }
             }
+            AutomaticSwitch();
+            _player.HudPlayerInventory.SetAllInfoHud();
         }
 
         public void DropWeapon()
         {
-            int index = StrucWeapons.Length;
+            int indexCount = StrucWeapons.Length;
+            
             
             for (int i = 0; i < StrucWeapons.Length; i++)
             {
                 if (StrucWeapons[i].Weapon == null)
                 {
-                    index--;
+                    indexCount--;
                 }
             }
 
-            if (index > 1)
+            if (indexCount > 1)
             {
+                Debug.Log("Va drop l'arme");
                 GameObject weapon = Instantiate(equipedWeaponWrap.WeaponPrefab, gameObject.transform.position, quaternion.identity);
                 weapon.GetComponent<WeaponOnGround>().Drop(equipedWeaponWrap);
                 weapon.GetComponent<WeaponOnGround>().DropedWeapon = true;
+                _player.HudPlayerInventory.SetActiveWeapon(indexWeapon, false);
                 StrucWeapons[indexWeapon].ClearData();
                 equipedWeaponWrap.ClearData();
                 AutomaticSwitch();

@@ -66,8 +66,8 @@ namespace Julien.Script
         [Header("References")] 
         
         [SerializeField] private GameObject HudPrefab;
-
-       [SerializeField] private GameObject HudParent;
+        public HUDPlayerInventory HudPlayerInventory;
+        private GameObject HudParent;
         
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
@@ -96,7 +96,9 @@ namespace Julien.Script
             int index = PlayerIndex - 1;
             HudParent = GameObject.FindWithTag("HudMultiplayer");
             GameObject hud = Instantiate(HudPrefab, HudParent.transform.position, quaternion.identity, HudParent.transform);
-            hud.GetComponent<HUDPlayerInventory>().SetInfo(this);
+            HudPlayerInventory = hud.GetComponent<HUDPlayerInventory>();
+            HudPlayerInventory.SetInfoOnStart(this);
+            
             
             
             // changer la place du joueur au début au chargement de la scene
@@ -196,6 +198,7 @@ namespace Julien.Script
                 StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 _inventory.equipedWeaponWrap.CurrentAmmo -= _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
+                HudPlayerInventory.SetHudInfo();
             }
         }
         
@@ -204,12 +207,6 @@ namespace Julien.Script
             yield return new WaitForSeconds(timer);
             _canShoot = true;
         }
-        
-        
-        // recharger
-        
-
-       
         
         public void Die()
         {

@@ -1,6 +1,7 @@
+using System;
 using System.Collections.Generic;
 using Julien.Script.Static;
-using Script.Struc;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Julien.Script.HUD
@@ -11,12 +12,19 @@ namespace Julien.Script.HUD
         public InventoryPlayer Inventory;
         
         [SerializeField] private List<HUDWeapon> _weaponsHUD = new List<HUDWeapon>();
-        
-        public void SetInfo(Player player)
+
+        public void SetInfoOnStart(Player player)
         {
             PlayerTarget = player;
             SetPosition();
             Inventory = PlayerTarget.GetComponent<InventoryPlayer>();
+            SetAllInfoHud();
+        }
+
+        public void SetAllInfoHud()
+        {
+            _weaponsHUD[0].SetHUD(Inventory.StrucWeapons[0]);
+            _weaponsHUD[1].SetHUD(Inventory.StrucWeapons[1]);
         }
 
         public void SetPosition()
@@ -31,9 +39,15 @@ namespace Julien.Script.HUD
             hudRectTransform.offsetMax = new Vector2(0, 0);
         }
 
-        public void SetHudInfo(WeaponWrap weaponWrap)
+        public void SetHudInfo()
         {
-            _weaponsHUD[Inventory.indexWeapon]
+            _weaponsHUD[Inventory.indexWeapon].GetComponent<HUDWeapon>().SetHUD(Inventory.equipedWeaponWrap);
+            Debug.Log("Change info HUD");
+        }
+
+        public void SetActiveWeapon(int index, bool condition)
+        {
+            _weaponsHUD[index].gameObject.SetActive(condition);
         }
     }
 }
