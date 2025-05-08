@@ -6,13 +6,13 @@ using UnityEngine;
 
 namespace Julien.Script.HUD
 {
-    public class HUDPlayerInventory : MonoBehaviour
+    public class HUDPlayer : MonoBehaviour
     {
         public Player PlayerTarget;
         public InventoryPlayer Inventory;
         
         [SerializeField] private List<HUDWeapon> _weaponsHUD = new List<HUDWeapon>();
-
+        public HUDPlayerHealth HUDPlayerHealth;
         public void SetInfoOnStart(Player player)
         {
             PlayerTarget = player;

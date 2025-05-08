@@ -52,7 +52,7 @@ namespace Julien.Script
             _player.isReloading = false;
             equipedWeaponWrap.CurrentAmmo = equipedWeaponWrap.Weapon.MaxAmmo;
             equipedWeaponWrap.CurrentMagazin--;
-            _player.HudPlayerInventory.SetHudInfo();
+            _player.hudPlayer.SetHudInfo();
         }
 
         public void Switch()
@@ -96,12 +96,12 @@ namespace Julien.Script
                 if (StrucWeapons[i].Weapon == null)
                 {
                     StrucWeapons[i] = weaponWrap;
-                    _player.HudPlayerInventory.SetActiveWeapon(i, true);
+                    _player.hudPlayer.SetActiveWeapon(i, true);
                     Destroy(weaponVisual);
                 }
             }
             AutomaticSwitch();
-            _player.HudPlayerInventory.SetAllInfoHud();
+            _player.hudPlayer.SetAllInfoHud();
         }
 
         public void DropWeapon()
@@ -123,7 +123,7 @@ namespace Julien.Script
                 GameObject weapon = Instantiate(equipedWeaponWrap.WeaponPrefab, gameObject.transform.position, quaternion.identity);
                 weapon.GetComponent<WeaponOnGround>().Drop(equipedWeaponWrap);
                 weapon.GetComponent<WeaponOnGround>().DropedWeapon = true;
-                _player.HudPlayerInventory.SetActiveWeapon(indexWeapon, false);
+                _player.hudPlayer.SetActiveWeapon(indexWeapon, false);
                 StrucWeapons[indexWeapon].ClearData();
                 equipedWeaponWrap.ClearData();
                 AutomaticSwitch();

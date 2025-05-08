@@ -20,7 +20,7 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
                     {
                         if (obj.CompareTag("Player"))
                         {
-                            obj.GetComponent<Player>().Health -= zombie.Damage;
+                            obj.GetComponent<Player>().TakeDamage(zombie.Damage);
                         }
                     } 
                 }

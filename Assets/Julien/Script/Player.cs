@@ -24,8 +24,9 @@ namespace Julien.Script
         
         public PlayerData PlayerData;
 
-        [Header("Player Stat")] 
-        
+        [Header("Player Stat")]
+
+        [SerializeField] private float _maxHealth;
         [SerializeField] private float _health;
         public float Health
         {
@@ -66,7 +67,7 @@ namespace Julien.Script
         [Header("References")] 
         
         [SerializeField] private GameObject HudPrefab;
-        public HUDPlayerInventory HudPlayerInventory;
+        [FormerlySerializedAs("HudPlayerInventory")] public HUDPlayer hudPlayer;
         private GameObject HudParent;
         
         private GameObject _gameManager;
@@ -96,8 +97,8 @@ namespace Julien.Script
             int index = PlayerIndex - 1;
             HudParent = GameObject.FindWithTag("HudMultiplayer");
             GameObject hud = Instantiate(HudPrefab, HudParent.transform.position, quaternion.identity, HudParent.transform);
-            HudPlayerInventory = hud.GetComponent<HUDPlayerInventory>();
-            HudPlayerInventory.SetInfoOnStart(this);
+            hudPlayer = hud.GetComponent<HUDPlayer>();
+            hudPlayer.SetInfoOnStart(this);
             
             
             
@@ -118,7 +119,8 @@ namespace Julien.Script
 
         private void DisplayData()
         {
-            Health = PlayerData.health;
+            _maxHealth = PlayerData.health;
+            Health = _maxHealth;
             Speed = PlayerData.Speed;
         }
 
@@ -198,7 +200,7 @@ namespace Julien.Script
                 StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 _inventory.equipedWeaponWrap.CurrentAmmo -= _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
-                HudPlayerInventory.SetHudInfo();
+                hudPlayer.SetHudInfo();
             }
         }
         
@@ -207,7 +209,18 @@ namespace Julien.Script
             yield return new WaitForSeconds(timer);
             _canShoot = true;
         }
+
+        [ContextMenu("Debug take damage")]
+        public void takeDamageDebug()
+        {
+            TakeDamage(20);
+        }
         
+        public void TakeDamage(float damage)
+        {
+            Health -= damage;
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+        }
         public void Die()
         {
             Debug.Log("Meurt");
