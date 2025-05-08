@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Julien.Script.Menu
 {
-    public class UI_Credits : MonoBehaviour
+    public class UICredits : MonoBehaviour
     {
         public GameObject CreditsMenu;
         public GameObject ReturnMenu;

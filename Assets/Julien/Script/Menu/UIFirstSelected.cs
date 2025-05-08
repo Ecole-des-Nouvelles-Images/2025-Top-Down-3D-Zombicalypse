@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace Julien.Script.Menu
 {
-    public class UI_FirstSelected : MonoBehaviour
+    public class UIFirstSelected : MonoBehaviour
     {
         private GameObject _eventSystemGameObject;
         private EventSystem _eventSystem;

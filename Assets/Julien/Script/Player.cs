@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Script.HUD;
 using Julien.Script.Interface;
 using Julien.Script.Static;
 using Script.Data.PlayerData;
 using Script.Input;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -63,7 +65,11 @@ namespace Julien.Script
 
         [Header("References")] 
         
-        [SerializeField] private GameObject _gameManager;
+        [SerializeField] private GameObject HudPrefab;
+
+       [SerializeField] private GameObject HudParent;
+        
+        private GameObject _gameManager;
         public GameObject PlayerRenderer;
         private Vector2 _move;
         private InventoryPlayer _inventory;
@@ -85,7 +91,16 @@ namespace Julien.Script
         
         private void OnSceneloaded(Scene arg0, LoadSceneMode arg1)
         {
-            transform.position = GameManagerStatic.positions[PlayerIndex];
+            
+            // instancier au chargement de la scene un prefab de son HUD ( inventaire )
+            int index = PlayerIndex - 1;
+            HudParent = GameObject.FindWithTag("HudMultiplayer");
+            GameObject hud = Instantiate(HudPrefab, HudParent.transform.position, quaternion.identity, HudParent.transform);
+            hud.GetComponent<HUDPlayerInventory>().SetInfo(this);
+            
+            
+            // changer la place du joueur au début au chargement de la scene
+            transform.position = GameManagerStatic.positions[index];
         }
 
         private void Start()

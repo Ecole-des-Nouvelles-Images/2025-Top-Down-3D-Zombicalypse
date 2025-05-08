@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Julien.Script.Menu
 {
-    public class UI_MainMenu : MonoBehaviour
+    public class UIMainMenu : MonoBehaviour
     {
         public GameObject MainMenuPanel;
         

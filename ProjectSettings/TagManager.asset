@@ -12,6 +12,7 @@ TagManager:
   - Turel
   - EventSystem
   - StartMenu
+  - HudMultiplayer
   layers:
   - Default
   - TransparentFX

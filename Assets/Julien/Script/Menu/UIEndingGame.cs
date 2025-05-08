@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Julien.Script.Menu
 {
-    public class UI_EndingGame : MonoBehaviour
+    public class UIEndingGame : MonoBehaviour
     {
         public void ReturnMenu()
         {

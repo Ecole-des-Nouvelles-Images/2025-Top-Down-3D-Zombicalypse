@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Julien.Script.Menu
 {
-    public class UI_Option : MonoBehaviour
+    public class UIOption : MonoBehaviour
     {
         public GameObject OptionPanel;
 

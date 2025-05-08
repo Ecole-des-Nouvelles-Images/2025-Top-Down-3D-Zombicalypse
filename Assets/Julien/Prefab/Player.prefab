@@ -303,7 +303,7 @@ MonoBehaviour:
   handingObject: {fileID: 7791655236001309451}
   _dropPrefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   currentAimTurel: {fileID: 0}
-  _gameManager: {fileID: 0}
+  HudPrefab: {fileID: 1959261300190757804, guid: 00cff2f511051ae4493c8e9135186c81, type: 3}
   PlayerRenderer: {fileID: 3948030461964295193}
   InteractsGameObject: []
 --- !u!114 &2854704983080223569

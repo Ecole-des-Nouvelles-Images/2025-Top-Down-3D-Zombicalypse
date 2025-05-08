@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Julien.Script.Menu
 {
-    public class UI_StartMenu : MonoBehaviour
+    public class UIStartMenu : MonoBehaviour
     {
         public void MainMenu()
         {
