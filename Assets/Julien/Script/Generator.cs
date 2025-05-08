@@ -45,6 +45,12 @@ namespace Script
             
         }
 
+        public void TakeDamage(float damage)
+        {
+            Health -= damage;
+            
+        }
+
         public void On()
         {
             _timeBefforDamaged = _maxTimeBefforDamaged;

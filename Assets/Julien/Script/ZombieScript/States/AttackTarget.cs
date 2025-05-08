@@ -12,7 +12,7 @@ namespace Script.ZombieScript.States
             
             if (zombie.AttackSpeed <= 0)
             {
-                zombie.Target.GetComponent<Generator>().Health -= zombie.Damage;
+                zombie.Target.GetComponent<Generator>().TakeDamage(zombie.Damage);
                 zombie.AttackSpeed = zombie.TypeZombie.AttackSpeed;
             }
         }

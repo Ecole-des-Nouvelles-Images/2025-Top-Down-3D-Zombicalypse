@@ -33,8 +33,8 @@ namespace Julien.Script.HUD
 
             int index = PlayerTarget.PlayerIndex - 1;
             
-            hudRectTransform.anchorMin = new Vector2(GameManagerStatic.Anchor[index].x, GameManagerStatic.Anchor[index].y);
-            hudRectTransform.anchorMax = new Vector2(GameManagerStatic.Anchor[index].z, GameManagerStatic.Anchor[index].w);
+            hudRectTransform.anchorMin = new Vector2(GameManagerStatic.Anchors[index].x, GameManagerStatic.Anchors[index].y);
+            hudRectTransform.anchorMax = new Vector2(GameManagerStatic.Anchors[index].z, GameManagerStatic.Anchors[index].w);
             hudRectTransform.offsetMin = new Vector2(0, 0);
             hudRectTransform.offsetMax = new Vector2(0, 0);
         }
