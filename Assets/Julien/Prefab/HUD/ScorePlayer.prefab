@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 991072346904939412}
   m_Layer: 5
   m_Name: ScorePlayer
-  m_TagString: Untagged
+  m_TagString: EndHud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

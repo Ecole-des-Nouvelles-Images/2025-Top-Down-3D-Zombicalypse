@@ -60,6 +60,7 @@ namespace Julien.Script.ZombieScript
                 if (CurrentHealth <= 0 && !Dead)
                 {
                     Dead = true;
+                    _player.GetComponent<PlayerScore>().ZombieKilled++;
                     Die();
                 }
             }
@@ -71,9 +72,10 @@ namespace Julien.Script.ZombieScript
             Health -= 50;
         }
 
-        public void Damaged(float damage)
+        public void Damaged(float damage, Player player)
         {
             Health -= damage;
+            _player = player;
         }
         
         private void Awake()

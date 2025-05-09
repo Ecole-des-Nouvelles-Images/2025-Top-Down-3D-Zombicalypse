@@ -2,9 +2,8 @@ using System.Collections;
 using Julien.Script.PlayerScripts;
 using Julien.Script.ZombieScript;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Script
+namespace Julien.Script
 {
     public class Bullet : MonoBehaviour
     {
@@ -35,20 +34,23 @@ namespace Script
             _rigibody.AddForce((gameObject.transform.forward + gameObject.transform.right * randomDirection) * BulletSpeed, ForceMode.Impulse);
         }
 
-        public void SetBulletParameter(float bulletSpeed, float damage, float precision, float range)
+        public void SetBulletParameter(float bulletSpeed, float damage, float precision, float range, Player player)
         {
             BulletSpeed = bulletSpeed;
             DamageBullet = damage;
             Precision = precision;
             LethalRange = range;
+            Debug.Log(player);
+            if (player != null) _player = player;
         }
         
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Zombie"))
             {
+                if (_player != null) _player.GetComponent<PlayerScore>().DamageCount += DamageBullet;
                 Zombie zombie = other.gameObject.GetComponent<Zombie>();
-                zombie.Damaged(DamageBullet);
+                zombie.Damaged(DamageBullet, _player);
                 Destroy(gameObject);
             }
         }

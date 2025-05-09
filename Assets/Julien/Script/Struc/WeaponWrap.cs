@@ -1,6 +1,5 @@
 using System;
 using Julien.Script.Data.Weapons;
-using Script.Data.WeaponsData;
 using UnityEngine;
 
 namespace Script.Struc

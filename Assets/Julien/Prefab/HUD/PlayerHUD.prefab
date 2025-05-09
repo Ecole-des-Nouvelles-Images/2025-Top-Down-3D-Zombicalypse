@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7668299088803203422}
   m_Layer: 5
   m_Name: PlayerHUD
-  m_TagString: Untagged
+  m_TagString: Hud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02012821bfcf3c74a8e5b8f74f705d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerTarget: {fileID: 0}
-  Inventory: {fileID: 0}
+  _playerTarget: {fileID: 0}
+  _inventory: {fileID: 0}
   _weaponsHUD:
   - {fileID: 8951938864057025349}
   - {fileID: 6907280528359003188}

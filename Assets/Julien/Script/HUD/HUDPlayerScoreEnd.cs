@@ -34,7 +34,7 @@ namespace Julien.Script.HUD
         }
 
         [ContextMenu("SetScore")]
-        public void SetScore()
+        public void OnEnable()
         {
             _playerScore.CalculScore();
             

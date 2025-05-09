@@ -1,3 +1,4 @@
+using Julien.Script.PlayerScripts;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
@@ -29,7 +30,7 @@ namespace Julien.Script.Data.Weapons
         public float ReloadTime;
 
         public int RemoveAmmoParFire;
-        public abstract void Fire(Transform spawnBulletPosition);
+        public abstract void Fire(Transform spawnBulletPosition, Player player);
         public abstract void Reload();
     }
 }

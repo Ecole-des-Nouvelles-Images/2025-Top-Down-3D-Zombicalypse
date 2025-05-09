@@ -330,7 +330,7 @@ MonoBehaviour:
     CurrentMagazin: 0
   StrucWeapons:
   - WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
+    Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - WeaponPrefab: {fileID: 0}

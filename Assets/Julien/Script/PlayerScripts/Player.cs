@@ -117,6 +117,7 @@ namespace Julien.Script.PlayerScripts
 
         private void Start()
         {
+            _playerScore = GetComponent<PlayerScore>();
             _inventory = gameObject.GetComponent<InventoryPlayer>();
             DisplayData();
             handingObject.SwitchWeapon();
@@ -205,7 +206,7 @@ namespace Julien.Script.PlayerScripts
             _isHolding = readValueAsButton;
             if (readValueAsButton && _canShoot && !isReloading && _inventory.equipedWeaponWrap.CurrentAmmo - _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
             {
-                _inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform);
+                _inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this);
                 StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 _inventory.equipedWeaponWrap.CurrentAmmo -= _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;

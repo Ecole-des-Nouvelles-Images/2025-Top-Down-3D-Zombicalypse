@@ -1,14 +1,15 @@
+using Julien.Script.HUD;
 using UnityEngine;
 
 namespace Julien.Script
 {
     public class EndingGame : MonoBehaviour
     {
-        [SerializeField] private GameObject _EndingPanel;
-        
+        [SerializeField] private HUDMultiplayerManager _hudMultiplayerManager;
+
         public void EndGame()
         {
-            _EndingPanel.SetActive(true);
+            _hudMultiplayerManager.SetHUD();
         }
     }
 }

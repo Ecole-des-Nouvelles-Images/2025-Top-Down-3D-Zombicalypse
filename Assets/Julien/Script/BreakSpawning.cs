@@ -105,7 +105,6 @@ namespace Julien.Script
             {
                 Destroy(_parentSpawn.transform.GetChild(i).gameObject);
             }
-            _navMeshSurface.BuildNavMesh();
         }
         
         public bool checkIfCanSpawn()

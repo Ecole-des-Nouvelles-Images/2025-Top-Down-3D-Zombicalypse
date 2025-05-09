@@ -1,15 +1,15 @@
-using Julien.Script.Data.Weapons;
+using Julien.Script.PlayerScripts;
 using UnityEngine;
 
-namespace Script.Data.WeaponsData
+namespace Julien.Script.Data.Weapons
 {
     [CreateAssetMenu(fileName = "Pistol", menuName = "Scriptable Objects/Weapon/Pistol")]
     public class Pistol : Weapon
     {
-        public override void Fire(Transform spawnBulletPosition)
+        public override void Fire(Transform spawnBulletPosition, Player player)
         {
             GameObject bullet = Instantiate(BulletPrefab, spawnBulletPosition.transform.position, spawnBulletPosition.transform.rotation);
-            bullet.gameObject.GetComponent<Bullet>().SetBulletParameter(BulletSpeed, Damage, Precision, LethalRangeLetal);
+            bullet.gameObject.GetComponent<Bullet>().SetBulletParameter(BulletSpeed, Damage, Precision, LethalRangeLetal, player);
         }
 
         public override void Reload()
