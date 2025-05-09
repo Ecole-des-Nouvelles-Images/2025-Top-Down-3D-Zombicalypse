@@ -1,3 +1,4 @@
+using System;
 using Julien.Script;
 using UnityEngine;
 
@@ -16,16 +17,20 @@ namespace Script
         
         public bool IsBreak;
         [SerializeField] private bool _isDestroyed;
+
+        public float MaxHealth;
+        [SerializeField] private float _health;
+
+        public event Action<float> OntakeDamage; 
         
-        [SerializeField] private float _healthHH;
         
         public float Health
         {
-            get => _healthHH;
+            get => _health;
             set
             {
-                _healthHH = value;
-                if (_healthHH <= 0)
+                _health = value;
+                if (_health <= 0)
                 {
                     EndGame();
                 }
@@ -48,7 +53,7 @@ namespace Script
         public void TakeDamage(float damage)
         {
             Health -= damage;
-            
+            OntakeDamage?.Invoke(Health);
         }
 
         public void On()
@@ -76,6 +81,13 @@ namespace Script
                     _timedamage = _maxTimeDamage;
                 }
             }
+        }
+
+        [ContextMenu("TakeDamage debug")]
+        public void TakeDamageDebug()
+        {
+            Health -= 20;
+            OntakeDamage?.Invoke(Health);
         }
 
         [ContextMenu("EndGame")]

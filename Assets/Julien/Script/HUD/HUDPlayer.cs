@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using Julien.Script.Static;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Julien.Script.HUD

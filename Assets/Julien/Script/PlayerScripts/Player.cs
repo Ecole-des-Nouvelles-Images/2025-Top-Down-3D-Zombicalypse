@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
-namespace Julien.Script
+namespace Julien.Script.PlayerScripts
 {
     public class Player : MonoBehaviour
     {

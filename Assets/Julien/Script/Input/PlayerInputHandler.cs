@@ -1,5 +1,6 @@
 using System;
 using Julien.Script;
+using Julien.Script.PlayerScripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
