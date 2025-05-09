@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Julien.Script.Data.Zombie;
+using Julien.Script.PlayerScripts;
 using Script;
 using Script.ZombieScript.States;
 using UnityEngine;
@@ -47,6 +48,8 @@ namespace Julien.Script.ZombieScript
 
         private RoundHundler _roundHundler;
         private BonusToZombie _bonusToZombie;
+
+        private Player _player;
 
         public float Health
         {

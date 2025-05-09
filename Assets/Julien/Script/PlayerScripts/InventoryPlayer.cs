@@ -5,7 +5,7 @@ using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Julien.Script
+namespace Julien.Script.PlayerScripts
 {
     
     public class InventoryPlayer : MonoBehaviour

@@ -1,4 +1,5 @@
 using System.Collections;
+using Julien.Script.PlayerScripts;
 using Julien.Script.ZombieScript;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,7 +9,8 @@ namespace Script
     public class Bullet : MonoBehaviour
     {
         [SerializeField] private Rigidbody _rigibody;
-
+        [SerializeField] private Player _player;
+        
         public float BulletSpeed;
         public float DamageBullet;
         public float Precision;

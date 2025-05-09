@@ -64,16 +64,19 @@ namespace Julien.Script.PlayerScripts
 
         [SerializeField] public GameObject currentAimTurel;
 
-        [Header("References")] 
-        
+        [Header("References HUD")] 
+        [SerializeField] private GameObject _hudScore;
+        [SerializeField] private HUDPlayerScoreEnd _hudPlayerScoreEnd;
         [SerializeField] private GameObject HudPrefab;
-        [FormerlySerializedAs("HudPlayerInventory")] public HUDPlayer hudPlayer;
+        public HUDPlayer hudPlayer;
         private GameObject HudParent;
         
+        [Header("References Script")]
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
         private Vector2 _move;
         private InventoryPlayer _inventory;
+        private PlayerScore _playerScore;
 
         [SerializeField] private List<GameObject> InteractsGameObject;
         
@@ -99,6 +102,12 @@ namespace Julien.Script.PlayerScripts
             GameObject hud = Instantiate(HudPrefab, HudParent.transform.position, quaternion.identity, HudParent.transform);
             hudPlayer = hud.GetComponent<HUDPlayer>();
             hudPlayer.SetInfoOnStart(this);
+
+            
+            // HUD SCORE
+            GameObject hudScore = Instantiate(_hudScore, HudParent.transform.position, quaternion.identity, HudParent.transform);
+            _hudPlayerScoreEnd = hudScore.GetComponent<HUDPlayerScoreEnd>();
+            _hudPlayerScoreEnd.SetOnStart(this);
             
             
             
@@ -224,6 +233,7 @@ namespace Julien.Script.PlayerScripts
         public void Die()
         {
             Debug.Log("Meurt");
+            _playerScore.DeadCount++;
         }
        
         public void OpenInventory()

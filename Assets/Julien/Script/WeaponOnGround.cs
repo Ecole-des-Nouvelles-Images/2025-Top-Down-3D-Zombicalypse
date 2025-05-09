@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Julien.Script.Data.Weapons;
 using Julien.Script.Interface;
+using Julien.Script.PlayerScripts;
 using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;

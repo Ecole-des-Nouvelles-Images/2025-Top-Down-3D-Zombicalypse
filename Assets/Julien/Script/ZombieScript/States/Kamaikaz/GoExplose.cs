@@ -1,3 +1,4 @@
+using Julien.Script.PlayerScripts;
 using Script.ZombieScript;
 using Script.ZombieScript.States;
 using UnityEngine;
