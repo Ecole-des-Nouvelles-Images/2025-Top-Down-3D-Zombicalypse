@@ -1,8 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using Julien.Script;
+using Julien.Script.Static;
 using UnityEngine;
+
 
 namespace Script
 {
@@ -23,8 +23,6 @@ namespace Script
         public float MaxHealth;
         [SerializeField] private float _health;
 
-        public event Action<float> OntakeDamage; 
-        
         
         public float Health
         {
@@ -55,7 +53,7 @@ namespace Script
         public void TakeDamage(float damage)
         {
             Health -= damage;
-            OntakeDamage?.Invoke(Health);
+            StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
         }
 
         public void On()
@@ -89,7 +87,7 @@ namespace Script
         public void TakeDamageDebug()
         {
             Health -= 20;
-            OntakeDamage?.Invoke(Health);
+            StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
         }
 
         [ContextMenu("EndGame")]

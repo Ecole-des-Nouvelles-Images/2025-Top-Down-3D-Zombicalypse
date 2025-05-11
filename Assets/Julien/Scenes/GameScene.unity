@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &59197662
 Transform:
   m_ObjectHideFlags: 0
@@ -219,6 +219,10 @@ PrefabInstance:
     - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: m_Name
       value: BonusTurel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: UpgraderWrap.Upgrader
@@ -493,6 +497,10 @@ PrefabInstance:
     - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: m_Name
       value: BonusTurel (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: UpgraderWrap.Upgrader
@@ -1027,6 +1035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusTurel (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: UpgraderWrap.Upgrader
       value: 
@@ -1090,7 +1102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _endGamesHUD: []
-  _surviveText: {fileID: 0}
+  _surviveText: {fileID: 1909451517}
 --- !u!4 &675160688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8360216231893004887, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
@@ -2127,6 +2139,10 @@ PrefabInstance:
     - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: m_Name
       value: BonusTurel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: UpgraderWrap.Upgrader
@@ -3382,6 +3398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusTurel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: UpgraderWrap.Upgrader
       value: 
@@ -3588,6 +3608,10 @@ PrefabInstance:
     - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: m_Name
       value: BonusTurel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: _types.Array.size
@@ -4548,6 +4572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurelOnGround (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7208615373735821925, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7960980451764752522, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
       propertyPath: TurelWrap.Turel
       value: 
@@ -4656,6 +4684,10 @@ PrefabInstance:
     - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: m_Name
       value: BonusTurel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6774061200144654677, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: UpgraderWrap.Upgrader
@@ -5013,6 +5045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurelOnGround
       objectReference: {fileID: 0}
+    - target: {fileID: 7208615373735821925, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7960980451764752522, guid: a81177107a2c28f45ba16f49a1e1bcdf, type: 3}
       propertyPath: TurelWrap.Turel
       value: 
@@ -5226,6 +5262,10 @@ PrefabInstance:
     - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
       propertyPath: m_Name
       value: BonusTurel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
