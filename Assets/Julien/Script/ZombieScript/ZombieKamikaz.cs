@@ -23,6 +23,15 @@ namespace Julien.Script.ZombieScript
         }
         private void Start()
         {
+            if (Targets[0] == null)
+            {
+                TargetTag = "Generator";
+            }
+            else
+            {
+                TargetTag = "Player";
+            }
+            
             SetData();
             SetRoundBonusStat();
         }

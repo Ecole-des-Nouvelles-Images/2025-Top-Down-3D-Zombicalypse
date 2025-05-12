@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Julien.Script.HUD;
 using Julien.Script.Interface;
+using Julien.Script.Multiplayer;
 using Julien.Script.Static;
 using Script.Data.PlayerData;
 using Script.Input;
@@ -28,6 +29,7 @@ namespace Julien.Script.PlayerScripts
 
         [SerializeField] private float _maxHealth;
         [SerializeField] private float _health;
+        public float timeBeforRespawn;
         public float Health
         {
             get => _health;
@@ -69,6 +71,7 @@ namespace Julien.Script.PlayerScripts
         [SerializeField] private HUDPlayerScoreEnd _hudPlayerScoreEnd;
         [SerializeField] private GameObject HudPrefab;
         public HUDPlayer hudPlayer;
+        [SerializeField] private GameObject _hudDeadPlayer;
         private GameObject HudParent;
         
         [Header("References Script")]
@@ -231,10 +234,14 @@ namespace Julien.Script.PlayerScripts
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
         }
+        
+        [ContextMenu("Die")]
         public void Die()
         {
             Debug.Log("Meurt");
-            _playerScore.DeadCount++;
+            _playerScore.DieCount++;
+            GameObject hudDead = Instantiate(_hudDeadPlayer, HudParent.transform);
+            hudDead.GetComponent<HUDDeadPlayer>().SetInfo(this);
         }
        
         public void OpenInventory()

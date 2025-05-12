@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Script.PlayerScripts
 {
@@ -7,13 +8,13 @@ namespace Julien.Script.PlayerScripts
         public float Score;
         public int ZombieKilled;
         public float DamageCount;
-        public int DeadCount;
+        [FormerlySerializedAs("KoCount")] [FormerlySerializedAs("DeadCount")] public int DieCount;
         
         public void CalculScore()
         {
             Score += ZombieKilled * 5;
             Score += DamageCount;
-            Score -= DeadCount * 200;
+            Score -= DieCount * 200;
         }
     }
 }

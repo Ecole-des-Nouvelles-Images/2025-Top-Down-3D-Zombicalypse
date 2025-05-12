@@ -295,6 +295,7 @@ MonoBehaviour:
   PlayerData: {fileID: 11400000, guid: 2b685de70f5ee8f49af4b40bd1cbc32a, type: 2}
   _maxHealth: 0
   _health: 0
+  timeBeforRespawn: 10
   Speed: 0
   _spawnBullet: {fileID: 5344439608016241122}
   _isHolding: 0
@@ -309,6 +310,7 @@ MonoBehaviour:
   _hudPlayerScoreEnd: {fileID: 0}
   HudPrefab: {fileID: 1959261300190757804, guid: 00cff2f511051ae4493c8e9135186c81, type: 3}
   hudPlayer: {fileID: 0}
+  _hudDeadPlayer: {fileID: 2612938324517824276, guid: 5bc601ef75bee7c43a9063c11e328e87, type: 3}
   PlayerRenderer: {fileID: 3948030461964295193}
   InteractsGameObject: []
 --- !u!114 &2854704983080223569
@@ -377,7 +379,7 @@ MonoBehaviour:
   Score: 0
   ZombieKilled: 0
   DamageCount: 0
-  DeadCount: 0
+  DieCount: 0
 --- !u!114 &5683671012514460301
 MonoBehaviour:
   m_ObjectHideFlags: 0

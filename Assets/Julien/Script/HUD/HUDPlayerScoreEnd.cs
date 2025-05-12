@@ -40,7 +40,7 @@ namespace Julien.Script.HUD
             
             _killCount.text = _playerScore.ZombieKilled.ToString();
             _damageCount.text = _playerScore.DamageCount.ToString();
-            _deathCount.text = _playerScore.DeadCount.ToString();
+            _deathCount.text = _playerScore.DieCount.ToString();
             _totalScore.text = _playerScore.Score.ToString();
         }
     }

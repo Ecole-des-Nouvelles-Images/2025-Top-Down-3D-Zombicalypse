@@ -84,6 +84,7 @@ namespace Julien.Script.ZombieScript
             Targets = GameObject.FindGameObjectsWithTag(TargetTag).ToList();
             int index = Random.Range(0, Targets.Count);
             Target = Targets[index];
+           
             
             NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
             
