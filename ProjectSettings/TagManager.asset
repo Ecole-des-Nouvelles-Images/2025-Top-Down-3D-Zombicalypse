@@ -16,6 +16,7 @@ TagManager:
   - EndHud
   - Hud
   - HudManager
+  - TargetGeneratorPoin
   layers:
   - Default
   - TransparentFX

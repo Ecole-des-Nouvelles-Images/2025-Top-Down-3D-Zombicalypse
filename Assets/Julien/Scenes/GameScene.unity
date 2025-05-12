@@ -1316,7 +1316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2902083763329592815, guid: a7edc4418d7afbf429cdcf8496084561, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5671128646298694468, guid: a7edc4418d7afbf429cdcf8496084561, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5042,7 +5042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 756934083406809107, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 788443700186144108, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_TagString
+      value: TargetGeneratorPoin
       objectReference: {fileID: 0}
     - target: {fileID: 926848915314803763, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5084,6 +5088,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1359797193368024595, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_TagString
+      value: TargetGeneratorPoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868109992026176987, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_TagString
+      value: TargetGeneratorPoin
+      objectReference: {fileID: 0}
     - target: {fileID: 5983146983818471974, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: _health
       value: 100
@@ -5096,6 +5108,10 @@ PrefabInstance:
       propertyPath: _EndingPanel
       value: 
       objectReference: {fileID: 855148074}
+    - target: {fileID: 8774875931446004003, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_TagString
+      value: TargetGeneratorPoin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5345,11 +5361,15 @@ PrefabInstance:
       objectReference: {fileID: 1536146187}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: RoundDictionary.Array.data[0].Round
-      value: 1
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: RoundDictionary.Array.data[1].Round
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: RoundDictionary.Array.data[2].Round
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

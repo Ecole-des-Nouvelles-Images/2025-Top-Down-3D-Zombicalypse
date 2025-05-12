@@ -1,5 +1,5 @@
+using Julien.Script.ZombieScript.States;
 using Julien.Script.ZombieScript.States.Kamaikaz;
-using Script.ZombieScript;
 using Script.ZombieScript.States;
 
 namespace Julien.Script.ZombieScript
