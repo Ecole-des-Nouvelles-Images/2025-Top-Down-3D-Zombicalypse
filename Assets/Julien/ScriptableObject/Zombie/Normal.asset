@@ -17,5 +17,5 @@ MonoBehaviour:
   Damage: 10
   Speed: 5
   Acceleration: 10
-  AttackRange: 4
+  AttackRange: 2
   AttackSpeed: 2

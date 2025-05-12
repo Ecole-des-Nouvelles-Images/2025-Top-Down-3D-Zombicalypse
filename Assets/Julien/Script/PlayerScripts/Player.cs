@@ -210,7 +210,7 @@ namespace Julien.Script.PlayerScripts
                 StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 _inventory.equipedWeaponWrap.CurrentAmmo -= _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
-                hudPlayer.SetHudInfo();
+                if (hudPlayer) hudPlayer.SetHudInfo();
             }
         }
         

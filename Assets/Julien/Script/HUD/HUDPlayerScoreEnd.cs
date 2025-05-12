@@ -42,7 +42,6 @@ namespace Julien.Script.HUD
             _damageCount.text = _playerScore.DamageCount.ToString();
             _deathCount.text = _playerScore.DeadCount.ToString();
             _totalScore.text = _playerScore.Score.ToString();
-            
         }
     }
 }

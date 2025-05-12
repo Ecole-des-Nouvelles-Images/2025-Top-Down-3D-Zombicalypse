@@ -1,5 +1,6 @@
 using System;
 using Julien.Script;
+using Julien.Script.HUD;
 using Julien.Script.PlayerScripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -44,6 +45,8 @@ namespace Script.Input
 
             _playerInput.actions["Aim"].performed += OnAim;
             _playerInput.actions["Aim"].canceled += OnAim;
+            
+            _playerInput.actions["Start"].performed += OnStart;
 
             // GameManager.PlayerPrefabs.Add(PlayerInputManager.playerPrefab.gameObject);
             // Debug.Log(PlayerInputManager.playerPrefab.gameObject+ " Join the game " );
@@ -71,6 +74,8 @@ namespace Script.Input
             
             _playerInput.actions["Aim"].performed -= OnAim;
             _playerInput.actions["Aim"].canceled -= OnAim;
+            
+            _playerInput.actions["Start"].performed -= OnStart;
         }
     
         private void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -129,6 +134,11 @@ namespace Script.Input
         private void OnOpenInventory(InputAction.CallbackContext context)
         {
             _player.OpenInventory();
+        }
+
+        public void OnStart(InputAction.CallbackContext context)
+        {
+            GameObject.FindWithTag("HudManager").GetComponent<HUDManager>().Pause();
         }
     }
 }

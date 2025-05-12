@@ -13,6 +13,9 @@ TagManager:
   - EventSystem
   - StartMenu
   - HudMultiplayer
+  - EndHud
+  - Hud
+  - HudManager
   layers:
   - Default
   - TransparentFX

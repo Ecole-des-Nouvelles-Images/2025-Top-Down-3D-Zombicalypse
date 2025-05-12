@@ -49,7 +49,7 @@ namespace Julien.Script.ZombieScript
         private RoundHundler _roundHundler;
         private BonusToZombie _bonusToZombie;
 
-        private Player _player;
+        [SerializeField] private Player _player;
 
         public float Health
         {
@@ -60,7 +60,6 @@ namespace Julien.Script.ZombieScript
                 if (CurrentHealth <= 0 && !Dead)
                 {
                     Dead = true;
-                    _player.GetComponent<PlayerScore>().ZombieKilled++;
                     Die();
                 }
             }
@@ -118,6 +117,10 @@ namespace Julien.Script.ZombieScript
         public void Die()
         {
             GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
+            if (_player)
+            {
+                _player.GetComponent<PlayerScore>().ZombieKilled++;
+            }
             Debug.Log("Die");
             Destroy(gameObject);
         }

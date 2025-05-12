@@ -51,6 +51,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "8c19a8aa-435b-4624-8e58-73447941bfc6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Inventory",
                     "type": "Button",
                     "id": "cb54e9f0-197a-46b7-a516-e5e0cbaa7834",
@@ -266,6 +275,17 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "DropBonus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d23de50-c099-4684-a78c-2bf12e7f24a9",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

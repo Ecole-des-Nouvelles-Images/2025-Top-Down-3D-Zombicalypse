@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 namespace Julien.Script.HUD
 {
@@ -37,8 +40,18 @@ namespace Julien.Script.HUD
             {
                 hud.SetActive(false);
             }
-
+            
             _surviveText.text = "Fin de partie Vous avez survécu " + _roundHundler.Round.CurrentRound + " vagues";
+        }
+
+        public void MainMenu()
+        {
+            List<GameObject> players = GameObject.FindGameObjectsWithTag("Player").ToList();
+            foreach (GameObject player in players)
+            {
+                Destroy(player);
+            }
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
