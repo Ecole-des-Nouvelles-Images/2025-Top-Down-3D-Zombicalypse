@@ -1,4 +1,5 @@
 using Julien.Script.ZombieScript;
+using Julien.Script.ZombieScript.States;
 using Script.ZombieScript.States;
 
 namespace Script.ZombieScript

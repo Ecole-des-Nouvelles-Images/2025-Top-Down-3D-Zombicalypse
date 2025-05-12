@@ -1,7 +1,7 @@
-using Julien.Script.ZombieScript;
+using Julien.Script.ZombieScript.States;
 using Script.ZombieScript.States;
 
-namespace Script.ZombieScript
+namespace Julien.Script.ZombieScript
 {
     public class ZombieNormal : Zombie
     {
