@@ -13,7 +13,7 @@ using UnityEngine.Serialization;
 
 namespace Julien.Script.PlayerScripts
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, ITakeDamage
     {
         [Header("-- Input Template ----------------------------------------------------------------------")]
         
@@ -226,13 +226,7 @@ namespace Julien.Script.PlayerScripts
         [ContextMenu("Debug take damage")]
         public void takeDamageDebug()
         {
-            TakeDamage(20);
-        }
-        
-        public void TakeDamage(float damage)
-        {
-            Health -= damage;
-            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+            takeDamage(20);
         }
         
         [ContextMenu("Die")]
@@ -302,6 +296,12 @@ namespace Julien.Script.PlayerScripts
                 other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 InteractsGameObject.Remove(other.gameObject);
             }
+        }
+
+        public void takeDamage(float damage)
+        {
+            Health -= damage;
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
         }
     }
 }

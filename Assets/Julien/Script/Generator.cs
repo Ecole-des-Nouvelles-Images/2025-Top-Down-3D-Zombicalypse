@@ -1,12 +1,13 @@
 using System;
 using Julien.Script;
+using Julien.Script.Interface;
 using Julien.Script.Static;
 using UnityEngine;
 
 
 namespace Script
 {
-    public class Generator : MonoBehaviour
+    public class Generator : MonoBehaviour, ITakeDamage
     {
         [SerializeField] private float _maxTimeBefforDamaged;
         [SerializeField] private float _timeBefforDamaged;
@@ -50,12 +51,6 @@ namespace Script
             
         }
 
-        public void TakeDamage(float damage)
-        {
-            Health -= damage;
-            StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
-        }
-
         public void On()
         {
             _timeBefforDamaged = _maxTimeBefforDamaged;
@@ -95,6 +90,12 @@ namespace Script
         {
             GameObject.FindWithTag("GameManager").GetComponent<EndingGame>().EndGame();
             Debug.Log("EndGame");
+        }
+
+        public void takeDamage(float damage)
+        {
+            Health -= damage;
+            StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
         }
     }
 }

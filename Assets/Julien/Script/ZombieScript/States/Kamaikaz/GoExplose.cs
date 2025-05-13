@@ -1,3 +1,4 @@
+using Julien.Script.Interface;
 using Julien.Script.PlayerScripts;
 using Script.ZombieScript;
 using Script.ZombieScript.States;
@@ -10,24 +11,24 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
         public override void Execute(Zombie zombie)
         {
             zombie.NavMeshAgent.speed = 0f;
-        
             zombie.AttackSpeed -= Time.deltaTime;
-        
             if (zombie.AttackSpeed <= 0)
             {
                 if (zombie.Object != null)
                 {
-                    foreach (GameObject obj in zombie.Object)
+                    for (int i = zombie.Object.Count - 1; i >= 0; i--)
                     {
-                        if (obj.CompareTag("Player"))
+                        GameObject obj = zombie.Object[i];
+                        if (obj.GetComponent<ITakeDamage>() != null)
                         {
-                            obj.GetComponent<Player>().TakeDamage(zombie.Damage);
+                            obj.GetComponent<ITakeDamage>().takeDamage(zombie.Damage);
+                            zombie.Object.RemoveAt(i);
+                            Debug.Log("ITake damage");
                         }
-                    } 
+                    }
                 }
-                
-                zombie.Die();
-                Object.Destroy(zombie.gameObject);
+                zombie.Die(false);
+                Object.Destroy(zombie.gameObject, 1.0f);
             }
         }
     }

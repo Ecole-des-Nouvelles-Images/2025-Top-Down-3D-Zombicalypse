@@ -1,7 +1,8 @@
-using Julien.Script.ZombieScript;
+using Julien.Script.Interface;
+using Script.ZombieScript.States;
 using UnityEngine;
 
-namespace Script.ZombieScript.States
+namespace Julien.Script.ZombieScript.States
 {
     public class AttackTarget : ZombieState
     {
@@ -12,7 +13,7 @@ namespace Script.ZombieScript.States
             
             if (zombie.AttackSpeed <= 0)
             {
-                zombie.Target.GetComponent<Generator>().TakeDamage(zombie.Damage);
+                zombie.Target.GetComponent<ITakeDamage>().takeDamage(zombie.Damage);
                 zombie.AttackSpeed = zombie.TypeZombie.AttackSpeed;
             }
         }

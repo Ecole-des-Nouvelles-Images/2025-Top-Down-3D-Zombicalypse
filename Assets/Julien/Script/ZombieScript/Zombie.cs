@@ -63,7 +63,7 @@ namespace Julien.Script.ZombieScript
                 if (CurrentHealth <= 0 && !Dead)
                 {
                     Dead = true;
-                    Die();
+                    Die(true);
                 }
             }
         }
@@ -76,8 +76,8 @@ namespace Julien.Script.ZombieScript
 
         public void Damaged(float damage, Player player)
         {
-            Health -= damage;
             _player = player;
+            Health -= damage;
         }
         
         private void Awake()
@@ -98,8 +98,6 @@ namespace Julien.Script.ZombieScript
 
         private void Start()
         {
-            
-            
             SetData();
             SetRoundBonusStat();
             gameObject.GetComponent<SphereCollider>().radius = TypeZombie.AttackRange;
@@ -133,14 +131,18 @@ namespace Julien.Script.ZombieScript
             }
         }
 
-        public void Die()
+        public void Die(bool deadByPlayer)
         {
             GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
             if (_player)
             {
                 _player.GetComponent<PlayerScore>().ZombieKilled++;
             }
-            Debug.Log("Die");
+            if (deadByPlayer)
+            {
+                StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
+            }
+            Debug.Log("Destroy the zombie");
             Destroy(gameObject);
         }
     }

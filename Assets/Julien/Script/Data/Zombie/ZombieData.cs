@@ -7,6 +7,7 @@ namespace Julien.Script.Data.Zombie
     public class ZombieData : ScriptableObject
     {
         public int PriceZombie;
+        public float Point;
         
         public float MaxHealth;
         public float Damage;

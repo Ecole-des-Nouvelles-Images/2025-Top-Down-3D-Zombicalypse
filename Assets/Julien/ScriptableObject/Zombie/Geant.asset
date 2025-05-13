@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Geant
   m_EditorClassIdentifier: 
   PriceZombie: 4
+  Point: 2
   MaxHealth: 120
   Damage: 15
   Speed: 2

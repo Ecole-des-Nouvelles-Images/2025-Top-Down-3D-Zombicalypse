@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kamikaz
   m_EditorClassIdentifier: 
   PriceZombie: 2
+  Point: 1
   MaxHealth: 15
   Damage: 30
   Speed: 10
