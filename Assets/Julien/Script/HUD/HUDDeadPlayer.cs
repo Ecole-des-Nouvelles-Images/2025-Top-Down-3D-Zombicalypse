@@ -40,7 +40,7 @@ namespace Julien.Script.HUD
             if (_timer <= 0)
             {
                 _playerTarget.gameObject.SetActive(true);
-                _playerTarget.timeBeforRespawn += 5;
+                _playerTarget.Respawn();
                 Destroy(gameObject);
             }
         }

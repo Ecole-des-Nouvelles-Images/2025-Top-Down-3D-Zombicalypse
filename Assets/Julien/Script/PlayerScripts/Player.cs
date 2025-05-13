@@ -113,7 +113,7 @@ namespace Julien.Script.PlayerScripts
             _hudPlayerScoreEnd.SetOnStart(this);
             
             
-            
+            GameManagerStatic.Players.Add(gameObject);
             // changer la place du joueur au début au chargement de la scene
             transform.position = GameManagerStatic.positions[index];
         }
@@ -241,7 +241,16 @@ namespace Julien.Script.PlayerScripts
             Debug.Log("Meurt");
             _playerScore.DieCount++;
             GameObject hudDead = Instantiate(_hudDeadPlayer, HudParent.transform);
+            GameManagerStatic.Players.Remove(gameObject);
             hudDead.GetComponent<HUDDeadPlayer>().SetInfo(this);
+        }
+
+        public void Respawn()
+        {
+            timeBeforRespawn += 5;
+            Health = _maxHealth;
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+            GameManagerStatic.Players.Add(gameObject);
         }
        
         public void OpenInventory()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Julien.Script.Data.Zombie;
 using Julien.Script.PlayerScripts;
+using Julien.Script.Static;
 using Script;
 using Script.ZombieScript.States;
 using UnityEngine;
@@ -81,10 +82,13 @@ namespace Julien.Script.ZombieScript
         
         private void Awake()
         {
-            Targets = GameObject.FindGameObjectsWithTag(TargetTag).ToList();
+            Targets = GameObject.FindGameObjectsWithTag(TargetTag).ToList();  
             int index = Random.Range(0, Targets.Count);
-            Target = Targets[index];
-           
+
+            if (Targets.Count != 0)
+            {
+                Target = Targets[index];
+            }
             
             NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
             
@@ -94,6 +98,8 @@ namespace Julien.Script.ZombieScript
 
         private void Start()
         {
+            
+            
             SetData();
             SetRoundBonusStat();
             gameObject.GetComponent<SphereCollider>().radius = TypeZombie.AttackRange;

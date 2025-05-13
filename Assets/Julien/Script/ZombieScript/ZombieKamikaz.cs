@@ -1,6 +1,7 @@
+using Julien.Script.Static;
 using Julien.Script.ZombieScript.States;
 using Julien.Script.ZombieScript.States.Kamaikaz;
-using Script.ZombieScript.States;
+using UnityEngine;
 
 namespace Julien.Script.ZombieScript
 {
@@ -8,6 +9,17 @@ namespace Julien.Script.ZombieScript
     {
         private void Update()
         {
+            if (GameManagerStatic.Players.Count > 1)
+            {
+                Debug.Log("Focus les joueur");
+            }
+            else if (GameManagerStatic.Players.Count == 0)
+            {
+                TargetTag = "Generator";
+                Target = GameObject.FindWithTag("Generator");
+                Debug.Log("Focus le générateur");
+            }
+            
             switch (WantAttack)
             {
                 case true when !CanAttack:
@@ -19,18 +31,11 @@ namespace Julien.Script.ZombieScript
             }
             
             
+            Debug.Log(" nombre de joueur Kamikaz " + GameManagerStatic.Players.Count);
             CurrentState.Execute(this);
         }
         private void Start()
         {
-            if (Targets[0] == null)
-            {
-                TargetTag = "Generator";
-            }
-            else
-            {
-                TargetTag = "Player";
-            }
             
             SetData();
             SetRoundBonusStat();
