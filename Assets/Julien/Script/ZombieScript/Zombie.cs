@@ -141,6 +141,7 @@ namespace Julien.Script.ZombieScript
             if (deadByPlayer)
             {
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
+                Debug.Log("Invoke l'action");
             }
             Debug.Log("Destroy the zombie");
             Destroy(gameObject);

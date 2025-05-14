@@ -9,24 +9,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e8bba67085df2340b7409860ee2797d, type: 3}
-  m_Name: CheatM4
+  m_Script: {fileID: 11500000, guid: 4e8dd3897e6fc98418f9212244b1d91e, type: 3}
+  m_Name: GlockLVL4
   m_EditorClassIdentifier: 
-  lvl: 0
-  Color: {r: 0, g: 0, b: 0, a: 0}
-  DropChance: 0
+  lvl: 4
+  Color: {r: 0.6509804, g: 0, b: 1, a: 0.39215687}
+  DropChance: 20
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
-  WeaponMesh: {fileID: 8452351603674016922, guid: 5438a4792475728418a0e5c2353a2c1e, type: 3}
+  WeaponMesh: {fileID: 9201717749093418378, guid: 3a1bb098d6624a540b858a4fd5b7ce6b, type: 3}
   ImageWeapon: {fileID: 0}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
-  BulletSpeed: 120
-  Damage: 500
-  FireRate: 0
+  BulletSpeed: 80
+  Damage: 30
+  FireRate: 0.4
   Precision: 0.1
-  LethalRangeLetal: 1.7
-  MaxAmmo: 5000
-  MaxMagazine: 5000
-  ReloadTime: 0.1
+  LethalRangeLetal: 1.2
+  MaxAmmo: 15
+  MaxMagazine: 5
+  ReloadTime: 1.5
   RemoveAmmoParFire: 1

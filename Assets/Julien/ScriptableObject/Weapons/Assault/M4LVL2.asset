@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8bba67085df2340b7409860ee2797d, type: 3}
-  m_Name: M4
+  m_Name: M4LVL2
   m_EditorClassIdentifier: 
+  lvl: 2
+  Color: {r: 0.15686275, g: 1, b: 0, a: 0.39215687}
+  DropChance: 35
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 8452351603674016922, guid: 5438a4792475728418a0e5c2353a2c1e, type: 3}
   ImageWeapon: {fileID: 0}

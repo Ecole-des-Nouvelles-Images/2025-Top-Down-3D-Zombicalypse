@@ -3,6 +3,7 @@ using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Julien.Script.HUD
 {
@@ -24,7 +25,10 @@ namespace Julien.Script.HUD
         public void SetAllInfoHud()
         {
             _weaponsHUD[0].SetHUD(_inventory.StrucWeapons[0]);
+            _weaponsHUD[0].GetComponent<Image>().color = _inventory.StrucWeapons[0].Color;
+            
             _weaponsHUD[1].SetHUD(_inventory.StrucWeapons[1]);
+            _weaponsHUD[1].GetComponent<Image>().color = _inventory.StrucWeapons[1].Color;
         }
 
         public void SetPosition()

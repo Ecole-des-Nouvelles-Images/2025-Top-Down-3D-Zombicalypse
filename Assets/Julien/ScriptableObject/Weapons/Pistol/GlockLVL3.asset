@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e8dd3897e6fc98418f9212244b1d91e, type: 3}
-  m_Name: Glock
+  m_Name: GlockLVL3
   m_EditorClassIdentifier: 
+  lvl: 3
+  Color: {r: 0, g: 0.12941177, b: 1, a: 0.39215687}
+  DropChance: 30
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 9201717749093418378, guid: 3a1bb098d6624a540b858a4fd5b7ce6b, type: 3}
+  ImageWeapon: {fileID: 0}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}

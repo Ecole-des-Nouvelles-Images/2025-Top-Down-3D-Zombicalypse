@@ -7,6 +7,10 @@ namespace Script.Struc
     [Serializable]
     public struct WeaponWrap
     {
+        
+        public int Lvl;
+        public Color Color;
+        
         public GameObject WeaponPrefab;
         
         public Weapon Weapon;
@@ -14,6 +18,9 @@ namespace Script.Struc
         public int CurrentMagazin;
         public void SetFirstData()
         {
+            Lvl = Weapon.lvl;
+            Color = Weapon.Color;
+            
             CurrentAmmo = Weapon.MaxAmmo;
             CurrentMagazin = Weapon.MaxMagazine;
             WeaponPrefab = Weapon.Prefab;

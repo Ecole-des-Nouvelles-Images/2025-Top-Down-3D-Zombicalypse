@@ -41,11 +41,11 @@ namespace Julien.Script.HUD
             gameManager.CurrentPoint += pointToadd;
             _progressBar.fillAmount = gameManager.CurrentPoint / gameManager.MaxProgressBar;
             
-            
-            
             if (_progressBar.fillAmount >= 1)
             {
-                
+                gameManager.CurrentPoint = 0;
+                gameManager.MaxProgressBar += 10;
+                gameManager.SpawnWeapon();
             }
         }
         
