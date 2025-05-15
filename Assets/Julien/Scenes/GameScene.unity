@@ -14643,7 +14643,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.322
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -33559,18 +33559,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TargetGeneratorPoin
       objectReference: {fileID: 0}
-    - target: {fileID: 5983146983818471974, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
-      propertyPath: _health
-      value: 100
+    - target: {fileID: 5222157085810312157, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_Type
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5983146983818471974, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
-      propertyPath: MaxHealth
-      value: 100
+    - target: {fileID: 5222157085810312157, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222157085810312157, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983146983818471974, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: _EndingPanel
       value: 
       objectReference: {fileID: 855148074}
+    - target: {fileID: 8201953047581780891, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8774875931446004003, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: m_TagString
       value: TargetGeneratorPoin
@@ -33816,7 +33824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: _parentZombie

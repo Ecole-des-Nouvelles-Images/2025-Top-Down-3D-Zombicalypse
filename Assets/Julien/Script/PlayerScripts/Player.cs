@@ -282,18 +282,18 @@ namespace Julien.Script.PlayerScripts
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Interactable"))
+            if (other.gameObject.GetComponent<IInteractable>() != null)
             {
                 InteractsGameObject.Add(other.gameObject);
-                InteractsGameObject[0].gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                //InteractsGameObject[0].gameObject.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.CompareTag("Interactable"))
+            if (other.gameObject.GetComponent<IInteractable>() != null)
             {
-                other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                //other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 InteractsGameObject.Remove(other.gameObject);
             }
         }

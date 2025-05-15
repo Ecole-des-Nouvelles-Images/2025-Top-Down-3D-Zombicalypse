@@ -1,19 +1,21 @@
 using System;
 using Julien.Script;
 using Julien.Script.Interface;
+using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 
 namespace Script
 {
-    public class Generator : MonoBehaviour, ITakeDamage
+    public class Generator : MonoBehaviour, ITakeDamage, IInteractable
     {
         [SerializeField] private float _maxTimeBefforDamaged;
         [SerializeField] private float _timeBefforDamaged;
         [SerializeField] private float _maxTimeDamage;
         [SerializeField] private float _timedamage;
-        
         
         [SerializeField] private float _maxTimer;
         [SerializeField] private float _timer;
@@ -24,7 +26,23 @@ namespace Script
         public float MaxHealth;
         [SerializeField] private float _health;
 
+        [SerializeField] private float _maxRepar;
+        [SerializeField] private float _currentRepar;
+        [SerializeField] private float _reparParClick;
+        [SerializeField] private float _reparHealthParClick;
+
+        [Header("Reférence")]
+        private GameObject _gameManager;
         
+        [SerializeField] private GameObject _reparBarParent;
+        [SerializeField] private Image _reparBar;
+        [SerializeField] private Image _TimeBeforDamageBar;
+
+        private void Start()
+        {
+            _gameManager = GameObject.Find("GameManager");
+        }
+
         public float Health
         {
             get => _health;
@@ -40,7 +58,7 @@ namespace Script
 
         private void Update()
         {
-            if (IsBreak)
+            if (!IsBreak)
             {
                 On();
             }
@@ -55,10 +73,15 @@ namespace Script
         {
             _timeBefforDamaged = _maxTimeBefforDamaged;
             _timedamage = _maxTimeDamage;
-            
+            _reparBarParent.SetActive(false);
             _timer -= Time.deltaTime;
             if (_timer <= 0 )
             {
+                float rand = Random.Range(0f, 100f);
+                if (rand <= 5)
+                {
+                    IsBreak = true;
+                }
                 _timer = _maxTimer; 
             }
         }
@@ -66,7 +89,8 @@ namespace Script
         public void Off()
         {
             _timeBefforDamaged -= Time.deltaTime;
-            
+            _TimeBeforDamageBar.fillAmount = _timeBefforDamaged / _maxTimeBefforDamaged;
+            _reparBarParent.SetActive(true);
             if (_timeBefforDamaged <= 0)
             {
                 _timedamage -= Time.deltaTime;
@@ -74,6 +98,7 @@ namespace Script
                 {
                     Health -= 1;
                     _timedamage = _maxTimeDamage;
+                    StaticAction.OntakedDamage.Invoke(Health, MaxHealth);
                 }
             }
         }
@@ -96,6 +121,33 @@ namespace Script
         {
             Health -= damage;
             StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
+        }
+
+        public void Activate(Player player)
+        {
+            if (IsBreak)
+            {
+                _currentRepar += _reparParClick;
+                SetReparBar();
+                if (_currentRepar >= _maxRepar)
+                {
+                    IsBreak = false;
+                    _currentRepar = 0;
+                    _reparBar.fillAmount = 0;
+                }
+            }
+
+            if (_gameManager.GetComponent<RoundHundler>().InBreak && !IsBreak)
+            {
+                Health += _reparHealthParClick;
+                Health = Mathf.Clamp(Health, 0, MaxHealth);
+                StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
+            }
+        }
+
+        public void SetReparBar()
+        {
+            _reparBar.fillAmount = _currentRepar / _maxRepar;
         }
     }
 }

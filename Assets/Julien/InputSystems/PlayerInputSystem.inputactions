@@ -121,6 +121,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ReparGenerator",
+                    "type": "Button",
+                    "id": "5d65f88d-79d6-452d-9900-965134f934b9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -259,7 +268,7 @@
                 {
                     "name": "",
                     "id": "cf4d54e7-8967-4104-a315-c63745f660a1",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -286,6 +295,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf779590-2ff3-4f15-9e66-b981b69c661e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReparGenerator",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

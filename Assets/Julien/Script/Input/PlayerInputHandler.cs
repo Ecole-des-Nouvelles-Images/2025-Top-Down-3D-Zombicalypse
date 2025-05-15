@@ -34,6 +34,8 @@ namespace Script.Input
 
             _playerInput.actions["Interact"].started += OnInteract;
             
+            _playerInput.actions["ReparGenerator"].performed += OnReparing;
+            
             _playerInput.actions["DropWeapon"].performed += OnDrop;
             
             _playerInput.actions["Reload"].performed += OnReload;
@@ -62,6 +64,8 @@ namespace Script.Input
             _playerInput.actions["SwitchWeapon"].performed -= OnSwitchWeapon;
             
             _playerInput.actions["Interact"].started -= OnInteract;
+
+            _playerInput.actions["ReparGenerator"].performed -= OnReparing;
             
             _playerInput.actions["DropWeapon"].performed -= OnDrop;
             
@@ -139,6 +143,11 @@ namespace Script.Input
         public void OnStart(InputAction.CallbackContext context)
         {
             GameObject.FindWithTag("HudManager").GetComponent<HUDManager>().Pause();
+        }
+
+        public void OnReparing(InputAction.CallbackContext context)
+        {
+            
         }
     }
 }
