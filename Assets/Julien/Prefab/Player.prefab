@@ -84,8 +84,8 @@ MonoBehaviour:
   HandingBonus: {fileID: 6115931542095130803}
   _setSpawnBulletPosition: {fileID: 1081197973007504128}
   _weaponMesh: {fileID: 0}
-  TurelPrefab: {fileID: 0}
-  BonusPrefab: {fileID: 0}
+  TurelPrefab: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
+  BonusPrefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
 --- !u!1 &2039706244962328061
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 4096

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8180403353565874589}
   - component: {fileID: 566504404321456544}
   - component: {fileID: 7452346254487298524}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Generator
   m_TagString: Generator
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 8201953047581780891}
   - component: {fileID: 7685336411818545441}
   - component: {fileID: 2120072567831754049}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: CurrentRepar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 2112181248682899537}
   - component: {fileID: 1174419951228326422}
   - component: {fileID: 5222157085810312157}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: TimeBeforCanTakeDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 5711062764073150830}
   - component: {fileID: 8384020597073847653}
   - component: {fileID: 5120332945207575353}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 1442738373109754474}
   - component: {fileID: 697771543500090220}
   - component: {fileID: 2384946756561022275}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

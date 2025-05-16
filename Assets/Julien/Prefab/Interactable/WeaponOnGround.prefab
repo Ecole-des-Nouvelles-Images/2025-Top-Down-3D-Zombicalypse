@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5695141000056093812}
   - component: {fileID: 1880751284091016256}
   - component: {fileID: 86075851471239497}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ColorRarety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 2669916711556855687}
   - component: {fileID: 6230138702452241931}
   - component: {fileID: 7577057621802822547}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WeaponOnGround
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -189,6 +189,7 @@ MonoBehaviour:
     CurrentMagazin: 0
   DropedWeapon: 0
   _visual: {fileID: 0}
+  _random: 0
 --- !u!65 &2669916711556855687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -270,7 +271,7 @@ GameObject:
   - component: {fileID: 4698316243541944794}
   - component: {fileID: 5199529125109664327}
   - component: {fileID: 4230170117468858106}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Interactable
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -460,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_IsActive
@@ -468,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3823109233696985481, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8009034115994777824, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_PresetInfoIsWorld

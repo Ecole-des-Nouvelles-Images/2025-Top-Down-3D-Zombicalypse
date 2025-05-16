@@ -22,11 +22,12 @@ MonoBehaviour:
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
   BulletSpeed: 80
-  Damage: 30
-  FireRate: 0.4
-  Precision: 0.1
-  LethalRangeLetal: 1.2
+  Damage: 35
+  FireRate: 0.5
+  Precision: 0.2
+  LethalRangeLetal: 1
   MaxAmmo: 15
+  InfiniteMagazine: 0
   MaxMagazine: 5
   ReloadTime: 1.5
   RemoveAmmoParFire: 1

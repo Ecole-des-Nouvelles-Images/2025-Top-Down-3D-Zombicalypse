@@ -152,6 +152,7 @@ namespace Julien.Script.PlayerScripts
                 UpgraderWrap = new UpgraderWrap();
                 Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
                 handingObject.HandingWeapon.SetActive(true);
+                _player.currentAimTurel = null;
                 _player.SwitchInputHandler(0);
             }
         }

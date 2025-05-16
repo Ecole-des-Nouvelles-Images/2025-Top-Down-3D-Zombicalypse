@@ -167,6 +167,7 @@ namespace Julien.Script.PlayerScripts
                 else
                 {
                     currentAimTurel = null;
+                    Debug.Log("Touche rien");
                 }
             }
 
@@ -247,6 +248,7 @@ namespace Julien.Script.PlayerScripts
             Health = _maxHealth;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
             GameManagerStatic.Players.Add(gameObject);
+            _canShoot = true;
         }
        
         public void OpenInventory()

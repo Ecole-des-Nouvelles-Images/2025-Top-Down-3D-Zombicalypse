@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6214474408158845240}
   - component: {fileID: 8089956038382059060}
   - component: {fileID: 7212527904799727492}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigibody: {fileID: 6214474408158845240}
+  _player: {fileID: 0}
   BulletSpeed: 0
   DamageBullet: 0
   Precision: 0

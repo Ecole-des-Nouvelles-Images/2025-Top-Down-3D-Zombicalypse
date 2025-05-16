@@ -9,17 +9,18 @@ namespace Julien.Script.HUD
         [SerializeField] private TMP_Text _currentAmmo; 
         [SerializeField] private TMP_Text _currentMagazin;
         
-        public void SetHUD(WeaponWrap equipedWeapon)
+        public void SetHUD(WeaponWrap weapon)
         {
-            _currentAmmo.text = equipedWeapon.CurrentAmmo.ToString();
-            if (!equipedWeapon.Weapon.InfiniteMagazine)
+            _currentAmmo.text = weapon.CurrentAmmo.ToString();
+            
+            if (weapon.Weapon.InfiniteMagazine)
             {
-                _currentMagazin.text = equipedWeapon.CurrentMagazin.ToString(); 
+                _currentMagazin.text = "∞";
                 Debug.Log("Balle pas infinie");
             }
             else
             {
-                _currentMagazin.text = "∞";
+                _currentMagazin.text = weapon.CurrentMagazin.ToString(); 
                 Debug.Log("Balle infinie");
             }
         }

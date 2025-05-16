@@ -464,9 +464,10 @@ GameObject:
   - component: {fileID: 6982627918490121866}
   - component: {fileID: 8137912481269897934}
   - component: {fileID: 6469986255557070829}
+  - component: {fileID: 6668053906987217074}
   m_Layer: 3
   m_Name: Socle
-  m_TagString: Untagged
+  m_TagString: Turel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,6 +561,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &6668053906987217074
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913233407693244040}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8540968015393134329
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +590,7 @@ GameObject:
   - component: {fileID: 8341374458109265195}
   m_Layer: 3
   m_Name: TurelRenderer
-  m_TagString: Untagged
+  m_TagString: Turel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -659,7 +676,7 @@ GameObject:
   - component: {fileID: 3670030264623342975}
   - component: {fileID: 543534184604352507}
   - component: {fileID: 5386280198470785080}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,6 +818,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb5642ffe8c63f648af2a7d534d8392f, type: 3}
       propertyPath: m_Name
       value: Triangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb5642ffe8c63f648af2a7d534d8392f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Julien.Script
@@ -72,10 +71,9 @@ namespace Julien.Script
             for (int i = Round.NumberOfPoint; i > 0;)
             {
                 GameObject zombieToAdd = Round._zombiesPrefabCanSpawn[Random.Range(0, Round._zombiesPrefabCanSpawn.Count)].gameObject;
-                int priceZombie = zombieToAdd.GetComponent<global::Julien.Script.ZombieScript.Zombie>().TypeZombie.PriceZombie;
+                int priceZombie = zombieToAdd.GetComponent<ZombieScript.Zombie>().TypeZombie.PriceZombie;
                 
                 i -= priceZombie;
-                //Debug.Log(i + " - "  + " prix : " + zombieToAdd.GetComponent<Zombie.Zombie>().TypeZombie.PirceZombie);
                 Round._zombies.Add(zombieToAdd);
             }
             

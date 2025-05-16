@@ -32,8 +32,8 @@ TagManager:
   - Interactable
   - NoCollideWithSphereCollider
   - Bullet
-  - 
-  - 
+  - Generator
+  - Bonus
   - 
   - 
   - 
