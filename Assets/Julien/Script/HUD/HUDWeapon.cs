@@ -12,17 +12,18 @@ namespace Julien.Script.HUD
         public void SetHUD(WeaponWrap weapon)
         {
             _currentAmmo.text = weapon.CurrentAmmo.ToString();
+            _currentMagazin.text = weapon.CurrentMagazin.ToString(); 
             
-            if (weapon.Weapon.InfiniteMagazine)
-            {
-                _currentMagazin.text = "∞";
-                Debug.Log("Balle pas infinie");
-            }
-            else
-            {
-                _currentMagazin.text = weapon.CurrentMagazin.ToString(); 
-                Debug.Log("Balle infinie");
-            }
+            // if (weapon.Weapon.InfiniteMagazine)
+            // {
+            //     _currentMagazin.text = "∞";
+            //     Debug.Log("Balle pas infinie");
+            // }
+            // else
+            // {
+            //     _currentMagazin.text = weapon.CurrentMagazin.ToString(); 
+            //     Debug.Log("Balle infinie");
+            // }
         }
     }
 }
