@@ -9,10 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5097460286155230413}
+  - component: {fileID: 1851516392337459698}
+  - component: {fileID: 2593040448384764293}
   - component: {fileID: 8727236817250310588}
   - component: {fileID: 5978329320630793120}
   - component: {fileID: 2446494881858463769}
   - component: {fileID: 1237537192648682482}
+  - component: {fileID: 2057915131095998813}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -35,6 +38,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1851516392337459698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920496199143966151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9be435b89766cc45803f1073dabe0b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentPoint: 0
+  MaxProgressBar: 10
+  _weaponPrefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+  _parentSpawn: {fileID: 0}
+--- !u!114 &2593040448384764293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920496199143966151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7cb3f0173c33b743ac5bd54e915cff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 3.08
 --- !u!114 &8727236817250310588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +155,16 @@ MonoBehaviour:
   _objectsToSpawn: []
   _parentSpawn: {fileID: 0}
   _navMeshSurface: {fileID: 0}
+--- !u!114 &2057915131095998813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920496199143966151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9dbeb2c757d10248a8b634c9161005a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hudMultiplayerManager: {fileID: 0}

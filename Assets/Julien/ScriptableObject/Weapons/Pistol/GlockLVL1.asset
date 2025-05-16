@@ -27,6 +27,7 @@ MonoBehaviour:
   Precision: 0.1
   LethalRangeLetal: 1.2
   MaxAmmo: 15
+  InfiniteMagazine: 1
   MaxMagazine: 5
   ReloadTime: 1.5
   RemoveAmmoParFire: 1

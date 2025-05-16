@@ -30,6 +30,7 @@ namespace Julien.Script.Data.Weapons
         public float LethalRangeLetal;
         
         public int MaxAmmo;
+        public bool InfiniteMagazine;
         public int MaxMagazine;
         public float ReloadTime;
 

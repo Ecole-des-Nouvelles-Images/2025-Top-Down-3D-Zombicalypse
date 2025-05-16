@@ -116,6 +116,8 @@ namespace Julien.Script.PlayerScripts
             GameManagerStatic.Players.Add(gameObject);
             // changer la place du joueur au début au chargement de la scene
             transform.position = GameManagerStatic.positions[index];
+            
+            Debug.Log("rhnbvihechge,rchnfkljndrg");
         }
 
         private void Start()

@@ -78,7 +78,7 @@ namespace Script
             if (_timer <= 0 )
             {
                 float rand = Random.Range(0f, 100f);
-                if (rand <= 5)
+                if (rand <= 1f)
                 {
                     IsBreak = true;
                 }

@@ -131,8 +131,20 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1851516392337459698, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057915131095998813, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2446494881858463769, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593040448384764293, guid: 7045a13421514d64780639df9faa05f9, type: 3}
+      propertyPath: timeScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
@@ -191,10 +203,7 @@ PrefabInstance:
     - {fileID: 1244091286728954380, guid: 7045a13421514d64780639df9faa05f9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 813272171}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7045a13421514d64780639df9faa05f9, type: 3}
 --- !u!1 &131182280
 GameObject:
@@ -960,24 +969,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &813272166 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
-  m_PrefabInstance: {fileID: 114864649}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &813272171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813272166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7cb3f0173c33b743ac5bd54e915cff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeScale: 3.08
 --- !u!1 &877873930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,6 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _helthBarGenerator: {fileID: 0}
   _returnMenuButton: {fileID: 0}
+  _progressBar: {fileID: 0}
   PauseMenu: {fileID: 1411199321}
 --- !u!114 &1720530159
 MonoBehaviour:
