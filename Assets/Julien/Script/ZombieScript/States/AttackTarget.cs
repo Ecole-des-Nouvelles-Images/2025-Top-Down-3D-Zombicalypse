@@ -10,11 +10,13 @@ namespace Julien.Script.ZombieScript.States
         {
             zombie.AttackSpeed -= Time.deltaTime;
             zombie.NavMeshAgent.speed = 0;
+            zombie.Animator.SetBool("Run", false);
             
             if (zombie.AttackSpeed <= 0)
             {
                 zombie.Target.GetComponent<ITakeDamage>().takeDamage(zombie.Damage);
                 zombie.AttackSpeed = zombie.TypeZombie.AttackSpeed;
+                zombie.Animator.SetTrigger("Attack");
             }
         }
     }

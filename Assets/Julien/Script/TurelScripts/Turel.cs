@@ -1,21 +1,24 @@
 using System.Collections.Generic;
 using System.Linq;
+using Julien.Script.Interface;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts.State;
 using Script.Data.TurellData;
 using Script.Turel.State;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Julien.Script.TurelScripts
 {
-    public class Turel : MonoBehaviour
+    public class Turel : MonoBehaviour, ITakeDamage
     {
         [SerializeField] private Rigidbody _rigidbody;
-        [FormerlySerializedAs("_colliderTurel")] [SerializeField] private GameObject _AimCollider;
+        [SerializeField] private GameObject _AimCollider;
         
         public TurelData TurelType;
         public TurelState CurrentStat;
+
+        [SerializeField] private Image _imageHealth;
 
         [Header("Data")] 
         
@@ -95,6 +98,12 @@ namespace Julien.Script.TurelScripts
         {
             _AimCollider.transform.localScale += new Vector3(turelWrap.AddRange, 0, turelWrap.AddDistance);
             TurelWrap.AddBonus(turelWrap);
+        }
+
+        public void takeDamage(float damage)
+        {
+            Health -= damage;
+            _imageHealth.fillAmount = Health / TurelWrap.MaxHEalth;
         }
     }
 }

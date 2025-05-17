@@ -54,6 +54,10 @@ namespace Julien.Script.ZombieScript
 
         [SerializeField] private Player _player;
 
+        [Header("animator")]
+
+        public Animator Animator;
+        
         public float Health
         {
             get => CurrentHealth;

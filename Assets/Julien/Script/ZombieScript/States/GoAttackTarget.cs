@@ -7,6 +7,7 @@ namespace Julien.Script.ZombieScript.States
         public override void Execute(Zombie zombie)
         {
             zombie.NavMeshAgent.SetDestination(zombie.Target.transform.position);
+            zombie.Animator.SetBool("Run", true);
         }
     }
 }

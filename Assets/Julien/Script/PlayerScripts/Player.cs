@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Julien.Script.HUD;
 using Julien.Script.Interface;
-using Julien.Script.Multiplayer;
 using Julien.Script.Static;
 using Script.Data.PlayerData;
 using Script.Input;
@@ -63,7 +62,7 @@ namespace Julien.Script.PlayerScripts
         
         public HandingObject handingObject;
         [SerializeField] private GameObject _dropPrefab;
-
+        
         [SerializeField] public GameObject currentAimTurel;
 
         [Header("References HUD")] 
@@ -80,7 +79,13 @@ namespace Julien.Script.PlayerScripts
         private Vector2 _move;
         private InventoryPlayer _inventory;
         private PlayerScore _playerScore;
+        
+        [Header("animator")]
+        [SerializeField] private Animator _animator;
 
+        [SerializeField] private float _verticalValue;
+        [SerializeField] private float _horizontalValue;
+        
         [SerializeField] private List<GameObject> InteractsGameObject;
         
         
@@ -141,6 +146,13 @@ namespace Julien.Script.PlayerScripts
 
         private void Update()
         {
+            // animation des jambes
+            _verticalValue = _rigidbody.linearVelocity.x;
+            _horizontalValue = _rigidbody.linearVelocity.z;
+            
+            _animator.SetFloat("Vertical", _verticalValue);
+            _animator.SetFloat("Horizontal", _horizontalValue);
+            
             OnMove(_move);
             if (_isHolding)
             {
@@ -156,18 +168,15 @@ namespace Julien.Script.PlayerScripts
                     if (hit.collider.CompareTag("Turel"))
                     {
                         currentAimTurel = hit.transform.gameObject;
-                        Debug.Log("Touche une tourelle");
                     }
                     else
                     {
                         currentAimTurel = null;
-                        Debug.Log("Touche rien");
                     }
                 }
                 else
                 {
                     currentAimTurel = null;
-                    Debug.Log("Touche rien");
                 }
             }
 
@@ -289,7 +298,10 @@ namespace Julien.Script.PlayerScripts
             if (other.gameObject.GetComponent<IInteractable>() != null)
             {
                 InteractsGameObject.Add(other.gameObject);
-                //InteractsGameObject[0].gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                if ( InteractsGameObject[0].gameObject.transform.Find("CanvaInteract"))
+                {
+                    InteractsGameObject[0].gameObject.transform.Find("CanvaInteract").gameObject.SetActive(true);
+                }
             }
         }
 
@@ -297,7 +309,10 @@ namespace Julien.Script.PlayerScripts
         {
             if (other.gameObject.GetComponent<IInteractable>() != null)
             {
-                //other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                if (other.gameObject.transform.transform.Find("CanvaInteract"))
+                {
+                    other.gameObject.transform.transform.Find("CanvaInteract").gameObject.SetActive(false);
+                }
                 InteractsGameObject.Remove(other.gameObject);
             }
         }
