@@ -56,8 +56,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2763150300084313575}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.024234299, y: -0.121680066, z: -0.0026462858, w: 0.99227}
-  m_LocalPosition: {x: -0.2038702, y: 0.2649273, z: 0.90267086}
+  m_LocalRotation: {x: -0.5348644, y: 0.5868957, z: 0.43072256, w: 0.4288958}
+  m_LocalPosition: {x: 0.0070016393, y: 0.6207484, z: -0.05747915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 314452077858189708}
   - {fileID: 9017303823062493876}
   - {fileID: 6161813699516548135}
-  m_Father: {fileID: 747707550222075817}
+  m_Father: {fileID: 5000800417456730054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8611981300260649327
 MonoBehaviour:
@@ -990,7 +990,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45e9af05528d210479f9cc5262c63809, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1710026558086964752}
-    - targetCorrespondingSourceObject: {fileID: 3383669428380522585, guid: 45e9af05528d210479f9cc5262c63809, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7058046747855499318, guid: 45e9af05528d210479f9cc5262c63809, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8384894240903927684}
     m_AddedComponents:
@@ -1205,7 +1205,23 @@ MonoBehaviour:
   m_RigLayers:
   - m_Rig: {fileID: 8309760970959161589}
     m_Active: 1
-  m_Effectors: []
+  m_Effectors:
+  - m_Transform: {fileID: 8384894240903927684}
+    m_Style:
+      shape: {fileID: 6934816846298916836, guid: 261bad8dcbb8e4d4d92ed78bd0e3bdfc, type: 3}
+      color: {r: 1, g: 0, b: 0, a: 0.5}
+      size: 69.73
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    m_Visible: 1
+  - m_Transform: {fileID: 8384894240903927684}
+    m_Style:
+      shape: {fileID: 6934816846298916836, guid: 261bad8dcbb8e4d4d92ed78bd0e3bdfc, type: 3}
+      color: {r: 1, g: 0, b: 0, a: 0.5}
+      size: 69.73
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    m_Visible: 1
 --- !u!4 &3081242701450226102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1033457975694571078, guid: 45e9af05528d210479f9cc5262c63809, type: 3}

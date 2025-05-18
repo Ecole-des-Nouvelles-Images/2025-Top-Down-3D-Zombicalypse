@@ -16,7 +16,7 @@ MonoBehaviour:
   Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 0.39215687}
   DropChance: 50
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
-  WeaponMesh: {fileID: 8452351603674016922, guid: 5438a4792475728418a0e5c2353a2c1e, type: 3}
+  WeaponMesh: {fileID: 919132149155446097, guid: ab353def0a9f3ae45aa10bea63e49dff, type: 3}
   ImageWeapon: {fileID: 0}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
