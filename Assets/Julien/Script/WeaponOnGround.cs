@@ -20,14 +20,18 @@ namespace Julien.Script
         
         [Header("Visual")]
         [SerializeField] private GameObject _visual;
-        
+
+        [SerializeField] private bool _random;
         
         private void Start()
         {
             if (!DropedWeapon)
             {
                 //RandomWeapon();
-                weaponWrap.Weapon = GetRandomWeapon();
+                if (_random)
+                {
+                    weaponWrap.Weapon = GetRandomWeapon();
+                }
                 Debug.Log(GetRandomWeapon().lvl);
                 weaponWrap.SetFirstData();
                 SetVisual();
@@ -84,7 +88,7 @@ namespace Julien.Script
             Destroy(transform.GetChild(0).gameObject);
 
             _colorGameObject.GetComponent<MeshRenderer>().material.color = weaponWrap.Color;
-            _colorGameObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", weaponWrap.Color * 0.5f);
+            _colorGameObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", weaponWrap.Color * 0.2f);
             GameObject weapon = Instantiate(weaponWrap.Weapon.WeaponMesh, transform.position + new Vector3(0,0,0), quaternion.identity, transform);
         }
     }

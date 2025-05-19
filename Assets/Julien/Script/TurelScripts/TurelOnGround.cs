@@ -14,6 +14,8 @@ namespace Julien.Script.TurelScripts
         public TurelWrap TurelWrap;
         private void Start()
         {
+            // Random();
+            // SetVisual();
         }
         public void Activate(Player player)
         {

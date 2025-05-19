@@ -46,6 +46,7 @@ namespace Julien.Script.HUD
                 gameManager.CurrentPoint = 0;
                 gameManager.MaxProgressBar += 10;
                 gameManager.SpawnWeapon();
+                SetProgressBar(0);
             }
         }
         

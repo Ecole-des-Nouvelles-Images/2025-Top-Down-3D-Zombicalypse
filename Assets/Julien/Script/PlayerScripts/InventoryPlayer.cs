@@ -1,9 +1,12 @@
 using System.Collections;
+using Julien.Script.HUD.OnTopPlayer;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
+using Microsoft.Unity.VisualStudio.Editor;
 using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;
+using Image = UnityEngine.UIElements.Image;
 
 namespace Julien.Script.PlayerScripts
 {
@@ -22,6 +25,8 @@ namespace Julien.Script.PlayerScripts
          
          [SerializeField] private Player _player;
          [SerializeField] private HandingObject handingObject;
+
+         [SerializeField] private GameObject _reloadImageGameObject;
         private void Start()
         {
             _player = GetComponent<Player>();
@@ -47,6 +52,7 @@ namespace Julien.Script.PlayerScripts
         private IEnumerator ReloadDelay(float timer)
         {
             _player.isReloading = true;
+            _reloadImageGameObject.GetComponent<ReloadingBar>().SetReloardBoar(equipedWeaponWrap.Weapon.ReloadTime);
             yield return new WaitForSeconds(timer);
             _player.isReloading = false;
             equipedWeaponWrap.CurrentAmmo = equipedWeaponWrap.Weapon.MaxAmmo;
@@ -152,6 +158,7 @@ namespace Julien.Script.PlayerScripts
                 UpgraderWrap = new UpgraderWrap();
                 Destroy(handingObject.HandingBonus.transform.GetChild(0).gameObject);
                 handingObject.HandingWeapon.SetActive(true);
+                _player.currentAimTurel = null;
                 _player.SwitchInputHandler(0);
             }
         }

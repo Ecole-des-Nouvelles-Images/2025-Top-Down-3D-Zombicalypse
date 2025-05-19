@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: NormalTurel
   m_EditorClassIdentifier: 
   MaxAmmo: 50
-  Damage: 10
-  MaxFireRate: 0.2
+  Damage: 5
+  MaxFireRate: 0.3
   FireRate: 0.05
   Precision: 0.2
   Range: 15

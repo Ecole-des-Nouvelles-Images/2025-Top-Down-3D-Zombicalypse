@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: -6841320857642746679}
   - component: {fileID: 6763875113113559004}
   - component: {fileID: 8335890442325940512}
+  - component: {fileID: 4441715771690777600}
   m_Layer: 0
   m_Name: ZombieNormal
   m_TagString: Zombie
@@ -177,6 +178,7 @@ MonoBehaviour:
   CanAttack: 0
   Object: []
   _player: {fileID: 0}
+  Animator: {fileID: 4441715771690777600}
 --- !u!33 &6411723483431922560
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -323,3 +325,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &4441715771690777600
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910938945056931783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a22bbf6bb2aae474e88e08f6cd8a0556, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

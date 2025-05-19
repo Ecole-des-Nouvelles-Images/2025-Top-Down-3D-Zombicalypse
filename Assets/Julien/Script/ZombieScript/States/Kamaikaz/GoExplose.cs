@@ -12,6 +12,9 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
         {
             zombie.NavMeshAgent.speed = 0f;
             zombie.AttackSpeed -= Time.deltaTime;
+            zombie.Animator.SetBool("Run", false);
+            zombie.Animator.SetTrigger("GoExplose");
+            
             if (zombie.AttackSpeed <= 0)
             {
                 if (zombie.Object != null)

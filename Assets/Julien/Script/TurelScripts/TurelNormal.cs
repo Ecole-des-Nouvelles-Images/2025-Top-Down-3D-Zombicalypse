@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Julien.Script.TurelScripts
 {
-    public class TurelNormal : Julien.Script.TurelScripts.Turel
+    public class TurelNormal : Turel
     {
         private void Update()
         {

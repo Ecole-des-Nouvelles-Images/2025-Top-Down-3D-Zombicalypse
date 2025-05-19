@@ -8,7 +8,7 @@ namespace Julien.Script.HUD
 {
     public class HUDDeadPlayer : MonoBehaviour
     {
-        [FormerlySerializedAs("_platerTarget")] [SerializeField] private Player _playerTarget;
+        [SerializeField] private Player _playerTarget;
         [SerializeField] private float _timer;
 
         [SerializeField] private TMP_Text _timerText;
