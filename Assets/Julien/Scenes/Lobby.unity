@@ -131,18 +131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MilitaryPlayer 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3166169921982437721, guid: 232460a1f0613d64e9ceb8d6835648b7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3166169921982437721, guid: 232460a1f0613d64e9ceb8d6835648b7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.177
-      objectReference: {fileID: 0}
-    - target: {fileID: 3166169921982437721, guid: 232460a1f0613d64e9ceb8d6835648b7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.083
-      objectReference: {fileID: 0}
     - target: {fileID: 3855578383421192527, guid: 232460a1f0613d64e9ceb8d6835648b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

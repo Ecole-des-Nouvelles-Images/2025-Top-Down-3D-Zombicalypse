@@ -285,7 +285,7 @@ MonoBehaviour:
   hudPlayer: {fileID: 0}
   _hudDeadPlayer: {fileID: 2612938324517824276, guid: 5bc601ef75bee7c43a9063c11e328e87, type: 3}
   PlayerRenderer: {fileID: 4027683388114342622}
-  _animator: {fileID: 1903891870980167025}
+  _animator: {fileID: 5095038008887302461}
   _verticalValue: 0
   _horizontalValue: 0
   InteractsGameObject: []
@@ -941,6 +941,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d8a5ac0b78834e9b2525d94905615, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5669514641061983032}
+    - targetCorrespondingSourceObject: {fileID: 1082271958561512970, guid: eb4d8a5ac0b78834e9b2525d94905615, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5095038008887302461}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d8a5ac0b78834e9b2525d94905615, type: 3}
 --- !u!4 &233566893584079607 stripped
 Transform:
@@ -1027,6 +1030,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 608321761475470972, guid: eb4d8a5ac0b78834e9b2525d94905615, type: 3}
   m_PrefabInstance: {fileID: 4261633824301068175}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3756386913669214597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1082271958561512970, guid: eb4d8a5ac0b78834e9b2525d94905615, type: 3}
+  m_PrefabInstance: {fileID: 4261633824301068175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5095038008887302461
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756386913669214597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba69f6d86d52867499c8fbde485ff06c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &3852067231253639737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8191740002585371210, guid: eb4d8a5ac0b78834e9b2525d94905615, type: 3}
