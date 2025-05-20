@@ -9,7 +9,7 @@ echo "🔧 Initialisation de Git LFS..."
 LFS_VERSION="v3.6.1"
 LFS_URL="https://github.com/git-lfs/git-lfs/releases/download/${LFS_VERSION}/git-lfs-windows-${LFS_VERSION}.exe"
 INSTALLER="git-lfs-installer.exe"
-TRACKED_EXTENSIONS=("*.psd" "*.png" "*.wav" "*.mp4" "*.fbx" "*.blend" ".blend1" "*.spp")
+TRACKED_EXTENSIONS=("*.psd" "*.png" "*.wav" "*.mp4" "*.fbx" "*.blend" "*.spp")
 
 # =========================
 # PRÉCONDITION

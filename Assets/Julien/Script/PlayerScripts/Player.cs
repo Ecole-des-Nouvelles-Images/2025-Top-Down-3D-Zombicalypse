@@ -147,11 +147,11 @@ namespace Julien.Script.PlayerScripts
         private void Update()
         {
             // animation des jambes
-            _verticalValue = _rigidbody.linearVelocity.x;
-            _horizontalValue = _rigidbody.linearVelocity.z;
+            _verticalValue = _rigidbody.linearVelocity.z;
+            _horizontalValue = _rigidbody.linearVelocity.x;
             
-            _animator.SetFloat("Vertical", _verticalValue);
             _animator.SetFloat("Horizontal", _horizontalValue);
+            _animator.SetFloat("Vertical", _verticalValue);
             
             OnMove(_move);
             if (_isHolding)
