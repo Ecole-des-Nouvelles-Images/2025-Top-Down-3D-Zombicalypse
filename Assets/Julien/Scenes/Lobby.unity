@@ -1850,6 +1850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MilitaryPlayer 2
       objectReference: {fileID: 0}
+    - target: {fileID: 568397726907809810, guid: 09c756a3e6e64f9429fd05e4712fdab2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2788347044499354813, guid: 09c756a3e6e64f9429fd05e4712fdab2, type: 3}
       propertyPath: equipedWeaponWrap.Weapon
       value: 
