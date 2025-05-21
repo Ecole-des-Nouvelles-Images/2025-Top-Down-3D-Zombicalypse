@@ -316,6 +316,7 @@ MonoBehaviour:
   _animator: {fileID: 1611295729479926352}
   _verticalValue: 0
   _horizontalValue: 0
+  _spineBone: {fileID: 0}
   InteractsGameObject: []
 --- !u!114 &2854704983080223569
 MonoBehaviour:
@@ -333,14 +334,14 @@ MonoBehaviour:
     Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
+    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
   - Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
+    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - Lvl: 0

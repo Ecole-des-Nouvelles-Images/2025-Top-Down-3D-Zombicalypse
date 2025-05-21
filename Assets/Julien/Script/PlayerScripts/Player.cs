@@ -85,9 +85,12 @@ namespace Julien.Script.PlayerScripts
 
         [SerializeField] private float _verticalValue;
         [SerializeField] private float _horizontalValue;
-        
+
+        [SerializeField] private GameObject _spineBone;
         [SerializeField] private List<GameObject> InteractsGameObject;
-        
+
+        private Vector3 _playerUpdateDir;
+         
         
         private void Awake()
         {
@@ -103,9 +106,9 @@ namespace Julien.Script.PlayerScripts
         
         private void OnSceneloaded(Scene arg0, LoadSceneMode arg1)
         {
-            
             // instancier au chargement de la scene un prefab de son HUD ( inventaire )
             int index = PlayerIndex - 1;
+            
             HudParent = GameObject.FindWithTag("HudMultiplayer");
             GameObject hud = Instantiate(HudPrefab, HudParent.transform.position, quaternion.identity, HudParent.transform);
             hudPlayer = hud.GetComponent<HUDPlayer>();
@@ -211,8 +214,12 @@ namespace Julien.Script.PlayerScripts
             if (Mathf.Abs(valueAim.x) >= 0.5f || Mathf.Abs(valueAim.y) >= 0.5f)
             {
                 Vector2 oldValue = valueAim;
+                _playerUpdateDir = new Vector3(valueAim.x, 0, valueAim.y);
                _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1, gameObject.transform.position.z + oldValue.y);
             }
+
+            Debug.Log(valueAim);
+            transform.forward = _spineBone.transform.forward;
         }
         
         // Tirer
@@ -221,7 +228,7 @@ namespace Julien.Script.PlayerScripts
             _isHolding = readValueAsButton;
             if (readValueAsButton && _canShoot && !isReloading && _inventory.equipedWeaponWrap.CurrentAmmo - _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
             {
-                _inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this);
+                _inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this, _playerUpdateDir);
                 StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 _inventory.equipedWeaponWrap.CurrentAmmo -= _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;

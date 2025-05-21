@@ -1,5 +1,4 @@
 using System;
-using Julien.Script;
 using Julien.Script.HUD;
 using Julien.Script.PlayerScripts;
 using UnityEngine;

@@ -16,7 +16,6 @@ namespace Julien.Script.HUD
         {
             StaticAction.OntakedDamage += SetHealthGenerator;
             StaticAction.OnAddPoint += SetProgressBar;
-            Debug.Log(" ajouter l'evenet");
         }
 
         private void OnDisable()
