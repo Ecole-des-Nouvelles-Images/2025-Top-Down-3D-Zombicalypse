@@ -11,5 +11,6 @@ namespace Julien.Script.Static
         public static List<Vector4> AnchorsScore = new List<Vector4>{new Vector4(0.2f,0.65f,0.8f,0.75f),new Vector4(0.2f,0.54f,0.8f,0.64f),new Vector4(0.2f,0.43f,0.8f,0.53f),new Vector4(0.2f,0.32f,0.8f,0.42f)};
         
         public static List<GameObject> Players = new List<GameObject>();
+        public static Vector3 lastZombiePosition;
     }
 }

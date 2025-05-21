@@ -67,6 +67,7 @@ namespace Julien.Script.ZombieScript
                 if (CurrentHealth <= 0 && !Dead)
                 {
                     Dead = true;
+                    GameManagerStatic.lastZombiePosition = gameObject.transform.position;
                     Die(true);
                 }
             }
