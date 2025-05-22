@@ -25,6 +25,7 @@ namespace Julien.Script.ZombieScript
         public float AttackRange;
         
         public float CurrentHealth;
+        [SerializeField] private float _chanceDropAmmo;
 
         [Header("Target")] 
         
@@ -51,6 +52,8 @@ namespace Julien.Script.ZombieScript
 
         private RoundHundler _roundHundler;
         private BonusToZombie _bonusToZombie;
+        [SerializeField] private GameObject _ammoPrfab;
+        [SerializeField] private float _spawnRadiusAmmo;
 
         [SerializeField] private Player _player;
 
@@ -67,6 +70,14 @@ namespace Julien.Script.ZombieScript
                 if (CurrentHealth <= 0 && !Dead)
                 {
                     Dead = true;
+
+                    float rand = Random.Range(0, 100);
+                    if (rand <= _spawnRadiusAmmo)
+                    {
+                        Instantiate(_ammoPrfab, transform.position, Quaternion.identity);
+                        Debug.Log("Spawn bullet");
+                    }
+                    
                     GameManagerStatic.lastZombiePosition = gameObject.transform.position;
                     Die(true);
                 }

@@ -76,8 +76,9 @@ namespace Julien.Script.PlayerScripts
         [Header("References Script")]
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
+        public List<GameObject> Cloths = new List<GameObject>();
         private Vector2 _move;
-        private InventoryPlayer _inventory;
+        [FormerlySerializedAs("_inventory")] public InventoryPlayer Inventory;
         private PlayerScore _playerScore;
         
         [Header("animator")]
@@ -131,10 +132,10 @@ namespace Julien.Script.PlayerScripts
         private void Start()
         {
             _playerScore = GetComponent<PlayerScore>();
-            _inventory = gameObject.GetComponent<InventoryPlayer>();
+            Inventory = gameObject.GetComponent<InventoryPlayer>();
             DisplayData();
             handingObject.SwitchWeapon();
-            _inventory.AutomaticSwitch();
+            Inventory.AutomaticSwitch();
             _gameManager = GameObject.FindWithTag("GameManager");
             gameObject.GetComponent<PlayerInputHandlerTurel>().enabled = true;
             SwitchInputHandler(0);
@@ -161,12 +162,12 @@ namespace Julien.Script.PlayerScripts
             {
                 Fire(_isHolding);
             }
-            if (_inventory.UpgraderWrap.UpgraderType)
+            if (Inventory.UpgraderWrap.UpgraderType)
             {
                 RaycastHit hit;
-                
-                Debug.DrawRay(PlayerRenderer.transform.position, PlayerRenderer.transform.forward * 2, Color.blue, 1f);
-                if (Physics.Raycast(PlayerRenderer.transform.position, PlayerRenderer.transform.forward, out hit, 2))
+                Debug.Log(_aimTarget.transform.position);
+                Debug.DrawRay(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), Color.blue, 1f);
+                if (Physics.Raycast(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), out hit, 2))
                 {
                     if (hit.collider.CompareTag("Turel"))
                     {
@@ -215,23 +216,22 @@ namespace Julien.Script.PlayerScripts
             {
                 Vector2 oldValue = valueAim;
                 _playerUpdateDir = new Vector3(valueAim.x, 0, valueAim.y);
-               _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1, gameObject.transform.position.z + oldValue.y);
+               _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z + oldValue.y);
             }
 
-            Debug.Log(valueAim);
-            transform.forward = _spineBone.transform.forward;
+            //Debug.Log(valueAim);
         }
         
         // Tirer
         public void Fire(bool readValueAsButton)
         {
             _isHolding = readValueAsButton;
-            if (readValueAsButton && _canShoot && !isReloading && _inventory.equipedWeaponWrap.CurrentAmmo - _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
+            if (readValueAsButton && _canShoot && !isReloading && Inventory.equipedWeaponWrap.CurrentAmmo - Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
             {
-                _inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this, _playerUpdateDir);
-                StartCoroutine("ShootDelay", _inventory.equipedWeaponWrap.Weapon.FireRate);
+                Inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this, _playerUpdateDir);
+                StartCoroutine("ShootDelay", Inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
-                _inventory.equipedWeaponWrap.CurrentAmmo -= _inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
+                Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
                 if (hudPlayer) hudPlayer.SetHudInfo();
             }
         }
