@@ -179,6 +179,7 @@ MonoBehaviour:
   CanAttack: 0
   Object: []
   _ammoPrfab: {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
+  _spawnRadiusAmmo: 0
   _player: {fileID: 0}
   Animator: {fileID: 4441715771690777600}
 --- !u!33 &6411723483431922560
