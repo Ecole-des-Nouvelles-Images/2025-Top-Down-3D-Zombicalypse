@@ -103,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4731517236692706262
 Transform:
   m_ObjectHideFlags: 0
@@ -471,13 +471,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2995270520134523662}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.63923335, y: 0.1982975, z: 0.66448367, w: 0.33244592}
-  m_LocalPosition: {x: -1.2718624, y: -0.19847822, z: -0.45988137}
+  m_LocalRotation: {x: -0.00000002235174, y: -0.000000052154057, z: 0.00000009615904, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 713231992653568032}
-  m_Father: {fileID: 1688599112241065912}
+  m_Father: {fileID: 6946509520553681576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3397791808412925478
 GameObject:
@@ -1008,7 +1008,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3982889295286081173}
   - {fileID: 4923567848498877193}
   - {fileID: 4053187942484483040}
   m_Father: {fileID: 6240450571824603263}
@@ -1030,9 +1029,11 @@ MonoBehaviour:
   HandingTurel: {fileID: 9151893342318012470}
   HandingBonus: {fileID: 5968998107595753299}
   _setSpawnBulletPosition: {fileID: 1410790677786451984}
-  _weaponMesh: {fileID: 0}
+  WeaponMesh: {fileID: 0}
   TurelPrefab: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
   BonusPrefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+  _bonesPlayer: {fileID: 0}
+  rotation: 0
 --- !u!1 &5968998107595753299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1332,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4aaf2421f3ca9d4e98dcc7c1f80f57e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3098523669214954450}
+    - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: d4aaf2421f3ca9d4e98dcc7c1f80f57e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3982889295286081173}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4aaf2421f3ca9d4e98dcc7c1f80f57e, type: 3}
       insertIndex: -1

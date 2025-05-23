@@ -36,7 +36,9 @@ namespace Julien.Script
 
         public void RotateWeapon()
         {
-            WeaponMesh.transform.LookAt(_bonesPlayer.transform, Vector3.forward);
+            // Vector3 targetPosition = _bonesPlayer.transform.position;
+            // targetPosition.x = transform.position.x;
+            // transform.LookAt(targetPosition);
         }
     }
 }
