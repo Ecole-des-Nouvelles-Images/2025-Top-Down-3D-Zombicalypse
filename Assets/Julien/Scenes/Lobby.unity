@@ -984,10 +984,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colors:
-  - {r: 1, g: 0, b: 0, a: 5.27e-43}
-  - {r: 0.72255623, g: 1, b: 0, a: 5.27e-43}
-  - {r: 0, g: 0.17034149, b: 1, a: NaN}
-  - {r: 0, g: 1, b: 0.8044872, a: 5.27e-43}
+  - {r: 0.7735849, g: 0.53203946, b: 0.3539516, a: 0}
+  - {r: 0.38768244, g: 0.74479663, b: 0.8301887, a: 5.27e-43}
+  - {r: 0.17946778, g: 0.3490566, b: 0.20102325, a: NaN}
+  - {r: 1, g: 1, b: 1, a: 5.27e-43}
 --- !u!33 &759291705
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1444,6 +1444,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 197538694342873908, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 946fd41380b234241a88431eae813284, type: 2}
+    - target: {fileID: 384439507875424449, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1b7e0f2d0dcfd644905f0b1ed9b8102, type: 2}
     - target: {fileID: 1275117740412515932, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.3198366
@@ -1488,6 +1496,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MilitaryPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4904881071703836128, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 946fd41380b234241a88431eae813284, type: 2}
+    - target: {fileID: 7301242089418348871, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 946fd41380b234241a88431eae813284, type: 2}
+    - target: {fileID: 8324468696384778091, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1b7e0f2d0dcfd644905f0b1ed9b8102, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
