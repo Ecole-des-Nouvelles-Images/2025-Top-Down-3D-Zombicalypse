@@ -25,6 +25,7 @@ namespace Julien.Script.PlayerScripts
          
          [SerializeField] private Player _player;
          [SerializeField] private HandingObject handingObject;
+         [SerializeField] private IkBones _ikBones;
 
          [SerializeField] private GameObject _reloadImageGameObject;
         private void Start()
@@ -70,6 +71,7 @@ namespace Julien.Script.PlayerScripts
                 equipedWeaponWrap = StrucWeapons[nextIndexWeapon];
                 indexWeapon = nextIndexWeapon;
             }
+            _ikBones.ChangeHandsPlacement();
         }
 
         public void AutomaticSwitch()
@@ -84,6 +86,7 @@ namespace Julien.Script.PlayerScripts
                     indexWeapon = i;
                 }
             }
+            _ikBones.ChangeHandsPlacement();
         }
         
         public void SwitchWeapon()
@@ -92,6 +95,7 @@ namespace Julien.Script.PlayerScripts
             StopCoroutine("ReloadDelay");
             handingObject.SwitchWeapon();
             _player.isReloading = false;
+            _ikBones.ChangeHandsPlacement();
         }
  
         public void TookWeapon(WeaponWrap weaponWrap, GameObject weaponVisual)

@@ -656,6 +656,7 @@ MonoBehaviour:
     AddDistance: 0
   _player: {fileID: 1187438759244976583}
   handingObject: {fileID: 1250817660826761203}
+  _ikBones: {fileID: 2946475957143782961}
   _reloadImageGameObject: {fileID: 1743377096529878794}
 --- !u!114 &6244079928736301926
 MonoBehaviour:

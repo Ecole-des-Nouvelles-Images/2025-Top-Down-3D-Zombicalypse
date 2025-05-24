@@ -7,6 +7,7 @@ using Script.Data.PlayerData;
 using Script.Input;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -91,7 +92,9 @@ namespace Julien.Script.PlayerScripts
         [SerializeField] private List<GameObject> InteractsGameObject;
 
         private Vector3 _playerUpdateDir;
-         
+
+        [Header("IK")]
+        [SerializeField] private MultiAimConstraint _multiAimConstraint;
         
         private void Awake()
         {
@@ -220,6 +223,10 @@ namespace Julien.Script.PlayerScripts
             }
 
             //Debug.Log(valueAim);
+        }
+
+        private void TurnIKBones()
+        {
         }
         
         // Tirer
