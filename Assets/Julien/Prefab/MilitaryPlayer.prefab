@@ -103,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4731517236692706262
 Transform:
   m_ObjectHideFlags: 0
@@ -471,14 +471,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2995270520134523662}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000002235174, y: -0.000000052154057, z: 0.00000009615904, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.39776608, y: -0.68612856, z: 0.23097526, w: 0.5636135}
+  m_LocalPosition: {x: -0, y: 0.068, z: 0.043}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 713231992653568032}
   m_Father: {fileID: 6946509520553681576}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 130.064, y: 66.371, z: 153.67}
 --- !u!1 &3397791808412925478
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +858,7 @@ Transform:
   m_GameObject: {fileID: 4803204656347959020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0.775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 3068890469118411365}
     m_Mid: {fileID: 6503206356985784520}
@@ -1004,7 +1004,7 @@ Transform:
   m_GameObject: {fileID: 5917125445613164223}
   serializedVersion: 2
   m_LocalRotation: {x: -0.54699075, y: 0.68319786, z: -0.3464952, w: 0.33761346}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.25, y: 0.24, z: -0.163}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   WeaponMesh: {fileID: 0}
   TurelPrefab: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
   BonusPrefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
-  _bonesPlayer: {fileID: 0}
+  _bonesPlayer: {fileID: 7812116695346295259}
   rotation: 0
 --- !u!1 &5968998107595753299
 GameObject:
@@ -1336,6 +1336,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3982889295286081173}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4aaf2421f3ca9d4e98dcc7c1f80f57e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2946475957143782961}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4aaf2421f3ca9d4e98dcc7c1f80f57e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7840660657233293757}
@@ -1841,6 +1844,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4aaf2421f3ca9d4e98dcc7c1f80f57e, type: 3}
   m_PrefabInstance: {fileID: 8778458301358890336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2946475957143782961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435858384709640241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7892cd00546f66f4ead4471f30439b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handingObject: {fileID: 1250817660826761203}
+  _rightHandGismo: {fileID: 4648020901105432426}
+  _leftHandGismo: {fileID: 1366730387108103817}
+  _rightHandPlacement: {fileID: 0}
+  _leftHandPlacement: {fileID: 0}
 --- !u!95 &7840660657233293757
 Animator:
   serializedVersion: 7

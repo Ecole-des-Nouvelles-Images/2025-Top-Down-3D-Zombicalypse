@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e8dd3897e6fc98418f9212244b1d91e, type: 3}
-  m_Name: GlockLVL2
+  m_Name: ColtLVL5
   m_EditorClassIdentifier: 
-  lvl: 2
-  Color: {r: 0.15294123, g: 1, b: 0, a: 0.39215687}
-  DropChance: 40
+  lvl: 5
+  Color: {r: 1, g: 0.9549617, b: 0, a: 0.39215687}
+  DropChance: 10
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
-  WeaponMesh: {fileID: 919132149155446097, guid: a12329c6b29e78a4d8ec5e5b3419f41f, type: 3}
+  WeaponMesh: {fileID: 7184659289043099588, guid: 5fa1d5dd910396b41b37e3df0e0bf8dd, type: 3}
   ImageWeapon: {fileID: 0}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
   BulletSpeed: 80
-  Damage: 35
-  FireRate: 0.5
-  Precision: 0.2
-  LethalRangeLetal: 1
-  MaxAmmo: 15
+  Damage: 80
+  FireRate: 0.3
+  Precision: 0.1
+  LethalRangeLetal: 0.5
+  MaxAmmo: 17
   InfiniteMagazine: 0
-  MaxMagazine: 5
+  MaxMagazine: 7
   ReloadTime: 1.5
   RemoveAmmoParFire: 1
