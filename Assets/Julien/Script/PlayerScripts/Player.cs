@@ -161,6 +161,8 @@ namespace Julien.Script.PlayerScripts
             _animator.SetFloat("Horizontal", _horizontalValue);
             _animator.SetFloat("Vertical", _verticalValue);
             
+            _playerUpdateDir =  _lineRenderer.GetPosition(1);
+            
             OnMove(_move);
             if (_isHolding)
             {
@@ -219,9 +221,6 @@ namespace Julien.Script.PlayerScripts
             if (Mathf.Abs(valueAim.x) >= 0.5f || Mathf.Abs(valueAim.y) >= 0.5f)
             {
                 Vector2 oldValue = valueAim;
-                
-                _playerUpdateDir =  _lineRenderer.GetPosition(1);
-                Debug.Log(_playerUpdateDir);
                _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z + oldValue.y);
             }
 
