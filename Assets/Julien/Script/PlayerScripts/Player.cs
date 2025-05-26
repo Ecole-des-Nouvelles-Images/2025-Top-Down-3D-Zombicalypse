@@ -92,7 +92,8 @@ namespace Julien.Script.PlayerScripts
         [SerializeField] private List<GameObject> InteractsGameObject;
 
         private Vector3 _playerUpdateDir;
-
+        [SerializeField] private LineRenderer _lineRenderer;
+        
         [Header("IK")]
         [SerializeField] private MultiAimConstraint _multiAimConstraint;
         
@@ -218,7 +219,9 @@ namespace Julien.Script.PlayerScripts
             if (Mathf.Abs(valueAim.x) >= 0.5f || Mathf.Abs(valueAim.y) >= 0.5f)
             {
                 Vector2 oldValue = valueAim;
-                _playerUpdateDir = new Vector3(valueAim.x, 0, valueAim.y);
+                
+                _playerUpdateDir =  _lineRenderer.GetPosition(1);
+                Debug.Log(_playerUpdateDir);
                _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z + oldValue.y);
             }
 

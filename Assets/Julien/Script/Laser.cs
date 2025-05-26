@@ -10,7 +10,7 @@ namespace Julien.Script
         private void Update()
         {
             _lineRenderer.SetPosition(0, transform.position);
-            _lineRenderer.SetPosition(1, transform.forward * 100);
+            _lineRenderer.SetPosition(1, new Vector3(transform.forward.x * 100, 1, transform.forward.z * 100));
             // _lineRenderer.SetPosition(1, new Vector3(transform.localPosition.x  + 100, transform.localPosition.y, transform.localPosition.z));
         }   
     }

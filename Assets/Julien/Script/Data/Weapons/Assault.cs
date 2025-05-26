@@ -9,7 +9,7 @@ namespace Julien.Script.Data.Weapons
         public override void Fire(Transform spawnBulletPosition, Player player, Vector3 dir)
         {
             GameObject bullet = Instantiate(BulletPrefab, spawnBulletPosition.transform.position, spawnBulletPosition.transform.rotation);
-            bullet.transform.forward = dir;
+            bullet.transform.LookAt(dir);
             bullet.gameObject.GetComponent<Bullet>().SetBulletParameter(BulletSpeed, Damage, Precision, LethalRangeLetal, player);
         }
 
