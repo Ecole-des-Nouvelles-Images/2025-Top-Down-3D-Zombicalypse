@@ -23,10 +23,14 @@ namespace Julien.Script.Lobby
             {
                 if (index >= 0 && index < _colors.Count)
                 {
-                    foreach (GameObject cloth in  player.GetComponent<Player>().Cloths)
+                    
+                    foreach (GameObject cloth in  player.Cloths)
                     {
                         Debug.Log("Change l'habit de couleur");
-                       // cloth.GetComponent<MeshRenderer>().material.color = //_colors[index];
+                        Material copieMaterial = new Material(cloth.GetComponent<Renderer>().material);
+                        cloth.GetComponent<Renderer>().sharedMaterial = copieMaterial;
+                        copieMaterial.color = _colors[index];
+                        cloth.GetComponent<Renderer>().material = copieMaterial;
                     }
                     //player.GetComponent<Player>().PlayerRenderer.GetComponent<MeshRenderer>().material.color = _colors[index];
                     _dictionaryPlayer[player] += 1;

@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8bba67085df2340b7409860ee2797d, type: 3}
-  m_Name: M4LVL3
+  m_Name: Ak47LVL2
   m_EditorClassIdentifier: 
-  lvl: 3
-  Color: {r: 0, g: 0.12941177, b: 1, a: 0.39215687}
-  DropChance: 25
+  lvl: 2
+  Color: {r: 0.15686275, g: 1, b: 0, a: 0.39215687}
+  DropChance: 35
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
-  WeaponMesh: {fileID: 919132149155446097, guid: 93d7f3ab9c2792b4bbf7aa7d32353e43, type: 3}
+  WeaponMesh: {fileID: 8699190383496485946, guid: ba59a6ccd02bbf14cb5ee7884b3357e1, type: 3}
   ImageWeapon: {fileID: 0}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
   BulletSpeed: 120
-  Damage: 40
-  FireRate: 0.23
-  Precision: 0.08
+  Damage: 35
+  FireRate: 0.25
+  Precision: 0.1
   LethalRangeLetal: 1.7
-  MaxAmmo: 35
+  MaxAmmo: 30
   InfiniteMagazine: 0
   MaxMagazine: 5
   ReloadTime: 1
