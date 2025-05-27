@@ -16,7 +16,7 @@ MonoBehaviour:
   Point: 2
   MaxHealth: 120
   Damage: 15
-  Speed: 2
-  Acceleration: 10
+  Speed: 1
+  Acceleration: 2
   AttackRange: 1
   AttackSpeed: 1.5

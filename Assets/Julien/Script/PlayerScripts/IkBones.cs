@@ -10,7 +10,7 @@ namespace Julien.Script.PlayerScripts
         [SerializeField] private GameObject _rightHandGismo;
         [SerializeField] private GameObject _leftHandGismo;
 
-        [SerializeField] private Transform _rightHandPlacement;
+        //[SerializeField] private Transform _rightHandPlacement;
         [SerializeField] private Transform _leftHandPlacement;
 
         private void Start()
@@ -26,8 +26,8 @@ namespace Julien.Script.PlayerScripts
         [ContextMenu("PlaceHands")]
         public void MoveHands()
         {
-            _rightHandGismo.transform.position = _rightHandPlacement.position;
-            _rightHandGismo.transform.rotation = _rightHandPlacement.rotation;
+            //_rightHandGismo.transform.position = _rightHandPlacement.position;
+            //_rightHandGismo.transform.rotation = _rightHandPlacement.rotation;
             
             _leftHandGismo.transform.position = _leftHandPlacement.position;
             _leftHandGismo.transform.rotation = _leftHandPlacement.rotation;
@@ -36,10 +36,10 @@ namespace Julien.Script.PlayerScripts
         public void ChangeHandsPlacement()
         {
             Debug.Log("PlaceHands");
-            Transform rightHandPlacement = _handingObject.WeaponMesh.transform.Find("RightPlacement");
+            //Transform rightHandPlacement = _handingObject.WeaponMesh.transform.Find("RightPlacement");
             Transform leftHandPlacement = _handingObject.WeaponMesh.transform.Find("LeftPlacement");
 
-            _rightHandPlacement = rightHandPlacement;
+            //_rightHandPlacement = rightHandPlacement;
             _leftHandPlacement = leftHandPlacement;
         }
     }
