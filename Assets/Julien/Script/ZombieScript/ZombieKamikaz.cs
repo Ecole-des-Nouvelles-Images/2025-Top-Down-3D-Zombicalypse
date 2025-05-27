@@ -31,7 +31,6 @@ namespace Julien.Script.ZombieScript
             }
             
             
-            Debug.Log(" nombre de joueur Kamikaz " + GameManagerStatic.Players.Count);
             CurrentState.Execute(this);
         }
         private void Start()

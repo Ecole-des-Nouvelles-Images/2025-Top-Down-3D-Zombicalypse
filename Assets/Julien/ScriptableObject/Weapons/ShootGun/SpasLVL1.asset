@@ -17,7 +17,7 @@ MonoBehaviour:
   DropChance: 50
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 919132149155446097, guid: a73223be37eaeb04597d4f7a3f1fb579, type: 3}
-  ImageWeapon: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 21a4b377ce9b3134a83a441176f73768, type: 3}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}

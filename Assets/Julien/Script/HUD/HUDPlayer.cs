@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
@@ -20,6 +21,15 @@ namespace Julien.Script.HUD
             SetPosition();
             _inventory = _playerTarget.GetComponent<InventoryPlayer>();
             SetAllInfoHud();
+        }
+
+        private void Update()
+        {
+            if (UnityEngine.Input.GetKeyDown(KeyCode.K))
+            {
+                SetAllInfoHud();
+                Debug.Log("Set HUD");
+            }
         }
 
         public void SetAllInfoHud()

@@ -15,7 +15,7 @@ namespace Julien.Script.Data.Weapons
         // visual Of weapon
         // le visuel contient aussi, la ou les balles spawn et deux point ou le joueur placera ses mains
         public GameObject WeaponMesh;
-        public Sprite ImageWeapon;
+        public Sprite Sprite;
         public Vector3 SpawnPositionOffset;
         public Vector3 SpawnBulletOffset;
         

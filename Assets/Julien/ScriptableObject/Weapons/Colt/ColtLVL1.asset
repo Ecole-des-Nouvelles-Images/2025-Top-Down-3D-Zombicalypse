@@ -17,14 +17,14 @@ MonoBehaviour:
   DropChance: 60
   Prefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   WeaponMesh: {fileID: 919132149155446097, guid: a12329c6b29e78a4d8ec5e5b3419f41f, type: 3}
-  ImageWeapon: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 47c4fcbccb87a7c45ba703df9efb0338, type: 3}
   SpawnPositionOffset: {x: 0, y: 0, z: 0}
   SpawnBulletOffset: {x: 0, y: 0, z: 0}
   BulletPrefab: {fileID: 3034596040991903725, guid: 8aea6f5bc2159ce40b4608f1e8dd1984, type: 3}
   BulletSpeed: 100
   Damage: 25
   FireRate: 0.5
-  Precision: 0.1
+  Precision: 0.08
   LethalRangeLetal: 1
   MaxAmmo: 15
   InfiniteMagazine: 0
