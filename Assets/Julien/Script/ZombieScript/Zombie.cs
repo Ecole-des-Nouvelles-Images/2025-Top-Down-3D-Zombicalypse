@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Julien.Script.Data.Zombie;
@@ -94,6 +95,7 @@ namespace Julien.Script.ZombieScript
         {
             _player = player;
             Health -= damage;
+            Animator.SetTrigger("Hit");
         }
         
         private void Awake()
@@ -149,6 +151,7 @@ namespace Julien.Script.ZombieScript
 
         public void Die(bool deadByPlayer)
         {
+            Animator.SetBool("Die", true);
             GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
             if (_player)
             {
@@ -157,9 +160,14 @@ namespace Julien.Script.ZombieScript
             if (deadByPlayer)
             {
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
-                Debug.Log("Invoke l'action");
             }
-            Debug.Log("Destroy the zombie");
+
+            StartCoroutine("DestroyZombieDelay");
+        }
+
+        public IEnumerator DestroyZombieDelay()
+        {
+            yield return new WaitForSeconds(5f);
             Destroy(gameObject);
         }
     }
