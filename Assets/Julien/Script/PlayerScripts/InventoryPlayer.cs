@@ -43,11 +43,6 @@ namespace Julien.Script.PlayerScripts
             equipedWeaponWrap = StrucWeapons[0];
         }
 
-        private void Update()
-        {
-            Debug.Log("L'arme est " + equipedWeaponWrap.Weapon.Handgun);
-        }
-
         public void Reload()
         {
             Debug.Log("Reload");

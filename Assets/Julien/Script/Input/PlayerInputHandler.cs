@@ -111,6 +111,7 @@ namespace Script.Input
 
         private void OnMove(InputAction.CallbackContext context)
         {
+            Debug.Log("readvalue : " + context.ReadValue<Vector2>());
             _player.SetParameter(context.ReadValue<Vector2>());
         }
 

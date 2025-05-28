@@ -6,7 +6,6 @@ using Julien.Script.Static;
 using Script.Data.PlayerData;
 using Script.Input;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.SceneManagement;
@@ -160,9 +159,6 @@ namespace Julien.Script.PlayerScripts
             _verticalValue = _rigidbody.linearVelocity.z;
             _horizontalValue = _rigidbody.linearVelocity.x;
             
-            Animator.SetFloat("Horizontal", _horizontalValue);
-            Animator.SetFloat("Vertical", _verticalValue);
-            
             _playerUpdateDir =  _lineRenderer.GetPosition(1);
             
             OnMove(_move);
@@ -205,15 +201,22 @@ namespace Julien.Script.PlayerScripts
         // Pour ensuite appeler On move avec _move comme paramettre.
         public void SetParameter(Vector2 moveValue)
         {
+            Debug.Log("setparam : " + moveValue);
             _move = moveValue;
         }
         public void OnMove(Vector2 moveValue)
         {
             float horizontal = moveValue.x;
             float vertical = moveValue.y;
+            Debug.Log("OnMove : " + horizontal + ", " + vertical);
+            
+            Animator.SetFloat("Movement", moveValue.magnitude);
+            // Animator.SetFloat("Horizontal", horizontal);
+            // Animator.SetFloat("Vertical", vertical);
 
             Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
             _rigidbody.linearVelocity = moveDirection * Speed;
+            transform.LookAt(transform.position + new Vector3(moveValue.x, 0, moveValue.y), transform.up);
         }
         
         // Viser
