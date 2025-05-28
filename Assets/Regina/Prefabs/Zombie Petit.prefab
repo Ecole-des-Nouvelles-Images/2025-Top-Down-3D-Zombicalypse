@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e09e4e8d34b05c6448c770822b5df7c4, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 66ec2a55b3882ae439d92b52e3f635a6, type: 2}
     - target: {fileID: 8242088940591160657, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -95,5 +99,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1948623546616938053}
   m_SourcePrefab: {fileID: 100100000, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
+--- !u!1 &8782951015844378881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
+  m_PrefabInstance: {fileID: 8440351239853720656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1948623546616938053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782951015844378881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4e222bdc2ea1745a70e387ca171868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeZombie: {fileID: 0}
+  Price: 0
+  Damage: 0
+  Speed: 0
+  Acceleration: 0
+  MaxHealth: 0
+  AttackSpeed: 0
+  AttackRange: 0
+  CurrentHealth: 0
+  _chanceDropAmmo: 0
+  Targets: []
+  Target: {fileID: 0}
+  TargetTag: PLayer
+  NavMeshAgent: {fileID: 0}
+  Rigidbody: {fileID: 0}
+  WantAttack: 0
+  CanAttack: 0
+  Object: []
+  _ammoPrfab: {fileID: 0}
+  _spawnRadiusAmmo: 12
+  _player: {fileID: 0}
+  Animator: {fileID: 0}

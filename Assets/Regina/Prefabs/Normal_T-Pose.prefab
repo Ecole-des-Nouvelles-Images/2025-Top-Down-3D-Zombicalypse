@@ -87,5 +87,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: -448970865759494481}
   m_SourcePrefab: {fileID: 100100000, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+--- !u!1 &732991131765198207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+  m_PrefabInstance: {fileID: 499180877002928174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-448970865759494481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732991131765198207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5110712ffe8d62644b868476f9ccdab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeZombie: {fileID: 11400000, guid: 798e5e06666cd334788b77d4c8d142b1, type: 2}
+  Price: 0
+  Damage: 0
+  Speed: 0
+  Acceleration: 0
+  MaxHealth: 0
+  AttackSpeed: 0
+  AttackRange: 0
+  CurrentHealth: 0
+  _chanceDropAmmo: 0
+  Targets: []
+  Target: {fileID: 0}
+  TargetTag: Generator
+  NavMeshAgent: {fileID: 0}
+  Rigidbody: {fileID: 0}
+  WantAttack: 1
+  CanAttack: 0
+  Object: []
+  _ammoPrfab: {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
+  _spawnRadiusAmmo: 12
+  _player: {fileID: 0}
+  Animator: {fileID: 0}

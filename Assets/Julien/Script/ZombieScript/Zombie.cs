@@ -161,13 +161,14 @@ namespace Julien.Script.ZombieScript
             {
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
             }
-            StartCoroutine("DestroyZombieDelay");
+            Destroy(gameObject);
+            //StartCoroutine("DestroyZombieDelay");
         }
 
-        public IEnumerator DestroyZombieDelay()
-        {
-            yield return new WaitForSeconds(5f);
-            Destroy(gameObject);
-        }
+        // public IEnumerator DestroyZombieDelay()
+        // {
+        //     yield return new WaitForSeconds(5f);
+        //     
+        // }
     }
 }

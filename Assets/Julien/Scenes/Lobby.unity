@@ -3804,17 +3804,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1357865316676142230, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.926
-      objectReference: {fileID: 0}
-    - target: {fileID: 1357865316676142230, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.507
-      objectReference: {fileID: 0}
     - target: {fileID: 3397791808412925478, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
       propertyPath: m_Name
       value: MilitaryPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517875911041470353, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: m_Height
+      value: 1.8925476
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517875911041470353, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.8981285
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
