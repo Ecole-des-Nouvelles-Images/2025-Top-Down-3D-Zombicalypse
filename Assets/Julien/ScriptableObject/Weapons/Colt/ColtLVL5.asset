@@ -25,7 +25,7 @@ MonoBehaviour:
   Damage: 80
   FireRate: 0.3
   Precision: 0.04
-  LethalRangeLetal: 0.5
+  LethalRangeLetal: 1
   MaxAmmo: 17
   InfiniteMagazine: 0
   MaxMagazine: 7

@@ -471,14 +471,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2995270520134523662}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.39776608, y: -0.68612856, z: 0.23097526, w: 0.5636135}
-  m_LocalPosition: {x: -0, y: 0.068, z: 0.043}
+  m_LocalRotation: {x: 0.4641488, y: -0.6513443, z: 0.2958665, w: 0.52228296}
+  m_LocalPosition: {x: 0.078, y: 0.186, z: 0.064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 713231992653568032}
   m_Father: {fileID: 6946509520553681576}
-  m_LocalEulerAnglesHint: {x: 130.064, y: 66.371, z: 153.67}
+  m_LocalEulerAnglesHint: {x: 119.51199, y: 55.449997, z: 143.126}
 --- !u!1 &3397791808412925478
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
   - {fileID: 2780542801244984086}
   - {fileID: 6085475497914099448}
   Inventory: {fileID: 0}
-  _animator: {fileID: 7840660657233293757}
+  Animator: {fileID: 7840660657233293757}
   _verticalValue: 0
   _horizontalValue: 0
   _spineBone: {fileID: 7812116695346295259}
@@ -617,14 +617,14 @@ MonoBehaviour:
     Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 309dfb11535157849b319925c0e09640, type: 2}
+    Weapon: {fileID: 11400000, guid: f9862701ffee1fb4db813eb29429afd6, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
   - Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 309dfb11535157849b319925c0e09640, type: 2}
+    Weapon: {fileID: 11400000, guid: f9862701ffee1fb4db813eb29429afd6, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - Lvl: 0
@@ -1773,7 +1773,6 @@ MonoBehaviour:
   _handingObject: {fileID: 1250817660826761203}
   _rightHandGismo: {fileID: 4648020901105432426}
   _leftHandGismo: {fileID: 1366730387108103817}
-  _rightHandPlacement: {fileID: 0}
   _leftHandPlacement: {fileID: 0}
 --- !u!95 &7840660657233293757
 Animator:

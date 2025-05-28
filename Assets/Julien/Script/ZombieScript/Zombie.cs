@@ -161,7 +161,6 @@ namespace Julien.Script.ZombieScript
             {
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
             }
-
             StartCoroutine("DestroyZombieDelay");
         }
 

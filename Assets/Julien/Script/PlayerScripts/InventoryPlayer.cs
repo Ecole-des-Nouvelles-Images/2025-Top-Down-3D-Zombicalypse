@@ -44,6 +44,7 @@ namespace Julien.Script.PlayerScripts
         
         public void Reload()
         {
+            Debug.Log("Reload");
             if (equipedWeaponWrap.CurrentMagazin - 1 !>= 0 && equipedWeaponWrap.CurrentAmmo != equipedWeaponWrap.Weapon.MaxAmmo && ! _player.isReloading || equipedWeaponWrap.Weapon.InfiniteMagazine)
             {
                 StartCoroutine("ReloadDelay", equipedWeaponWrap.Weapon.ReloadTime);
@@ -72,6 +73,7 @@ namespace Julien.Script.PlayerScripts
                 indexWeapon = nextIndexWeapon;
             }
             _ikBones.ChangeHandsPlacement();
+            _player.Animator.SetBool("HandGun", equipedWeaponWrap.Weapon.Handgun);
         }
 
         public void AutomaticSwitch()
@@ -87,6 +89,7 @@ namespace Julien.Script.PlayerScripts
                 }
             }
             _ikBones.ChangeHandsPlacement();
+            _player.Animator.SetBool("HandGun", equipedWeaponWrap.Weapon.Handgun);
         }
         
         public void SwitchWeapon()
@@ -96,6 +99,7 @@ namespace Julien.Script.PlayerScripts
             handingObject.SwitchWeapon();
             _player.isReloading = false;
             _ikBones.ChangeHandsPlacement();
+            _player.Animator.SetBool("HandGun", equipedWeaponWrap.Weapon.Handgun);
         }
  
         public void TookWeapon(WeaponWrap weaponWrap, GameObject weaponVisual)

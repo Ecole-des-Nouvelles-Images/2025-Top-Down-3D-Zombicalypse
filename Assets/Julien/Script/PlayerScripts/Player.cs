@@ -6,6 +6,7 @@ using Julien.Script.Static;
 using Script.Data.PlayerData;
 using Script.Input;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.SceneManagement;
@@ -79,11 +80,12 @@ namespace Julien.Script.PlayerScripts
         public GameObject PlayerRenderer;
         public List<GameObject> Cloths = new List<GameObject>();
         private Vector2 _move;
-        [FormerlySerializedAs("_inventory")] public InventoryPlayer Inventory;
+        public InventoryPlayer Inventory;
         private PlayerScore _playerScore;
         
+        [FormerlySerializedAs("_animator")]
         [Header("animator")]
-        [SerializeField] private Animator _animator;
+        public Animator Animator;
 
         [SerializeField] private float _verticalValue;
         [SerializeField] private float _horizontalValue;
@@ -158,8 +160,8 @@ namespace Julien.Script.PlayerScripts
             _verticalValue = _rigidbody.linearVelocity.z;
             _horizontalValue = _rigidbody.linearVelocity.x;
             
-            _animator.SetFloat("Horizontal", _horizontalValue);
-            _animator.SetFloat("Vertical", _verticalValue);
+            Animator.SetFloat("Horizontal", _horizontalValue);
+            Animator.SetFloat("Vertical", _verticalValue);
             
             _playerUpdateDir =  _lineRenderer.GetPosition(1);
             
@@ -243,6 +245,7 @@ namespace Julien.Script.PlayerScripts
                 Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
                 if (hudPlayer) hudPlayer.SetHudInfo();
             }
+            if (Inventory.equipedWeaponWrap.CurrentAmmo == 0) Inventory.Reload();
         }
         
         public IEnumerator ShootDelay(float timer)
