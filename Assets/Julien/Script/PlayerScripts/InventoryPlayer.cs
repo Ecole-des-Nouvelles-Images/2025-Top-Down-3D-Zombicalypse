@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Julien.Script.HUD.OnTopPlayer;
 using Julien.Script.Struc;
@@ -41,7 +42,12 @@ namespace Julien.Script.PlayerScripts
             handingObject.SwitchWeapon();
             equipedWeaponWrap = StrucWeapons[0];
         }
-        
+
+        private void Update()
+        {
+            Debug.Log("L'arme est " + equipedWeaponWrap.Weapon.Handgun);
+        }
+
         public void Reload()
         {
             Debug.Log("Reload");
@@ -73,7 +79,7 @@ namespace Julien.Script.PlayerScripts
                 indexWeapon = nextIndexWeapon;
             }
             _ikBones.ChangeHandsPlacement();
-            _player.Animator.SetBool("HandGun", equipedWeaponWrap.Weapon.Handgun);
+            _player.Animator.SetBool("Handgun", equipedWeaponWrap.Weapon.Handgun);
         }
 
         public void AutomaticSwitch()
@@ -89,7 +95,7 @@ namespace Julien.Script.PlayerScripts
                 }
             }
             _ikBones.ChangeHandsPlacement();
-            _player.Animator.SetBool("HandGun", equipedWeaponWrap.Weapon.Handgun);
+            _player.Animator.SetBool("Handgun", equipedWeaponWrap.Weapon.Handgun);
         }
         
         public void SwitchWeapon()
@@ -99,7 +105,7 @@ namespace Julien.Script.PlayerScripts
             handingObject.SwitchWeapon();
             _player.isReloading = false;
             _ikBones.ChangeHandsPlacement();
-            _player.Animator.SetBool("HandGun", equipedWeaponWrap.Weapon.Handgun);
+            _player.Animator.SetBool("Handgun", equipedWeaponWrap.Weapon.Handgun);
         }
  
         public void TookWeapon(WeaponWrap weaponWrap, GameObject weaponVisual)
