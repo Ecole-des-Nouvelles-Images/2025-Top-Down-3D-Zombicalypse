@@ -78,7 +78,8 @@ namespace Julien.Script.PlayerScripts
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
         public List<GameObject> Cloths = new List<GameObject>();
-        private Vector2 _move;
+        public Vector2 move;
+        public Vector2 aim;
         public InventoryPlayer Inventory;
         private PlayerScore _playerScore;
         
@@ -161,7 +162,8 @@ namespace Julien.Script.PlayerScripts
             
             _playerUpdateDir =  _lineRenderer.GetPosition(1);
             
-            OnMove(_move);
+            OnMove();
+            // OnAim(aim);
             if (_isHolding)
             {
                 Fire(_isHolding);
@@ -197,41 +199,34 @@ namespace Julien.Script.PlayerScripts
             }
         }
         
-        // Set parameter récupere la value du joystick, et le set à la variable move.
-        // Pour ensuite appeler On move avec _move comme paramettre.
-        public void SetParameter(Vector2 moveValue)
+        public void OnMove()
         {
-            Debug.Log("setparam : " + moveValue);
-            _move = moveValue;
-        }
-        public void OnMove(Vector2 moveValue)
-        {
-            float horizontal = moveValue.x;
-            float vertical = moveValue.y;
-            Debug.Log("OnMove : " + horizontal + ", " + vertical);
+            Vector2 dir = move.normalized;
             
-            Animator.SetFloat("Movement", moveValue.magnitude);
-            // Animator.SetFloat("Horizontal", horizontal);
-            // Animator.SetFloat("Vertical", vertical);
+            Vector2 aimDir = (aim.sqrMagnitude > 0.01f) ? aim.normalized : dir;
+            
+            Vector2 right = new Vector2(aimDir.y, -aimDir.x);
+            Vector2 forward = aimDir;
+            
+            float localX = Vector2.Dot(dir, right);
+            float localY = Vector2.Dot(dir, forward);
 
-            Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
+            Vector2 animationDir = new Vector2(localX, localY);
+            Debug.Log($"animationDir : {animationDir.x}, {animationDir.y}");
+
+            Animator.SetFloat("Horizontal", animationDir.x);
+            Animator.SetFloat("Vertical", animationDir.y);
+
+            Vector3 moveDirection = new Vector3(move.x, 0, move.y);
             _rigidbody.linearVelocity = moveDirection * Speed;
-            transform.LookAt(transform.position + new Vector3(moveValue.x, 0, moveValue.y), transform.up);
+
+            Vector3 lookDirection = new Vector3(aimDir.x, 0, aimDir.y);
+            if (lookDirection.sqrMagnitude > 0.01f)
+            {
+                transform.forward = lookDirection.normalized;
+            }
         }
         
-        // Viser
-        public void Aim(Vector2 valueAim)
-        {
-            // stacker la valeur que si elle est superieur à 0.8f
-            if (Mathf.Abs(valueAim.x) >= 0.5f || Mathf.Abs(valueAim.y) >= 0.5f)
-            {
-                Vector2 oldValue = valueAim;
-               _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z + oldValue.y);
-            }
-
-            //Debug.Log(valueAim);
-        }
-
         private void TurnIKBones()
         {
         }
