@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Julien.Script.HUD;
@@ -13,7 +14,7 @@ using UnityEngine.Serialization;
 
 namespace Julien.Script.PlayerScripts
 {
-    public class Player : MonoBehaviour, ITakeDamage
+    public class Player : MonoBehaviour, ITakeDamage, ITakeHeal
     {
         [Header("-- Input Template ----------------------------------------------------------------------")]
         
@@ -202,6 +203,7 @@ namespace Julien.Script.PlayerScripts
         public void OnMove()
         {
             Vector2 dir = move.normalized;
+            Debug.Log(" Move normalisé " + dir);
             
             Vector2 aimDir = (aim.sqrMagnitude > 0.01f) ? aim.normalized : dir;
             
@@ -255,7 +257,8 @@ namespace Julien.Script.PlayerScripts
         [ContextMenu("Debug take damage")]
         public void takeDamageDebug()
         {
-            takeDamage(20);
+            takeDamage(80);
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);         
         }
         
         [ContextMenu("Die")]
@@ -338,6 +341,13 @@ namespace Julien.Script.PlayerScripts
         {
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+        }
+
+        public void takeHeal(float healValue)
+        {
+            Health += healValue;
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+            Health = Mathf.Clamp(Health, 0, 100);
         }
     }
 }

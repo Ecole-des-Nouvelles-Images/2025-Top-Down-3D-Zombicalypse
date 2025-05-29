@@ -593,6 +593,8 @@ MonoBehaviour:
   - {fileID: 5163384540801960401}
   - {fileID: 2780542801244984086}
   - {fileID: 6085475497914099448}
+  move: {x: 0, y: 0}
+  aim: {x: 0, y: 0}
   Inventory: {fileID: 0}
   Animator: {fileID: 7840660657233293757}
   _verticalValue: 0
@@ -600,7 +602,7 @@ MonoBehaviour:
   _spineBone: {fileID: 7812116695346295259}
   InteractsGameObject: []
   _lineRenderer: {fileID: 567204486668749929}
-  _multiAimConstraint: {fileID: 0}
+  _multiAimConstraint: {fileID: 5500275354883094743}
 --- !u!114 &8611086571813383693
 MonoBehaviour:
   m_ObjectHideFlags: 0

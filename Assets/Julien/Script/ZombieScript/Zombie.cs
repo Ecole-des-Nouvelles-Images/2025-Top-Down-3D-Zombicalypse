@@ -53,8 +53,8 @@ namespace Julien.Script.ZombieScript
 
         private RoundHundler _roundHundler;
         private BonusToZombie _bonusToZombie;
-        [SerializeField] private GameObject _ammoPrfab;
-        [SerializeField] private float _spawnRadiusAmmo;
+        [SerializeField] private List<GameObject> _prefabs;
+        [SerializeField] private float _spawnRadius;
 
         [SerializeField] private Player _player;
 
@@ -73,9 +73,9 @@ namespace Julien.Script.ZombieScript
                     Dead = true;
 
                     float rand = Random.Range(0, 100);
-                    if (rand <= _spawnRadiusAmmo)
+                    if (rand <= _spawnRadius)
                     {
-                        Instantiate(_ammoPrfab, transform.position, Quaternion.identity);
+                        SpawnPrefab();
                         Debug.Log("Spawn bullet");
                     }
                     
@@ -170,5 +170,12 @@ namespace Julien.Script.ZombieScript
         //     yield return new WaitForSeconds(5f);
         //     
         // }
+
+        public void SpawnPrefab()
+        {
+            int randInt = Random.Range(0, _prefabs.Count);
+            GameObject prefab = _prefabs[randInt];
+            Instantiate(prefab, transform.position, Quaternion.identity);
+        }
     }
 }
