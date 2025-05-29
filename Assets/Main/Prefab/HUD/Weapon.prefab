@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eaf11702086d745a77ab4d2e12d0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 3078965158342702009}
   _currentAmmo: {fileID: 4951172184967813141}
   _currentMagazin: {fileID: 2083076602691727244}
 --- !u!1 &7124823495647521437

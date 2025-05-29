@@ -145,6 +145,7 @@ namespace Julien.Script.PlayerScripts
             Inventory.AutomaticSwitch();
             _gameManager = GameObject.FindWithTag("GameManager");
             gameObject.GetComponent<PlayerInputHandlerTurel>().enabled = true;
+            PlayerRenderer.gameObject.GetComponent<IkBones>().ChangeHandsPlacement();
             SwitchInputHandler(0);
         }
 
@@ -173,7 +174,7 @@ namespace Julien.Script.PlayerScripts
             {
                 RaycastHit hit;
                 Debug.Log(_aimTarget.transform.position);
-                Debug.DrawRay(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), Color.blue, 1f);
+                Debug.DrawRay(transform.position, transform.forward * 5, Color.blue, 1f);
                 if (Physics.Raycast(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), out hit, 2))
                 {
                     if (hit.collider.CompareTag("Turel"))
@@ -203,7 +204,7 @@ namespace Julien.Script.PlayerScripts
         public void OnMove()
         {
             Vector2 dir = move.normalized;
-            Debug.Log(" Move normalisé " + dir);
+            //Debug.Log(" Move normalisé " + dir);
             
             Vector2 aimDir = (aim.sqrMagnitude > 0.01f) ? aim.normalized : dir;
             

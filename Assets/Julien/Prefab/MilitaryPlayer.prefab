@@ -619,14 +619,14 @@ MonoBehaviour:
     Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: f9862701ffee1fb4db813eb29429afd6, type: 2}
+    Weapon: {fileID: 11400000, guid: abb87db7f31d77e419015d925ec0afbd, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
   - Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: f9862701ffee1fb4db813eb29429afd6, type: 2}
+    Weapon: {fileID: 11400000, guid: abb87db7f31d77e419015d925ec0afbd, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - Lvl: 0
