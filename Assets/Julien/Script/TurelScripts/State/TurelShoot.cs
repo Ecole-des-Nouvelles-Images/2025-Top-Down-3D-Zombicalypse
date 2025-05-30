@@ -28,6 +28,7 @@ namespace Julien.Script.TurelScripts.State
             bullet.GetComponent<Bullet>().SetBulletParameter(turel.TurelWrap.BulletSpeed, turel.TurelWrap.Damage, turel.TurelWrap.Precision, turel.TurelWrap.BulletRange, null);
             bullet.transform.forward = turel.SpawnBullet.transform.forward;
             bullet.GetComponent<Bullet>().Impulse();
+            turel.VisualEffect();
             turel.TurelWrap.FireRate = turel.TurelWrap.MaxFireRate;
         }
     }

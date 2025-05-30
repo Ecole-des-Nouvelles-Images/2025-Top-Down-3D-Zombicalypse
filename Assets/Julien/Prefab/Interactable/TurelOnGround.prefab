@@ -51,7 +51,7 @@ MonoBehaviour:
   _turelsData:
   - {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
   TurelWrap:
-    TurelType: {fileID: 0}
+    TurelType: {fileID: 11400000, guid: f68cb2be12a111944bd36d8c9355b113, type: 2}
     MaxAmmo: 0
     BulletSpeed: 0
     BulletRange: 0

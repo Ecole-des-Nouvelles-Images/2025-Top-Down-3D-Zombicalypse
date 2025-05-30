@@ -106,5 +106,14 @@ namespace Julien.Script.TurelScripts
             Health -= damage;
             _imageHealth.fillAmount = Health / TurelWrap.MaxHEalth;
         }
+
+        public void VisualEffect()
+        {
+            Transform bulletParticle = gameObject.transform.Find("BulletFallVfx");
+            bulletParticle.gameObject.GetComponent<ParticleSystem>().Play();
+                
+            Transform flashParticle = gameObject.transform.Find("FlashTurretVfx");
+            flashParticle.gameObject.GetComponent<ParticleSystem>().Play();
+        }
     }
 }

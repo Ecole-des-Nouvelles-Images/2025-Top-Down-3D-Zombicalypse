@@ -15,6 +15,7 @@ namespace Julien.Script
         public UpgraderWrap UpgraderWrap;
         private void Start()
         {
+            
         }
         public void Random()
         {

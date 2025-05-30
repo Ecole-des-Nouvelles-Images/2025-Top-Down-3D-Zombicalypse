@@ -16,7 +16,7 @@ namespace Julien.Script.HUD
         {
             _currentAmmo.text = weapon.CurrentAmmo.ToString();
             _currentMagazin.text = weapon.CurrentMagazin.ToString();
-            _image.sprite = weapon.Weapon.Sprite;
+            //_image.sprite = weapon.Weapon.Sprite;
             //_image.color = weapon.Weapon.Color;
 
             // if (weapon.Weapon.InfiniteMagazine)
