@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Script.Data.TurellData
+namespace Julien.Script.Data.Turel
 {
     [CreateAssetMenu(fileName = "TurelData", menuName = "Scriptable Objects/TurelData")]
     public class TurelData : ScriptableObject
@@ -20,5 +19,6 @@ namespace Script.Data.TurellData
         public GameObject Prefab;
         public GameObject OnGroundPrefab;
         public GameObject VisualHologram;
+
     }
 }

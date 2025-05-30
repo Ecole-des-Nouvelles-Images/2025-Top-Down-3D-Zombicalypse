@@ -244,6 +244,9 @@ namespace Julien.Script.PlayerScripts
                 StartCoroutine("ShootDelay", Inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
+                
+                Inventory.equipedWeaponWrap.Weapon.VisualEffect(handingObject);
+                
                 if (hudPlayer) hudPlayer.SetHudInfo();
             }
             if (Inventory.equipedWeaponWrap.CurrentAmmo == 0) Inventory.Reload();

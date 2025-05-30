@@ -38,5 +38,7 @@ namespace Julien.Script.Data.Weapons
         public int RemoveAmmoParFire;
         public abstract void Fire(Transform spawnBulletPosition, Player player, Vector3 dir);
         public abstract void Reload();
+
+        public abstract void VisualEffect(HandingObject handingObject);
     }
 }

@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593040448384764293, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: timeScale
-      value: 2.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_Name
@@ -3810,7 +3810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3397791808412925478, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5517875911041470353, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
       propertyPath: m_Height
@@ -3820,6 +3820,14 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.8981285
       objectReference: {fileID: 0}
+    - target: {fileID: 8611086571813383693, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: equipedWeaponWrap.Weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: f2227e222aaa630429919fa55e1a7a6c, type: 2}
+    - target: {fileID: 8611086571813383693, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
+      propertyPath: StrucWeapons.Array.data[0].Weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: f2227e222aaa630429919fa55e1a7a6c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

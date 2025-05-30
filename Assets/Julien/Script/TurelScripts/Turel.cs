@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
+using Julien.Script.Data.Turel;
 using Julien.Script.Interface;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts.State;
-using Script.Data.TurellData;
 using Script.Turel.State;
 using UnityEngine;
 using UnityEngine.UI;

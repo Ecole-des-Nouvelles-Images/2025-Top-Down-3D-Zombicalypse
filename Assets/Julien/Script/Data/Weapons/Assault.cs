@@ -17,5 +17,14 @@ namespace Julien.Script.Data.Weapons
         {
             throw new System.NotImplementedException();
         }
+
+        public override void VisualEffect(HandingObject handingObject)
+        {
+            Transform bulletParticle = handingObject.WeaponMesh.transform.Find("BulletFallVfx");
+            bulletParticle.gameObject.GetComponent<ParticleSystem>().Play();
+                
+            Transform flashParticle = handingObject.WeaponMesh.transform.Find("FlashTurretVfx");
+            flashParticle.gameObject.GetComponent<ParticleSystem>().Play();
+        }
     }
 }

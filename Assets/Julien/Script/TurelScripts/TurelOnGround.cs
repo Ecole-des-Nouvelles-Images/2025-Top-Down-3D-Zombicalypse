@@ -1,8 +1,8 @@
 using System.Collections.Generic;
+using Julien.Script.Data.Turel;
 using Julien.Script.Interface;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Struc;
-using Script.Data.TurellData;
 using UnityEngine;
 
 namespace Julien.Script.TurelScripts

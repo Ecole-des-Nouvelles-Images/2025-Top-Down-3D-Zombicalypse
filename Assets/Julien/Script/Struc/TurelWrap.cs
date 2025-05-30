@@ -1,5 +1,5 @@
 using System;
-using Script.Data.TurellData;
+using Julien.Script.Data.Turel;
 using UnityEngine;
 using UnityEngine.Serialization;
 
