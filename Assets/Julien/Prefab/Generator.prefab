@@ -77,7 +77,7 @@ MonoBehaviour:
   _reparBarParent: {fileID: 5966448049152442382}
   _reparBar: {fileID: 2120072567831754049}
   _TimeBeforDamageBar: {fileID: 5222157085810312157}
-  _brokenEffect: {fileID: 0}
+  _brokenEffect: {fileID: 7781657507750232609}
 --- !u!23 &8180403353565874589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -142,8 +142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.2703667, y: 2, z: 2.0648289}
+  m_Center: {x: -0.026254654, y: 0.5, z: -0.30607224}
 --- !u!54 &7452346254487298524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -312,10 +312,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 7482667652216324306, guid: 1d1c2945d1f36ae4d855e8fc4431ff9a, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -690,15 +690,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9139206930182834576, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.249
+      value: -0.058
       objectReference: {fileID: 0}
     - target: {fileID: 9139206930182834576, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.198
+      value: 0.585
       objectReference: {fileID: 0}
     - target: {fileID: 9139206930182834576, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.941
+      value: -0.973
       objectReference: {fileID: 0}
     - target: {fileID: 9139206930182834576, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
       propertyPath: m_LocalRotation.w
@@ -736,5 +736,10 @@ PrefabInstance:
 --- !u!4 &1845321336868919134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9139206930182834576, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
+  m_PrefabInstance: {fileID: 7444196963892027086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7781657507750232609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 914540738046794991, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
   m_PrefabInstance: {fileID: 7444196963892027086}
   m_PrefabAsset: {fileID: 0}

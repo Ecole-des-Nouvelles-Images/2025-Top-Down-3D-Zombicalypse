@@ -99,7 +99,11 @@ namespace Julien.Script.PlayerScripts
         
         [Header("IK")]
         [SerializeField] private MultiAimConstraint _multiAimConstraint;
+
+        [FormerlySerializedAs("_damage")]
+        [Header("VisualEffect")] 
         
+        [SerializeField] private ParticleSystem _damageEffect;
         private void Awake()
         {
             // ne pas detruire le gameobject lors d'un chargement de scene
@@ -268,7 +272,6 @@ namespace Julien.Script.PlayerScripts
         [ContextMenu("Die")]
         public void Die()
         {
-            Debug.Log("Meurt");
             _playerScore.DieCount++;
             GameObject hudDead = Instantiate(_hudDeadPlayer, HudParent.transform);
             GameManagerStatic.Players.Remove(gameObject);
@@ -343,6 +346,7 @@ namespace Julien.Script.PlayerScripts
 
         public void takeDamage(float damage)
         {
+            _damageEffect.Play();
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
         }

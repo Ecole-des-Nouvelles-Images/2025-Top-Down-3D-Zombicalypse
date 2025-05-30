@@ -10,7 +10,14 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
         public override void Execute(Zombie zombie)
         {
             zombie.NavMeshAgent.speed = 0f;
-            zombie.AttackSpeed -= Time.deltaTime;
+            if (zombie.Dead == false)
+            {
+                zombie.AttackSpeed -= Time.deltaTime;
+            }
+            else
+            {
+                zombie.CurrentState = new Dead();
+            }
             zombie.Animator.SetBool("Run", false);
             zombie.Animator.SetTrigger("GoExplose");
             
