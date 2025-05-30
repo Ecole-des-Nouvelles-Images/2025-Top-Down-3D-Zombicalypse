@@ -1,14 +1,13 @@
-using System;
-using Julien.Script;
 using Julien.Script.Interface;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 
-namespace Script
+namespace Julien.Script
 {
     public class Generator : MonoBehaviour, ITakeDamage, IInteractable
     {
@@ -37,6 +36,10 @@ namespace Script
         [SerializeField] private GameObject _reparBarParent;
         [SerializeField] private Image _reparBar;
         [SerializeField] private Image _TimeBeforDamageBar;
+        
+        [Header("VisualEffect")] 
+        
+        [SerializeField] private GameObject _brokenEffect;
 
         private void Start()
         {
@@ -66,11 +69,11 @@ namespace Script
             { 
                 Off();
             }
-            
         }
 
         public void On()
         {
+            _brokenEffect.SetActive(false);
             _timeBefforDamaged = _maxTimeBefforDamaged;
             _timedamage = _maxTimeDamage;
             _reparBarParent.SetActive(false);
@@ -88,6 +91,7 @@ namespace Script
 
         public void Off()
         {
+            _brokenEffect.SetActive(true);
             _timeBefforDamaged -= Time.deltaTime;
             _TimeBeforDamageBar.fillAmount = _timeBefforDamaged / _maxTimeBefforDamaged;
             _reparBarParent.SetActive(true);

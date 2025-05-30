@@ -6968,6 +6968,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+--- !u!198 &403416931 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7594148851337458711, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+  m_PrefabInstance: {fileID: 1034333255700356938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -37799,6 +37804,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TargetGeneratorPoin
       objectReference: {fileID: 0}
+    - target: {fileID: 1845321336868919134, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845321336868919134, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845321336868919134, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.973
+      objectReference: {fileID: 0}
     - target: {fileID: 4868109992026176987, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: m_TagString
       value: TargetGeneratorPoin
@@ -37815,6 +37832,10 @@ PrefabInstance:
       propertyPath: m_FillMethod
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5983146983818471974, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
+      propertyPath: _broken
+      value: 
+      objectReference: {fileID: 403416931}
     - target: {fileID: 5983146983818471974, guid: 629b2eb4be0444646bff1e7afc4f59ac, type: 3}
       propertyPath: _EndingPanel
       value: 
@@ -38096,7 +38117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: _parentZombie

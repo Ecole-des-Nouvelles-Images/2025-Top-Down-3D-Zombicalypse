@@ -184,6 +184,7 @@ MonoBehaviour:
   TargetTag: Generator
   NavMeshAgent: {fileID: 0}
   Rigidbody: {fileID: 0}
+  Dead: 0
   WantAttack: 1
   CanAttack: 0
   Object: []
@@ -195,6 +196,7 @@ MonoBehaviour:
   _spawnRadius: 0
   _player: {fileID: 0}
   Animator: {fileID: 3277813349330453755}
+  BloodEffect: {fileID: 0}
 --- !u!23 &5413454763290509419
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -61,6 +61,10 @@ namespace Julien.Script.ZombieScript
         [Header("animator")]
 
         public Animator Animator;
+
+        [Header("VisualEffect")] 
+        
+        public ParticleSystem BloodEffect;
         
         public float Health
         {
@@ -95,6 +99,7 @@ namespace Julien.Script.ZombieScript
         {
             _player = player;
             Health -= damage;
+            BloodEffect.Play();
             Animator.SetTrigger("Hit");
         }
         
