@@ -343,7 +343,7 @@ Animator:
   m_GameObject: {fileID: 6910938945056931783}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19cb8dea3aeaf3f4d945c0b5367c03f8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 95aa0bd112113584d8aa790c8178c25e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -439,6 +439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grand_T-Pose
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 95aa0bd112113584d8aa790c8178c25e, type: 2}
     - target: {fileID: 7964679032271332838, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
