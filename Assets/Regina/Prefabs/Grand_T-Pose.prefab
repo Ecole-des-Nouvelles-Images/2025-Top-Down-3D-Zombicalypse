@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grand_T-Pose
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 19cb8dea3aeaf3f4d945c0b5367c03f8, type: 2}
     - target: {fileID: 7964679032271332838, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -91,5 +95,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2376602461648328461}
   m_SourcePrefab: {fileID: 100100000, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
+--- !u!1 &6568241999010432715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
+  m_PrefabInstance: {fileID: 6333886942544706458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2376602461648328461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568241999010432715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebc8a45d76537f4caab6a51ebf329ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeZombie: {fileID: 11400000, guid: 6a702a404c0e79849891326a70b56bab, type: 2}
+  Price: 0
+  Damage: 0
+  Speed: 0
+  Acceleration: 0
+  MaxHealth: 0
+  AttackSpeed: 0
+  AttackRange: 0
+  CurrentHealth: 0
+  _chanceDropAmmo: 0
+  Targets: []
+  Target: {fileID: 0}
+  TargetTag: Generator
+  NavMeshAgent: {fileID: 0}
+  Rigidbody: {fileID: 0}
+  WantAttack: 0
+  CanAttack: 0
+  Object: []
+  _ammoPrfab: {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
+  _spawnRadiusAmmo: 30
+  _player: {fileID: 0}
+  Animator: {fileID: 0}

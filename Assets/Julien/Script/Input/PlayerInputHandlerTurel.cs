@@ -87,12 +87,12 @@ namespace Script.Input
 
         private void OnMove(InputAction.CallbackContext context)
         {
-            _player.SetParameter(context.ReadValue<Vector2>());
+            _player.move = context.ReadValue<Vector2>();
         }
 
         private void OnAim(InputAction.CallbackContext context)
         {
-            _player.Aim(context.ReadValue<Vector2>());
+            _player.aim = context.ReadValue<Vector2>();
         }
 
         private void OnRotateTurel(InputAction.CallbackContext context)

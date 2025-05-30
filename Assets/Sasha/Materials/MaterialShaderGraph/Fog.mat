@@ -134,6 +134,8 @@ Material:
     - _LightingEnabled: 0
     - _Metallic: 0
     - _Mode: 2
+    - _NoiseScale01: 8.39
+    - _NoiseScale02: -2.3
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -146,7 +148,9 @@ Material:
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 1
     - _Speed: 0.2
-    - _Speed02: 0.8
+    - _Speed02: 0.11
+    - _Speed03: -0.45
+    - _Speed04: -0.25
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 0
@@ -158,7 +162,9 @@ Material:
     - _Color: {r: 0.6116476, g: 0.5762727, b: 0.6603774, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FogColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FlowSpeed01: {r: -0.15, g: -0.2, b: 0, a: 0}
+    - _FlowSpeed02: {r: 0.014, g: 0.07, b: 0, a: 0}
+    - _FogColor: {r: 1, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0.11764706, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WaveAmplitude: {r: 5.63, g: 2.12, b: 0, a: 0}
