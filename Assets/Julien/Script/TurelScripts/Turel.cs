@@ -56,6 +56,7 @@ namespace Julien.Script.TurelScripts
         {
             _rigidbody = GetComponent<Rigidbody>();
             SetInfo();
+            TurelWrap.SetFirstData();
             CurrentStat = new TurelShearch();
         }
 

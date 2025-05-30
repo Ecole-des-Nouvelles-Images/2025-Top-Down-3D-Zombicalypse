@@ -3823,11 +3823,11 @@ PrefabInstance:
     - target: {fileID: 8611086571813383693, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
       propertyPath: equipedWeaponWrap.Weapon
       value: 
-      objectReference: {fileID: 11400000, guid: f2227e222aaa630429919fa55e1a7a6c, type: 2}
+      objectReference: {fileID: 11400000, guid: abb87db7f31d77e419015d925ec0afbd, type: 2}
     - target: {fileID: 8611086571813383693, guid: 6074af1ebb4abe24d9633e5751c6f6f4, type: 3}
       propertyPath: StrucWeapons.Array.data[0].Weapon
       value: 
-      objectReference: {fileID: 11400000, guid: f2227e222aaa630429919fa55e1a7a6c, type: 2}
+      objectReference: {fileID: 11400000, guid: abb87db7f31d77e419015d925ec0afbd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -26,6 +26,7 @@ namespace Julien.Script.TurelScripts.State
             Debug.Log("Shoot");
             GameObject bullet = Instantiate(turel.TurelType.AmmoType, turel.SpawnBullet.transform.position, turel.TurelRenderer.transform.rotation);
             bullet.GetComponent<Bullet>().SetBulletParameter(turel.TurelWrap.BulletSpeed, turel.TurelWrap.Damage, turel.TurelWrap.Precision, turel.TurelWrap.BulletRange, null);
+            bullet.transform.forward = turel.SpawnBullet.transform.forward;
             bullet.GetComponent<Bullet>().Impulse();
             turel.TurelWrap.FireRate = turel.TurelWrap.MaxFireRate;
         }
