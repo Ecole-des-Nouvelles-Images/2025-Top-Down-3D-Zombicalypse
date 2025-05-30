@@ -177,7 +177,7 @@ MonoBehaviour:
   NavMeshAgent: {fileID: 0}
   Rigidbody: {fileID: 0}
   WantAttack: 1
-  CanAttack: 0
+  CanAttack: 1
   Object: []
   _ammoPrfab: {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
   _spawnRadiusAmmo: 0
@@ -359,6 +359,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2412814746354204975}
     m_Modifications:
+    - target: {fileID: -9154447149548669050, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
     - target: {fileID: -8679921383154817045, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -403,6 +407,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Normal_T-Pose
       objectReference: {fileID: 0}
+    - target: {fileID: 982750766551212191, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
+    - target: {fileID: 998915688639873192, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
+    - target: {fileID: 2013478631694450975, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
+    - target: {fileID: 5055157699794118578, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 62cb85df1f05c0d4a9d3fc2d834ae0e6, type: 2}
+    - target: {fileID: 7625037205243613688, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
+    - target: {fileID: 7891554977988300412, guid: 4a358aa122d5c89478b944863fa2b6dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dc9764d2ca57f24b9e54ad0494f6d0d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
