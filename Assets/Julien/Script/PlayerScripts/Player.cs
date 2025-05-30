@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Julien.Script.HUD;
@@ -13,7 +14,7 @@ using UnityEngine.Serialization;
 
 namespace Julien.Script.PlayerScripts
 {
-    public class Player : MonoBehaviour, ITakeDamage
+    public class Player : MonoBehaviour, ITakeDamage, ITakeHeal
     {
         [Header("-- Input Template ----------------------------------------------------------------------")]
         
@@ -78,12 +79,14 @@ namespace Julien.Script.PlayerScripts
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
         public List<GameObject> Cloths = new List<GameObject>();
-        private Vector2 _move;
-        [FormerlySerializedAs("_inventory")] public InventoryPlayer Inventory;
+        public Vector2 move;
+        public Vector2 aim;
+        public InventoryPlayer Inventory;
         private PlayerScore _playerScore;
         
+        [FormerlySerializedAs("_animator")]
         [Header("animator")]
-        [SerializeField] private Animator _animator;
+        public Animator Animator;
 
         [SerializeField] private float _verticalValue;
         [SerializeField] private float _horizontalValue;
@@ -142,6 +145,7 @@ namespace Julien.Script.PlayerScripts
             Inventory.AutomaticSwitch();
             _gameManager = GameObject.FindWithTag("GameManager");
             gameObject.GetComponent<PlayerInputHandlerTurel>().enabled = true;
+            PlayerRenderer.gameObject.GetComponent<IkBones>().ChangeHandsPlacement();
             SwitchInputHandler(0);
         }
 
@@ -158,12 +162,10 @@ namespace Julien.Script.PlayerScripts
             _verticalValue = _rigidbody.linearVelocity.z;
             _horizontalValue = _rigidbody.linearVelocity.x;
             
-            _animator.SetFloat("Horizontal", _horizontalValue);
-            _animator.SetFloat("Vertical", _verticalValue);
-            
             _playerUpdateDir =  _lineRenderer.GetPosition(1);
             
-            OnMove(_move);
+            OnMove();
+            // OnAim(aim);
             if (_isHolding)
             {
                 Fire(_isHolding);
@@ -172,7 +174,7 @@ namespace Julien.Script.PlayerScripts
             {
                 RaycastHit hit;
                 Debug.Log(_aimTarget.transform.position);
-                Debug.DrawRay(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), Color.blue, 1f);
+                Debug.DrawRay(transform.position, transform.forward * 5, Color.blue, 1f);
                 if (Physics.Raycast(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), out hit, 2))
                 {
                     if (hit.collider.CompareTag("Turel"))
@@ -199,34 +201,35 @@ namespace Julien.Script.PlayerScripts
             }
         }
         
-        // Set parameter récupere la value du joystick, et le set à la variable move.
-        // Pour ensuite appeler On move avec _move comme paramettre.
-        public void SetParameter(Vector2 moveValue)
+        public void OnMove()
         {
-            _move = moveValue;
-        }
-        public void OnMove(Vector2 moveValue)
-        {
-            float horizontal = moveValue.x;
-            float vertical = moveValue.y;
+            Vector2 dir = move.normalized;
+            //Debug.Log(" Move normalisé " + dir);
+            
+            Vector2 aimDir = (aim.sqrMagnitude > 0.01f) ? aim.normalized : dir;
+            
+            Vector2 right = new Vector2(aimDir.y, -aimDir.x);
+            Vector2 forward = aimDir;
+            
+            float localX = Vector2.Dot(dir, right);
+            float localY = Vector2.Dot(dir, forward);
 
-            Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
+            Vector2 animationDir = new Vector2(localX, localY);
+            Debug.Log($"animationDir : {animationDir.x}, {animationDir.y}");
+
+            Animator.SetFloat("Horizontal", animationDir.x);
+            Animator.SetFloat("Vertical", animationDir.y);
+
+            Vector3 moveDirection = new Vector3(move.x, 0, move.y);
             _rigidbody.linearVelocity = moveDirection * Speed;
+
+            Vector3 lookDirection = new Vector3(aimDir.x, 0, aimDir.y);
+            if (lookDirection.sqrMagnitude > 0.01f)
+            {
+                transform.forward = lookDirection.normalized;
+            }
         }
         
-        // Viser
-        public void Aim(Vector2 valueAim)
-        {
-            // stacker la valeur que si elle est superieur à 0.8f
-            if (Mathf.Abs(valueAim.x) >= 0.5f || Mathf.Abs(valueAim.y) >= 0.5f)
-            {
-                Vector2 oldValue = valueAim;
-               _aimTarget.transform.position = new Vector3(gameObject.transform.position.x + oldValue.x, gameObject.transform.position.y + 1f, gameObject.transform.position.z + oldValue.y);
-            }
-
-            //Debug.Log(valueAim);
-        }
-
         private void TurnIKBones()
         {
         }
@@ -243,6 +246,7 @@ namespace Julien.Script.PlayerScripts
                 Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
                 if (hudPlayer) hudPlayer.SetHudInfo();
             }
+            if (Inventory.equipedWeaponWrap.CurrentAmmo == 0) Inventory.Reload();
         }
         
         public IEnumerator ShootDelay(float timer)
@@ -254,7 +258,8 @@ namespace Julien.Script.PlayerScripts
         [ContextMenu("Debug take damage")]
         public void takeDamageDebug()
         {
-            takeDamage(20);
+            takeDamage(80);
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);         
         }
         
         [ContextMenu("Die")]
@@ -337,6 +342,13 @@ namespace Julien.Script.PlayerScripts
         {
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+        }
+
+        public void takeHeal(float healValue)
+        {
+            Health += healValue;
+            hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+            Health = Mathf.Clamp(Health, 0, 100);
         }
     }
 }

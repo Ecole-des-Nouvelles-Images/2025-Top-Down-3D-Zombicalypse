@@ -17,11 +17,6 @@ namespace Julien.Script.Lobby
             _multiplayerHandler = GameObject.FindWithTag("GameManager").GetComponent<MultiplayerHandler>();
         }
 
-        private void Update()
-        {
-            Debug.Log("Current player" + CurrentNumberPlayer + " Max player " + _multiplayerHandler.NumberOfPlayer);
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))

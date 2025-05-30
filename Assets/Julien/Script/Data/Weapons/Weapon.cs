@@ -12,6 +12,7 @@ namespace Julien.Script.Data.Weapons
         [Range(0,100f)] public float DropChance;
         
         public GameObject Prefab;
+        public bool Handgun;
         // visual Of weapon
         // le visuel contient aussi, la ou les balles spawn et deux point ou le joueur placera ses mains
         public GameObject WeaponMesh;
