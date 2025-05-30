@@ -43,7 +43,6 @@ namespace Julien.Script.PlayerScripts
             _rightHandPlacement = rightHandPlacement;
             _leftHandPlacement = leftHandPlacement;
             
-            Debug.Log("change les main");
         }
     }
 }

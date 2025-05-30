@@ -5,8 +5,8 @@ using System.Linq;
 using Julien.Script.Data.Zombie;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
+using Julien.Script.ZombieScript.States;
 using Script;
-using Script.ZombieScript.States;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -41,7 +41,7 @@ namespace Julien.Script.ZombieScript
 
         [Header("Conditions")]
         
-        private bool Dead = false;
+        public bool Dead;
         
         [Header("Attack")]
         public bool WantAttack;

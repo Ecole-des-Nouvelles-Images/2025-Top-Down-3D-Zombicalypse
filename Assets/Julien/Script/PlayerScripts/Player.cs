@@ -215,7 +215,7 @@ namespace Julien.Script.PlayerScripts
             float localY = Vector2.Dot(dir, forward);
 
             Vector2 animationDir = new Vector2(localX, localY);
-            Debug.Log($"animationDir : {animationDir.x}, {animationDir.y}");
+            //Debug.Log($"animationDir : {animationDir.x}, {animationDir.y}");
 
             Animator.SetFloat("Horizontal", animationDir.x);
             Animator.SetFloat("Vertical", animationDir.y);

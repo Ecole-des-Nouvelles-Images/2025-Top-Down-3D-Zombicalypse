@@ -1,6 +1,4 @@
-using Julien.Script.ZombieScript;
-
-namespace Script.ZombieScript.States
+namespace Julien.Script.ZombieScript.States
 {
     public abstract class ZombieState
     {

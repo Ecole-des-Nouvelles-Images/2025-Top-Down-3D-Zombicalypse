@@ -1,6 +1,5 @@
 using Julien.Script.ZombieScript;
 using Julien.Script.ZombieScript.States;
-using Script.ZombieScript.States;
 
 namespace Script.ZombieScript
 {
@@ -10,6 +9,9 @@ namespace Script.ZombieScript
         {
             switch (WantAttack)
             {
+                case true when Dead:
+                    CurrentState = new Dead();
+                    break;
                 case true when !CanAttack:
                     CurrentState = new GoAttackTarget();
                     break;

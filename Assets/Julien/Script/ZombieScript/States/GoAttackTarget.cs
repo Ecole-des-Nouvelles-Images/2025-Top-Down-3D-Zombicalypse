@@ -1,5 +1,3 @@
-using Script.ZombieScript.States;
-
 namespace Julien.Script.ZombieScript.States
 {
     public class GoAttackTarget : ZombieState

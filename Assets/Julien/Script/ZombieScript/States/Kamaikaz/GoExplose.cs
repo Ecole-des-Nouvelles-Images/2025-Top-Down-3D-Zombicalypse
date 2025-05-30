@@ -1,7 +1,6 @@
 using Julien.Script.Interface;
 using Julien.Script.PlayerScripts;
 using Script.ZombieScript;
-using Script.ZombieScript.States;
 using UnityEngine;
 
 namespace Julien.Script.ZombieScript.States.Kamaikaz
