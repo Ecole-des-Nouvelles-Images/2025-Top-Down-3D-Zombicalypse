@@ -70,7 +70,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 0}
   Dead: 0
   WantAttack: 1
-  CanAttack: 0
+  CanAttack: 1
   Object: []
   _prefabs:
   - {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
@@ -237,7 +237,7 @@ Animator:
   m_GameObject: {fileID: 6910938945056931783}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a22bbf6bb2aae474e88e08f6cd8a0556, type: 2}
+  m_Controller: {fileID: 9100000, guid: 62cb85df1f05c0d4a9d3fc2d834ae0e6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
