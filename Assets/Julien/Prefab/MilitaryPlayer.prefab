@@ -505,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1275117740412515932
 Transform:
   m_ObjectHideFlags: 0
@@ -588,7 +588,6 @@ MonoBehaviour:
   HudPrefab: {fileID: 1959261300190757804, guid: 00cff2f511051ae4493c8e9135186c81, type: 3}
   hudPlayer: {fileID: 0}
   _hudDeadPlayer: {fileID: 2612938324517824276, guid: 5bc601ef75bee7c43a9063c11e328e87, type: 3}
-  _laser: {fileID: 7248223102719653189}
   PlayerRenderer: {fileID: 8435858384709640241}
   Cloths:
   - {fileID: 5856581169100993813}
@@ -1487,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32818842652daae43b24346b2330902b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LineRenderer: {fileID: 0}
+  LineRenderer: {fileID: 567204486668749929}
 --- !u!120 &567204486668749929 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 7281120802811265398, guid: 2703b1b126c7d2b49a601a165917d460, type: 3}

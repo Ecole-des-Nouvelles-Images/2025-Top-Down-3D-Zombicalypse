@@ -75,8 +75,7 @@ namespace Julien.Script.PlayerScripts
         [SerializeField] private GameObject _hudDeadPlayer;
         private GameObject HudParent;
 
-        [Header("References Script")] [SerializeField]
-        private Laser _laser;
+        [Header("References Script")] 
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
         public List<GameObject> Cloths = new List<GameObject>();
@@ -168,7 +167,7 @@ namespace Julien.Script.PlayerScripts
             _verticalValue = _rigidbody.linearVelocity.z;
             _horizontalValue = _rigidbody.linearVelocity.x;
             
-            _playerUpdateDir =  _laser.LineRenderer.GetPosition(1);
+            _playerUpdateDir =  _lineRenderer.GetPosition(1);
             
             OnMove();
             // OnAim(aim);
