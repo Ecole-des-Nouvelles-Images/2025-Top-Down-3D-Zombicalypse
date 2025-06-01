@@ -15,13 +15,13 @@ namespace Julien.Script.PlayerScripts
 
         private void Start()
         {
-            ChangeHandsPlacement();
             MoveHands();
             Debug.Log("Start");
         }
 
         private void Update()
         {
+            ChangeHandsPlacement();
             MoveHands();
         }
 
