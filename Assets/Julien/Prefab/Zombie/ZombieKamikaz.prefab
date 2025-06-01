@@ -302,7 +302,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetTag: Player
   NavMeshAgent: {fileID: 0}
-  Rigidbody: {fileID: 0}
+  Rigidbody: {fileID: 3620977104577959301}
   Dead: 0
   WantAttack: 1
   CanAttack: 0
