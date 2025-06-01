@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
 using Julien.Script.HUD.OnTopPlayer;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts;
-using Microsoft.Unity.VisualStudio.Editor;
 using Script.Struc;
 using Unity.Mathematics;
 using UnityEngine;
-using Image = UnityEngine.UIElements.Image;
 
 namespace Julien.Script.PlayerScripts
 {

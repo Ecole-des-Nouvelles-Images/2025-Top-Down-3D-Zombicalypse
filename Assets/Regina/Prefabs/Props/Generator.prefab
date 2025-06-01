@@ -406,7 +406,7 @@ MonoBehaviour:
   _reparBarParent: {fileID: 833497973266648209}
   _reparBar: {fileID: 5705067198411773521}
   _TimeBeforDamageBar: {fileID: 7497985105501784723}
-  _brokenEffect: {fileID: 0}
+  _brokenEffect: {fileID: 9172363050109456055}
 --- !u!23 &3549050318270337733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -740,5 +740,10 @@ PrefabInstance:
 --- !u!4 &950015586241371080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9139206930182834576, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
+  m_PrefabInstance: {fileID: 8357518090687631960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9172363050109456055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 914540738046794991, guid: d0c31c33a17cec3449fbb0a5efb6a473, type: 3}
   m_PrefabInstance: {fileID: 8357518090687631960}
   m_PrefabAsset: {fileID: 0}
