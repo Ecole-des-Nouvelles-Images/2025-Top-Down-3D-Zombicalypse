@@ -42,7 +42,6 @@ namespace Julien.Script
             DamageBullet = damage;
             Precision = precision;
             LethalRange = range;
-            Debug.Log(player);
             if (player != null) _player = player;
         }
 

@@ -74,8 +74,9 @@ namespace Julien.Script.PlayerScripts
         public HUDPlayer hudPlayer;
         [SerializeField] private GameObject _hudDeadPlayer;
         private GameObject HudParent;
-        
-        [Header("References Script")]
+
+        [Header("References Script")] [SerializeField]
+        private Laser _laser;
         private GameObject _gameManager;
         public GameObject PlayerRenderer;
         public List<GameObject> Cloths = new List<GameObject>();
@@ -104,6 +105,7 @@ namespace Julien.Script.PlayerScripts
         [Header("VisualEffect")] 
         
         [SerializeField] private ParticleSystem _damageEffect;
+        
         private void Awake()
         {
             // ne pas detruire le gameobject lors d'un chargement de scene
@@ -166,7 +168,7 @@ namespace Julien.Script.PlayerScripts
             _verticalValue = _rigidbody.linearVelocity.z;
             _horizontalValue = _rigidbody.linearVelocity.x;
             
-            _playerUpdateDir =  _lineRenderer.GetPosition(1);
+            _playerUpdateDir =  _laser.LineRenderer.GetPosition(1);
             
             OnMove();
             // OnAim(aim);
@@ -176,10 +178,11 @@ namespace Julien.Script.PlayerScripts
             }
             if (Inventory.UpgraderWrap.UpgraderType)
             {
+                Debug.Log("FAIT LE RAYCAST");
                 RaycastHit hit;
-                Debug.Log(_aimTarget.transform.position);
-                Debug.DrawRay(transform.position, transform.forward * 5, Color.blue, 1f);
-                if (Physics.Raycast(_spineBone.transform.position, _aimTarget.transform.localPosition * 2 - new Vector3(0,2f,0), out hit, 2))
+                //Debug.Log(_aimTarget.transform.position);
+                Debug.DrawRay(transform.position + new Vector3(0,1,0), transform.forward * 2 , Color.green, 1f);
+                if (Physics.Raycast(transform.position + new Vector3(0,1,0), transform.forward * 3 - new Vector3(0,2f,0), out hit, 2))
                 {
                     if (hit.collider.CompareTag("Turel"))
                     {

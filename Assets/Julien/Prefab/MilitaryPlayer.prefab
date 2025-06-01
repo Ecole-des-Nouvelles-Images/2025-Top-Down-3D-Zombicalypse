@@ -505,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1275117740412515932
 Transform:
   m_ObjectHideFlags: 0
@@ -588,6 +588,7 @@ MonoBehaviour:
   HudPrefab: {fileID: 1959261300190757804, guid: 00cff2f511051ae4493c8e9135186c81, type: 3}
   hudPlayer: {fileID: 0}
   _hudDeadPlayer: {fileID: 2612938324517824276, guid: 5bc601ef75bee7c43a9063c11e328e87, type: 3}
+  _laser: {fileID: 7248223102719653189}
   PlayerRenderer: {fileID: 8435858384709640241}
   Cloths:
   - {fileID: 5856581169100993813}
@@ -622,14 +623,14 @@ MonoBehaviour:
     Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: abb87db7f31d77e419015d925ec0afbd, type: 2}
+    Weapon: {fileID: 11400000, guid: 7a09e463e3670cf41ae39d4b783961fb, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
   - Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: abb87db7f31d77e419015d925ec0afbd, type: 2}
+    Weapon: {fileID: 11400000, guid: 7a09e463e3670cf41ae39d4b783961fb, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - Lvl: 0
@@ -807,9 +808,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2.0575285
+  m_Height: 1.8925476
   m_Direction: 1
-  m_Center: {x: 0, y: 0.81563807, z: 0}
+  m_Center: {x: 0, y: 0.8981285, z: 0}
 --- !u!1 &4648020901105432426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32818842652daae43b24346b2330902b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lineRenderer: {fileID: 567204486668749929}
+  LineRenderer: {fileID: 0}
 --- !u!120 &567204486668749929 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 7281120802811265398, guid: 2703b1b126c7d2b49a601a165917d460, type: 3}

@@ -13,9 +13,14 @@ namespace Julien.Script
         [SerializeField] private List<Upgrader> _types = new List<Upgrader>();
         
         public UpgraderWrap UpgraderWrap;
+
+        [SerializeField] private bool _randomOnStart;
         private void Start()
         {
-            
+            if (_randomOnStart)
+            {
+                Random();
+            }
         }
         public void Random()
         {
