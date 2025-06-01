@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593040448384764293, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: timeScale
-      value: 4.79
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920496199143966151, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: m_Name
