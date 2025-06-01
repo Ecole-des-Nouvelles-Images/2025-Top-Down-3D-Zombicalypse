@@ -67,10 +67,10 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetTag: Generator
   NavMeshAgent: {fileID: 0}
-  Rigidbody: {fileID: 0}
+  Rigidbody: {fileID: 8335890442325940512}
   Dead: 0
   WantAttack: 1
-  CanAttack: 1
+  CanAttack: 0
   Object: []
   _prefabs:
   - {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}

@@ -75,7 +75,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetTag: Generator
   NavMeshAgent: {fileID: 0}
-  Rigidbody: {fileID: 0}
+  Rigidbody: {fileID: 484201143875930646}
   Dead: 0
   WantAttack: 1
   CanAttack: 0
