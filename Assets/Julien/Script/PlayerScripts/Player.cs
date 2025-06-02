@@ -313,7 +313,6 @@ namespace Julien.Script.PlayerScripts
             {
                 Inputhandlers[index].enabled = true;
             }
-            
         }
         
         

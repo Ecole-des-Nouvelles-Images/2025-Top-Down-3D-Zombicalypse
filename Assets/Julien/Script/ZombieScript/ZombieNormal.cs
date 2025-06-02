@@ -20,7 +20,6 @@ namespace Julien.Script.ZombieScript
                     break;
             }
             
-            Debug.Log(CurrentState);
             CurrentState.Execute(this);
         }
     }
