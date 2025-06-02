@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +11,7 @@ namespace Julien.Script.Menu
         private EventSystem _eventSystem;
 
         [SerializeField] private GameObject Button;
+        [SerializeField] private TMP_Text _endingText;
         private void Awake()
         {
             _eventSystemGameObject = GameObject.Find("EventSystem");

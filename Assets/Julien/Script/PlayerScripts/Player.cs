@@ -308,8 +308,12 @@ namespace Julien.Script.PlayerScripts
             foreach (MonoBehaviour component in Inputhandlers)
             {
                 component.enabled = false;
-            } 
-            Inputhandlers[index].enabled = true;
+            }
+            if (index != 4)
+            {
+                Inputhandlers[index].enabled = true;
+            }
+            
         }
         
         
