@@ -2182,6 +2182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1650614880}
+  _endingText: {fileID: 0}
 --- !u!4 &90762068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5786094395230183077, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
@@ -17207,6 +17208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 689216536}
+  _endingText: {fileID: 0}
 --- !u!114 &855148079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38736,7 +38738,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 53.25
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -41563,7 +41565,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.15
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -43289,15 +43291,15 @@ PrefabInstance:
       objectReference: {fileID: 1536146187}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: RoundDictionary.Array.data[0].Round
-      value: 1
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: RoundDictionary.Array.data[1].Round
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8727236817250310588, guid: 7045a13421514d64780639df9faa05f9, type: 3}
       propertyPath: RoundDictionary.Array.data[2].Round
-      value: 3
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43794,7 +43796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 273622830367492209, guid: f584994af1bee3549bd0c68b0fb09a78, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.97
+      value: 0.98435193
       objectReference: {fileID: 0}
     - target: {fileID: 273622830367492209, guid: f584994af1bee3549bd0c68b0fb09a78, type: 3}
       propertyPath: m_AnchorMin.x
@@ -43802,7 +43804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 273622830367492209, guid: f584994af1bee3549bd0c68b0fb09a78, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.94
+      value: 0.80311126
       objectReference: {fileID: 0}
     - target: {fileID: 273622830367492209, guid: f584994af1bee3549bd0c68b0fb09a78, type: 3}
       propertyPath: m_SizeDelta.x
@@ -43860,6 +43862,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2400805341604820391, guid: f584994af1bee3549bd0c68b0fb09a78, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 94b88c24f8121f74b81391fb8d7d5b2a, type: 3}
     - target: {fileID: 5440135749416250954, guid: f584994af1bee3549bd0c68b0fb09a78, type: 3}
       propertyPath: m_Name
       value: GeneratorHealth

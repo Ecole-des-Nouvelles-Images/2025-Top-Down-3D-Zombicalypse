@@ -41,6 +41,7 @@ namespace Julien.Script.ZombieScript
 
         [Header("Conditions")]
         
+        public bool Explose;
         public bool Dead;
         
         [Header("Attack")]

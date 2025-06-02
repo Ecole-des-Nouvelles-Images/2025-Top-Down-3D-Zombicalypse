@@ -1,6 +1,4 @@
 using Julien.Script.Interface;
-using Julien.Script.PlayerScripts;
-using Script.ZombieScript;
 using UnityEngine;
 
 namespace Julien.Script.ZombieScript.States.Kamaikaz
@@ -23,6 +21,7 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
             
             if (zombie.AttackSpeed <= 0)
             {
+                zombie.Explose = true;
                 if (zombie.Object != null)
                 {
                     for (int i = zombie.Object.Count - 1; i >= 0; i--)
@@ -37,7 +36,6 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
                     }
                 }
                 zombie.Die(false);
-                Object.Destroy(zombie.gameObject, 1.0f);
             }
         }
     }
