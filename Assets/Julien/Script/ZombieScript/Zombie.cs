@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,6 @@ using Julien.Script.ZombieScript.States;
 using Script;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = UnityEngine.Random;
 
 namespace Julien.Script.ZombieScript
 {
@@ -66,7 +64,7 @@ namespace Julien.Script.ZombieScript
         [Header("VisualEffect")] 
         
         public ParticleSystem BloodEffect;
-        
+
         public float Health
         {
             get => CurrentHealth;
@@ -87,6 +85,18 @@ namespace Julien.Script.ZombieScript
                     GameManagerStatic.lastZombiePosition = gameObject.transform.position;
                     Die(true);
                 }
+            }
+        }
+        
+        public void PlayScream()
+        {
+            float rand = Random.Range(0, 1000);
+            Debug.Log("Rand");
+            if (rand <= 1f)
+            {
+                Debug.Log(rand);
+                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.ScreamZombie);
+                Debug.Log("PLAY SOUND");
             }
         }
 

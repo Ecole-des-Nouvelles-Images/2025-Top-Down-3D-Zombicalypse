@@ -38654,6 +38654,87 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
+--- !u!1001 &1907057691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2029672791534043553, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.72102344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7560856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.804199
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580545906318271392, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880578073987403906, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: Explosion.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880578073987403906, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: DeadZombie.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880578073987403906, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: AttackZombie.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880578073987403906, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: 'Explosion.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b1099db20fd24514f8d39477ac3fa3de, type: 3}
+    - target: {fileID: 7880578073987403906, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: 'DeadZombie.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b1099db20fd24514f8d39477ac3fa3de, type: 3}
+    - target: {fileID: 7880578073987403906, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
+      propertyPath: 'AttackZombie.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b1099db20fd24514f8d39477ac3fa3de, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4339a976f678a064f9a5fdd6117d8ac6, type: 3}
 --- !u!1 &1909451515
 GameObject:
   m_ObjectHideFlags: 0
@@ -43879,6 +43960,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1907057691}
   - {fileID: 3955482195169874854}
   - {fileID: 264634633}
   - {fileID: 993006011}

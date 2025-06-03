@@ -41,6 +41,7 @@ namespace Julien.Script.ZombieScript
                 case true when Explose:
                     break;
             }
+            PlayScream();
             CurrentState.Execute(this);
         }
 

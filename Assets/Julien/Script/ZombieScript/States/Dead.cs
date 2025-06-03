@@ -12,6 +12,8 @@ namespace Julien.Script.ZombieScript.States
             zombie.NavMeshAgent.enabled = false;
             zombie.GetComponent<CapsuleCollider>().enabled = false;
             zombie.GetComponent<SphereCollider>().enabled = false;
+            
+            SoundManager.Instance.PlaySound(zombie.gameObject, SoundManager.Instance.DeadZombie);
         }
     }
 }

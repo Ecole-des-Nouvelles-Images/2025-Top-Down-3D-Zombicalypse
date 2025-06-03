@@ -86,6 +86,7 @@ namespace Julien.Script.TurelScripts
         
         public void Die()
         {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.TurelDestroy);
             Destroy(gameObject);
         }
 

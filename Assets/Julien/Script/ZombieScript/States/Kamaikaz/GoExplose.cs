@@ -35,6 +35,7 @@ namespace Julien.Script.ZombieScript.States.Kamaikaz
                         }
                     }
                 }
+                SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.Explosion);
                 zombie.Die(false);
             }
         }

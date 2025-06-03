@@ -2,7 +2,6 @@ using Julien.Script.Interface;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -32,7 +31,8 @@ namespace Julien.Script
 
         [Header("Reférence")]
         private GameObject _gameManager;
-        
+
+        [SerializeField] private AudioSource _audioSource;
         [SerializeField] private GameObject _reparBarParent;
         [SerializeField] private Image _reparBar;
         [SerializeField] private Image _TimeBeforDamageBar;
@@ -40,10 +40,13 @@ namespace Julien.Script
         [Header("VisualEffect")] 
         
         [SerializeField] private GameObject _brokenEffect;
+        
 
         private void Start()
         {
             _gameManager = GameObject.Find("GameManager");
+            _audioSource.clip = SoundManager.Instance.GeneratorWork;
+            _audioSource.Play();
         }
 
         public float Health
@@ -131,6 +134,7 @@ namespace Julien.Script
         {
             if (IsBreak)
             {
+                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.GeneratorRepart);
                 _currentRepar += _reparParClick;
                 SetReparBar();
                 if (_currentRepar >= _maxRepar)

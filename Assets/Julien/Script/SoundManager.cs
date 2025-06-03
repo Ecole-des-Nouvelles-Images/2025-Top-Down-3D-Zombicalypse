@@ -14,25 +14,26 @@ namespace Julien.Script
         
         [Header("Zombie")]
         public List<AudioClip> AttackZombie = new List<AudioClip>();
-        public List<AudioClip> StepsZombie = new List<AudioClip>();
         public List<AudioClip> DeadZombie = new List<AudioClip>();
         public List<AudioClip> ScreamZombie = new List<AudioClip>();
+        public List<AudioClip> Explosion = new List<AudioClip>();
         
         [Header("Turel")]
         public List<AudioClip> TurelShoot = new List<AudioClip>();
         public List<AudioClip> TurelDestroy = new List<AudioClip>();
         
         [Header("Generator")]
-        public List<AudioClip> Repart = new List<AudioClip>();
-        public List<AudioClip> Break = new List<AudioClip>();
+        
+        public List<AudioClip> GeneratorRepart = new List<AudioClip>();
+
+        public AudioClip GeneratorBreak;
+        public AudioClip GeneratorWork;
+        
         
         [Header("WaponsSound")]
         public List<AudioClip> Ak47 = new List<AudioClip>();
         public List<AudioClip> Spas = new List<AudioClip>();
         public List<AudioClip> Colt = new List<AudioClip>();
-        
-        [Header("HitSoundZombie")]
-        public List<AudioClip> Hit = new List<AudioClip>();
         
         /// <summary>
         /// l'obj est le gameobject ou serra instancier l'audio source. Clips est une list d'audioClip qui est disponible dans le soundManager
