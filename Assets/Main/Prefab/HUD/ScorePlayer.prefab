@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8e560fa70f0bf764281959d420722af3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -856,6 +856,8 @@ MonoBehaviour:
   _damageCount: {fileID: 6559423490714994426}
   _deathCount: {fileID: 2953923557651325633}
   _totalScore: {fileID: 911119858301475686}
+  _imageIndexPlayer: {fileID: 7759139592916663298}
+  _spritesIndex: []
 --- !u!114 &991072346904939412
 MonoBehaviour:
   m_ObjectHideFlags: 0

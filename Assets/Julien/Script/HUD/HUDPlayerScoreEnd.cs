@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Julien.Script.HUD
 {
@@ -14,6 +16,8 @@ namespace Julien.Script.HUD
         [SerializeField] private TMP_Text _damageCount;
         [SerializeField] private TMP_Text _deathCount;
         [SerializeField] private TMP_Text _totalScore;
+        [SerializeField] private Image _imageIndexPlayer;
+        [SerializeField] private List<Sprite> _spritesIndex;
         public void SetOnStart(Player player)
         {
             _playerTarget = player;
@@ -42,6 +46,7 @@ namespace Julien.Script.HUD
             _damageCount.text = _playerScore.DamageCount.ToString();
             _deathCount.text = _playerScore.DieCount.ToString();
             _totalScore.text = _playerScore.Score.ToString();
+            _imageIndexPlayer.sprite = _spritesIndex[_playerTarget.PlayerIndex];
         }
     }
 }
