@@ -9,6 +9,8 @@ namespace Julien.Script.Data.Weapons
         public int BulletParShoot;
         public override void Fire(Transform spawnBulletPosition, Player player, Vector3 dir)
         {
+            SoundManager.Instance.PlaySound( player.gameObject, SoundManager.Instance.Spas);
+            
             for (int i = 0; i < BulletParShoot; i++)
             { 
                 float randomFloat = Random.Range(1, 5);

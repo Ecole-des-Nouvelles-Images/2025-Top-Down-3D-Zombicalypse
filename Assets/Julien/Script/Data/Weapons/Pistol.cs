@@ -11,6 +11,8 @@ namespace Julien.Script.Data.Weapons
             GameObject bullet = Instantiate(BulletPrefab, spawnBulletPosition.transform.position, spawnBulletPosition.transform.rotation);
             bullet.transform.forward = dir;
             bullet.gameObject.GetComponent<Bullet>().SetBulletParameter(BulletSpeed, Damage, Precision, LethalRangeLetal, player);
+            
+            SoundManager.Instance.PlaySound( player.gameObject, SoundManager.Instance.Colt);
         }
 
         public override void Reload()
