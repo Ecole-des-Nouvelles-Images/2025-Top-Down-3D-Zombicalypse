@@ -7,7 +7,7 @@ namespace Julien.Script.Data.Weapons
     public class ShootGun : Weapon
     {
         public int BulletParShoot;
-        public override void Fire(Transform spawnBulletPosition, Player player, Vector3 dir)
+        public override void Fire(Transform spawnBulletPosition, PlayerScripts.Player player, Vector3 dir)
         {
             SoundManager.Instance.PlaySound( player.gameObject, SoundManager.Instance.Spas);
             

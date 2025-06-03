@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Script.Data.PlayerData
+namespace Julien.Script.Data.Player
 {
     [CreateAssetMenu(fileName = "Player", menuName = "Scriptable Objects/Player")]
     public class PlayerData : ScriptableObject

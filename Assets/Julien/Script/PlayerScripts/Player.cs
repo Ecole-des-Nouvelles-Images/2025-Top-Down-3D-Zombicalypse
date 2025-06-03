@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Script.Data.Player;
 using Julien.Script.HUD;
 using Julien.Script.Interface;
 using Julien.Script.Static;
-using Script.Data.PlayerData;
 using Script.Input;
 using Unity.Mathematics;
 using UnityEngine;

@@ -20,6 +20,9 @@ namespace Julien.Script.Menu
         private void OnEnable()
         {
             _eventSystem.SetSelectedGameObject(Button.gameObject);
+            RoundHundler roundHundler = GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>();
+            int waveSurvived = roundHundler.Round.CurrentRound - 1;
+            _endingText.text = " Fin de partie\nVous avez survécu " + waveSurvived + " vagues ";
         }
 
         private void Start()

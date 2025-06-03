@@ -6,7 +6,7 @@ namespace Julien.Script.Data.Weapons
     [CreateAssetMenu(fileName = "Pistol", menuName = "Scriptable Objects/Weapon/Assault")]
     public class Assault : Weapon
     {
-        public override void Fire(Transform spawnBulletPosition, Player player, Vector3 dir)
+        public override void Fire(Transform spawnBulletPosition, PlayerScripts.Player player, Vector3 dir)
         {
             GameObject bullet = Instantiate(BulletPrefab, spawnBulletPosition.transform.position, spawnBulletPosition.transform.rotation);
             bullet.transform.LookAt(dir);

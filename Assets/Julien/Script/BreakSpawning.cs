@@ -94,9 +94,10 @@ namespace Julien.Script
             float RandomX = Random.Range(-x, x);
             float RandomZ = Random.Range(-z, z);
 
+            
             GameObject ObjectToSpawn = Instantiate(_objectsToSpawn[0], new Vector3(RandomX, _parentSpawn.transform.position.y, RandomZ), Quaternion.identity, _parentSpawn.transform);
             ObjectToSpawn.GetComponent<IRandom>().Random();
-            _objectsToSpawn.Remove(_objectsToSpawn[0]); 
+            _objectsToSpawn.Remove(_objectsToSpawn[0]);
         }
 
         public void EndBreakTime()
@@ -107,8 +108,9 @@ namespace Julien.Script
             }
         }
         
-        public bool checkIfCanSpawn()
+        public bool CheckIfCanSpawn(float randX, float randZ)
         {
+            
             return true;
         }
     }

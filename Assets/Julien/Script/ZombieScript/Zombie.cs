@@ -178,6 +178,7 @@ namespace Julien.Script.ZombieScript
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
             }
             
+            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadZombie);
             StartCoroutine("DestroyZombieDelay");
         }
 
