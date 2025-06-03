@@ -47,13 +47,19 @@ namespace Julien.Script.ZombieScript
         public IEnumerator DelayExplosion()
         {
             Debug.Log("VA EXPLOSER");
+            if (Dead)
+            {
+                Animator.SetBool("Die", true);
+            }
             yield return new WaitForSeconds(TypeZombie.AttackSpeed);
-            Instantiate(_firstParticle,transform.position,Quaternion.identity);
-            Instantiate(_secondParticle,transform.position,Quaternion.identity);
-            Destroy(gameObject);
-            AreExplosed = true;
-            Debug.Log("EXPLOSE PARTICLE");
-            
+            if (!Dead)
+            {
+                Instantiate(_firstParticle,transform.position,Quaternion.identity);
+                Instantiate(_secondParticle,transform.position,Quaternion.identity);
+                Destroy(gameObject);
+                AreExplosed = true;
+                Debug.Log("EXPLOSE PARTICLE");
+            }
         }
         private void Start()
         {

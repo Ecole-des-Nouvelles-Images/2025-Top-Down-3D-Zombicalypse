@@ -2785,7 +2785,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: -10
   far clip plane: 1000
   field of view: 60.003983
   orthographic: 1
@@ -3601,6 +3601,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb32e0a538b9aad469e7da978a259371, type: 3}
+--- !u!1001 &1772190117
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157941637355819951, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179844727403533603, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: m_Name
+      value: FogVfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588397589222897615, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
+      propertyPath: 'CollisionModule.m_Planes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 229035169}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0508c00c5e400bd438abe4fc811fe44f, type: 3}
 --- !u!1001 &1858264291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4266,3 +4327,4 @@ SceneRoots:
   - {fileID: 687370314}
   - {fileID: 1588652188}
   - {fileID: 90728478}
+  - {fileID: 1772190117}
