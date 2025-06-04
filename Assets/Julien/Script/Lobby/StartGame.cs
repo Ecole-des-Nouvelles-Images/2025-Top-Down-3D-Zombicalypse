@@ -44,7 +44,7 @@ namespace Julien.Script.Lobby
         public IEnumerator StartGameCoroutine()
         {
             yield return new WaitForSeconds(5f);
-            SceneManager.LoadScene("Julien/Scenes/GameScene");
+            SceneManager.LoadScene("GameScene");
         }
     }
 }

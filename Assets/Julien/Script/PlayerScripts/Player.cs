@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Script.Data.Player;
 using Julien.Script.HUD;
 using Julien.Script.Interface;
 using Julien.Script.Static;
-using Script.Data.PlayerData;
 using Script.Input;
 using Unity.Mathematics;
 using UnityEngine;
@@ -278,6 +278,8 @@ namespace Julien.Script.PlayerScripts
             GameObject hudDead = Instantiate(_hudDeadPlayer, HudParent.transform);
             GameManagerStatic.Players.Remove(gameObject);
             hudDead.GetComponent<HUDDeadPlayer>().SetInfo(this);
+            
+            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadPlayer, 0.3f);
         }
 
         public void Respawn()
@@ -287,6 +289,7 @@ namespace Julien.Script.PlayerScripts
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
             GameManagerStatic.Players.Add(gameObject);
             _canShoot = true;
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f);
         }
        
         public void OpenInventory()
@@ -308,8 +311,11 @@ namespace Julien.Script.PlayerScripts
             foreach (MonoBehaviour component in Inputhandlers)
             {
                 component.enabled = false;
-            } 
-            Inputhandlers[index].enabled = true;
+            }
+            if (index != 4)
+            {
+                Inputhandlers[index].enabled = true;
+            }
         }
         
         
@@ -351,6 +357,7 @@ namespace Julien.Script.PlayerScripts
             _damageEffect.Play();
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.DamagedPlayer, 0.2f);
         }
 
         public void takeHeal(float healValue)

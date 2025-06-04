@@ -36,7 +36,7 @@ namespace Julien.Script.Data.Weapons
         public float ReloadTime;
 
         public int RemoveAmmoParFire;
-        public abstract void Fire(Transform spawnBulletPosition, Player player, Vector3 dir);
+        public abstract void Fire(Transform spawnBulletPosition, PlayerScripts.Player player, Vector3 dir);
         public abstract void Reload();
 
         public abstract void VisualEffect(HandingObject handingObject);

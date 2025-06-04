@@ -85,7 +85,7 @@ MonoBehaviour:
   - {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
   - {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
   - {fileID: 592554152592320317, guid: 079f4f4ec49d53b44a4e04985a0d0b6b, type: 3}
-  _spawnRadius: 0
+  _spawnRadius: 35
   _player: {fileID: 0}
   Animator: {fileID: 3277813349330453755}
   BloodEffect: {fileID: 5716452502542176966}

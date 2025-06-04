@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,6 @@ using Julien.Script.ZombieScript.States;
 using Script;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = UnityEngine.Random;
 
 namespace Julien.Script.ZombieScript
 {
@@ -41,6 +39,7 @@ namespace Julien.Script.ZombieScript
 
         [Header("Conditions")]
         
+        public bool Explose;
         public bool Dead;
         
         [Header("Attack")]
@@ -65,7 +64,7 @@ namespace Julien.Script.ZombieScript
         [Header("VisualEffect")] 
         
         public ParticleSystem BloodEffect;
-        
+
         public float Health
         {
             get => CurrentHealth;
@@ -119,6 +118,14 @@ namespace Julien.Script.ZombieScript
             _bonusToZombie =  GameObject.FindGameObjectWithTag("GameManager").GetComponent<BonusToZombie>();
         }
 
+        public void PlayScream()
+        {
+            float rand = Random.Range(0, 5000);
+            if (rand <= 1)
+            {
+                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.ScreamZombie, 0.2f);
+            }
+        }
         private void Start()
         {
             SetData();
@@ -167,6 +174,7 @@ namespace Julien.Script.ZombieScript
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
             }
             
+            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadZombie, 0.3f);
             StartCoroutine("DestroyZombieDelay");
         }
 

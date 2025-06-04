@@ -16,6 +16,8 @@ namespace Julien.Script.ZombieScript.States
                 zombie.Target.GetComponent<ITakeDamage>().takeDamage(zombie.Damage);
                 zombie.AttackSpeed = zombie.TypeZombie.AttackSpeed;
                 zombie.Animator.SetTrigger("Attack");
+                
+                SoundManager.Instance.PlaySound(zombie.gameObject, SoundManager.Instance.AttackZombie,0.3f);
             }
         }
     }

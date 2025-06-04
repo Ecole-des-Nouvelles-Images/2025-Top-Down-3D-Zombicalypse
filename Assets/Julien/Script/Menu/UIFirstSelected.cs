@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +11,7 @@ namespace Julien.Script.Menu
         private EventSystem _eventSystem;
 
         [SerializeField] private GameObject Button;
+        [SerializeField] private TMP_Text _endingText;
         private void Awake()
         {
             _eventSystemGameObject = GameObject.Find("EventSystem");
@@ -18,6 +20,9 @@ namespace Julien.Script.Menu
         private void OnEnable()
         {
             _eventSystem.SetSelectedGameObject(Button.gameObject);
+            RoundHundler roundHundler = GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>();
+            int waveSurvived = roundHundler.Round.CurrentRound - 1;
+            _endingText.text = " Fin de partie\nVous avez survécu " + waveSurvived + " vagues ";
         }
 
         private void Start()

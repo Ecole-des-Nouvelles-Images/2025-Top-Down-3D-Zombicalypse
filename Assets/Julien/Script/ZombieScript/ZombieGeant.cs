@@ -1,7 +1,6 @@
-using Julien.Script.ZombieScript;
 using Julien.Script.ZombieScript.States;
 
-namespace Script.ZombieScript
+namespace Julien.Script.ZombieScript
 {
     public class ZombieGeant : Zombie
     {
@@ -19,6 +18,8 @@ namespace Script.ZombieScript
                     CurrentState = new AttackTarget();
                     break;
             }
+            
+            PlayScream();
             
             CurrentState.Execute(this);
         }

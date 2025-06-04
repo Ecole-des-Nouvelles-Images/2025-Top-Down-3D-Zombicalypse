@@ -1,4 +1,3 @@
-using Script;
 using Script.Turel.State;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ namespace Julien.Script.TurelScripts.State
 {
     public class TurelShoot : TurelState
     {
-        public override void Execute(Julien.Script.TurelScripts.Turel turel)
+        public override void Execute(Turel turel)
         {
             Debug.Log("Aim");
             if (turel.Target != null)
@@ -23,6 +22,7 @@ namespace Julien.Script.TurelScripts.State
 
         public void Shoot(Turel turel)
         {
+            SoundManager.Instance.PlaySound(turel.gameObject, SoundManager.Instance.TurelShoot, 0.3f);
             Debug.Log("Shoot");
             GameObject bullet = Instantiate(turel.TurelType.AmmoType, turel.SpawnBullet.transform.position, turel.TurelRenderer.transform.rotation);
             bullet.GetComponent<Bullet>().SetBulletParameter(turel.TurelWrap.BulletSpeed, turel.TurelWrap.Damage, turel.TurelWrap.Precision, turel.TurelWrap.BulletRange, null);

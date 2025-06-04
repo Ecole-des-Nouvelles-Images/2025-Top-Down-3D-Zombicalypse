@@ -312,10 +312,13 @@ MonoBehaviour:
   - {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
   - {fileID: 7822501420940168304, guid: a0cb8878c35f75045a2585c6b557ad10, type: 3}
   - {fileID: 592554152592320317, guid: 079f4f4ec49d53b44a4e04985a0d0b6b, type: 3}
-  _spawnRadius: 0
+  _spawnRadius: 20
   _player: {fileID: 0}
   Animator: {fileID: 5932206751926053180}
   BloodEffect: {fileID: 6232886122375315407}
+  AreExplosed: 0
+  _firstParticle: {fileID: 7127702545180342443, guid: 3eef66968730faa47b1cbe9d80a628f4, type: 3}
+  _secondParticle: {fileID: 1165764068543416930, guid: 5b33344557a268549a5cacc64288ddc7, type: 3}
 --- !u!33 &6411723483431922560
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -457,10 +460,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!95 &2936441507805549248
 Animator:
@@ -567,7 +570,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 66ec2a55b3882ae439d92b52e3f635a6, type: 2}
+      objectReference: {fileID: 9100000, guid: eee2d4e5273ccb145a99fe0eeb307a38, type: 2}
     - target: {fileID: 8242088940591160657, guid: 6bb73f46e1256df4b9b9a75453840759, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

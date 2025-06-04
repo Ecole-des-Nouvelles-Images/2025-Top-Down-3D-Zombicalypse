@@ -46,6 +46,7 @@ namespace Julien.Script.PlayerScripts
             if (equipedWeaponWrap.CurrentMagazin - 1 !>= 0 && equipedWeaponWrap.CurrentAmmo != equipedWeaponWrap.Weapon.MaxAmmo && ! _player.isReloading || equipedWeaponWrap.Weapon.InfiniteMagazine)
             {
                 StartCoroutine("ReloadDelay", equipedWeaponWrap.Weapon.ReloadTime);
+                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.Reload, 0.2f);
             }
         }
         

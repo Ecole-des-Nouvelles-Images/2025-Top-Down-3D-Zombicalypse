@@ -16,7 +16,6 @@ namespace Julien.Script.TurelScripts
                     CurrentStat = new TurelShoot();
                     break;
             }
-            Debug.Log(CurrentStat);
             CurrentStat.Execute(this);
         }
     }

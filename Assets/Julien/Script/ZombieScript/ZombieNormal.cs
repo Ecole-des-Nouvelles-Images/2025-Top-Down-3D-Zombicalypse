@@ -1,5 +1,4 @@
 using Julien.Script.ZombieScript.States;
-using UnityEngine;
 
 namespace Julien.Script.ZombieScript
 {
@@ -20,7 +19,7 @@ namespace Julien.Script.ZombieScript
                     break;
             }
             
-            Debug.Log(CurrentState);
+            PlayScream();
             CurrentState.Execute(this);
         }
     }
