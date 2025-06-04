@@ -45,25 +45,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepsPlayer:
-  - {fileID: 8300000, guid: 2654efe00ca87a04ab7ae806292540e4, type: 3}
-  - {fileID: 8300000, guid: 59806c6f36d503246bae6c389235b919, type: 3}
-  - {fileID: 8300000, guid: 3193d701fd764ad4ab25fafa55e3ca26, type: 3}
-  - {fileID: 8300000, guid: e0d1be8e0237cf24b9be082052ee0ec8, type: 3}
+  - {fileID: 8300000, guid: 9e57aee9101788b47adb5683981f4389, type: 3}
+  - {fileID: 8300000, guid: ce68cbcd681e7f347952cbc9e7ff0017, type: 3}
   DamagedPlayer:
-  - {fileID: 0}
-  DeadPlayer: []
-  RespawnPlayer: []
-  AttackZombie: []
-  DeadZombie: []
+  - {fileID: 8300000, guid: 5abe22941cc8523458f62469c2b49a14, type: 3}
+  DeadPlayer:
+  - {fileID: 8300000, guid: 7d1cbf15d678fa14e874a7022e28f83a, type: 3}
+  RespawnPlayer:
+  - {fileID: 8300000, guid: 2efd29b65bf727a46ad26bd19e83c781, type: 3}
+  Reload:
+  - {fileID: 8300000, guid: 886458243abe5b14387a460ac4da4958, type: 3}
+  AttackZombie:
+  - {fileID: 8300000, guid: a3b662309533bd140a22e5281c7c4adc, type: 3}
+  DeadZombie:
+  - {fileID: 8300000, guid: bde14a225e75dfe43bf357242dcedf4d, type: 3}
   ScreamZombie:
-  - {fileID: 8300000, guid: b1099db20fd24514f8d39477ac3fa3de, type: 3}
-  Explosion: []
-  TurelShoot: []
-  TurelDestroy: []
+  - {fileID: 8300000, guid: 3c453131a036211418493e53aab44837, type: 3}
+  - {fileID: 8300000, guid: e7fce700a2619f34a897b28ad46c66cd, type: 3}
+  Explosion:
+  - {fileID: 8300000, guid: 1adab4486d8246c48975edbef1f232aa, type: 3}
+  TurelShoot:
+  - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
+  TurelDestroy:
+  - {fileID: 8300000, guid: 4e2a4db50ee05014fa72a7ff1a2fc68b, type: 3}
   GeneratorRepart: []
   GeneratorBreak: {fileID: 0}
   GeneratorWork: {fileID: 0}
   Ak47:
-  - {fileID: 8300000, guid: b1099db20fd24514f8d39477ac3fa3de, type: 3}
-  Spas: []
-  Colt: []
+  - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
+  - {fileID: 8300000, guid: 351abc9a05ed351408ba3a97ad86ec29, type: 3}
+  Spas:
+  - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
+  - {fileID: 8300000, guid: 351abc9a05ed351408ba3a97ad86ec29, type: 3}
+  Colt:
+  - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
+  - {fileID: 8300000, guid: 351abc9a05ed351408ba3a97ad86ec29, type: 3}

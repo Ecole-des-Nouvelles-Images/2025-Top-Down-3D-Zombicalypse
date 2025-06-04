@@ -118,6 +118,14 @@ namespace Julien.Script.ZombieScript
             _bonusToZombie =  GameObject.FindGameObjectWithTag("GameManager").GetComponent<BonusToZombie>();
         }
 
+        public void PlayScream()
+        {
+            float rand = Random.Range(0, 5000);
+            if (rand <= 1)
+            {
+                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.ScreamZombie, 0.2f);
+            }
+        }
         private void Start()
         {
             SetData();

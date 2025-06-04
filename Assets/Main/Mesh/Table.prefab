@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2609422333838879406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.694, z: 0.61}
-  m_LocalScale: {x: 1, y: 1, z: 2.5005}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5543752771127081266}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2609422333838879406}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -6317805809608689028, guid: 4c38c1b142d2521489b85ce3499352c7, type: 3}
 --- !u!23 &2164812535651221902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a1c9d992ea80e6d469521cccf4ac2008, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -324,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c256a7e731af724489fe06ebe1110b2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09463976
+      value: 0.095
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c256a7e731af724489fe06ebe1110b2f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c256a7e731af724489fe06ebe1110b2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.17875242
+      value: -0.014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c256a7e731af724489fe06ebe1110b2f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -471,6 +471,10 @@ PrefabInstance:
     - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_Name
       value: CanvaInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8009034115994777824, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_PresetInfoIsWorld

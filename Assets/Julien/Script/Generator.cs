@@ -36,9 +36,10 @@ namespace Julien.Script
         [SerializeField] private GameObject _reparBarParent;
         [SerializeField] private Image _reparBar;
         [SerializeField] private Image _TimeBeforDamageBar;
+
+        [Header("VisualEffect")]
         
-        [Header("VisualEffect")] 
-        
+        [SerializeField] private Animator _animator;
         [SerializeField] private GameObject _brokenEffect;
         
 
@@ -79,6 +80,7 @@ namespace Julien.Script
             _brokenEffect.SetActive(false);
             _timeBefforDamaged = _maxTimeBefforDamaged;
             _timedamage = _maxTimeDamage;
+            _animator.SetBool("Break", true);
             _reparBarParent.SetActive(false);
             _timer -= Time.deltaTime;
             if (_timer <= 0 )
@@ -96,6 +98,7 @@ namespace Julien.Script
         {
             _brokenEffect.SetActive(true);
             _timeBefforDamaged -= Time.deltaTime;
+            _animator.SetBool("Break", false);
             _TimeBeforDamageBar.fillAmount = _timeBefforDamaged / _maxTimeBefforDamaged;
             _reparBarParent.SetActive(true);
             if (_timeBefforDamaged <= 0)
