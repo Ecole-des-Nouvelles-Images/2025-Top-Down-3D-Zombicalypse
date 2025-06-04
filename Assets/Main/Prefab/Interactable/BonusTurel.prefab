@@ -245,6 +245,7 @@ MonoBehaviour:
     AddMaxHealth: 0
     AddRange: 0
     AddDistance: 0
+  _randomOnStart: 0
 --- !u!54 &193297125816290900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -326,19 +327,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.64753616
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.28407347
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.64753455
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.28407422
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -17,7 +17,7 @@ namespace Julien.Script.ZombieScript.States
                 zombie.AttackSpeed = zombie.TypeZombie.AttackSpeed;
                 zombie.Animator.SetTrigger("Attack");
                 
-                SoundManager.Instance.PlaySound(zombie.gameObject, SoundManager.Instance.AttackZombie);
+                SoundManager.Instance.PlaySound(zombie.gameObject, SoundManager.Instance.AttackZombie,0.3f);
             }
         }
     }

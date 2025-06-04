@@ -12,7 +12,7 @@ namespace Julien.Script.Data.Weapons
             bullet.transform.forward = dir;
             bullet.gameObject.GetComponent<Bullet>().SetBulletParameter(BulletSpeed, Damage, Precision, LethalRangeLetal, player);
             
-            SoundManager.Instance.PlaySound( player.gameObject, SoundManager.Instance.Colt);
+            SoundManager.Instance.PlaySound( player.gameObject, SoundManager.Instance.Colt,0.1f);
         }
 
         public override void Reload()

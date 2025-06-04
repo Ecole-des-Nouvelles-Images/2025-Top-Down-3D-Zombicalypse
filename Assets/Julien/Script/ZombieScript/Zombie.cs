@@ -87,18 +87,6 @@ namespace Julien.Script.ZombieScript
                 }
             }
         }
-        
-        public void PlayScream()
-        {
-            float rand = Random.Range(0, 1000);
-            Debug.Log("Rand");
-            if (rand <= 1f)
-            {
-                Debug.Log(rand);
-                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.ScreamZombie);
-                Debug.Log("PLAY SOUND");
-            }
-        }
 
         [ContextMenu("TakeDamge (Test Methode)")]
         public void TakeDamaga()
@@ -178,7 +166,7 @@ namespace Julien.Script.ZombieScript
                 StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
             }
             
-            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadZombie);
+            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadZombie, 0.3f);
             StartCoroutine("DestroyZombieDelay");
         }
 

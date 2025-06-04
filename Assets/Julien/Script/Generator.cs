@@ -134,7 +134,7 @@ namespace Julien.Script
         {
             if (IsBreak)
             {
-                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.GeneratorRepart);
+                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.GeneratorRepart, 0.3f);
                 _currentRepar += _reparParClick;
                 SetReparBar();
                 if (_currentRepar >= _maxRepar)

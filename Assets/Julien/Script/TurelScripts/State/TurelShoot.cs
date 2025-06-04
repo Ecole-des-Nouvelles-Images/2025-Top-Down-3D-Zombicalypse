@@ -22,7 +22,7 @@ namespace Julien.Script.TurelScripts.State
 
         public void Shoot(Turel turel)
         {
-            SoundManager.Instance.PlaySound(turel.gameObject, SoundManager.Instance.TurelShoot);
+            SoundManager.Instance.PlaySound(turel.gameObject, SoundManager.Instance.TurelShoot, 0.3f);
             Debug.Log("Shoot");
             GameObject bullet = Instantiate(turel.TurelType.AmmoType, turel.SpawnBullet.transform.position, turel.TurelRenderer.transform.rotation);
             bullet.GetComponent<Bullet>().SetBulletParameter(turel.TurelWrap.BulletSpeed, turel.TurelWrap.Damage, turel.TurelWrap.Precision, turel.TurelWrap.BulletRange, null);
