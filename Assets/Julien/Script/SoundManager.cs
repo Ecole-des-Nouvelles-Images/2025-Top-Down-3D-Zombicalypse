@@ -11,6 +11,7 @@ namespace Julien.Script
         public List<AudioClip> DamagedPlayer = new List<AudioClip>();
         public List<AudioClip> DeadPlayer = new List<AudioClip>();
         public List<AudioClip> RespawnPlayer = new List<AudioClip>();
+        public List<AudioClip> Reload = new List<AudioClip>();
         
         [Header("Zombie")]
         public List<AudioClip> AttackZombie = new List<AudioClip>();
@@ -41,11 +42,12 @@ namespace Julien.Script
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="clips"></param>
-        public void PlaySound(GameObject obj, List<AudioClip> clips)
+        public void PlaySound(GameObject obj, List<AudioClip> clips, float volume)
         {
            AudioSource audio = obj.AddComponent<AudioSource>();
            audio.clip = clips[Random.Range(0, clips.Count)];
            audio.Play();
+           audio.volume = volume;
            float durationClip = audio.clip.length;
            StartCoroutine(RemoveAudioSource(durationClip, audio));
         }
