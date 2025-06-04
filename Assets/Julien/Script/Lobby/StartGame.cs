@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using Julien.Script.Multiplayer;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,13 +10,17 @@ namespace Julien.Script.Lobby
     public class StartGame : MonoBehaviour
     {
         public int CurrentNumberPlayer;
-
-
-        private MultiplayerHandler _multiplayerHandler;
         
+        private MultiplayerHandler _multiplayerHandler;
+        [SerializeField] private TMP_Text _text;
         private void Awake()
         {
             _multiplayerHandler = GameObject.FindWithTag("GameManager").GetComponent<MultiplayerHandler>();
+        }
+
+        private void Update()
+        {
+            _text.text = CurrentNumberPlayer + "/" +_multiplayerHandler.NumberOfPlayer;
         }
 
         private void OnTriggerEnter(Collider other)
