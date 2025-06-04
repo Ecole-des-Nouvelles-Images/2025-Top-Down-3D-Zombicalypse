@@ -14,9 +14,9 @@ namespace Julien.Script.HUD
         
         public void SetHUD(WeaponWrap weapon)
         {
+            _image.sprite = weapon.Sprite;
             _currentAmmo.text = weapon.CurrentAmmo.ToString();
             _currentMagazin.text = weapon.CurrentMagazin.ToString();
-            //_image.sprite = weapon.Weapon.Sprite;
             //_image.color = weapon.Weapon.Color;
 
             // if (weapon.Weapon.InfiniteMagazine)
