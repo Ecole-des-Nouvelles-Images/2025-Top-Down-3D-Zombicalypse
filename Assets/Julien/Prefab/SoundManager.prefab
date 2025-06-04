@@ -48,7 +48,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2654efe00ca87a04ab7ae806292540e4, type: 3}
   - {fileID: 8300000, guid: 59806c6f36d503246bae6c389235b919, type: 3}
   - {fileID: 8300000, guid: 3193d701fd764ad4ab25fafa55e3ca26, type: 3}
-  - {fileID: 8300000, guid: e0d1be8e0237cf24b9be082052ee0ec8, type: 3}
   DamagedPlayer: []
   DeadPlayer: []
   RespawnPlayer: []
