@@ -279,7 +279,7 @@ namespace Julien.Script.PlayerScripts
             GameManagerStatic.Players.Remove(gameObject);
             hudDead.GetComponent<HUDDeadPlayer>().SetInfo(this);
             
-            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadPlayer);
+            SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadPlayer, 0.3f);
         }
 
         public void Respawn()
@@ -289,7 +289,7 @@ namespace Julien.Script.PlayerScripts
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
             GameManagerStatic.Players.Add(gameObject);
             _canShoot = true;
-            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer);
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f);
         }
        
         public void OpenInventory()
@@ -357,7 +357,7 @@ namespace Julien.Script.PlayerScripts
             _damageEffect.Play();
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
-            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.DamagedPlayer);
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.DamagedPlayer, 0.2f);
         }
 
         public void takeHeal(float healValue)
