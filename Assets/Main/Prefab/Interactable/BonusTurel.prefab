@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5166275002404456874
 Transform:
   m_ObjectHideFlags: 0
@@ -327,19 +327,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.64753616
+      value: 0.000042799857
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.28407347
+      value: -0.00001778919
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.64753455
+      value: 0.91575325
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.28407422
+      value: 0.4017412
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -351,11 +351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -47.374
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 179.995
       objectReference: {fileID: 0}
     - target: {fileID: 853918995187711106, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -371,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643889416946367302, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3823109233696985481, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
       propertyPath: m_Layer
