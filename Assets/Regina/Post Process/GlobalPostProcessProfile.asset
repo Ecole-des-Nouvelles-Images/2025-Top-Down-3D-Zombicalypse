@@ -21,10 +21,10 @@ MonoBehaviour:
     m_Value: 2.89
   intensity:
     m_OverrideState: 1
-    m_Value: 0.27
+    m_Value: 0.2
   scatter:
     m_OverrideState: 1
-    m_Value: 0.945
+    m_Value: 0.851
   clamp:
     m_OverrideState: 0
     m_Value: 65472.2
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.127
+    m_Value: 0.182
   smoothness:
     m_OverrideState: 1
     m_Value: 0.913
@@ -133,53 +133,6 @@ MonoBehaviour:
   - {fileID: 4073267698080753863}
   - {fileID: 6730084012355094081}
   - {fileID: -6838227474174032429}
-  - {fileID: 1040228566613934715}
---- !u!114 &1040228566613934715
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: 
-  active: 0
-  mode:
-    m_OverrideState: 1
-    m_Value: 1
-  gaussianStart:
-    m_OverrideState: 1
-    m_Value: 7
-  gaussianEnd:
-    m_OverrideState: 1
-    m_Value: 14
-  gaussianMaxRadius:
-    m_OverrideState: 1
-    m_Value: 1.329
-  highQualitySampling:
-    m_OverrideState: 0
-    m_Value: 0
-  focusDistance:
-    m_OverrideState: 0
-    m_Value: 10
-  aperture:
-    m_OverrideState: 0
-    m_Value: 5.6
-  focalLength:
-    m_OverrideState: 0
-    m_Value: 50
-  bladeCount:
-    m_OverrideState: 0
-    m_Value: 5
-  bladeCurvature:
-    m_OverrideState: 0
-    m_Value: 1
-  bladeRotation:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &4073267698080753863
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -195,10 +148,10 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.32678446, g: 0.23166609, b: 0.3584906, a: 1}
+    m_Value: {r: 0.4003538, g: 0.1014151, b: 0.5, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.56882316, g: 1, b: 0.4669811, a: 1}
+    m_Value: {r: 0.41037738, g: 1, b: 0.480783, a: 1}
   balance:
     m_OverrideState: 1
     m_Value: -1
@@ -220,7 +173,7 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.569
+    m_Value: 0.818
   response:
     m_OverrideState: 1
     m_Value: 0.624
