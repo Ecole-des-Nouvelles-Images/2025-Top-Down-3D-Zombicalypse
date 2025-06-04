@@ -20879,6 +20879,7 @@ GameObject:
   - component: {fileID: 1791694363}
   - component: {fileID: 1791694362}
   - component: {fileID: 1791694364}
+  - component: {fileID: 1791694365}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -20989,6 +20990,21 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1791694365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791694361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a834e5390b8d344aa96cf2e66d7d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0.3
+  CurrentRotation: 314
+  Skybox: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
 --- !u!1001 &1801292572
 PrefabInstance:
   m_ObjectHideFlags: 0
