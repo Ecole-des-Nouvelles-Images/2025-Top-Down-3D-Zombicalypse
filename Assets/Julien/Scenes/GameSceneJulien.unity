@@ -23016,6 +23016,23 @@ MonoBehaviour:
   _returnMenuButton: {fileID: 0}
   _progressBar: {fileID: 993669602}
   PauseMenu: {fileID: 1351374701}
+--- !u!1 &1176436440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 833497973266648209, guid: b432563dbbc06604484f12fc8898fc4e, type: 3}
+  m_PrefabInstance: {fileID: 7473136419823857319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1176436444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176436440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dd39b9633304b489994c6691983c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1178094783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44595,6 +44612,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6011005112072890421, guid: b432563dbbc06604484f12fc8898fc4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8896558384461277691, guid: b432563dbbc06604484f12fc8898fc4e, type: 3}
       propertyPath: m_Name
       value: Generator
@@ -44602,7 +44623,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 833497973266648209, guid: b432563dbbc06604484f12fc8898fc4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1176436444}
   m_SourcePrefab: {fileID: 100100000, guid: b432563dbbc06604484f12fc8898fc4e, type: 3}
 --- !u!1001 &7526989824850256347
 PrefabInstance:

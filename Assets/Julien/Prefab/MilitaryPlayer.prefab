@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 623422308915241328}
   - component: {fileID: 4063981802223203849}
   - component: {fileID: 8181048459413027482}
+  - component: {fileID: 3826000380810597200}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -447,6 +448,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3826000380810597200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034500232048156709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dd39b9633304b489994c6691983c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 0}
 --- !u!1 &2995270520134523662
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,14 +636,14 @@ MonoBehaviour:
     Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
+    Weapon: {fileID: 11400000, guid: 309dfb11535157849b319925c0e09640, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
   - Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
-    Weapon: {fileID: 11400000, guid: 3ac9c71292bc26c40a5a9aa4778c818d, type: 2}
+    Weapon: {fileID: 11400000, guid: 309dfb11535157849b319925c0e09640, type: 2}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - Lvl: 0
