@@ -18760,9 +18760,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1557437255}
     m_Modifications:
+    - target: {fileID: 212039679639683853, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964050179951257446, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2270772712087899677, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2270772712087899677, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3228426723545623879, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
       propertyPath: m_Pivot.x
@@ -18842,6 +18854,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228426723545623879, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403125984723197920, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779932117269689530, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952193379094217767, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050785166497106331, guid: 15b1f58ca5f63a849a99d1f32b10a1eb, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
