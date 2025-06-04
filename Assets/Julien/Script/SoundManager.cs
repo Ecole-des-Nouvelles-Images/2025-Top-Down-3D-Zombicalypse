@@ -13,7 +13,7 @@ namespace Julien.Script
         public List<AudioClip> RespawnPlayer = new List<AudioClip>();
         public List<AudioClip> Reload = new List<AudioClip>();
         
-        [Header("Zombie")]
+        [Header("Grand Zombie")]
         public List<AudioClip> AttackZombie = new List<AudioClip>();
         public List<AudioClip> DeadZombie = new List<AudioClip>();
         public List<AudioClip> ScreamZombie = new List<AudioClip>();

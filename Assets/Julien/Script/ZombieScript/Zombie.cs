@@ -87,18 +87,6 @@ namespace Julien.Script.ZombieScript
                 }
             }
         }
-        
-        public void PlayScream()
-        {
-            float rand = Random.Range(0, 1000);
-            Debug.Log("Rand");
-            if (rand <= 1f)
-            {
-                Debug.Log(rand);
-                SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.ScreamZombie, 0.08f);
-                Debug.Log("PLAY SOUND");
-            }
-        }
 
         [ContextMenu("TakeDamge (Test Methode)")]
         public void TakeDamaga()
