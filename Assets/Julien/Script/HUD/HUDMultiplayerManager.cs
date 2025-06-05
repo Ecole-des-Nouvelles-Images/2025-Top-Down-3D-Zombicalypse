@@ -41,9 +41,8 @@ namespace Julien.Script.HUD
                 hud.SetActive(false);
             }
             
-            //_surviveText.text = "Fin de partie Vous avez survécu " + _roundHundler.Round.CurrentRound + " vagues";
+            _surviveText.text = "Fin de partie Vous avez survecu " + _roundHundler.Round.CurrentRound + " vagues";
         }
-
         public void MainMenu()
         {
             List<GameObject> players = GameObject.FindGameObjectsWithTag("Player").ToList();
