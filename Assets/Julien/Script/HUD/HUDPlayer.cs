@@ -36,9 +36,16 @@ namespace Julien.Script.HUD
         {
             _weaponsHUD[0].SetHUD(_inventory.StrucWeapons[0]);
             _weaponsHUD[0].GetComponent<Image>().color = _inventory.StrucWeapons[0].Color;
-            
-            _weaponsHUD[1].SetHUD(_inventory.StrucWeapons[1]);
-            _weaponsHUD[1].GetComponent<Image>().color = _inventory.StrucWeapons[1].Color;
+
+            if (_weaponsHUD[1].gameObject == true)
+            {
+                _weaponsHUD[1].SetHUD(_inventory.StrucWeapons[1]);
+                _weaponsHUD[1].GetComponent<Image>().color = _inventory.StrucWeapons[1].Color;
+            }
+            else
+            {
+                Debug.Log("Pas 1 False");
+            }
         }
 
         public void SetPosition()

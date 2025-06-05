@@ -14,13 +14,15 @@ namespace Script.Struc
         public GameObject WeaponPrefab;
         
         public Weapon Weapon;
+        public Sprite Sprite;
         public int CurrentAmmo;
         public int CurrentMagazin;
         public void SetFirstData()
         {
             Lvl = Weapon.lvl;
             Color = Weapon.Color;
-            
+
+            Sprite = Weapon.Sprite;
             CurrentAmmo = Weapon.MaxAmmo;
             CurrentMagazin = Weapon.MaxMagazine;
             WeaponPrefab = Weapon.Prefab;
