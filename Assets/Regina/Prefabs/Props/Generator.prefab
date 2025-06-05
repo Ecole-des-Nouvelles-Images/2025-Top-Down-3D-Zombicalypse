@@ -404,10 +404,11 @@ MonoBehaviour:
   _currentRepar: 0
   _reparParClick: 2
   _reparHealthParClick: 0.5
-  _audioSource: {fileID: 0}
+  _audioSource: {fileID: 1229128606951575322}
   _reparBarParent: {fileID: 833497973266648209}
   _reparBar: {fileID: 5705067198411773521}
   _TimeBeforDamageBar: {fileID: 7497985105501784723}
+  _animator: {fileID: 2732126524453446910}
   _brokenEffect: {fileID: 9172363050109456055}
 --- !u!23 &3549050318270337733
 MeshRenderer:
@@ -512,12 +513,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: eaf3752b30bbfac4481a41bd939f93ec, type: 3}
+  m_Resource: {fileID: 8300000, guid: eaf3752b30bbfac4481a41bd939f93ec, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -695,6 +696,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8009034115994777824, guid: 345111116525fd64fbdeb946278b39ea, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -771,7 +776,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ecd0bba89c7a17e49a7f852becf31c25, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 258977693905558792}
+      addedObject: {fileID: 2732126524453446910}
   m_SourcePrefab: {fileID: 100100000, guid: ecd0bba89c7a17e49a7f852becf31c25, type: 3}
 --- !u!4 &8622796912781967485 stripped
 Transform:
@@ -783,7 +788,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ecd0bba89c7a17e49a7f852becf31c25, type: 3}
   m_PrefabInstance: {fileID: 8079718754684577686}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &258977693905558792
+--- !u!95 &2732126524453446910
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -793,7 +798,7 @@ Animator:
   m_GameObject: {fileID: 8998619455567436487}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b82560ffb5d43c74eb9bd62630b74274, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4f4b7fd3d7a07c64188569d1e81b7af4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

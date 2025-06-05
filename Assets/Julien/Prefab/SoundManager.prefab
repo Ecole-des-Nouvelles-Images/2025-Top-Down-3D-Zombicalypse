@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029672791534043553}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.72102344, y: 2.7560856, z: 3.804199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StepsPlayer:
   - {fileID: 8300000, guid: 9e57aee9101788b47adb5683981f4389, type: 3}
-  - {fileID: 8300000, guid: ce68cbcd681e7f347952cbc9e7ff0017, type: 3}
   DamagedPlayer:
   - {fileID: 8300000, guid: 5abe22941cc8523458f62469c2b49a14, type: 3}
   DeadPlayer:
@@ -68,15 +67,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
   TurelDestroy:
   - {fileID: 8300000, guid: 4e2a4db50ee05014fa72a7ff1a2fc68b, type: 3}
-  GeneratorRepart: []
+  GeneratorRepart:
+  - {fileID: 8300000, guid: a7f4531ba7c012f44b81effb69dcea51, type: 3}
+  - {fileID: 8300000, guid: 2efd29b65bf727a46ad26bd19e83c781, type: 3}
   GeneratorBreak: {fileID: 0}
   GeneratorWork: {fileID: 0}
   Ak47:
-  - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
-  - {fileID: 8300000, guid: 351abc9a05ed351408ba3a97ad86ec29, type: 3}
+  - {fileID: 8300000, guid: 40f3d190b72eb89478ab41dc73268bbe, type: 3}
+  - {fileID: 8300000, guid: 6492f7bf286400347b9a71efe1bb7619, type: 3}
+  - {fileID: 8300000, guid: c75fd688a1f828a46af9e8ee03b5eeaf, type: 3}
   Spas:
   - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
   - {fileID: 8300000, guid: 351abc9a05ed351408ba3a97ad86ec29, type: 3}
   Colt:
-  - {fileID: 8300000, guid: 81566886bb46f43458004ad4d1fbf716, type: 3}
-  - {fileID: 8300000, guid: 351abc9a05ed351408ba3a97ad86ec29, type: 3}
+  - {fileID: 8300000, guid: 682783a1af5402b428afb58ba232ab81, type: 3}
+  - {fileID: 8300000, guid: 7d419a15e7b33f74cba9bd08db6686f8, type: 3}
