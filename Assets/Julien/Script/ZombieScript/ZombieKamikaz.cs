@@ -53,6 +53,8 @@ namespace Julien.Script.ZombieScript
                 Animator.SetBool("Die", true);
             }
             yield return new WaitForSeconds(TypeZombie.AttackSpeed);
+            
+            GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
             if (!Dead)
             {
                 Instantiate(_firstParticle,transform.position,Quaternion.identity);

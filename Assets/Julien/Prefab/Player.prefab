@@ -83,9 +83,11 @@ MonoBehaviour:
   HandingTurel: {fileID: 60933250256397019}
   HandingBonus: {fileID: 6115931542095130803}
   _setSpawnBulletPosition: {fileID: 1081197973007504128}
-  _weaponMesh: {fileID: 0}
+  WeaponMesh: {fileID: 0}
   TurelPrefab: {fileID: 5071826242273263616, guid: 558e4628af26a84488944124055862f8, type: 3}
   BonusPrefab: {fileID: 5986149018679116267, guid: fcc42a11a459f914794d81af1cd306db, type: 3}
+  _bonesPlayer: {fileID: 0}
+  rotation: 0
 --- !u!1 &2039706244962328061
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,11 +315,18 @@ MonoBehaviour:
   hudPlayer: {fileID: 0}
   _hudDeadPlayer: {fileID: 2612938324517824276, guid: 5bc601ef75bee7c43a9063c11e328e87, type: 3}
   PlayerRenderer: {fileID: 3948030461964295193}
-  _animator: {fileID: 1611295729479926352}
+  Cloths: []
+  move: {x: 0, y: 0}
+  aim: {x: 0, y: 0}
+  Inventory: {fileID: 0}
+  Animator: {fileID: 1611295729479926352}
   _verticalValue: 0
   _horizontalValue: 0
   _spineBone: {fileID: 0}
   InteractsGameObject: []
+  _lineRenderer: {fileID: 0}
+  _multiAimConstraint: {fileID: 0}
+  _damageEffect: {fileID: 0}
 --- !u!114 &2854704983080223569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +344,7 @@ MonoBehaviour:
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
     Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
+    Sprite: {fileID: 0}
     CurrentAmmo: 0
     CurrentMagazin: 0
   StrucWeapons:
@@ -342,12 +352,14 @@ MonoBehaviour:
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
     Weapon: {fileID: 11400000, guid: 99cb10cd6888f2e45b04328c13ab8d30, type: 2}
+    Sprite: {fileID: 0}
     CurrentAmmo: 0
     CurrentMagazin: 0
   - Lvl: 0
     Color: {r: 0, g: 0, b: 0, a: 0}
     WeaponPrefab: {fileID: 0}
     Weapon: {fileID: 0}
+    Sprite: {fileID: 0}
     CurrentAmmo: 0
     CurrentMagazin: 0
   indexWeapon: 0
@@ -375,6 +387,7 @@ MonoBehaviour:
     AddDistance: 0
   _player: {fileID: 0}
   handingObject: {fileID: 7791655236001309451}
+  _ikBones: {fileID: 0}
   _reloadImageGameObject: {fileID: 7544454890710988876}
 --- !u!114 &106804544671237565
 MonoBehaviour:
