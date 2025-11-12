@@ -31,10 +31,9 @@ The development process included **<b>Pre-production<b> ( one week ), <b>Product
 
 ## Team
 This game was brought to life by **[Team Name or "a group of X developers/artists"]**:
-- **[Name 1]**: [Role and contributions]
-- **[Name 2]**: [Role and contributions]
-- **[Name 3]**: [Role and contributions]
-- **[Name 4]**: [Role and contributions]
+- **Lukoyanova Regina**: Porduct owner, lead artist
+- **Bilore Sasha**: Artist,
+- **Durand Julien**: Game developer
 
 ![Team](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/team-photo.png)
 
