@@ -8,9 +8,9 @@ Zombicalypse is a zombie game where you must survive as many waves as possible.
 [![License](https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina?color=lightgrey)]([https://github.com/Ecole-des-Nouvelles-Images/Unity-Template](https://github.com/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina))
 
-
+<div align="center">
 <img width="512" height="512" alt="Logo" src="https://github.com/user-attachments/assets/95c084a6-9da4-4ede-ab9f-4b2b045a4781" />
-(()
+</div>
 
 
 ## Table of Contents
@@ -24,7 +24,7 @@ Zombicalypse is a zombie game where you must survive as many waves as possible.
 8. [Recommendations](#recommendations)
 
 ---
-
+  
 ## Introduction
 **Zombicalypse** is a arena shooter developed during **five weeks**. This project was created as part of **a school project**.  
 The development process included **<b>Pre-production<b> ( one week ), <b>Production<b> ( trhee weeks ), <b>Post-production<b> ( one week ).**.
