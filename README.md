@@ -50,6 +50,19 @@ place new turrets, and upgrade them using modules to prepare for the next wave.
 
 ![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
 
+
+
+## Input 
+
+Left stick : move
+Right stick : Aim
+
+Bottom button : Interact
+Right button : Drop weapon
+Up button : Switch weapon
+
+Right trigger : Fire
+Left trigger : Reload
 ---
 
 ## Universe
