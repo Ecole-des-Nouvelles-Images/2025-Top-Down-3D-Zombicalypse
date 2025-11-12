@@ -48,7 +48,7 @@ Several weapons are at your disposal, and three types of zombies will try to des
 Players must eliminate all the zombies to complete the wave. Once all zombies are defeated, they can repair their generator, 
 place new turrets, and upgrade them using modules to prepare for the next wave.
 
-![Gameplay Screenshot](https://github.com/user-attachments/assets/7ebce97b-c90f-46b4-8c79-f1faec1aa81a)
+https://github.com/user-attachments/assets/7ebce97b-c90f-46b4-8c79-f1faec1aa81a
 
 
 
