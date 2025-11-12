@@ -1,5 +1,5 @@
 
-# [Project Name]
+# Zombicalypse
 
 [A brief and engaging tagline or description of the game]
 
@@ -24,7 +24,7 @@
 ---
 
 ## Introduction
-**Zombicalyps** is a arena shooter developed during **five weeks**. This project was created as part of **a school project**.  
+**Zombicalypse** is a arena shooter developed during **five weeks**. This project was created as part of **a school project**.  
 The development process included **<b>Pre-production<b> ( one week ), <b>Production<b> ( trhee weeks ), <b>Post-production<b> ( one week ).**.
 
 ---
