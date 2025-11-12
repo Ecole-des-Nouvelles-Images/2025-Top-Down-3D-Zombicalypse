@@ -24,9 +24,8 @@
 ---
 
 ## Introduction
-**[Project Name]** is a [genre of the game] developed by **[Team/Organization Name]** during **[timeframe]**.  
-This project was created as part of **[context, e.g., a school project, game jam, or indie initiative]**.  
-The development process included **[key phases, such as preproduction, production, etc.]**.
+**Zombicalyps** is a arena shooter developed during **five weeks**. This project was created as part of **a school project**.  
+The development process included **<b>Pre-production<b> ( one week ), <b>Production<b> ( trhee weeks ), <b>Post-production<b> ( one week ).**.
 
 ---
 
