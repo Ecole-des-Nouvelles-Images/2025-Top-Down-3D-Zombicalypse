@@ -40,7 +40,8 @@ This game was brought to life by **[Team Name or "a group of X developers/artist
 ---
 
 ## Gameplay
-[Describe the core gameplay loop, mechanics, and objectives of the game. Include details like number of players, perspective, and unique gameplay features.]
+Zombicalypse is a local multiplayer game for up to 4 players. You must survive waves of zombies while defending a generator.
+Several weapons are at your disposal, and three types of zombies will try to destroy the generator. Place and upgrade turrets, repair the generator, and survive as long as you can!
 
 ### Phase 1: [Phase Name]
 [Describe the first phase of gameplay, objectives, and player actions.]
