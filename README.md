@@ -9,8 +9,8 @@ Zombicalypse is a zombie game where you must survive as many waves as possible.
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina?color=lightgrey)]([https://github.com/Ecole-des-Nouvelles-Images/Unity-Template](https://github.com/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina))
 
 
-![Main Banner](![Uploading Logo.png…]<img width="512" height="512" alt="Logo" src="https://github.com/user-attachments/assets/95c084a6-9da4-4ede-ab9f-4b2b045a4781" />
-())
+<img width="512" height="512" alt="Logo" src="https://github.com/user-attachments/assets/95c084a6-9da4-4ede-ab9f-4b2b045a4781" />
+
 
 ## Table of Contents
 1. [Introduction](#introduction)
