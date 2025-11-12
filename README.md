@@ -63,6 +63,8 @@ place new turrets, and upgrade them using modules to prepare for the next wave.
 
 - Right trigger : Fire
 - Left trigger : Reload
+
+- Left & Right bumper : turn turel
 ---
 
 ## Universe
