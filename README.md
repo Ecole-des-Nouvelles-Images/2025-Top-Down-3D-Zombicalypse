@@ -3,8 +3,8 @@
 
 Zombicalypse is a zombie game where you must survive as many waves as possible.
 
-[![Unity Version](https://img.shields.io/badge/Unity-6000.2.3f1-blue?style=flat&logo=unity)](https://unity.com/)
-[![GitHub release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Zombicalypse?include_prereleases)](https://github.com/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Zombicalypse/releases)
+[![Unity Version](https://img.shields.io/badge/Unity-2022.3.47-blue?style=flat&logo=unity)](https://unity.com/)
+[![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race)](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race/releases)
 [![License](https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race?color=lightgrey)]([https://github.com/Ecole-des-Nouvelles-Images/Unity-Template](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race))
 
