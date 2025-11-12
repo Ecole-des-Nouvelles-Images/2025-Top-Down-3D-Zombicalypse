@@ -37,7 +37,7 @@ This game was brought to life by **[Team Name or "a group of X developers/artist
 - **Bilore Sasha**: Artist,
 - **Durand Julien**: Game developer
 
-![Team](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/team-photo.png)
+<img width="1832" height="1088" alt="LE_ZOMBIE_GROUPE_OUUUUUUUU" src="https://github.com/user-attachments/assets/c51ee744-0e9b-44ef-aa3e-e563dbb7ead9" />
 
 ---
 
