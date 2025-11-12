@@ -54,15 +54,15 @@ place new turrets, and upgrade them using modules to prepare for the next wave.
 
 ## Input 
 
-Left stick : move
-Right stick : Aim
+- Left stick : move
+- Right stick : Aim
 
-Bottom button : Interact
-Right button : Drop weapon
-Up button : Switch weapon
+- Bottom button : Interact
+- Right button : Drop weapon
+- Up button : Switch weapon
 
-Right trigger : Fire
-Left trigger : Reload
+- Right trigger : Fire
+- Left trigger : Reload
 ---
 
 ## Universe
