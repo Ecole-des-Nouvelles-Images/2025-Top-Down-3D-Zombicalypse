@@ -43,23 +43,21 @@ This game was brought to life by **[Team Name or "a group of X developers/artist
 Zombicalypse is a local multiplayer game for up to 4 players. You must survive waves of zombies while defending a generator.
 Several weapons are at your disposal, and three types of zombies will try to destroy the generator. Place and upgrade turrets, repair the generator, and survive as long as you can!
 
-### Phase 1: [Phase Name]
-[Describe the first phase of gameplay, objectives, and player actions.]
-
-### Phase 2: [Phase Name]
-[Describe the second phase, any escalating challenges, and goals.]
+Players must eliminate all the zombies to complete the wave. Once all zombies are defeated, they can repair their generator, 
+place new turrets, and upgrade them using modules to prepare for the next wave.
 
 ![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
 
 ---
 
 ## Universe
-[Provide a brief story or lore for the game world, highlighting key characters, locations, or events. Explain how the story ties into the gameplay.]
+You play as soldiers sent by the army to defend one of the last remaining power generators in the world. 
+Your mission is to protect it against relentless waves of undead enemies who will stop at nothing to make you their next meal.
 
 ---
 
 ## Release
-[Provide details about the platform, availability, and installation instructions. Mention if the game is available on PC, console, or mobile, and provide links to download or install.]
+Zombicalypse is available on PC, playable with the controller. You can install it on the release of this Github.
 
 This game supports **[platform requirements, e.g., Android 5.1+]**.
 
