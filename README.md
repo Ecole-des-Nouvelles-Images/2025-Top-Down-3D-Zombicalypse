@@ -1,7 +1,7 @@
 
 # Zombicalypse
 
-[A brief and engaging tagline or description of the game]
+Zombicalypse is a zombie game where you must survive as many waves as possible.
 
 [![Unity Version](https://img.shields.io/badge/Unity-6000.2.3f1-blue?style=flat&logo=unity)](https://unity.com/)
 [![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina)](https://github.com/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina/releases)
@@ -9,7 +9,7 @@
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina?color=lightgrey)]([https://github.com/Ecole-des-Nouvelles-Images/Unity-Template](https://github.com/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Regina))
 
 
-![Main Banner](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/main-banner.png)
+![Main Banner](<img width="512" height="512" alt="unnamed" src="https://github.com/user-attachments/assets/85a89023-c2f3-4934-9d56-a05fc13fcbb2" />)
 
 ## Table of Contents
 1. [Introduction](#introduction)
