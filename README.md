@@ -32,7 +32,7 @@ The development process included **<b>Pre-production<b> ( one week ), <b>Product
 ---
 
 ## Team
-This game was brought to life by **[Team Name or "a group of X developers/artists"]**:
+
 - **Lukoyanova Regina**: Porduct owner, lead artist
 - **Bilore Sasha**: Artist,
 - **Durand Julien**: Game developer
