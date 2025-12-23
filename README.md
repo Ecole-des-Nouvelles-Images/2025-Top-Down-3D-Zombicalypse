@@ -21,7 +21,6 @@ Zombicalypse is a zombie game where you must survive as many waves as possible.
 5. [Release](#release)
 6. [Development](#development)
 7. [Special Thanks](#special-thanks)
-8. [Recommendations](#recommendations)
 
 ---
   
