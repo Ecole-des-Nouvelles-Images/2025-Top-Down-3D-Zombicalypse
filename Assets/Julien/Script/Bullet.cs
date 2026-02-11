@@ -55,13 +55,13 @@ namespace Julien.Script
             {
                 if (hit.collider.CompareTag("Zombie"))
                 {
-                    Debug.Log("Hit turel");
                     if (_player != null) _player.GetComponent<PlayerScore>().DamageCount += DamageBullet;
                     Zombie zombie = hit.transform.gameObject.GetComponent<Zombie>();
                     zombie.Damaged(DamageBullet, _player);
                     Debug.Log(zombie.Health + " / " + Turel.name);
-                    if (zombie.Health <= 0 && Turel)
+                    if (zombie.Health - DamageBullet <= 0 && Turel)
                     {
+                        Debug.Log("Hit turel 2");
                         GameObject zombiTarget = Turel.GetComponent<Turel>().Target;
                         Turel.GetComponent<Turel>().Targets.Remove(zombiTarget);
                         Turel.GetComponent<Turel>().Target = null;

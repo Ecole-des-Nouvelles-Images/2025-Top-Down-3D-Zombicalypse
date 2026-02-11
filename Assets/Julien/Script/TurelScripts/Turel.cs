@@ -4,6 +4,7 @@ using Julien.Script.Data.Turel;
 using Julien.Script.Interface;
 using Julien.Script.Struc;
 using Julien.Script.TurelScripts.State;
+using Julien.Script.ZombieScript;
 using Script.Turel.State;
 using UnityEngine;
 using UnityEngine.UI;
@@ -64,6 +65,11 @@ namespace Julien.Script.TurelScripts
         {
             foreach (GameObject target in Targets.ToList())
             {
+                if (target.GetComponent<Zombie>().Dead)
+                {
+                    Target = null;
+                    Targets.Remove(target);
+                }
                 if (!target)
                 {
                     Targets.Remove(target);

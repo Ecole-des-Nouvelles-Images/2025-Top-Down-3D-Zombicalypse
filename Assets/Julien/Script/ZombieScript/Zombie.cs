@@ -4,6 +4,7 @@ using System.Linq;
 using Julien.Script.Data.Zombie;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
+using Julien.Script.TurelScripts;
 using Julien.Script.ZombieScript.States;
 using Script;
 using UnityEngine;
