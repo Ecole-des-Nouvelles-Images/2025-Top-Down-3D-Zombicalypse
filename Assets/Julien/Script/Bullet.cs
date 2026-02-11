@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Julien.Script.PlayerScripts;
+using Julien.Script.TurelScripts;
 using Julien.Script.ZombieScript;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,7 +12,8 @@ namespace Julien.Script
     {
         [SerializeField] private Rigidbody _rigibody;
         [SerializeField] private Player _player;
-        
+
+        public Turel Turel;
         public float BulletSpeed;
         public float DamageBullet;
         public float Precision;
@@ -36,26 +38,34 @@ namespace Julien.Script
             _rigibody.AddForce((gameObject.transform.forward + gameObject.transform.right * randomDirection) * BulletSpeed, ForceMode.Impulse);
         }
 
-        public void SetBulletParameter(float bulletSpeed, float damage, float precision, float range, Player player)
+        public void SetBulletParameter(float bulletSpeed, float damage, float precision, float range, Player player, Turel turel = null)
         {
             BulletSpeed = bulletSpeed;
             DamageBullet = damage;
             Precision = precision;
             LethalRange = range;
+            if (turel) Turel = turel;
             if (player != null) _player = player;
         }
 
         private void Update()
         {
             RaycastHit hit;
-            Debug.DrawRay(transform.position, transform.forward * 2 , Color.blue, 1f);
             if (Physics.Raycast(transform.position, transform.forward * 2 , out hit, 2))
             {
                 if (hit.collider.CompareTag("Zombie"))
                 {
+                    Debug.Log("Hit turel");
                     if (_player != null) _player.GetComponent<PlayerScore>().DamageCount += DamageBullet;
                     Zombie zombie = hit.transform.gameObject.GetComponent<Zombie>();
                     zombie.Damaged(DamageBullet, _player);
+                    Debug.Log(zombie.Health + " / " + Turel.name);
+                    if (zombie.Health <= 0 && Turel)
+                    {
+                        GameObject zombiTarget = Turel.GetComponent<Turel>().Target;
+                        Turel.GetComponent<Turel>().Targets.Remove(zombiTarget);
+                        Turel.GetComponent<Turel>().Target = null;
+                    }
                     Destroy(gameObject);
                 }
             }

@@ -164,6 +164,7 @@ namespace Julien.Script.ZombieScript
         public void Die(bool deadByPlayer)
         {
             Animator.SetBool("Die", true);
+            
             GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
             if (_player)
             {
