@@ -1,1 +1,24 @@
+name: Deploy to Itch.io
 
+# Permet de lancer le workflow manuellement depuis GitHub
+on:
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: 'Branche à publier (ex: dev, main)'
+        required: false
+        default: 'main'
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Itch.io via Butler
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
+        run: |
+          butler push chemin/vers/votre/dossier/build nom-utilisateur/nom-du-jeu:win
