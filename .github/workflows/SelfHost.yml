@@ -1,37 +1,33 @@
-name: Build Unity & Deploy to Itch.io
+name: Build Unity Project
 
 on:
   workflow_dispatch:
     inputs:
       game_name:
-        description: 'Nom du jeu sur Itch.io (ex: mon-super-jeu)'
+        description: 'Nom de l exécutable du jeu (ex: MonJeu)'
         required: true
-        default: 'mon-jeu'
-      itch_username:
-        description: 'Nom utilisateur Itch.io'
-        required: true
-        default: 'mon-pseudo'
+        default: 'MonJeu'
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: self-hosted
 
     steps:
       - name: Récupérer le code source
         uses: actions/checkout@v4
 
-      - name: Configurer les dossiers et variables
+      - name: Nettoyer et créer le dossier de build
         shell: powershell
         run: |
           $buildDir = "Builds/StandaloneWindows64"
           if (Test-Path $buildDir) { Remove-Item -Recurse -Force $buildDir }
           New-Item -ItemType Directory -Path $buildDir -Force
 
-      # 1. Compilation du projet Unity
-      # Note : Adapte le chemin de ton Unity.exe selon la version installée sur ta machine
-      - name: Build Unity Project
+      # Lancement du build Unity en arrière-plan
+      - name: Build Unity
         shell: powershell
         run: |
+          # /!\ N'oublie pas de vérifier ce chemin vers ton exécutable Unity.exe /!\
           $unityPath = "C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Unity.exe"
           
           Start-Process -FilePath $unityPath -ArgumentList `
@@ -42,24 +38,11 @@ jobs:
             "-logFile", "$PWD/unity_build.log" -Wait
 
           if ($LASTEXITCODE -ne 0) {
-            Write-Error "Échec du build Unity. Vérifie unity_build.log"
+            Write-Error "Échec du build Unity. Consulte le fichier unity_build.log."
             exit 1
           }
 
-      # 2. Archiver le build en fichier ZIP
-      - name: Compress Build to ZIP
+      - name: Confirmation de fin
         shell: powershell
         run: |
-          Compress-Archive -Path "Builds/StandaloneWindows64/*" -DestinationPath "Builds/${{ github.event.inputs.game_name }}_Win64.zip" -Force
-
-      # 3. Déploiement sur Itch.io via Butler
-      - name: Deploy to Itch.io
-        env:
-          BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
-        shell: powershell
-        run: |
-          $user = "${{ github.event.inputs.itch_username }}"
-          $game = "${{ github.event.inputs.game_name }}"
-          $zipPath = "Builds/${{ github.event.inputs.game_name }}_Win64.zip"
-
-          butler push $zipPath "$user/$game:win-zip"
+          Write-Host "Le build est terminé avec succès dans le dossier Builds/StandaloneWindows64 !"
