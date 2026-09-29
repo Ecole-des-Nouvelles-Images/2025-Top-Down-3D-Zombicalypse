@@ -86,4 +86,10 @@ This project is currently in development Future updates might include Bug fixes,
 
 ## Special Thanks
 We would like to thank:
-- **École des nouvelles images** <img src="https://github.com/user-attachments/assets/f91f4643-1a3b-4470-b24d-758ebbec57d4" alt="Image" height="50" width="50">
+
+**Our teachers*** :
+- **[Frédéric Bast](https://fr.linkedin.com/in/frederic-bast-6b8b6b9a?trk=people-guest_people_search-card)** : Development support
+- **Yvan Bladet** : Development support / Integration support
+- **Jérôme Cros** : Art support
+- **Frédéric Conil** : Art support
+- **[Tommy Ha phuoc](https://fr.linkedin.com/in/tommyhaphuoc)** : Game tester / Game design support
