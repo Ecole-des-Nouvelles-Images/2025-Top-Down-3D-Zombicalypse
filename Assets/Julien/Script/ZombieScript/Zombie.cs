@@ -4,6 +4,7 @@ using System.Linq;
 using Julien.Script.Data.Zombie;
 using Julien.Script.PlayerScripts;
 using Julien.Script.Static;
+using Julien.Script.TurelScripts;
 using Julien.Script.ZombieScript.States;
 using Script;
 using UnityEngine;
@@ -164,6 +165,7 @@ namespace Julien.Script.ZombieScript
         public void Die(bool deadByPlayer)
         {
             Animator.SetBool("Die", true);
+            
             GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
             if (_player)
             {

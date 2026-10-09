@@ -87,15 +87,15 @@ namespace Julien.Script
         public void Spawn()
         {
             BoxCollider box = _parentSpawn.GetComponent<BoxCollider>();
-            
+    
             float x = box.center.x + box.size.x / 2;
             float z = box.center.z + box.size.z / 2;
-            
+    
             float RandomX = Random.Range(-x, x);
             float RandomZ = Random.Range(-z, z);
 
-            
             GameObject ObjectToSpawn = Instantiate(_objectsToSpawn[0], new Vector3(RandomX, _parentSpawn.transform.position.y, RandomZ), Quaternion.identity, _parentSpawn.transform);
+            Debug.Log(new Vector2(RandomX, RandomZ));
             ObjectToSpawn.GetComponent<IRandom>().Random();
             _objectsToSpawn.Remove(_objectsToSpawn[0]);
         }
