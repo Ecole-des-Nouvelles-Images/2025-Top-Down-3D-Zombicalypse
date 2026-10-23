@@ -9,10 +9,10 @@ namespace Julien.Script.Data.Weapons
         public override void Fire(Transform spawnBulletPosition, PlayerScripts.Player player, Vector3 dir)
         {
             GameObject bullet = Instantiate(BulletPrefab, spawnBulletPosition.transform.position, spawnBulletPosition.transform.rotation);
-            bullet.transform.LookAt(dir);
+            bullet.transform.forward = dir;
             bullet.gameObject.GetComponent<Bullet>().SetBulletParameter(BulletSpeed, Damage, Precision, LethalRangeLetal, player);
-            
-            SoundManager.Instance.PlaySound( player.gameObject, SoundManager.Instance.Ak47,0.1f);
+
+            SoundManager.Instance.PlaySound(player.gameObject, SoundManager.Instance.Colt, 0.1f, new Vector2(0.9f, 1.1f));
         }
 
         public override void Reload()

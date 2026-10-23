@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Julien.Script.Interface;
 using Julien.Script.PlayerScripts;
 using UnityEngine;
@@ -11,8 +12,17 @@ namespace Julien.Script.Lobby
         [SerializeField] private List<Color> _colors = new List<Color>();
         [SerializeField] private Dictionary<Player, int> _dictionaryPlayer = new Dictionary<Player, int>();
 
+        [SerializeField] private GameObject _changeSkinTuto;
+
+        private void Start()
+        {
+            float posY = transform.position.y + 2.8f;
+            _changeSkinTuto.transform.DOMoveY(posY, 1f).SetLoops(-1, LoopType.Yoyo);
+        }
+
         public void Activate(Player player)
         {
+          
             if (!_dictionaryPlayer.ContainsKey(player))
             {
                 _dictionaryPlayer.Add(player, 0);
@@ -43,6 +53,8 @@ namespace Julien.Script.Lobby
                     {
                         _dictionaryPlayer[player] = 0;
                     }
+
+                    _changeSkinTuto.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => _changeSkinTuto.SetActive(false));
                 }
             }
         }

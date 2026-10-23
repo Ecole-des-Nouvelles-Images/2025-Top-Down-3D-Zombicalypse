@@ -57,6 +57,31 @@ namespace Julien.Script
            float durationClip = audio.clip.length;
            StartCoroutine(RemoveAudioSource(durationClip, audio));
         }
+
+        /// <summary>
+        /// PlayAudio with random pitch
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="clips"></param>
+        /// <param name="volume"></param>
+        /// <param name="randomPitch"></param>
+        public void PlaySound(GameObject obj, List<AudioClip> clips, float volume, Vector2 randomPitch)
+        {
+            if (clips.Count == 0)
+            {
+                Debug.LogWarning("No audio clips available to play.");
+                return;
+            }
+            AudioSource audio = obj.AddComponent<AudioSource>();
+
+            audio.pitch = Random.Range(randomPitch.x, randomPitch.y);
+            audio.clip = clips[Random.Range(0, clips.Count)];
+            audio.Play();
+            audio.volume = volume;
+            float durationClip = audio.clip.length;
+            StartCoroutine(RemoveAudioSource(durationClip, audio));
+        }
+
         public IEnumerator RemoveAudioSource(float timer, AudioSource source)
         {
             yield return new WaitForSeconds(timer);

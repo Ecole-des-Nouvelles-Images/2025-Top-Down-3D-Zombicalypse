@@ -96,7 +96,7 @@ namespace Julien.Script.PlayerScripts
         [SerializeField] private GameObject _spineBone;
         [SerializeField] private List<GameObject> InteractsGameObject;
 
-        private Vector3 _playerUpdateDir;
+        [SerializeField] private Vector3 _playerUpdateDir;
         [SerializeField] private LineRenderer _lineRenderer;
         
         [Header("IK")]
@@ -242,7 +242,7 @@ namespace Julien.Script.PlayerScripts
             _isHolding = readValueAsButton;
             if (readValueAsButton && _canShoot && !isReloading && Inventory.equipedWeaponWrap.CurrentAmmo - Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire !>= 0)
             {
-                Inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this, _playerUpdateDir);
+                Inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this, transform.forward);
                 StartCoroutine("ShootDelay", Inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
                 Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
@@ -285,8 +285,7 @@ namespace Julien.Script.PlayerScripts
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
             GameManagerStatic.Players.Add(gameObject);
             _canShoot = true;
-            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f);
-            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f);
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f, new Vector2(0.8f, 1.2f));
         }
        
         public void OpenInventory()
@@ -354,7 +353,7 @@ namespace Julien.Script.PlayerScripts
             _damageEffect.Play();
             Health -= damage;
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
-            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.DamagedPlayer, 0.2f);
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.DamagedPlayer, 0.2f, new Vector2(0.8f, 1.2f));
         }
 
         public void takeHeal(float healValue)

@@ -24,9 +24,9 @@ namespace Julien.Script
         [SerializeField] private float rotation;
         public void SwitchWeapon()
         { 
-            Destroy(WeaponMesh);
+           Destroy(WeaponMesh);
            WeaponMesh = Instantiate(inventory.equipedWeaponWrap.Weapon.WeaponMesh,  HandingWeapon.transform.position + inventory.equipedWeaponWrap.Weapon.SpawnPositionOffset , HandingWeapon.transform.rotation, HandingWeapon.transform);
-           _setSpawnBulletPosition.SetPosition(HandingWeapon.transform.position + inventory.equipedWeaponWrap.Weapon.SpawnBulletOffset);
+           //_setSpawnBulletPosition.SetPosition(HandingWeapon.transform.position + inventory.equipedWeaponWrap.Weapon.SpawnBulletOffset);
         }
 
         private void Update()

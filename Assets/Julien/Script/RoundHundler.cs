@@ -113,11 +113,11 @@ namespace Julien.Script
              yield return new WaitForSeconds(Round.TimeBeforeNextRound);
              Debug.Log("End of break");
              InBreak = false;
-             NexRound();
+             NextRound();
          }
         
         [ContextMenu("NextRound")]
-        public void NexRound()
+        public void NextRound()
         {
             Round.CurrentRound++;
             Round.NumberOfPoint += 5;
