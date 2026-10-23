@@ -1,0 +1,48 @@
+name: Build Unity Project
+
+on:
+  workflow_dispatch:
+    inputs:
+      game_name:
+        description: 'Nom de l exécutable du jeu (ex: MonJeu)'
+        required: true
+        default: 'MonJeu'
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Nettoyer et créer le dossier de build
+        shell: powershell
+        run: |
+          $buildDir = "Builds/StandaloneWindows64"
+          if (Test-Path $buildDir) { Remove-Item -Recurse -Force $buildDir }
+          New-Item -ItemType Directory -Path $buildDir -Force
+
+      # Lancement du build Unity en arrière-plan
+      - name: Build Unity
+        shell: powershell
+        run: |
+          # /!\ N'oublie pas de vérifier ce chemin vers ton exécutable Unity.exe /!\
+          $unityPath = "C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Unity.exe"
+          
+          Start-Process -FilePath $unityPath -ArgumentList `
+            "-quit", `
+            "-batchmode", `
+            "-projectPath", "$PWD", `
+            "-buildWindows64Player", "$PWD/Builds/StandaloneWindows64/${{ github.event.inputs.game_name }}.exe", `
+            "-logFile", "$PWD/unity_build.log" -Wait
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Échec du build Unity. Consulte le fichier unity_build.log."
+            exit 1
+          }
+
+      - name: Confirmation de fin
+        shell: powershell
+        run: |
+          Write-Host "Le build est terminé avec succès dans le dossier Builds/StandaloneWindows64 !"

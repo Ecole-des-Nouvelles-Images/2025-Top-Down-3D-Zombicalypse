@@ -3,8 +3,8 @@
 
 Zombicalypse is a zombie game where you must survive as many waves as possible.
 
-[![Unity Version](https://img.shields.io/badge/Unity-6000..2.3f1-blue?style=flat&logo=unity)](https://unity.com/)
-[![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race)](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race/releases)
+[![Unity Version](https://img.shields.io/badge/Unity-6000.0.30f1-blue?style=flat&logo=unity)](https://unity.com/)
+[![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Top-Down-3D-Zombicalypse)](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race/releases)
 [![License](https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race?color=lightgrey)]([https://github.com/Ecole-des-Nouvelles-Images/Unity-Template](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race))
 
@@ -86,4 +86,10 @@ This project is currently in development Future updates might include Bug fixes,
 
 ## Special Thanks
 We would like to thank:
-- **École des nouvelles images** <img src="https://github.com/user-attachments/assets/f91f4643-1a3b-4470-b24d-758ebbec57d4" alt="Image" height="50" width="50">
+
+**Our teachers*** :
+- **[Frédéric Bast](https://fr.linkedin.com/in/frederic-bast-6b8b6b9a?trk=people-guest_people_search-card)** : Development support
+- **Yvan Bladet** : Development support / Integration support
+- **Jérôme Cros** : Art support
+- **Frédéric Conil** : Art support
+- **[Tommy Ha phuoc](https://fr.linkedin.com/in/tommyhaphuoc)** : Game tester / Game design support
