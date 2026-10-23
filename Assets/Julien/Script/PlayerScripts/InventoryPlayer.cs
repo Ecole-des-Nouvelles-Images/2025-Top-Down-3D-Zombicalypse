@@ -108,12 +108,12 @@ namespace Julien.Script.PlayerScripts
                 if (StrucWeapons[i].Weapon == null)
                 {
                     StrucWeapons[i] = weaponWrap;
-                    _player.hudPlayer.SetActiveWeapon(i, true);
+                    if (_player.hudPlayer) _player.hudPlayer.SetActiveWeapon(i, true);
                     Destroy(weaponVisual);
                 }
             }
             AutomaticSwitch();
-            _player.hudPlayer.SetAllInfoHud();
+            if (_player.hudPlayer) _player.hudPlayer.SetAllInfoHud();
         }
 
         public void DropWeapon()
@@ -135,7 +135,8 @@ namespace Julien.Script.PlayerScripts
                 GameObject weapon = Instantiate(equipedWeaponWrap.WeaponPrefab, gameObject.transform.position, quaternion.identity);
                 weapon.GetComponent<WeaponOnGround>().Drop(equipedWeaponWrap);
                 weapon.GetComponent<WeaponOnGround>().DropedWeapon = true;
-                _player.hudPlayer.SetActiveWeapon(indexWeapon, false);
+                if (_player.hudPlayer) _player.hudPlayer.SetAllInfoHud(); 
+                if (_player.hudPlayer) _player.hudPlayer.SetActiveWeapon(indexWeapon, false);
                 StrucWeapons[indexWeapon].ClearData();
                 equipedWeaponWrap.ClearData();
                 AutomaticSwitch();

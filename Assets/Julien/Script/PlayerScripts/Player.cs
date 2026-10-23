@@ -106,7 +106,9 @@ namespace Julien.Script.PlayerScripts
         [Header("VisualEffect")] 
         
         [SerializeField] private ParticleSystem _damageEffect;
-        
+
+        private bool _infiniteAmmo= true;
+
         private void Awake()
         {
             // ne pas detruire le gameobject lors d'un chargement de scene
@@ -139,6 +141,8 @@ namespace Julien.Script.PlayerScripts
             GameManagerStatic.Players.Add(gameObject);
             // changer la place du joueur au début au chargement de la scene
             transform.position = GameManagerStatic.positions[index];
+
+            _infiniteAmmo = false;
         }
 
         private void Start()
@@ -245,7 +249,7 @@ namespace Julien.Script.PlayerScripts
                 Inventory.equipedWeaponWrap.Weapon.Fire(_spawnBullet.transform, this, transform.forward);
                 StartCoroutine("ShootDelay", Inventory.equipedWeaponWrap.Weapon.FireRate);
                 _canShoot = false;
-                Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
+                if (!_infiniteAmmo) Inventory.equipedWeaponWrap.CurrentAmmo -= Inventory.equipedWeaponWrap.Weapon.RemoveAmmoParFire;
                 
                 Inventory.equipedWeaponWrap.Weapon.VisualEffect(handingObject);
                 

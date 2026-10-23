@@ -76,6 +76,7 @@ MonoBehaviour:
   TargetTag: Generator
   NavMeshAgent: {fileID: 0}
   Rigidbody: {fileID: 484201143875930646}
+  Explose: 0
   Dead: 0
   WantAttack: 1
   CanAttack: 0
@@ -404,6 +405,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 95aa0bd112113584d8aa790c8178c25e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7964679032271332838, guid: 7ecb32a4f72d0094ab58f07cfa377a39, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

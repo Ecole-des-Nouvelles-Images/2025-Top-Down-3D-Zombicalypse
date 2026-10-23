@@ -1791,11 +1791,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &473472938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6887298183949211579, guid: e01105ee12a9db34288dbd185ff9dde8, type: 3}
-  m_PrefabInstance: {fileID: 1623158839626630668}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &500658594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,18 +5327,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 591058083732381807, guid: e01105ee12a9db34288dbd185ff9dde8, type: 3}
-      propertyPath: _changeSkinTuto
-      value: 
-      objectReference: {fileID: 473472938}
-    - target: {fileID: 4713914916958294992, guid: e01105ee12a9db34288dbd185ff9dde8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.392
-      objectReference: {fileID: 0}
-    - target: {fileID: 4713914916958294992, guid: e01105ee12a9db34288dbd185ff9dde8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.455
-      objectReference: {fileID: 0}
     - target: {fileID: 5543752771127081266, guid: e01105ee12a9db34288dbd185ff9dde8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.947
