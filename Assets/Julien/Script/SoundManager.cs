@@ -44,7 +44,13 @@ namespace Julien.Script
         /// <param name="clips"></param>
         public void PlaySound(GameObject obj, List<AudioClip> clips, float volume)
         {
-           AudioSource audio = obj.AddComponent<AudioSource>();
+            if (clips.Count == 0)
+            {
+                Debug.LogWarning("No audio clips available to play.");
+                return;
+            }
+            AudioSource audio = obj.AddComponent<AudioSource>();
+
            audio.clip = clips[Random.Range(0, clips.Count)];
            audio.Play();
            audio.volume = volume;

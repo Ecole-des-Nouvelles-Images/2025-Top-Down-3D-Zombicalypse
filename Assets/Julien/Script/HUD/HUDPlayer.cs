@@ -14,6 +14,8 @@ namespace Julien.Script.HUD
         [SerializeField] private InventoryPlayer _inventory;
         
         [SerializeField] private List<HUDWeapon> _weaponsHUD = new List<HUDWeapon>();
+
+        [SerializeField] private Image _outLine;
         public HUDPlayerHealth HUDPlayerHealth;
         public void SetInfoOnStart(Player player)
         {
@@ -36,6 +38,8 @@ namespace Julien.Script.HUD
         {
             _weaponsHUD[0].SetHUD(_inventory.StrucWeapons[0]);
             _weaponsHUD[0].GetComponent<Image>().color = _inventory.StrucWeapons[0].Color;
+
+            _outLine.color = _playerTarget.PlayerColor;
 
             if (_weaponsHUD[1].gameObject == true)
             {

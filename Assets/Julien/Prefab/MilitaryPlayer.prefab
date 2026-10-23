@@ -1422,10 +1422,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5953303565573149730, guid: 2703b1b126c7d2b49a601a165917d460, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7281120802811265398, guid: 2703b1b126c7d2b49a601a165917d460, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c2f76519b31add7439b5ac46d60f7e80, type: 2}
+      objectReference: {fileID: 2100000, guid: 5df87548080dcc54daace24959e95866, type: 2}
     - target: {fileID: 7281120802811265398, guid: 2703b1b126c7d2b49a601a165917d460, type: 3}
       propertyPath: m_Parameters.generateLightingData
       value: 1
@@ -1482,7 +1486,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -65.013
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 967219112266903628, guid: 2703b1b126c7d2b49a601a165917d460, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

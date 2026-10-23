@@ -3,6 +3,7 @@ using System.Collections;
 using Julien.Script.Multiplayer;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace Julien.Script.Lobby
@@ -12,15 +13,30 @@ namespace Julien.Script.Lobby
         public int CurrentNumberPlayer;
         
         private MultiplayerHandler _multiplayerHandler;
+
+        [SerializeField] PlayerInputManager _playerInputManager;
+
         [SerializeField] private TMP_Text _text;
         private void Awake()
         {
             _multiplayerHandler = GameObject.FindWithTag("GameManager").GetComponent<MultiplayerHandler>();
         }
 
-        private void Update()
+        private void OnEnable()
         {
-            _text.text = CurrentNumberPlayer + "/" +_multiplayerHandler.NumberOfPlayer;
+            _playerInputManager.onPlayerJoined += OnPlayerJoin;
+        }
+
+        private void OnDisable()
+        {
+            _playerInputManager.onPlayerJoined -= OnPlayerJoin;
+        }
+
+        private void OnPlayerJoin(PlayerInput playerInput)
+        {
+            Debug.Log("Player join");
+            _multiplayerHandler.NumberOfPlayer++;
+            _text.text = CurrentNumberPlayer + "/" + _multiplayerHandler.NumberOfPlayer;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -33,6 +49,8 @@ namespace Julien.Script.Lobby
                     StopCoroutine("StartGameCoroutine");
                     StartCoroutine("StartGameCoroutine");
                 }
+
+                _text.text = CurrentNumberPlayer + "/" + _multiplayerHandler.NumberOfPlayer;
             }
         }
         private void OnTriggerExit(Collider other)
@@ -44,6 +62,8 @@ namespace Julien.Script.Lobby
                 {
                     StopCoroutine("StartGameCoroutine");
                 }
+
+                _text.text = CurrentNumberPlayer + "/" + _multiplayerHandler.NumberOfPlayer;
             }
         }
 

@@ -17,7 +17,6 @@ namespace Julien.Script.Multiplayer
         {
             _player = GetComponent<Player>();
             _multiplayerHandler = GameObject.FindGameObjectWithTag("GameManager").GetComponent<MultiplayerHandler>();
-            _multiplayerHandler.NumberOfPlayer++;
             _player.PlayerIndex = _multiplayerHandler.NumberOfPlayer;
             PlayerNumber = _multiplayerHandler.NumberOfPlayer;
 

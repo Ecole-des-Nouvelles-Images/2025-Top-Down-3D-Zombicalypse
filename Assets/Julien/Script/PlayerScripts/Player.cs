@@ -47,6 +47,8 @@ namespace Julien.Script.PlayerScripts
         
         public float Speed;
 
+        public Color PlayerColor = Color.white;
+
         [Header("-- Private --------------------------------------------------------------------")]
         
         [SerializeField] private GameObject _spawnBullet;
@@ -137,8 +139,6 @@ namespace Julien.Script.PlayerScripts
             GameManagerStatic.Players.Add(gameObject);
             // changer la place du joueur au début au chargement de la scene
             transform.position = GameManagerStatic.positions[index];
-            
-            Debug.Log("rhnbvihechge,rchnfkljndrg");
         }
 
         private void Start()
@@ -236,10 +236,6 @@ namespace Julien.Script.PlayerScripts
             }
         }
         
-        private void TurnIKBones()
-        {
-        }
-        
         // Tirer
         public void Fire(bool readValueAsButton)
         {
@@ -289,6 +285,7 @@ namespace Julien.Script.PlayerScripts
             hudPlayer.HUDPlayerHealth.SetHealthBarHUD(Health, _maxHealth);
             GameManagerStatic.Players.Add(gameObject);
             _canShoot = true;
+            SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f);
             SoundManager.Instance.PlaySound(gameObject, SoundManager.Instance.RespawnPlayer, 0.3f);
         }
        

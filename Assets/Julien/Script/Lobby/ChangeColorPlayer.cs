@@ -10,8 +10,7 @@ namespace Julien.Script.Lobby
     {
         [SerializeField] private List<Color> _colors = new List<Color>();
         [SerializeField] private Dictionary<Player, int> _dictionaryPlayer = new Dictionary<Player, int>();
-        
-        
+
         public void Activate(Player player)
         {
             if (!_dictionaryPlayer.ContainsKey(player))
@@ -23,16 +22,22 @@ namespace Julien.Script.Lobby
             {
                 if (index >= 0 && index < _colors.Count)
                 {
-                    
+                    // Change color skin
                     foreach (GameObject cloth in  player.Cloths)
                     {
-                        Debug.Log("Change l'habit de couleur");
                         Material copieMaterial = new Material(cloth.GetComponent<Renderer>().material);
                         cloth.GetComponent<Renderer>().sharedMaterial = copieMaterial;
                         copieMaterial.color = _colors[index];
                         cloth.GetComponent<Renderer>().material = copieMaterial;
                     }
-                    //player.GetComponent<Player>().PlayerRenderer.GetComponent<MeshRenderer>().material.color = _colors[index];
+
+
+                    // change laser color
+                    LineRenderer lineRenderer = player.GetComponentInChildren<LineRenderer>();
+                    if (lineRenderer != null) lineRenderer.material.color = _colors[index];
+                    
+                    player.PlayerColor = _colors[index];
+
                     _dictionaryPlayer[player] += 1;
                     if ( _dictionaryPlayer[player] == _colors.Count)
                     {
