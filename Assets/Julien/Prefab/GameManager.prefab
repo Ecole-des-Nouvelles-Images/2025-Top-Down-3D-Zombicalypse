@@ -54,6 +54,7 @@ MonoBehaviour:
   MaxProgressBar: 10
   _weaponPrefab: {fileID: 1720082773541782833, guid: 73e1474e1ac577842abc4dbcc19eba62, type: 3}
   _parentSpawn: {fileID: 0}
+  _navMeshSurface: {fileID: 0}
 --- !u!114 &2593040448384764293
 MonoBehaviour:
   m_ObjectHideFlags: 0
