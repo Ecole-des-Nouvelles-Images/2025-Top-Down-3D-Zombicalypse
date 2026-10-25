@@ -14,18 +14,19 @@ namespace Julien.Script.HUD
         
         private void Start()
         {
-            StaticAction.OntakedDamage += SetHealthGenerator;
-            StaticAction.OnAddPoint += SetProgressBar;
+            EventBus.OntakedDamage += SetHealthGenerator;
+            EventBus.OnAddPoint += SetProgressBar;
         }
 
         private void OnDisable()
         {
-            StaticAction.OntakedDamage -= SetHealthGenerator;
-            StaticAction.OnAddPoint -= SetProgressBar;
+            EventBus.OntakedDamage -= SetHealthGenerator;
+            EventBus.OnAddPoint -= SetProgressBar;
         }
 
         public void SetHealthGenerator(float currentHealth, float maxHealth)
         {
+            if (!_helthBarGenerator) return;
             _helthBarGenerator.fillAmount = currentHealth / maxHealth;
             if (_helthBarGenerator.fillAmount <= 0)
             {
@@ -36,9 +37,13 @@ namespace Julien.Script.HUD
 
         public void SetProgressBar(float pointToadd)
         {
+            if (!_progressBar)
+            {
+                return;
+            }
             GameManager gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             gameManager.CurrentPoint += pointToadd;
-            _progressBar.fillAmount = gameManager.CurrentPoint / gameManager.MaxProgressBar;
+             _progressBar.fillAmount = gameManager.CurrentPoint / gameManager.MaxProgressBar;
             
             if (_progressBar.fillAmount >= 1)
             {

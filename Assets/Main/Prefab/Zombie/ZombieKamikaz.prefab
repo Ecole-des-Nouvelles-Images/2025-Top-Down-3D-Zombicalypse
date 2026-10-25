@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 3620977104577959301}
   - component: {fileID: 2936441507805549248}
   m_Layer: 0
-  m_Name: ZombieKamikaz 1
+  m_Name: ZombieKamikaz
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

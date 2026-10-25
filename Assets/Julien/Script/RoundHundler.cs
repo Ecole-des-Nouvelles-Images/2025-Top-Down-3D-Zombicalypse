@@ -71,9 +71,9 @@ namespace Julien.Script
             for (int i = Round.NumberOfPoint; i > 0;)
             {
                 GameObject zombieToAdd = Round._zombiesPrefabCanSpawn[Random.Range(0, Round._zombiesPrefabCanSpawn.Count)].gameObject;
-                int priceZombie = zombieToAdd.GetComponent<ZombieScript.Zombie>().TypeZombie.PriceZombie;
+               // int priceZombie = zombieToAdd.GetComponent<ZombieScript.Zombie>().TypeZombie.PriceZombie;
                 
-                i -= priceZombie;
+                //i -= priceZombie;
                 Round._zombies.Add(zombieToAdd);
             }
             

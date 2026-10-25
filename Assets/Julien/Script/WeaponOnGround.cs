@@ -32,7 +32,6 @@ namespace Julien.Script
                 {
                     weaponWrap.Weapon = GetRandomWeapon();
                 }
-                Debug.Log(GetRandomWeapon().lvl);
                 weaponWrap.SetFirstData();
                 SetVisual();
             }
@@ -56,7 +55,7 @@ namespace Julien.Script
             {
                 cumulative += weapon.DropChance;
                 if (randomValue <= cumulative)
-                    return weapon;
+                return weapon;
                 
             }
 

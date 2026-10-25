@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832ed3ff27ec50a48a5ae8fa0d488e39, type: 3}
   m_Name: Geant
   m_EditorClassIdentifier: 
-  PriceZombie: 4
-  Point: 2
+  Prefab: {fileID: 6910938945056931783, guid: f24fcbd9bba7eee499043628a6377855, type: 3}
+  ScoreToGiveToPlayer: 3
   MaxHealth: 120
   Damage: 15
   Speed: 0.8

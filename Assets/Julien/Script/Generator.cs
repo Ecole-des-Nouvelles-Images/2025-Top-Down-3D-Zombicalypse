@@ -108,7 +108,7 @@ namespace Julien.Script
                 {
                     Health -= 1;
                     _timedamage = _maxTimeDamage;
-                    StaticAction.OntakedDamage.Invoke(Health, MaxHealth);
+                    EventBus.OntakedDamage.Invoke(Health, MaxHealth);
                 }
             }
         }
@@ -117,7 +117,7 @@ namespace Julien.Script
         public void TakeDamageDebug()
         {
             Health -= 20;
-            StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
+            EventBus.OntakedDamage?.Invoke(Health, MaxHealth);
         }
 
         [ContextMenu("EndGame")]
@@ -130,7 +130,7 @@ namespace Julien.Script
         public void takeDamage(float damage)
         {
             Health -= damage;
-            StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
+            EventBus.OntakedDamage?.Invoke(Health, MaxHealth);
         }
 
         public void Activate(Player player)
@@ -152,7 +152,7 @@ namespace Julien.Script
             {
                 Health += _reparHealthParClick;
                 Health = Mathf.Clamp(Health, 0, MaxHealth);
-                StaticAction.OntakedDamage?.Invoke(Health, MaxHealth);
+                EventBus.OntakedDamage?.Invoke(Health, MaxHealth);
             }
         }
 

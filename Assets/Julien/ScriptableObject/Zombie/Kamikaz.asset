@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832ed3ff27ec50a48a5ae8fa0d488e39, type: 3}
   m_Name: Kamikaz
   m_EditorClassIdentifier: 
-  PriceZombie: 2
-  Point: 1
+  Prefab: {fileID: 6910938945056931783, guid: 189aee67dbb761548b9797cb0d2068ac, type: 3}
+  ScoreToGiveToPlayer: 1
   MaxHealth: 15
   Damage: 30
   Speed: 10

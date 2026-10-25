@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832ed3ff27ec50a48a5ae8fa0d488e39, type: 3}
   m_Name: Normal
   m_EditorClassIdentifier: 
-  PriceZombie: 1
-  Point: 1
+  Prefab: {fileID: 6910938945056931783, guid: 6a90b33e0e7704749affa8c023f01e7b, type: 3}
+  ScoreToGiveToPlayer: 1
   MaxHealth: 50
   Damage: 10
   Speed: 0.8

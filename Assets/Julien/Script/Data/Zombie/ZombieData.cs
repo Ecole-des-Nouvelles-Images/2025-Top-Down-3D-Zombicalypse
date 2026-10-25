@@ -6,9 +6,8 @@ namespace Julien.Script.Data.Zombie
     [CreateAssetMenu(fileName = "ZombieData", menuName = "Scriptable Objects/ZombieData")]
     public class ZombieData : ScriptableObject
     {
-        public int PriceZombie;
-        public float Point;
-        
+        public GameObject Prefab;
+        public float ScoreToGiveToPlayer;
         public float MaxHealth;
         public float Damage;
         public float Speed;

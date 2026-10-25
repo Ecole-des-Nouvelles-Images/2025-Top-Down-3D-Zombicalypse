@@ -16,7 +16,7 @@ namespace Julien.Script.ZombieScript
     {
         [Header("Data")]
         public ZombieData TypeZombie;
-        public int Price;
+        //public int Price;
         public float Damage;
         public float Speed;
         public float Acceleration;
@@ -89,6 +89,36 @@ namespace Julien.Script.ZombieScript
             }
         }
 
+        private void Awake()
+        {
+            Targets = GameObject.FindGameObjectsWithTag(TargetTag).ToList();
+            int index = Random.Range(0, Targets.Count);
+
+            if (Targets.Count != 0)
+            {
+                Target = Targets[index];
+            }
+
+            NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+
+            _roundHundler = GameObject.FindGameObjectWithTag("GameManager").GetComponent<RoundHundler>();
+            _bonusToZombie = GameObject.FindGameObjectWithTag("GameManager").GetComponent<BonusToZombie>();
+        }
+        public void SetUp(float Health)
+        {
+            MaxHealth = Health;
+            CurrentHealth = MaxHealth;
+
+            Damage = TypeZombie.Damage;
+            Speed = TypeZombie.Speed;
+            Acceleration = TypeZombie.Acceleration;
+            CurrentHealth = MaxHealth;
+            AttackSpeed = TypeZombie.AttackSpeed;
+            AttackRange = TypeZombie.AttackRange;
+            NavMeshAgent.acceleration = Acceleration;
+            NavMeshAgent.speed = Speed;
+        }
+
         [ContextMenu("TakeDamge (Test Methode)")]
         public void TakeDamaga()
         {
@@ -103,22 +133,7 @@ namespace Julien.Script.ZombieScript
             Animator.SetTrigger("Hit");
         }
         
-        private void Awake()
-        {
-            Targets = GameObject.FindGameObjectsWithTag(TargetTag).ToList();  
-            int index = Random.Range(0, Targets.Count);
-
-            if (Targets.Count != 0)
-            {
-                Target = Targets[index];
-            }
-            
-            NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
-            
-            _roundHundler = GameObject.FindGameObjectWithTag("GameManager").GetComponent<RoundHundler>();
-            _bonusToZombie =  GameObject.FindGameObjectWithTag("GameManager").GetComponent<BonusToZombie>();
-        }
-
+        
         public void PlayScream()
         {
             float rand = Random.Range(0, 5000);
@@ -130,21 +145,13 @@ namespace Julien.Script.ZombieScript
         private void Start()
         {
             SetData();
-            SetRoundBonusStat();
+            //SetRoundBonusStat();
             gameObject.GetComponent<SphereCollider>().radius = TypeZombie.AttackRange;
         }
         public void SetData()
         {
-            Damage = TypeZombie.Damage;
-            Speed = TypeZombie.Speed;
-            Acceleration = TypeZombie.Acceleration;
-            MaxHealth = TypeZombie.MaxHealth;
-            CurrentHealth = MaxHealth;
-            AttackSpeed = TypeZombie.AttackSpeed;
-            AttackRange = TypeZombie.AttackRange;
-            NavMeshAgent.acceleration = Acceleration;
-            NavMeshAgent.speed = Speed;
-            Price = TypeZombie.PriceZombie;
+            
+            //Price = TypeZombie.PriceZombie;
         }
         
         public void SetRoundBonusStat()
@@ -166,17 +173,18 @@ namespace Julien.Script.ZombieScript
         {
             Animator.SetBool("Die", true);
             
-            GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
+            //GameObject.FindWithTag("GameManager").GetComponent<RoundHundler>().ZombieToKillCount++;
             if (_player)
             {
                 _player.GetComponent<PlayerScore>().ZombieKilled++;
             }
             if (deadByPlayer)
             {
-                StaticAction.OnAddPoint.Invoke(TypeZombie.Point);
+                EventBus.OnAddPoint.Invoke(TypeZombie.ScoreToGiveToPlayer);
             }
             
             SoundManager.Instance.PlaySound(SoundManager.Instance.gameObject, SoundManager.Instance.DeadZombie, 0.3f);
+            EventBus.OnZombieDie?.Invoke();
             StartCoroutine("DestroyZombieDelay");
         }
 
